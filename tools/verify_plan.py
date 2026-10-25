@@ -21,6 +21,7 @@ Exit 0 when there are zero hard errors.
 from __future__ import annotations
 
 import argparse
+import os
 import csv
 import json
 import math
@@ -48,7 +49,7 @@ ID_FIELD = {"evidence": "evidence_id", "shelf_task": "task_id", "exception": "ex
 HARD = {"schema", "reference", "conservation", "capacity", "labor", "deadline", "coverage", "contradiction",
         "decoy"}
 DECOY_RE = re.compile(r"red|e\s*127|erythro|eritro", re.I)
-MAX_EXAMPLES = 300
+MAX_EXAMPLES = int(os.environ.get("VERIFY_PLAN_MAX_EXAMPLES", "300"))  # per check, in the saved report
 
 
 class Errs:

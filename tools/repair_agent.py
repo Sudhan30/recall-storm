@@ -20,7 +20,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("name")
 ap.add_argument("--gen", required=True)
 ap.add_argument("--file", required=True)
-ap.add_argument("--tests", nargs="+", required=True)
+ap.add_argument("--tests", nargs="*", default=[])
+ap.add_argument("--drill-check", help="evidence = verify_plan errors of this check (e.g. labor) from a drill run")
 ap.add_argument("--unit", nargs="*", default=[])
 ap.add_argument("--shim", action="append", default=[])
 ap.add_argument("--max-tokens", type=int, default=300_000)
@@ -52,6 +53,32 @@ def add_shims(base: pathlib.Path):
         if not p.exists():
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_text(f'"""OURS. Test shim exposing {target} as {mod}.{name}."""\nfrom {tmod} import {name}\n')
+
+
+def run_drill(base: pathlib.Path, tag: str) -> dict:
+    """Run the drill on the real pack with this work dir, verify it, return error counts and samples."""
+    out = run / f"drill_{tag}"
+    env = {"PYTHONPATH": f"{base}:{ROOT}", "PATH": "/usr/bin:/bin"}
+    r = subprocess.run([sys.executable, "-m", "recallstorm", "run", "--scenario", "ca_red3", "--data", str(ROOT / "data"),
+                        "--out", str(out)], capture_output=True, text=True, env=env, cwd=ROOT, timeout=600)
+    if r.returncode != 0:
+        return {"crash": r.stderr[-3000:], "by_check": {}, "errors": []}
+    rep_path = out / "plan_report.json"
+    subprocess.run([sys.executable, str(ROOT / "tools" / "verify_plan.py"), str(out / "plan.jsonl"), "--labels",
+                    str(ROOT / "data" / "labels.csv"), "--data", str(ROOT / "data"), "--report", str(rep_path)],
+                   capture_output=True, text=True, cwd=ROOT, timeout=600,
+                   env={**env, "PYTHONPATH": str(ROOT), "VERIFY_PLAN_MAX_EXAMPLES": "1000000"})
+    rp = json.loads(rep_path.read_text())
+    errs = [e for e in rp.get("errors", []) if e.get("severity") == "hard"]
+    by_check = {}
+    for e in errs:
+        by_check[e["check"]] = by_check.get(e["check"], 0) + 1
+    return {"by_check": rp.get("by_check") or by_check, "hard": rp.get("hard_errors"), "errors": errs}
+
+
+def store_of(e: dict) -> str:
+    m = re.search(r"TSK-([A-Z0-9]+)-", e.get("id", "") + " " + e.get("msg", ""))
+    return m.group(1) if m else "?"
 
 
 def hide_tests(output: str, held: tuple[str, ...]) -> str:
@@ -107,7 +134,20 @@ def imported_signatures(src: str, base: pathlib.Path) -> str:
 
 
 add_shims(work)
-before = run_tests(work, a.tests)
+before = run_tests(work, a.tests) if a.tests else {"summary": "no tests", "passed": 0, "failed": 0, "output": "",
+                                                  "failed_ids": []}
+drill_before = run_drill(work, "before") if a.drill_check else None
+drill_shown_txt, held_stores = "", set()
+if drill_before:
+    errs = [e for e in drill_before["errors"] if e["check"] == a.drill_check]
+    stores = sorted({store_of(e) for e in errs})
+    held_stores = set(stores[1::2]) if a.holdout else set()
+    shown = [e for e in errs if store_of(e) not in held_stores]
+    drill_shown_txt = (f"verify_plan hard errors of check '{a.drill_check}' on the drill output "
+                       f"({len(shown)} shown, from {len(stores) - len(held_stores)} stores; other stores hidden):\n" +
+                       "\n".join(f"- [{e['src']}] {e['type']} {e['id']}: {e['msg']}" for e in shown[:60]) +
+                       "\n\nThe verifier rule: an associate may not have two tasks whose windows overlap; every window "
+                       "must lie inside that associate's shift and end before the scenario deadline.")
 held = tuple(before["failed_ids"][1::2]) if a.holdout else ()
 shown_output = hide_tests(before["output"], held)[-20000:]
 before_unit = run_tests(work, a.unit) if a.unit else None
@@ -155,6 +195,7 @@ DIAGNOSIS: <one line: the root cause>
 {"=== currently PASSING cases that must still pass after your fix (state=CA, at the deadline) ===" + chr(10) + guards + chr(10) if guards else ""}
 === failing test output (test source is hidden) ===
 {shown_output}
+{drill_shown_txt}
 
 === {a.file} ===
 {src}
@@ -213,13 +254,25 @@ m = re.search(r"<<<FILE path=[^>]*>>>\n(.*?)<<<END FILE>>>", reply, re.S)
 entry = {"name": a.name, "gen": a.gen, "file": a.file, "agent": AGENT, "status": status, "diagnosis": diag,
          "secs": round(time.time() - t0, 1), "usage": usage, "bundle_chars": len(bundle),
          "before": {k: before[k] for k in ("summary", "passed", "failed")},
+         "drill_before": drill_before and {"hard": drill_before.get("hard"), "by_check": drill_before["by_check"],
+                                            "crash": drill_before.get("crash")},
          "before_unit": before_unit and {k: before_unit[k] for k in ("summary", "passed", "failed")}}
 if not m:
     entry["result"] = "NO_PATCH"
 else:
     new = m.group(1)
     (work / a.file).write_text(new)
-    after = run_tests(work, a.tests)
+    after = run_tests(work, a.tests) if a.tests else dict(before)
+    if a.drill_check:
+        da = run_drill(work, "after")
+        cnt = lambda errs, held: sum(1 for e in errs if e["check"] == a.drill_check and (store_of(e) in held_stores) == held)
+        entry["drill_after"] = {"hard": da.get("hard"), "by_check": da["by_check"], "crash": da.get("crash")}
+        entry["drill_holdout"] = {"shown_before": cnt(drill_before["errors"], False), "shown_after": cnt(da["errors"], False),
+                                  "held_before": cnt(drill_before["errors"], True), "held_after": cnt(da["errors"], True),
+                                  "held_stores": sorted(held_stores)}
+        worse = {k: v for k, v in (da["by_check"] or {}).items()
+                 if isinstance(v, int) and v > (drill_before["by_check"] or {}).get(k, 0)}
+        entry["drill_regressions"] = worse
     still = set(after["failed_ids"])
     seen = [t for t in before["failed_ids"] if t not in held]
     entry["holdout"] = {"seen": len(seen), "seen_fixed": sum(t not in still for t in seen),
@@ -230,6 +283,12 @@ else:
                  after_unit=after_unit and {k: after_unit[k] for k in ("summary", "passed", "failed")},
                  result="FIXED" if after["failed"] == 0 and (not after_unit or after_unit["failed"] == 0)
                  else ("IMPROVED" if after["failed"] < before["failed"] else "NOT_FIXED"))
+    if a.drill_check:
+        dh, da_ = entry["drill_holdout"], entry["drill_after"]
+        tot_b = dh["shown_before"] + dh["held_before"]; tot_a = dh["shown_after"] + dh["held_after"]
+        ok_tests = not after_unit or after_unit["failed"] <= (before_unit or {}).get("failed", 0)
+        entry["result"] = ("CRASH" if da_.get("crash") else "FIXED" if tot_a == 0 and not entry["drill_regressions"] and ok_tests
+                           else "IMPROVED" if tot_a < tot_b and not entry["drill_regressions"] else "NOT_FIXED")
     pdir = ROOT / "patches" / "agent"; pdir.mkdir(parents=True, exist_ok=True)
     diff = difflib.unified_diff(src.splitlines(True), new.splitlines(True), f"a/{a.file}", f"b/{a.file}")
     (pdir / f"{a.name}.patch").write_text("".join(diff))
