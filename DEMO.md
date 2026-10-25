@@ -38,10 +38,10 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
 
 ## 1:05–1:50 · The whole system in one generation
 
-- Tab **3** (Hops & seams), pick `expansion_v2`.
+- Tab **3** (Hops & seams): "v2 · 646,825 tokens, 10 hops" (the default).
   > "Then we asked Argon for the whole platform in one continued generation: 646,825 tokens of code, 911 files,
   > over 10 hops — 92 minutes, about $14. Every seam where one hop hands off to the next joined cleanly."
-- Tab **4** (Code wall), pick `expansion_v2_agentpatched` (v2 + the one-line fix), click **Longest passing cross-file call**.
+- Tab **4** (Code wall): "v2 · 647K tokens + 1-line fix" (the default), click **Longest passing cross-file call**.
   > "This test was written at token 641,687. It calls a function Argon wrote at token 89,603 — 552,000 tokens
   > earlier — and it passes." Optionally run it live:
   > `cd gen/expansion_v2_agentpatched && PYTHONPATH=.:../.. ../../.venv/bin/python -m pytest tests/integration/test_flow_09_analytics_governance.py -q`

@@ -27,7 +27,7 @@ async function loadIndexes() {
 }
 // options for a kind: live names first; fixture names only when that kind has no live entry
 function options(kind) {
-  const live = (S.live?.[kind] || []).map((n) => ({ key: "live:" + n, name: n, fixture: false }));
+  const live = (S.live?.[kind] || []).map((n) => ({ key: "live:" + n, name: S.live?.labels?.[kind]?.[n] || n, fixture: false }));
   const fix = (S.fix?.[kind] || []).map((n) => ({ key: "fixture:" + n, name: n + " (FIXTURE)", fixture: true }));
   return live.length ? live : fix;
 }

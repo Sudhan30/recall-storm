@@ -636,6 +636,21 @@ def build_verify(index: dict) -> None:
         index["verify"] = True
 
 
+SHOW = {   # dict order = menu order; the first entry is the default
+    "drills": {"core_patched": "Core + 3 small fixes (live demo)", "core": "Core, Argon's first draft",
+               "expansion_agentpatched": "v1 · 254K tokens + agent fixes", "expansion": "v1 · 254K tokens, as written",
+               "expansion_v2_agentpatched": "v2 · 647K tokens + agent fixes",
+               "baseline_d": "Baseline D: code only (ours)", "baseline_c": "Baseline C: retrieval + LLM + code (ours)"},
+    "runs": {"expansion_v2": "v2 · 646,825 tokens, 10 hops", "expansion": "v1 · 254,377 tokens, 4 hops",
+             "core": "Core · 22,523 tokens, 1 hop", "probe": "Continuation probe · 2 hops",
+             "b_rules": "Baseline B rules (fresh call)", "b_allocate": "Baseline B allocate (fresh call)",
+             "b_route": "Baseline B route (fresh call)"},
+    "codes": {"expansion_v2_agentpatched": "v2 · 647K tokens + 1-line fix", "expansion_v2": "v2 · 647K tokens, as written",
+              "expansion_agentpatched": "v1 · 254K tokens + agent fixes", "expansion": "v1 · 254K tokens, as written",
+              "core_patched": "Core + 3 small fixes", "core": "Core, Argon's first draft"},
+}
+
+
 def build_once() -> dict:
     global SIG
     SIG = hashlib.sha1()
@@ -647,6 +662,11 @@ def build_once() -> dict:
             fn(index)
         except Exception as e:
             print(f"  {fn.__name__} failed: {e!r}", file=sys.stderr)
+    if "--all" not in sys.argv:                  # demo menus: only the builds we present, in this order, plain names
+        for kind, show in SHOW.items():
+            have = set(index[kind])
+            index[kind] = [n for n in show if n in have]
+        index["labels"] = {kind: dict(show) for kind, show in SHOW.items()}    # per menu: same name, different label
     index["sig"] = SIG.hexdigest()[:16]          # the viewer auto-reloads only when this changes
     index["files"] = dict(FILE_SIGS)              # per-file content hash: unchanged files are not re-fetched
     dump("index.json", index)
