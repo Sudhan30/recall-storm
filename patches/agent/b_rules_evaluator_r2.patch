@@ -1,0 +1,77 @@
+--- a/recallstorm/rules/evaluator.py
++++ b/recallstorm/rules/evaluator.py
+@@ -114,12 +114,13 @@
+     r"SYNTHETIC\s+COLO(?:U)?R(?:S|ING)?|"
+     r"FOOD\s+COLO(?:U)?RING"
+     r")\b"
+-    r"(?!\s*(?:\(|\s*\[|\s*:|\s*-|\s*INCLUDING|\s*FD&C|\s*RED|\s*YELLOW|\s*BLUE|\s*GREEN|"
+-    r"\s*CARAMEL|\s*ANNATTO|\s*BETA|\s*TITANIUM|\s*CARMINE|\s*TURMERIC|\s*PAPRIKA|\s*BEET))",
++    r"(?!\s*(?:\(|\s*\[|\s*\{|\s*:|\s*-|\s*INCLUDING|"
++    r"(?:\s*(?:WITH|USING|FROM|BY)\s+)?\s*(?:FD\s*&\s*C|RED|YELLOW|BLUE|GREEN|"
++    r"CARAMEL|ANNATTO|BETA|TITANIUM|CARMINE|COCHINEAL|TURMERIC|PAPRIKA|BEET)))",
+     re.IGNORECASE,
+ )
+ 
+-# Matches when a vague phrase like "(COLOR ADDED)" is immediately inside parens qualifying a specific named color
++# Matches when a vague phrase like "(COLOR ADDED)" or "[AN ARTIFICIAL COLORING]" is inside parens/brackets qualifying a specific named color
+ _PRECEDING_SPECIFIC_COLOR_PAREN = re.compile(
+     r"\b(?:"
+     r"RED\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
+@@ -127,15 +128,38 @@
+     r"BLUE\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
+     r"GREEN\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
+     r"CARAMEL(?:\s+COLO(?:U)?R)?|"
+-    r"ANNATTO(?:\s+EXTRACT)?|"
+-    r"CARMINE|"
++    r"ANNATTO(?:\s+EXTRACT|\s+COLO(?:U)?R)?|"
++    r"CARMINE(?:\s+COLO(?:U)?R)?|"
++    r"COCHINEAL(?:\s+EXTRACT)?|"
+     r"TITANIUM\s+DIOXIDE|"
+-    r"TURMERIC|"
++    r"TURMERIC(?:\s+EXTRACT|\s+OLEORESIN)?|"
+     r"BETA[\s\-]*CAROTENE|"
+     r"PAPRIKA(?:\s+OLEORESIN|\s+EXTRACT)?|"
+-    r"BEET\s+(?:JUICE|POWDER|COLOR)|"
+-    r"SPIRULINA"
+-    r")\s*[\(\[]\s*$",
++    r"BEET\s+(?:JUICE(?:\s+CONCENTRATE)?|POWDER|COLO(?:U)?R)|"
++    r"SPIRULINA(?:\s+EXTRACT)?|"
++    r"RIBOFLAVIN|"
++    r"IRON\s+OXIDES?"
++    r")\s*[\(\[\{]\s*(?:(?:AN?|THE|FOR|AS)\s+)*$",
++    re.IGNORECASE,
++)
++
++# Matches explicitly named FD&C / certified synthetic colors in the ingredient list
++_NAMED_FDC_COLOR_PATTERN = re.compile(
++    r"\b(?:"
++    r"(?:F\s*D\s*(?:&|AND|\+)?\s*C\s+)?"
++    r"(?:RED|YELLOW|BLUE|GREEN)"
++    r"(?:\s+DYE)?"
++    r"(?:\s*(?:NO\.?|NUMBER|#))?"
++    r"[\s.\-:]*\d+"
++    r"(?:\s*(?:&|AND)\s*(?:NO\.?|#)?\s*\d+)?"
++    r"(?:\s+(?:LAKE|DYE|ALUMINUM\s+LAKE))?|"
++    r"ALLURA\s+RED|"
++    r"TARTRAZINE|"
++    r"SUNSET\s+YELLOW|"
++    r"BRILLIANT\s+BLUE|"
++    r"INDIGOTINE|INDIGO\s+CARMINE|"
++    r"FAST\s+GREEN"
++    r")\b",
+     re.IGNORECASE,
+ )
+ 
+@@ -333,8 +357,12 @@
+ 
+ def _has_only_vague_artificial_color(text: str) -> tuple[re.Match[str] | None, str]:
+     """Detect when a label states a vague 'artificial color' (or equivalent) without specifying which color."""
++    has_named_fdc_color = _NAMED_FDC_COLOR_PATTERN.search(text) is not None
++    has_upper = any(c.isupper() for c in text)
+     for m in _VAGUE_COLOR_PATTERN.finditer(text):
+         if _PRECEDING_SPECIFIC_COLOR_PAREN.search(text[: m.start()]):
++            continue
++        if has_named_fdc_color and not (m.group(0).islower() and has_upper):
+             continue
+         return (
+             m,
