@@ -1,0 +1,36 @@
+--- a/recallstorm/route/packing.py
++++ b/recallstorm/route/packing.py
+@@ -41,8 +41,8 @@
+     """Compute how many integer cases fit in (avail_cube, avail_weight) and return (partial_stop, remaining_cases)."""
+     if cases <= 0 or avail_cube <= 0 or avail_weight <= 0:
+         return None, max(0, cases)
+-    by_cube = int(avail_cube // max(1e-6, unit_cube))
+-    by_wt = int(avail_weight // max(1e-6, unit_weight))
++    by_cube = int((avail_cube + 1e-9) // max(1e-6, unit_cube))
++    by_wt = int((avail_weight + 1e-9) // max(1e-6, unit_weight))
+     fit_cases = min(cases, by_cube, by_wt)
+     if fit_cases <= 0:
+         return None, cases
+@@ -110,6 +110,22 @@
+                 placed = True
+                 break
+         if not placed:
++            u_cu = cu / cases
++            u_wt = wt / cases
++            rem_cases = cases
++            for b in bins:
++                tr = b["truck"]
++                avail_cu = tr.cube_ft3 - b["cube"]
++                avail_wt = tr.weight_lb - b["weight"]
++                part_stop, rem_cases = split_stop(st_id, rem_cases, u_cu, u_wt, avail_cu, avail_wt)
++                if part_stop is not None:
++                    b["stops"].append(part_stop)
++                    b["cube"] += part_stop.cube_ft3
++                    b["weight"] += part_stop.weight_lb
++                if rem_cases == 0:
++                    placed = True
++                    break
++        if not placed:
+             raise RoutingError(f"Store {st_id} return load ({cu} ft3, {wt} lb) exceeds all trucks in DC")
+ 
+     manifests: list[RouteManifest] = []

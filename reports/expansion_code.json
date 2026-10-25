@@ -1,7 +1,7 @@
 {
   "gen_dir": "gen/expansion",
-  "generated_at": "2026-10-25T11:52:57",
-  "secs": 10.1,
+  "generated_at": "2026-10-25T13:05:00",
+  "secs": 9.5,
   "totals": {
     "files": 310,
     "parsed": 310,
@@ -20128,7 +20128,7 @@
     {
       "path": "tests/unit/test_ingest_vendor_catalog.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 61376,
       "tests": 1,
       "passed": 1,
@@ -20149,7 +20149,7 @@
     {
       "path": "tests/unit/test_ingest_vendor_catalog_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 61824,
       "tests": 1,
       "passed": 1,
@@ -20170,7 +20170,7 @@
     {
       "path": "tests/unit/test_ingest_usda_fdc.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 63117,
       "tests": 1,
       "passed": 1,
@@ -20191,7 +20191,7 @@
     {
       "path": "tests/unit/test_ingest_usda_fdc_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 63500,
       "tests": 1,
       "passed": 1,
@@ -20292,7 +20292,7 @@
         }
       ],
       "status": "failed",
-      "output_tail": "        assert extract_lot_codes(\"\") == []\n        assert recall_jurisdictions(\"Nationwide distribution\") == [\"US\"]\n        assert classify_recall_reason(\"Salmonella contamination\") == \"PATHOGEN\"\n>       assert classify_recall_reason(\"Undeclared milk\") == \"UNDECLARED_ALLERGEN\"\nE       AssertionError: assert 'PROHIBITED_ADDITIVE' == 'UNDECLARED_ALLERGEN'\nE         \nE         - UNDECLARED_ALLERGEN\nE         + PROHIBITED_ADDITIVE\ngen/expansion/tests/unit/test_ingest_openfda_enforcement_edge.py:18: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion/tests/unit/test_ingest_openfda_enforcement_edge.py::test_openfda_edge\n1 failed in 0.05s"
+      "output_tail": "        assert extract_lot_codes(\"\") == []\n        assert recall_jurisdictions(\"Nationwide distribution\") == [\"US\"]\n        assert classify_recall_reason(\"Salmonella contamination\") == \"PATHOGEN\"\n>       assert classify_recall_reason(\"Undeclared milk\") == \"UNDECLARED_ALLERGEN\"\nE       AssertionError: assert 'PROHIBITED_ADDITIVE' == 'UNDECLARED_ALLERGEN'\nE         \nE         - UNDECLARED_ALLERGEN\nE         + PROHIBITED_ADDITIVE\ngen/expansion/tests/unit/test_ingest_openfda_enforcement_edge.py:18: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion/tests/unit/test_ingest_openfda_enforcement_edge.py::test_openfda_edge\n1 failed in 0.06s"
     },
     {
       "path": "tests/unit/test_ingest_cpsc.py",
@@ -20339,7 +20339,7 @@
     {
       "path": "tests/unit/test_ingest_store_list.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 71911,
       "tests": 1,
       "passed": 1,
@@ -20360,7 +20360,7 @@
     {
       "path": "tests/unit/test_ingest_store_list_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 72274,
       "tests": 1,
       "passed": 1,
@@ -20423,7 +20423,7 @@
     {
       "path": "tests/unit/test_ingest_staffing.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.4,
       "tok": 75778,
       "tests": 1,
       "passed": 1,
@@ -20444,7 +20444,7 @@
     {
       "path": "tests/unit/test_ingest_staffing_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 76258,
       "tests": 1,
       "passed": 1,
@@ -20893,7 +20893,7 @@
     {
       "path": "tests/unit/test_rules_propylparaben.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 101615,
       "tests": 1,
       "passed": 1,
@@ -20914,7 +20914,7 @@
     {
       "path": "tests/unit/test_rules_propylparaben_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 101975,
       "tests": 1,
       "passed": 1,
@@ -20956,7 +20956,7 @@
     {
       "path": "tests/unit/test_rules_preemption_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 103737,
       "tests": 1,
       "passed": 1,
@@ -20977,7 +20977,7 @@
     {
       "path": "tests/unit/test_rules_model.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 105208,
       "tests": 1,
       "passed": 1,
@@ -21061,7 +21061,7 @@
     {
       "path": "tests/unit/test_rules_dates.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 108454,
       "tests": 1,
       "passed": 1,
@@ -21082,7 +21082,7 @@
     {
       "path": "tests/unit/test_rules_dates_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 108983,
       "tests": 1,
       "passed": 1,
@@ -21103,7 +21103,7 @@
     {
       "path": "tests/unit/test_rules_scope.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 110153,
       "tests": 1,
       "passed": 1,
@@ -21124,7 +21124,7 @@
     {
       "path": "tests/unit/test_rules_scope_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 110669,
       "tests": 1,
       "passed": 1,
@@ -21145,7 +21145,7 @@
     {
       "path": "tests/unit/test_rules_red3.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 112956,
       "tests": 1,
       "passed": 1,
@@ -21166,7 +21166,7 @@
     {
       "path": "tests/unit/test_rules_red3_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 113595,
       "tests": 1,
       "passed": 1,
@@ -21208,7 +21208,7 @@
     {
       "path": "tests/unit/test_rules_ab418_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 115786,
       "tests": 1,
       "passed": 1,
@@ -21229,7 +21229,7 @@
     {
       "path": "tests/unit/test_rules_bvo.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 117451,
       "tests": 1,
       "passed": 1,
@@ -21250,7 +21250,7 @@
     {
       "path": "tests/unit/test_rules_bvo_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 117809,
       "tests": 1,
       "passed": 1,
@@ -21313,7 +21313,7 @@
     {
       "path": "tests/unit/test_rules_carb_voc.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 121638,
       "tests": 1,
       "passed": 1,
@@ -21334,7 +21334,7 @@
     {
       "path": "tests/unit/test_rules_carb_voc_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 122008,
       "tests": 1,
       "passed": 1,
@@ -21691,7 +21691,7 @@
     {
       "path": "tests/unit/test_gs1_epcis.py",
       "rc": 1,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 142064,
       "tests": 1,
       "passed": 0,
@@ -21708,12 +21708,12 @@
         }
       ],
       "status": "failed",
-      "output_tail": "        ev = parse_epcis_event(raw)\n        ev2 = epcis_object_event(gtin, \"L2601\", \"WM1575\", \"2026-12-30T10:00:00Z\")\n        movs = epcis_to_movements([ev2, ev])\n>       assert movs[0][\"location\"] == \"DC_NORTH\"\nE       AssertionError: assert 'UNKNOWN_LOC' == 'DC_NORTH'\nE         \nE         - DC_NORTH\nE         + UNKNOWN_LOC\ngen/expansion/tests/unit/test_gs1_epcis.py:29: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion/tests/unit/test_gs1_epcis.py::test_epcis_functions - Ass...\n1 failed in 0.06s"
+      "output_tail": "        ev = parse_epcis_event(raw)\n        ev2 = epcis_object_event(gtin, \"L2601\", \"WM1575\", \"2026-12-30T10:00:00Z\")\n        movs = epcis_to_movements([ev2, ev])\n>       assert movs[0][\"location\"] == \"DC_NORTH\"\nE       AssertionError: assert 'UNKNOWN_LOC' == 'DC_NORTH'\nE         \nE         - DC_NORTH\nE         + UNKNOWN_LOC\ngen/expansion/tests/unit/test_gs1_epcis.py:29: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion/tests/unit/test_gs1_epcis.py::test_epcis_functions - Ass...\n1 failed in 0.05s"
     },
     {
       "path": "tests/unit/test_gs1_epcis_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 142453,
       "tests": 1,
       "passed": 1,
@@ -21755,7 +21755,7 @@
     {
       "path": "tests/unit/test_gs1_barcodes_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 144086,
       "tests": 1,
       "passed": 1,
@@ -21818,7 +21818,7 @@
     {
       "path": "tests/unit/test_gs1_digital_link.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 147683,
       "tests": 1,
       "passed": 1,
@@ -21839,7 +21839,7 @@
     {
       "path": "tests/unit/test_gs1_digital_link_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 147986,
       "tests": 1,
       "passed": 1,
@@ -21944,7 +21944,7 @@
     {
       "path": "tests/unit/test_store_backroom.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 154436,
       "tests": 1,
       "passed": 1,
@@ -21986,7 +21986,7 @@
     {
       "path": "tests/unit/test_store_signage.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 155941,
       "tests": 1,
       "passed": 1,
@@ -22007,7 +22007,7 @@
     {
       "path": "tests/unit/test_store_signage_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 156292,
       "tests": 1,
       "passed": 1,
@@ -22028,7 +22028,7 @@
     {
       "path": "tests/unit/test_store_layout.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 157532,
       "tests": 1,
       "passed": 1,
@@ -22049,7 +22049,7 @@
     {
       "path": "tests/unit/test_store_layout_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 157900,
       "tests": 1,
       "passed": 1,
@@ -22070,7 +22070,7 @@
     {
       "path": "tests/unit/test_store_facings.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 158993,
       "tests": 1,
       "passed": 1,
@@ -22091,7 +22091,7 @@
     {
       "path": "tests/unit/test_store_facings_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 159376,
       "tests": 1,
       "passed": 1,
@@ -22133,7 +22133,7 @@
     {
       "path": "tests/unit/test_store_exceptions_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 161444,
       "tests": 1,
       "passed": 1,
@@ -22154,7 +22154,7 @@
     {
       "path": "tests/unit/test_store_formats.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 162499,
       "tests": 1,
       "passed": 1,
@@ -22175,7 +22175,7 @@
     {
       "path": "tests/unit/test_store_formats_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 162839,
       "tests": 1,
       "passed": 1,
@@ -22406,7 +22406,7 @@
     {
       "path": "tests/unit/test_labor_assign.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 173372,
       "tests": 1,
       "passed": 1,
@@ -22427,7 +22427,7 @@
     {
       "path": "tests/unit/test_labor_assign_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 173906,
       "tests": 1,
       "passed": 1,
@@ -22658,7 +22658,7 @@
     {
       "path": "tests/unit/test_plan_exceptions_plan.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 186888,
       "tests": 1,
       "passed": 1,
@@ -22931,7 +22931,7 @@
     {
       "path": "tests/unit/test_plan_assemble_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 203837,
       "tests": 1,
       "passed": 1,
@@ -22952,7 +22952,7 @@
     {
       "path": "tests/unit/test_sim_walking.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 205878,
       "tests": 1,
       "passed": 1,
@@ -22973,7 +22973,7 @@
     {
       "path": "tests/unit/test_sim_walking_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 206234,
       "tests": 1,
       "passed": 1,
@@ -22994,7 +22994,7 @@
     {
       "path": "tests/unit/test_sim_disruptions.py",
       "rc": 0,
-      "secs": 0.7,
+      "secs": 0.4,
       "tok": 207816,
       "tests": 1,
       "passed": 1,
@@ -23015,7 +23015,7 @@
     {
       "path": "tests/unit/test_sim_disruptions_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 208268,
       "tests": 1,
       "passed": 1,
@@ -23036,7 +23036,7 @@
     {
       "path": "tests/unit/test_sim_events.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 209553,
       "tests": 1,
       "passed": 1,
@@ -23057,7 +23057,7 @@
     {
       "path": "tests/unit/test_sim_events_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 209925,
       "tests": 1,
       "passed": 1,
@@ -23078,7 +23078,7 @@
     {
       "path": "tests/unit/test_sim_replay.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 211311,
       "tests": 1,
       "passed": 1,
@@ -23099,7 +23099,7 @@
     {
       "path": "tests/unit/test_sim_replay_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 211856,
       "tests": 1,
       "passed": 1,
@@ -23120,7 +23120,7 @@
     {
       "path": "tests/unit/test_sim_metrics.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 213426,
       "tests": 1,
       "passed": 1,
@@ -23141,7 +23141,7 @@
     {
       "path": "tests/unit/test_sim_metrics_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 214054,
       "tests": 1,
       "passed": 1,
@@ -23162,7 +23162,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_scenario.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 216222,
       "tests": 1,
       "passed": 1,
@@ -23183,7 +23183,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_scenario_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 216706,
       "tests": 1,
       "passed": 1,
@@ -23204,7 +23204,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_lot_pull.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 218696,
       "tests": 1,
       "passed": 1,
@@ -23225,7 +23225,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_lot_pull_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 219137,
       "tests": 1,
       "passed": 1,
@@ -23246,7 +23246,7 @@
     {
       "path": "tests/unit/test_route_capacity.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 221253,
       "tests": 1,
       "passed": 1,
@@ -23267,7 +23267,7 @@
     {
       "path": "tests/unit/test_route_capacity_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 221651,
       "tests": 1,
       "passed": 1,
@@ -23288,7 +23288,7 @@
     {
       "path": "tests/unit/test_route_dispatch.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 222967,
       "tests": 1,
       "passed": 1,
@@ -23309,7 +23309,7 @@
     {
       "path": "tests/unit/test_route_dispatch_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 223345,
       "tests": 1,
       "passed": 1,
@@ -23414,7 +23414,7 @@
     {
       "path": "tests/unit/test_route_packing.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 230706,
       "tests": 1,
       "passed": 1,
@@ -23435,7 +23435,7 @@
     {
       "path": "tests/unit/test_route_packing_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 231363,
       "tests": 1,
       "passed": 1,
@@ -23456,7 +23456,7 @@
     {
       "path": "tests/unit/test_report_summary.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 233724,
       "tests": 1,
       "passed": 1,
@@ -23477,7 +23477,7 @@
     {
       "path": "tests/unit/test_report_summary_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 234187,
       "tests": 1,
       "passed": 1,
@@ -23604,7 +23604,7 @@
     {
       "path": "tests/unit/test_report_dashboard_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 240182,
       "tests": 1,
       "passed": 1,
@@ -23625,7 +23625,7 @@
     {
       "path": "tests/unit/test_cli_main.py",
       "rc": 0,
-      "secs": 3.3,
+      "secs": 3.4,
       "tok": 242376,
       "tests": 1,
       "passed": 1,
@@ -23688,7 +23688,7 @@
     {
       "path": "tests/integration/test_flow_02_ingest_to_rules.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 244071,
       "tests": 1,
       "passed": 1,
@@ -23751,7 +23751,7 @@
     {
       "path": "tests/integration/test_flow_05_allocate_and_route.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.4,
       "tok": 245724,
       "tests": 1,
       "passed": 1,

@@ -1,0 +1,1 @@
+wrote out/expansion_fda_lots_gs1_lotinv/plan.jsonl: 124 records, 65 shelf_tasks; 0 recalls crashed
