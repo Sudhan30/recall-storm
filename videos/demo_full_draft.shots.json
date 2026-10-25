@@ -1,6 +1,6 @@
 {
  "video": "videos/demo_full_draft.mp4",
- "duration": 156.63,
+ "duration": 165.19,
  "shots": [
   {
    "t": 0.0,
@@ -100,38 +100,46 @@
   },
   {
    "t": 87.13,
-   "dur": 6.43,
+   "dur": 5.77,
    "seg": "s4_exp1",
    "kind": "stats",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 93.57,
-   "dur": 4.27,
+   "t": 92.9,
+   "dur": 13.47,
    "seg": "s4_exp1",
    "kind": "still",
-   "src": "gallery_expansion",
+   "src": "compare_left",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 97.83,
-   "dur": 3.73,
+   "t": 106.37,
+   "dur": 5.63,
+   "seg": "s5a",
+   "kind": "still",
+   "src": "compare_both",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 112.0,
+   "dur": 2.5,
    "seg": "s5a",
    "kind": "term",
    "src": "agent_log",
    "label": "REAL CAPTURE \u00b7 terminal output"
   },
   {
-   "t": 101.57,
-   "dur": 8.77,
+   "t": 114.5,
+   "dur": 4.37,
    "seg": "s5a",
    "kind": "bars",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 110.33,
+   "t": 118.87,
    "dur": 5.63,
    "seg": "s5b",
    "kind": "cap",
@@ -139,31 +147,31 @@
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 115.97,
-   "dur": 4.6,
+   "t": 124.5,
+   "dur": 4.63,
    "seg": "s5b",
    "kind": "cap",
    "src": "map_replay",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 120.57,
-   "dur": 17.4,
+   "t": 129.13,
+   "dur": 17.37,
    "seg": "s5c",
    "kind": "stats",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 137.97,
-   "dur": 11.03,
+   "t": 146.5,
+   "dur": 11.07,
    "seg": "s6a",
    "kind": "ai",
    "src": "highway_trucks",
    "label": "AI-generated illustration"
   },
   {
-   "t": 149.0,
+   "t": 157.57,
    "dur": 7.63,
    "seg": "s6b",
    "kind": "title",
@@ -231,14 +239,14 @@
   {
    "id": "s4_exp1",
    "t": 87.12,
-   "dur": 10.7,
-   "say": "But consistent code isn't correct code. Our verifier ran the plan and found 8,441 mistakes, mostly one associate booked for two shelves at once.",
+   "dur": 19.26,
+   "say": "But consistent code isn't correct code. Our verifier ran the plan and found 8,441 mistakes. Each row here is one simulated associate. Red means Argon's plan sent the same person to two shelves at once: 7,631 double-bookings across 20 stores.",
    "beat": "Consistent isn't correct",
    "pending": null
   },
   {
    "id": "s5a",
-   "t": 97.82,
+   "t": 106.38,
    "dur": 12.5,
    "say": "A managed agent read the verifier's findings, found the 2 root causes, and fixed them. Mistakes went from 8,441 to 0, including in 10 stores it never saw.",
    "beat": "8,441 \u2192 0",
@@ -246,7 +254,7 @@
   },
   {
    "id": "s5b",
-   "t": 110.32,
+   "t": 118.88,
    "dur": 10.26,
    "say": "And the working core Argon wrote this morning, on 20 stores, overnight: tags flash, associates walk to each shelf, and every store goes green.",
    "beat": "The working core",
@@ -254,7 +262,7 @@
   },
   {
    "id": "s5c",
-   "t": 120.58,
+   "t": 129.14,
    "dur": 17.38,
    "say": "With three small logged fixes to its first draft, it found all 467 products with Red No. 3, pulled none of the 483 look-alikes, covered every one of 6,718 shelf spots, and finished every task before midnight.",
    "beat": "",
@@ -262,7 +270,7 @@
   },
   {
    "id": "s6a",
-   "t": 137.96,
+   "t": 146.51,
    "dur": 11.06,
    "say": "When a law changes overnight, a retailer needs the system built, checked and fixed fast. Argon writes the whole thing at once, the verifier proves it, the agent repairs it.",
    "beat": "Why it matters",
@@ -270,7 +278,7 @@
   },
   {
    "id": "s6b",
-   "t": 149.01,
+   "t": 157.57,
    "dur": 7.62,
    "say": "Simulated drill, simulated operations, every number from the verifier. Open source.",
    "beat": "",

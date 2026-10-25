@@ -162,8 +162,22 @@ async def scene_gallery(pg, out):
     await g.screenshot(path=str(out / f"gallery_expansion{SUF}.png"))
 
 
+async def scene_compare(p, base, out):
+    """viewer/compare.html (per-associate timelines). Header with the store dropdown is left out. 2x for crisp text."""
+    b = await p.chromium.launch(args=["--use-angle=metal", "--enable-gpu", "--ignore-gpu-blocklist"])
+    pg = await (await b.new_context(viewport={"width": 1920, "height": 1080}, device_scale_factor=2)).new_page()
+    await pg.goto(base.rstrip("/") + "/compare.html")
+    await pg.wait_for_timeout(2500)
+    await pg.locator("#L").screenshot(path=str(out / "compare_left.png"))
+    l, lg = await pg.locator("#L").bounding_box(), await pg.locator(".legend").bounding_box()
+    await pg.screenshot(path=str(out / "compare_both.png"),
+                        clip={"x": 0, "y": l["y"] - 10, "width": 1920, "height": lg["y"] + lg["height"] + 14 - (l["y"] - 10)})
+    await b.close()
+    print("compare stills")
+
+
 SCENES = {"map": scene_map, "store": scene_store, "cards": scene_cards, "verifier": scene_verifier,
-          "hops": scene_hops, "code": scene_code, "gallery": scene_gallery}
+          "compare": None, "hops": scene_hops, "code": scene_code, "gallery": scene_gallery}
 
 
 async def main():
@@ -179,6 +193,8 @@ async def main():
     out = pathlib.Path(a.out); out.mkdir(parents=True, exist_ok=True)
     async with async_playwright() as p:
         for s in a.scenes or list(SCENES):
+            if s == "compare":
+                await scene_compare(p, a.url, out); continue
             b, pg = await boot(p, a.url)
             try:
                 await SCENES[s](pg, out)

@@ -460,6 +460,52 @@
   "source": "patches/agent/LOG.jsonl",
   "field": "len(exp_openfda_lots.holdout.new_failures)"
  },
+ "agent.exp_route_packing.result": {
+  "value": "FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.result"
+ },
+ "agent.exp_route_packing.secs": {
+  "value": 44,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.secs (rounded)",
+  "raw": 43.7
+ },
+ "agent.exp_route_packing.before_failed": {
+  "value": 1,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.before.failed"
+ },
+ "agent.exp_route_packing.before_passed": {
+  "value": 6,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.before.passed"
+ },
+ "agent.exp_route_packing.after_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.after.failed"
+ },
+ "agent.exp_route_packing.after_passed": {
+  "value": 7,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.after.passed"
+ },
+ "agent.exp_route_packing.held_out": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.holdout.held_out"
+ },
+ "agent.exp_route_packing.held_out_fixed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_route_packing.holdout.held_out_fixed"
+ },
+ "agent.exp_route_packing.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(exp_route_packing.holdout.new_failures)"
+ },
  "exp1.visible": {
   "value": 254377,
   "source": "runs/expansion/hops.jsonl",
@@ -853,5 +899,35 @@
   "value": 10,
   "source": "patches/agent/LOG.jsonl",
   "field": "drill_holdout.held_stores with held_after == 0"
+ },
+ "exp1plan.double_bookings": {
+  "value": 7631,
+  "source": "viewer/data/compare.json",
+  "field": "sum of left.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+ },
+ "exp1plan.double_booking_stores": {
+  "value": 20,
+  "source": "viewer/data/compare.json",
+  "field": "len(left.stores)"
+ },
+ "exp1plan.double_bookings_shown_store": {
+  "value": 534,
+  "source": "viewer/data/compare.json",
+  "field": "left.stores[first].overlaps: on screen in the compare capture (not spoken; store ID not shown)"
+ },
+ "exp1fixed.double_bookings": {
+  "value": 0,
+  "source": "viewer/data/compare.json",
+  "field": "sum of right.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion_agentpatched/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+ },
+ "exp1fixed.double_booking_stores": {
+  "value": 20,
+  "source": "viewer/data/compare.json",
+  "field": "len(right.stores)"
+ },
+ "exp1fixed.double_bookings_shown_store": {
+  "value": 0,
+  "source": "viewer/data/compare.json",
+  "field": "right.stores[first].overlaps: on screen in the compare capture (not spoken; store ID not shown)"
  }
 }

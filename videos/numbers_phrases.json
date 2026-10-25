@@ -1,4 +1,26 @@
 {
+ "Each row is one simulated associate. Red means Argon's plan sent the same person to two shelves at once: 7,631 double-bookings across 20 stores": [
+  {
+   "key": "exp1plan.double_bookings",
+   "value": 7631,
+   "source": "viewer/data/compare.json",
+   "field": "sum of left.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+  },
+  {
+   "key": "exp1plan.double_booking_stores",
+   "value": 20,
+   "source": "viewer/data/compare.json",
+   "field": "len(left.stores)"
+  }
+ ],
+ "after the agent's fixes: 0 double-bookings": [
+  {
+   "key": "exp1fixed.double_bookings",
+   "value": 0,
+   "source": "viewer/data/compare.json",
+   "field": "sum of right.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion_agentpatched/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+  }
+ ],
  "nearly 300 California stores": [
   {
    "key": "stores_all.ca",

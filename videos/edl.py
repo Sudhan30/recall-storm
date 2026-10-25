@@ -113,14 +113,16 @@ def full(v):
          "shots": [{"kind": "term", "src": "exp_longest_test" if draft else "exp_longest_test_v2", "w": 1}], "min": 5.0},
         {"id": f"s4_{v}", "beat": "Consistent isn't correct",
          "say": "But consistent code isn't correct code. " + ("Our" if draft else "In the first run, our") +
-                " verifier ran the plan and found {exp1plan.mistakes} mistakes, mostly one associate booked for two "
-                "shelves at once.",
-         "shots": [{**MISTAKES, "w": 0.6}, {"kind": "still", "src": "gallery_expansion", "w": 0.4, "zoom": 0.05}]},
+                " verifier ran the plan and found {exp1plan.mistakes} mistakes. Each row here is one simulated associate. "
+                "Red means Argon's plan sent the same person to two shelves at once: {exp1plan.double_bookings} "
+                "double-bookings across {exp1plan.double_booking_stores} stores.",
+         "shots": [{**MISTAKES, "w": 0.3}, {"kind": "still", "src": "compare_left", "w": 0.7, "zoom": 0.04}]},
         {"id": "s5a", "beat": "{exp1plan.mistakes} → {exp1fixed.mistakes}",
          "say": "A managed agent read the verifier's findings, found the {agent.exp_root_causes} root causes, and fixed them. "
                 "Mistakes went from {exp1plan.mistakes} to {exp1fixed.mistakes}, including in {agent.exp_heldout_stores} "
                 "stores it never saw.",
-         "shots": [{"kind": "term", "src": "agent_log", "w": 0.3}, {**FIXLOOP, "w": 0.7}]},
+         "shots": [{"kind": "still", "src": "compare_both", "w": 0.45, "zoom": 0.03},
+                   {"kind": "term", "src": "agent_log", "w": 0.2}, {**FIXLOOP, "w": 0.35}]},
         {"id": "s5b", "beat": "The working core",
          "say": "And the working core Argon wrote this morning, on {core_patched.stores} stores, overnight: tags flash, "
                 "associates walk to each shelf, and every store goes green.",
@@ -154,10 +156,11 @@ def one_minute(v):
                    {"kind": "still", "src": "codewall_longest" if draft else "codewall_longest_v2", "w": 0.5, "zoom": 0.04}],
          "pending_text": "v2 tokens and cross-file links", "pending_secs": 5.0},
         {"id": "m5a", "beat": "{exp1plan.mistakes} → {exp1fixed.mistakes}",
-         "say": "Our verifier still found {exp1plan.mistakes} plan mistakes. A managed agent fixed the "
+         "say": "Our verifier still found {exp1plan.mistakes} plan mistakes. Red means one associate sent to two "
+                "shelves at once. A managed agent fixed the "
                 "{agent.exp_root_causes} root causes, and they went to {exp1fixed.mistakes}, even in "
                 "{agent.exp_heldout_stores} stores it never saw.",
-         "shots": [{**FIXLOOP, "w": 1}]},
+         "shots": [{"kind": "still", "src": "compare_both", "w": 0.6, "zoom": 0.03}, {**FIXLOOP, "w": 0.4}]},
         {"id": "m5b", "say": "The working core, on {core_patched.stores} stores, found all {core_patched.tp} products with "
                              "Red No. 3 and pulled none of the {core_patched.decoys} look-alikes.",
          "shots": [{**STORE, "w": 0.45, "b": 7}, {**FOUND, "w": 0.55}]},

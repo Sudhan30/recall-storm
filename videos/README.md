@@ -3,8 +3,8 @@
 | File | Length | What it is |
 |---|---|---|
 | `backup_core.mp4` | 1:31.3 (narration at 1.1× tempo) | Backup for demo steps 1-2: hook + working core |
-| `demo_full_draft.mp4` | 2:36.6 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
-| `one_minute.mp4` | 0:55.7 | Tight cut for the submission (v1 numbers) |
+| `demo_full_draft.mp4` | 2:45.2 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
+| `one_minute.mp4` | 0:58.2 | Tight cut for the submission (v1 numbers) |
 | `demo_full_final.mp4`, `one_minute_final.mp4` | not built yet | Final cuts. Same scripts with `{exp2.*}` numbers. They render `[v2 numbers pending]` cards until `runs/expansion_v2/` finishes |
 
 All videos are 1920x1080, 30 fps, H.264 (high) + AAC 48 kHz stereo, with captions burned in. Each `<video>.shots.json` lists
@@ -83,6 +83,10 @@ Any segment still missing a number or an asset renders a `[v2 numbers pending]` 
 - **No jargon** (precision, recall, hard errors). Numbers are phrased for a store manager. `numbers_phrases.json` maps
   every phrase to its keys and source files. "Plan mistakes" = verify_plan hard errors. "Cross-file links" = resolved
   cross-file references (`totals.d2_edges`). "314 files" = `totals.manifest_files_present` (310 of them parse as code).
+- **Compare capture (real):** `viewer/compare.html` (built by `viewer/build_compare.py`), captured at 2x by
+  `capture_viewer.py --url http://localhost:8000/viewer/ compare`. The header with the store dropdown is left out. 7,631
+  double-bookings is from `viewer/data/compare.json` (verify_plan's overlap rule). `reports/expansion_plan.json` has 7,632 labor
+  errors, which includes 1 over-shift-minutes error.
 - **New visuals (ours):** count-up cards (467 / 467 found, 0 / 483 look-alikes pulled, 6,718 / 6,718 shelf spots) and
   before -> after bars (first draft 25 -> 0 missed, 350 -> 0 shelf spots; plan mistakes 8,441 -> 0). Labelled
   "OURS · numbers from the verifier reports".

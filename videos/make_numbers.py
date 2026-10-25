@@ -207,7 +207,23 @@ for n in roots:
         held |= set(dh.get("held_stores", []))
 put("agent.exp_heldout_stores", len(held), "patches/agent/LOG.jsonl", "drill_holdout.held_stores with held_after == 0")
 
+cmp_p = ROOT / "viewer/data/compare.json"
+if cmp_p.exists():
+    cmp = json.loads(cmp_p.read_text())
+    for side, key in (("left", "exp1plan"), ("right", "exp1fixed")):
+        put(f"{key}.double_bookings", sum(st["overlaps"] for st in cmp[side]["stores"].values()), "viewer/data/compare.json",
+            f"sum of {side}.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on "
+            f"out/{'expansion' if side == 'left' else 'expansion_agentpatched'}/plan.jsonl); cross-check: "
+            f"reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error")
+        put(f"{key}.double_booking_stores", len(cmp[side]["stores"]), "viewer/data/compare.json", f"len({side}.stores)")
+        sid = next(iter(cmp[side]["stores"]))
+        put(f"{key}.double_bookings_shown_store", cmp[side]["stores"][sid]["overlaps"], "viewer/data/compare.json",
+            f"{side}.stores[first].overlaps: on screen in the compare capture (not spoken; store ID not shown)")
+
 PHRASES = {
+    "Each row is one simulated associate. Red means Argon's plan sent the same person to two shelves at once: "
+    "7,631 double-bookings across 20 stores": ["exp1plan.double_bookings", "exp1plan.double_booking_stores"],
+    "after the agent's fixes: 0 double-bookings": ["exp1fixed.double_bookings"],
     "nearly 300 California stores": ["stores_all.ca"],
     "the drill runs on 20 stores": ["core_patched.stores"],
     "Found all 467 products that contain Red No. 3": ["core_patched.tp", "core_patched.truth_pull"],

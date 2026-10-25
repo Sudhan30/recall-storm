@@ -1,6 +1,6 @@
 {
  "video": "videos/one_minute.mp4",
- "duration": 55.69,
+ "duration": 58.25,
  "shots": [
   {
    "t": 0.0,
@@ -36,14 +36,22 @@
   },
   {
    "t": 24.9,
-   "dur": 11.37,
+   "dur": 8.33,
+   "seg": "m5a",
+   "kind": "still",
+   "src": "compare_both",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 33.23,
+   "dur": 5.57,
    "seg": "m5a",
    "kind": "bars",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 36.27,
+   "t": 38.8,
    "dur": 4.33,
    "seg": "m5b",
    "kind": "cap",
@@ -51,23 +59,23 @@
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 40.6,
-   "dur": 5.27,
+   "t": 43.13,
+   "dur": 5.3,
    "seg": "m5b",
    "kind": "stats",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 45.87,
-   "dur": 4.43,
+   "t": 48.43,
+   "dur": 4.4,
    "seg": "m6",
    "kind": "ai",
    "src": "highway_trucks",
    "label": "AI-generated illustration"
   },
   {
-   "t": 50.3,
+   "t": 52.83,
    "dur": 5.4,
    "seg": "m6",
    "kind": "title",
@@ -95,14 +103,14 @@
   {
    "id": "m5a",
    "t": 24.92,
-   "dur": 11.34,
-   "say": "Our verifier still found 8,441 plan mistakes. A managed agent fixed the 2 root causes, and they went to 0, even in 10 stores it never saw.",
+   "dur": 13.9,
+   "say": "Our verifier still found 8,441 plan mistakes. Red means one associate sent to two shelves at once. A managed agent fixed the 2 root causes, and they went to 0, even in 10 stores it never saw.",
    "beat": "8,441 \u2192 0",
    "pending": null
   },
   {
    "id": "m5b",
-   "t": 36.25,
+   "t": 38.81,
    "dur": 9.62,
    "say": "The working core, on 20 stores, found all 467 products with Red No. 3 and pulled none of the 483 look-alikes.",
    "beat": "",
@@ -110,7 +118,7 @@
   },
   {
    "id": "m6",
-   "t": 45.87,
+   "t": 48.43,
    "dur": 9.82,
    "say": "Argon writes the whole thing at once, the verifier proves it, the agent repairs it. Simulated drill; every number from the verifier.",
    "beat": "Why it matters",
