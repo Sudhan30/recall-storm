@@ -1,0 +1,179 @@
+--- a/recallstorm/plan/tasks.py
++++ b/recallstorm/plan/tasks.py
+@@ -42,9 +42,12 @@
+     tz_name: str = "America/Los_Angeles",
+ ) -> list[str]:
+     """Compute a [start_iso, end_iso] task window strictly before deadline_dt."""
++    dur = max(1, duration_mins)
+     safe_end = deadline_dt - timedelta(minutes=5)
+-    w_start = min(start_dt, safe_end - timedelta(minutes=max(5, duration_mins)))
+-    w_end = min(safe_end, w_start + timedelta(minutes=max(5, duration_mins)))
++    if safe_end <= start_dt:
++        safe_end = deadline_dt - timedelta(minutes=1)
++    w_start = min(start_dt, safe_end - timedelta(minutes=dur))
++    w_end = min(safe_end, w_start + timedelta(minutes=dur))
+     return [iso_with_offset(w_start, tz_name), iso_with_offset(w_end, tz_name)]
+ 
+ 
+@@ -175,6 +178,46 @@
+     return record_with_src(payload, "shelf_task", "recallstorm/plan/tasks.py")
+ 
+ 
++def _assoc_task_window(
++    assoc: Associate | None,
++    base_start: datetime,
++    deadline: datetime,
++    tz_name: str,
++    task_idx: int,
++    total_tasks: int,
++) -> list[str]:
++    """Compute a non-overlapping window inside the associate's shift and before deadline."""
++    avail_start = assoc.shift_start if assoc is not None else base_start
++    shift_end = assoc.shift_end if assoc is not None else deadline
++    safe_deadline = deadline - timedelta(minutes=5)
++    if safe_deadline <= avail_start:
++        safe_deadline = deadline - timedelta(minutes=1)
++    avail_end = min(shift_end, safe_deadline)
++    if avail_end <= avail_start:
++        avail_end = min(shift_end, deadline)
++
++    count = max(1, total_tasks)
++    total_mins = int((avail_end - avail_start).total_seconds() // 60)
++
++    if total_mins >= 6 * count:
++        t_start = avail_start + timedelta(minutes=6 * task_idx)
++        return task_window(t_start, 5, avail_end + timedelta(minutes=5), tz_name)
++
++    if total_mins >= 2 * count:
++        step_mins = total_mins // count
++        dur_mins = max(1, step_mins - 1)
++        t_start = avail_start + timedelta(minutes=step_mins * task_idx)
++        w_end = t_start + timedelta(minutes=dur_mins)
++        return [iso_with_offset(t_start, tz_name), iso_with_offset(w_end, tz_name)]
++
++    total_secs = max(2 * count, int((avail_end - avail_start).total_seconds()))
++    step_secs = max(2, total_secs // count)
++    dur_secs = max(1, step_secs - max(1, step_secs // 5))
++    w_start = avail_start + timedelta(seconds=step_secs * task_idx)
++    w_end = min(avail_end, w_start + timedelta(seconds=dur_secs))
++    return [iso_with_offset(w_start, tz_name), iso_with_offset(w_end, tz_name)]
++
++
+ def build_shelf_tasks(
+     store: Store,
+     facings: list[Facing],
+@@ -202,12 +245,19 @@
+     if not local_assocs and associates:
+         local_assocs = [associates[0]]
+ 
++    valid_assocs = [a for a in local_assocs if min(a.shift_end, deadline) > a.shift_start]
++    if valid_assocs:
++        local_assocs = valid_assocs
++
+     base_start = local_assocs[0].shift_start if local_assocs else (deadline - timedelta(hours=8))
+-    tasks: list[dict] = []
++    assoc_by_id = {a.associate_id: a for a in local_assocs}
++    assoc_counts: dict[str, int] = {a.associate_id: 0 for a in local_assocs}
++
++    planned: list[tuple[Action, Facing, str, int, str, str | None, str | None]] = []
+     seq = 0
+     used_allocs: set[tuple[str, str]] = set()
+ 
+-    for idx, f in enumerate(store_facings):
++    for f in store_facings:
+         dec = decisions.get(f.sku_id)
+         if dec is None or dec.verdict == Verdict.KEEP:
+             continue
+@@ -215,43 +265,69 @@
+         if not ev:
+             continue
+         ev_id = ev["evidence_id"]
+-        assoc = local_assocs[idx % len(local_assocs)] if local_assocs else None
+-        aid = assoc.associate_id if assoc else f"{store.store_id}-A00"
+-        t_start = (assoc.shift_start if assoc else base_start) + timedelta(minutes=(seq * 4) % 240)
++        if local_assocs:
++            assoc = min(local_assocs, key=lambda a: (assoc_counts[a.associate_id], a.associate_id))
++            aid = assoc.associate_id
++        else:
++            aid = f"{store.store_id}-A00"
++            assoc_counts.setdefault(aid, 0)
+ 
+         if dec.verdict == Verdict.HOLD_VERIFY:
+             seq += 1
+-            win = task_window(t_start, 5, deadline, store.tz)
+-            tasks.append(hold_verify_task(store.store_id, f, aid, win, seq, ev_id))
++            assoc_counts[aid] += 1
++            planned.append((Action.HOLD_VERIFY, f, aid, seq, ev_id, None, None))
+             continue
+ 
+         if dec.verdict == Verdict.PULL:
+             seq += 1
+-            win_pull = task_window(t_start, 5, deadline, store.tz)
+-            tasks.append(pull_task(store.store_id, f, aid, win_pull, seq, ev_id))
++            assoc_counts[aid] += 1
++            planned.append((Action.PULL, f, aid, seq, ev_id, None, None))
+ 
+             sub_id = sub_for_pulled.get(f.sku_id)
+             alloc = allocations_by_store_sub.get((store.store_id, sub_id)) if sub_id else None
+             if alloc is not None and sub_id is not None and (store.store_id, sub_id) not in used_allocs:
+                 used_allocs.add((store.store_id, sub_id))
+                 seq += 1
+-                win_sub = task_window(t_start + timedelta(minutes=6), 6, deadline, store.tz)
+-                tasks.append(
+-                    place_sub_task(
+-                        store.store_id,
+-                        f,
+-                        sub_id,
+-                        alloc.alloc_id,
+-                        f.units,
+-                        aid,
+-                        win_sub,
+-                        seq,
+-                        ev_id,
+-                    )
+-                )
++                assoc_counts[aid] += 1
++                planned.append((Action.PLACE_SUB, f, aid, seq, ev_id, sub_id, alloc.alloc_id))
+             else:
+                 seq += 1
+-                win_tag = task_window(t_start + timedelta(minutes=6), 3, deadline, store.tz)
+-                tasks.append(tag_flash_task(store.store_id, f, aid, win_tag, seq, ev_id))
++                assoc_counts[aid] += 1
++                planned.append((Action.TAG_FLASH, f, aid, seq, ev_id, None, None))
++
++    tasks: list[dict] = []
++    assoc_cursor: dict[str, int] = {aid: 0 for aid in assoc_counts}
++
++    for action, f, aid, task_seq, ev_id, sub_id, alloc_id in planned:
++        idx_for_assoc = assoc_cursor[aid]
++        assoc_cursor[aid] = idx_for_assoc + 1
++        win = _assoc_task_window(
++            assoc_by_id.get(aid),
++            base_start,
++            deadline,
++            store.tz,
++            idx_for_assoc,
++            assoc_counts[aid],
++        )
++        if action == Action.HOLD_VERIFY:
++            tasks.append(hold_verify_task(store.store_id, f, aid, win, task_seq, ev_id))
++        elif action == Action.PULL:
++            tasks.append(pull_task(store.store_id, f, aid, win, task_seq, ev_id))
++        elif action == Action.PLACE_SUB:
++            tasks.append(
++                place_sub_task(
++                    store.store_id,
++                    f,
++                    sub_id or "",
++                    alloc_id or "",
++                    f.units,
++                    aid,
++                    win,
++                    task_seq,
++                    ev_id,
++                )
++            )
++        elif action == Action.TAG_FLASH:
++            tasks.append(tag_flash_task(store.store_id, f, aid, win, task_seq, ev_id))
+ 
+     return tasks

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recall Storm Status</title>
+<style>
+  :root { --bg:#0b0e14; --panel:#131824; --line:#232b3b; --text:#e6ebf3; --mute:#8a96ab; --green:#3ecf8e;
+          --amber:#f5b942; --red:#ff5f6d; --blue:#5aa9ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.45 system-ui,-apple-system,sans-serif; }
+  header { display:flex; align-items:baseline; gap:14px; padding:16px 20px 8px; flex-wrap:wrap; }
+  h1 { margin:0; font-size:22px; } h1 b { color:var(--red); }
+  .upd { color:var(--mute); font:13px ui-monospace,monospace; }
+  .stale { color:var(--red); font-weight:600; }
+  main { display:grid; grid-template-columns:repeat(auto-fit,minmax(380px,1fr)); gap:14px; padding:8px 16px 24px; }
+  section { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; min-width:0; }
+  h2 { margin:0 0 10px; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--mute); }
+  .big { font:700 34px/1.1 ui-monospace,monospace; } .sub { color:var(--mute); font-size:13px; }
+  .bar { height:10px; background:#1c2434; border-radius:5px; overflow:hidden; margin:8px 0 4px; }
+  .bar > i { display:block; height:100%; background:linear-gradient(90deg,var(--blue),var(--green)); }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  td, th { padding:5px 6px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  th { color:var(--mute); font-weight:500; } td.n { text-align:right; font-family:ui-monospace,monospace; }
+  .pill { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; font-weight:600; }
+  .ok { background:#103b2a; color:var(--green); } .warn { background:#3d3112; color:var(--amber); }
+  .bad { background:#3d1418; color:var(--red); } .run { background:#122a45; color:var(--blue); }
+  .dim { color:var(--mute); } .mono { font-family:ui-monospace,monospace; font-size:12.5px; }
+  .wide { grid-column:1/-1; }
+  @media (max-width:600px) { main { grid-template-columns:1fr; padding:8px; } .big { font-size:28px; } }
+</style>
+</head>
+<body>
+<header><h1>Recall <b>Storm</b> · live status</h1><span class="upd" id="upd">loading…</span></header>
+<main>
+  <section class="wide" id="hero"></section>
+  <section id="runs"><h2>Argon runs</h2><div id="runsBody"></div></section>
+  <section id="plans"><h2>Drill verifier (hard errors)</h2><div id="plansBody"></div></section>
+  <section id="repairs"><h2>Managed-agent repairs</h2><div id="repairsBody"></div></section>
+  <section id="clock"><h2>Schedule</h2><div id="clockBody"></div></section>
+  <section id="side"><h2>Side work</h2><div id="sideBody"></div></section>
+  <section id="git"><h2>Git</h2><div id="gitBody"></div></section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const k = (n) => n == null ? "—" : n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1) + "K" : String(n);
+const pill = (txt, cls) => `<span class="pill ${cls}">${esc(txt)}</span>`;
+
+function render(d) {
+  const v2 = d.runs.find((r) => r.name === "expansion_v2");
+  if (v2) {
+    const pct = v2.target ? Math.min(100, 100 * v2.visible / v2.target) : 0;
+    const seam = v2.seams ? `${v2.seams.pass} PASS · ${v2.seams.fail} FAIL · ${v2.seams.pending} pending` : "no seam yet";
+    $("hero").innerHTML = `<h2>Expansion v2 — one continued generation</h2>
+      <div class="big">${v2.visible.toLocaleString()} <span class="sub">visible tokens of ~${k(v2.target)} (spec estimate)</span></div>
+      <div class="bar"><i style="width:${pct.toFixed(1)}%"></i></div>
+      <div class="sub">${v2.running ? pill("RUNNING", "run") : pill(v2.finish || "STOPPED", v2.finish === "STOP" ? "ok" : "warn")}
+        &nbsp;hop ${v2.hops + (v2.running ? 1 : 0)} · ${v2.rate} tok/s · ${Math.round(v2.secs / 60)} min ·
+        ETA ${esc(v2.eta || "—")} · files ${v2.files}${v2.manifest ? " / " + v2.manifest + " (" + (100 * v2.files / v2.manifest).toFixed(0) + "%)" : " (manifest still streaming)"} · seams: ${seam}</div>`;
+  }
+  $("runsBody").innerHTML = `<table><tr><th>run</th><th>state</th><th class="n">visible</th><th class="n">hops</th><th class="n">files</th><th>seams</th></tr>` +
+    d.runs.map((r) => `<tr><td>${esc(r.name)}</td><td>${r.running ? pill("running", "run") : pill(r.finish || "—", r.finish === "STOP" ? "ok" : "warn")}</td>
+      <td class="n">${k(r.visible)}</td><td class="n">${r.hops}</td><td class="n">${r.files}${r.manifest ? "/" + r.manifest : ""}</td>
+      <td>${r.seams ? (r.seams.fail ? pill(r.seams.fail + " FAIL", "bad") : pill(r.seams.pass + " PASS", "ok")) : '<span class="dim">—</span>'}</td></tr>`).join("") + `</table>`;
+  $("plansBody").innerHTML = d.plans.length ? `<table><tr><th>build</th><th class="n">hard</th><th class="n">PULL P</th><th class="n">PULL R</th><th>top checks</th></tr>` +
+    d.plans.map((p) => {
+      const top = Object.entries(p.by_check || {}).map(([c, v]) => [c, typeof v === "object" ? v.hard : v]).filter(([, n]) => n).sort((a, b) => b[1] - a[1]).slice(0, 2)
+        .map(([c, n]) => `${esc(c)} ${k(n)}`).join(", ");
+      return `<tr><td>${esc(p.name)}</td><td class="n">${p.hard ? pill(k(p.hard), "bad") : pill("0", "ok")}</td>
+        <td class="n">${p.precision != null ? (+p.precision).toFixed(3) : "—"}</td><td class="n">${p.recall != null ? (+p.recall).toFixed(3) : "—"}</td><td class="dim">${top || "—"}</td></tr>`;
+    }).join("") + `</table>` : '<span class="dim">no reports yet</span>';
+  const res = (r) => ({ FIXED: "ok", IMPROVED: "warn", NOT_FIXED: "bad", CRASH: "bad", NO_PATCH: "bad" }[r] || "run");
+  $("repairsBody").innerHTML = (d.repair_running ? `<p>${pill("agent working", "run")}</p>` : "") +
+    (d.repairs.length ? `<table><tr><th>job</th><th>result</th><th>detail</th></tr>` + d.repairs.map((r) => {
+      const h = r.holdout, dh = r.drill_holdout;
+      const det = dh ? `labor: seen ${dh.shown_before}→${dh.shown_after}, held-out ${dh.held_before}→${dh.held_after}`
+        : `${esc(r.before?.summary || "")} → ${esc(r.after?.summary || "")}${h ? ` · held-out ${h.held_out_fixed}/${h.held_out} fixed, ${h.new_failures?.length ?? 0} new` : ""}`;
+      return `<tr><td>${esc(r.name)}</td><td>${pill(r.result || "—", res(r.result))}</td><td class="dim">${det} · ${Math.round(r.secs || 0)} s</td></tr>`;
+    }).join("") + `</table>` : '<span class="dim">none yet</span>');
+  $("clockBody").innerHTML = `<table>` + d.deadlines.map((x) => `<tr><td class="mono">${esc(x.at)}</td><td>${esc(x.label)}</td><td>${x.past ? pill("past", "dim") : ""}</td></tr>`).join("") + `</table>`;
+  $("sideBody").innerHTML = `<table>
+    <tr><td>Videos</td><td>${d.videos.length ? d.videos.map((v) => pill(v, "ok")).join(" ") : '<span class="dim">in progress</span>'}</td></tr>
+    <tr><td>openFDA lot scenario</td><td>${d.lots_reports.length ? d.lots_reports.map((v) => pill(v, "ok")).join(" ") : d.fda_lots_started ? pill("building", "run") : '<span class="dim">starting</span>'}</td></tr></table>`;
+  $("gitBody").innerHTML = `<p>${d.unpushed ? pill(d.unpushed + " unpushed", "warn") : pill("pushed", "ok")}</p><table>` +
+    d.git.map((g) => `<tr><td class="mono">${esc(g.hash)}</td><td class="dim">${esc(g.when)}</td><td>${esc(g.msg)}</td></tr>`).join("") + `</table>`;
+}
+
+async function tick() {
+  try {
+    const r = await fetch("data/status.json?t=" + Date.now(), { cache: "no-store" });
+    const d = await r.json();
+    render(d);
+    const [h, m, s] = d.updated.split(":").map(Number), now = new Date();
+    const age = (now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds()) - (h * 3600 + m * 60 + s);
+    $("upd").innerHTML = `updated ${esc(d.updated)}` + (age > 40 ? ` <span class="stale">· stale ${age}s — is tools/status.py running?</span>` : "");
+  } catch (e) {
+    $("upd").innerHTML = `<span class="stale">no status.json yet — run tools/status.py</span>`;
+  }
+}
+tick(); setInterval(tick, 5000);
+</script>
+</body>
+</html>

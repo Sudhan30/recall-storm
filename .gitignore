@@ -8,3 +8,5 @@ runs_*.out
 gen/core_patched/
 runs_expansion.start
 runs_*.start
+viewer/data/status.json
+viewer/data/status.tmp
