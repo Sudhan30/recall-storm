@@ -1,0 +1,30 @@
+{
+  "stream": "runs/b_allocate/stream.txt",
+  "stream_bytes": 9731,
+  "total_tok_est": 3096,
+  "token_map": {
+    "source": "stream_log+hops",
+    "points": 122,
+    "kind": "run",
+    "known_until_byte": 9731.0,
+    "points_kept": 121
+  },
+  "manifest": {
+    "found": true,
+    "terminated": true,
+    "bad_lines": 0,
+    "start_byte": 0,
+    "end_byte": 589,
+    "entries": 3
+  },
+  "blocks": 3,
+  "files_written": 3,
+  "unterminated": [],
+  "duplicates": [],
+  "fences_stripped": 0,
+  "manifest_missing_emitted": [],
+  "emitted_not_in_manifest": [],
+  "manifest_done_pct": 100.0,
+  "bytes_outside_blocks": 0,
+  "warnings": []
+}

@@ -1,0 +1,3 @@
+{"path": "recallstorm/__init__.py", "purpose": "Top-level Recall Storm package marker.", "public": [], "depends_on": []}
+{"path": "recallstorm/allocate/__init__.py", "purpose": "Substitute allocation package exposing allocate_substitutes.", "public": ["allocate_substitutes(demand, stock, stores) -> list[Allocation]"], "depends_on": ["contract.py"]}
+{"path": "tests/unit/test_allocate_substitutes.py", "purpose": "Unit tests for recallstorm.allocate.allocate_substitutes.", "public": [], "depends_on": ["contract.py", "recallstorm/allocate/__init__.py"]}

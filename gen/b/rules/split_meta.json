@@ -1,0 +1,30 @@
+{
+  "stream": "runs/b_rules/stream.txt",
+  "stream_bytes": 27976,
+  "total_tok_est": 10064,
+  "token_map": {
+    "source": "stream_log+hops",
+    "points": 1,
+    "kind": "none",
+    "known_until_byte": 27976.0,
+    "points_kept": 2
+  },
+  "manifest": {
+    "found": true,
+    "terminated": true,
+    "bad_lines": 0,
+    "start_byte": 0,
+    "end_byte": 1249,
+    "entries": 4
+  },
+  "blocks": 4,
+  "files_written": 4,
+  "unterminated": [],
+  "duplicates": [],
+  "fences_stripped": 0,
+  "manifest_missing_emitted": [],
+  "emitted_not_in_manifest": [],
+  "manifest_done_pct": 100.0,
+  "bytes_outside_blocks": 0,
+  "warnings": []
+}
