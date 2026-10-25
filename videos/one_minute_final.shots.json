@@ -1,6 +1,6 @@
 {
  "video": "videos/one_minute_final.mp4",
- "duration": 59.34,
+ "duration": 58.87,
  "shots": [
   {
    "t": 0.0,
@@ -20,63 +20,63 @@
   },
   {
    "t": 11.03,
-   "dur": 7.53,
+   "dur": 7.47,
    "seg": "m3_exp2",
    "kind": "still",
    "src": "hops_expansion_v2",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 18.57,
-   "dur": 7.53,
+   "t": 18.5,
+   "dur": 7.47,
    "seg": "m3_exp2",
    "kind": "still",
    "src": "codewall_longest_v2",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 26.1,
-   "dur": 9.0,
+   "t": 25.97,
+   "dur": 9.1,
    "seg": "m5a_v2",
    "kind": "still",
    "src": "compare_both_v2",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 35.1,
-   "dur": 6.0,
+   "t": 35.07,
+   "dur": 6.07,
    "seg": "m5a_v2",
    "kind": "bars",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 41.1,
-   "dur": 4.07,
+   "t": 41.13,
+   "dur": 4.0,
    "seg": "m5b",
    "kind": "cap",
    "src": "store3d",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 45.17,
-   "dur": 4.97,
+   "t": 45.13,
+   "dur": 4.87,
    "seg": "m5b",
    "kind": "stats",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 50.13,
-   "dur": 4.13,
+   "t": 50.0,
+   "dur": 4.0,
    "seg": "m6",
    "kind": "ai",
    "src": "highway_trucks",
    "label": "AI-generated illustration"
   },
   {
-   "t": 54.27,
-   "dur": 5.07,
+   "t": 54.0,
+   "dur": 4.87,
    "seg": "m6",
    "kind": "title",
    "src": "end_full",
@@ -87,39 +87,39 @@
   {
    "id": "m1",
    "t": 0.0,
-   "dur": 11.05,
+   "dur": 11.02,
    "say": "On January 1st, 2027, California bans food with Red No. 3. Stores get one overnight shift to clear it, even when it hides as erythrosine or E127.",
    "beat": "One night to clear the shelves",
    "pending": null
   },
   {
    "id": "m3_exp2",
-   "t": 11.05,
-   "dur": 15.05,
+   "t": 11.02,
+   "dur": 14.95,
    "say": "Gemini 4 Argon holds the whole system in one continued generation: 646,825 tokens of code, and after a one-line fix, every one of its 6,581 cross-file links lines up.",
    "beat": "The whole system in one generation",
    "pending": null
   },
   {
    "id": "m5a_v2",
-   "t": 26.1,
-   "dur": 15.01,
+   "t": 25.97,
+   "dur": 15.16,
    "say": "In that run, our verifier found 21,459 plan mistakes, mostly one associate sent to two shelves at once, or outside their shift. A managed agent fixed the root cause: scheduling mistakes went to zero, even in 10 stores it never saw.",
    "beat": "Scheduling mistakes \u2192 0",
    "pending": null
   },
   {
    "id": "m5b",
-   "t": 41.11,
-   "dur": 9.02,
+   "t": 41.13,
+   "dur": 8.86,
    "say": "The working core, on 20 stores, found all 467 products with Red No. 3 and pulled none of the 483 look-alikes.",
    "beat": "",
    "pending": null
   },
   {
    "id": "m6",
-   "t": 50.13,
-   "dur": 9.21,
+   "t": 49.99,
+   "dur": 8.88,
    "say": "Argon writes the whole thing at once, the verifier proves it, the agent repairs it. Simulated drill; every number from the verifier.",
    "beat": "Why it matters",
    "pending": null

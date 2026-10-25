@@ -2,12 +2,12 @@
 
 | File | Length | What it is |
 |---|---|---|
-| `backup_core.mp4` | 1:31.3 (narration at 1.1× tempo) | Backup for demo steps 1-2: hook + working core |
+| `backup_core.mp4` | 1:31.7 (narration 1.02×) | Backup for demo steps 1-2: hook + working core |
 | `demo_full_draft.mp4` | 2:45.2 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
 | `one_minute.mp4` | 0:58.2 | Tight cut for the submission (v1 numbers) |
-| `demo_full_final.mp4` | 2:38.1 (narration 1.06×) | **Final cut, v2 only.** Same story and wording as `submission_90s`, with more detail in the two experiment beats and the working core |
-| `submission_90s.mp4` | 1:34.5 (narration 1.15×) | **Submission cut**: "why one generation". v2 numbers only, a 1.2 s silent pause before "And it passes" (live pytest: 1 passed) |
-| `one_minute_final.mp4` | 0:59.3 (narration 1.07×) | **Final one-minute cut, v2 only** |
+| `demo_full_final.mp4` | 2:37.3 | **Final cut, v2 only.** Same story and wording as `submission_90s`, with more detail in the two experiment beats and the working core |
+| `submission_90s.mp4` | 1:34.0 (narration 1.06×) | **Submission cut**: "why one generation". v2 numbers only, a 1.2 s silent pause before "And it passes" (live pytest: 1 passed) |
+| `one_minute_final.mp4` | 0:58.9 (narration 1.02×) | **Final one-minute cut, v2 only** |
 
 All videos are 1920x1080, 30 fps, H.264 (high) + AAC 48 kHz stereo, with captions burned in. Each `<video>.shots.json` lists
 every shot (start, duration, kind, source, on-screen label) and every narration line as spoken.
@@ -38,6 +38,16 @@ uses `{key}` placeholders, so a spoken number cannot drift from its source. Spec
 - `live.longest_tests_passed` (9) comes from a live pytest run of the code wall's longest passing call (`assets/term/exp_longest_test.txt`). It is real output but not one of the report files. The narration only says "They pass"; the 9 is visible in the terminal shot.
 - Rounding: precision/recall are rounded to 3 dp (0.9465 → 0.947, which matches the viewer).
 - `exp2.*` keys are `null` with `"pending": true` until `runs/expansion_v2/hops.jsonl` ends with `STOP` and `reports/expansion_v2_{seams,code}.json` exist.
+
+## Audio (fixed 16:20-16:33)
+
+`gemini-3.8-flash-tts` returns a whole WAV file (`audio/wav`), and `gen_tts.py` used to write those bytes as raw PCM. So
+every line began with the 44-byte header and ended with a 6,072-byte metadata chunk, about 0.13 s of static at roughly
+-6 dBFS. The other Gemini TTS models return raw PCM. All clips in `assets/vo/` were unwrapped in place (same takes;
+nested originals in `raw/vo_nested_backup/`), and `gen_tts.py` now unwraps WAV responses. `build.py` cleans each clip:
+`afftdn` de-hiss, leading/trailing silence trimmed at -40 dB, and 20 ms fades. The mix is exact zeros between lines,
+gets a fixed gain to -1.5 dBFS peak (no loudness filter), and is copied mono to both stereo channels.
+`python videos/check_audio.py <video>` checks the decoded mp4 in 100 ms windows.
 
 ## Rebuild
 
