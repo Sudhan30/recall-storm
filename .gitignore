@@ -14,3 +14,4 @@ gen/expansion_agentpatched/
 .DS_Store
 viewer/data/compare.json
 reports/demo_plan.json
+gen/expansion_v2_agentpatched/

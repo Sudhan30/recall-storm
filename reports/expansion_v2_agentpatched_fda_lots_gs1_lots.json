@@ -1,0 +1,4233 @@
+{
+  "plan": "out/expansion_v2_agentpatched_fda_lots_gs1/plan.jsonl",
+  "scenario": "fda_lots",
+  "deadline": "2026-12-31T08:00:00-08:00",
+  "records": {
+    "run": 41,
+    "sku_verdict": 1600,
+    "store_playbook": 800
+  },
+  "shelf_tasks": 0,
+  "hard_errors": 276,
+  "by_check": {
+    "hold": {
+      "hard": 0,
+      "soft": 187
+    },
+    "coverage": {
+      "hard": 276,
+      "soft": 0
+    }
+  },
+  "lots": {
+    "labeled": 1002,
+    "truth": {
+      "HOLD_VERIFY": 187,
+      "PULL": 276,
+      "KEEP": 539
+    },
+    "tp": 0,
+    "fp": 0,
+    "fn": 276,
+    "precision": null,
+    "recall": 0.0,
+    "units": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2711
+    },
+    "non_recalled_lots_pulled": 0,
+    "hold_lots_pulled": 0,
+    "confusion": {
+      "HOLD_VERIFY": {
+        "NONE": 187
+      },
+      "PULL": {
+        "NONE": 276
+      },
+      "KEEP": {
+        "NONE": 539
+      }
+    }
+  },
+  "coverage": {
+    "pull_lots": 276,
+    "pull_lots_tasked": 0,
+    "rate": 0.0
+  },
+  "by_src": {
+    "<data>": {
+      "hold:soft": 187,
+      "coverage:hard": 276
+    }
+  },
+  "errors": [
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'H25-201B' of FDAF05462025 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'd25011a' of FDAF05462025 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'A24-206B' of FDAF12162024 at SAMS4735 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'C25221A' of FDAH04872025 at SAMS4735 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '1106' of FDAH09102026 at SAMS4735 has no PULL task (recall H-0910-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '049219' of FDAH09102026 at SAMS4735 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'J25-065A' of FDAH11292026 at SAMS4735 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'g25351a' of FDAH11292026 at SAMS4735 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P24-354A' of FDAH12682026 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'W26-030A' of FDAH12682026 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'F24-268B' of FDAH12682026 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2025121301' of FDAH12702026 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'L26248C' of FDAH12702026 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2024121501' of FDAH12702026 at SAMS4735 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'G26100C' of FDAH00142027 at SAMS4767 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'V25349B' of FDAH00142027 at SAMS4767 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'N26316A' of FDAH00142027 at SAMS4767 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'r24041b' of FDAH03232025 at SAMS4767 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT X25199A' of FDAH06002026 at SAMS4767 has no PULL task (recall H-0600-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '04-06' of FDAH09102026 at SAMS4767 has no PULL task (recall H-0910-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '048236' of FDAH09102026 at SAMS4767 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W25-060A' of FDAH11292026 at SAMS4767 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'M26-346A' of FDAH11292026 at SAMS4767 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W26060A' of FDAH13332026 at SAMS4767 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'w26150b' of FDAF05462025 at SAMS6405 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT F25056C' of FDAF05462025 at SAMS6405 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'm24130b' of FDAF05462025 at SAMS6405 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT V24041C' of FDAH00142027 at SAMS6405 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K25084C' of FDAH00142027 at SAMS6405 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P26316A' of FDAH00142027 at SAMS6405 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'K25330B' of FDAH04692025 at SAMS6405 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT D24339B' of FDAH04692025 at SAMS6405 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B25-302C' of FDAH06002026 at SAMS6405 has no PULL task (recall H-0600-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 215' of FDAH06862026 at SAMS6405 has no PULL task (recall H-0686-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B2025' of FDAH08092026 at SAMS6405 has no PULL task (recall H-0809-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '049021' of FDAH09102026 at SAMS6405 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'X25083A' of FDAH13332026 at SAMS6405 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'V24327B' of FDAH13872026 at SAMS6405 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'E25001C' of FDAH13942026 at SAMS6405 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'I24B-I01A' of FDAF06942025 at SAMS6621 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'E25041A' of FDAH00142027 at SAMS6621 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'G24093A' of FDAH00142027 at SAMS6621 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '05-45' of FDAH02602025 at SAMS6621 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U26042A' of FDAH05482026 at SAMS6621 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U25-079C' of FDAH05482026 at SAMS6621 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT N25036C' of FDAH12702026 at SAMS6621 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'j24105c' of FDAH12702026 at SAMS6621 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'e25188c' of FDAF02642025 at WM1563 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'V25193B' of FDAF02642025 at WM1563 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 's25351a' of FDAF02642025 at WM1563 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT W24018B' of FDAF05462025 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'H25074C' of FDAF05462025 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'H24350A' of FDAH00142027 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT T26041A' of FDAH00142027 at WM1563 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '42-82' of FDAH01342026 at WM1563 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '1198' of FDAH02602025 at WM1563 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528D911' of FDAH05372026 at WM1563 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT A26178B' of FDAH05482026 at WM1563 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25086' of FDAH05762025 at WM1563 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'UI775' of FDAH08982026 at WM1563 has no PULL task (recall H-0898-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '049222' of FDAH09102026 at WM1563 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'R24227B' of FDAH11522026 at WM1563 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'L24148B' of FDAH11522026 at WM1563 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT CA1G24' of FDAH11902026 at WM1563 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'j25105a' of FDAH12682026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S25110A' of FDAH12682026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S24329A' of FDAH12702026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'ng2024121501' of FDAH12702026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S26-108C' of FDAH12782026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT 224' of FDAH12782026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'j26008a' of FDAH12782026 at WM1563 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N24-099C' of FDAH13302026 at WM1563 has no PULL task (recall H-1330-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT S24342C' of FDAH13332026 at WM1563 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B25010C' of FDAH13332026 at WM1563 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'C24-185C' of FDAH13872026 at WM1563 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 't26002b' of FDAH13942026 at WM1563 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'Z26334B' of FDAH13942026 at WM1563 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'Z25020B' of FDAF05462025 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'F24014A' of FDAF05462025 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'L26-096B' of FDAF05462025 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'M24136B' of FDAH00142027 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K25291C' of FDAH00142027 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'T25332C' of FDAH00142027 at WM1574 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 4213' of FDAH01342026 at WM1574 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '1198' of FDAH02602025 at WM1574 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'F25318B' of FDAH04692025 at WM1574 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT D26230B' of FDAH04872025 at WM1574 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W25267B' of FDAH04872025 at WM1574 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT R25182C' of FDAH05482026 at WM1574 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25084' of FDAH05762025 at WM1574 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25-086' of FDAH05762025 at WM1574 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT C25139C' of FDAH06002026 at WM1574 has no PULL task (recall H-0600-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'UI775' of FDAH08982026 at WM1574 has no PULL task (recall H-0898-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '048766' of FDAH09102026 at WM1574 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '049-022' of FDAH09102026 at WM1574 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K26188A' of FDAH10752026 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C26339C' of FDAH10752026 at WM1574 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W24014C' of FDAH11292026 at WM1574 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'n26164a' of FDAH11292026 at WM1574 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'CA1G24' of FDAH11902026 at WM1574 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'DYY022' of FDAH12782026 at WM1574 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT M26201C' of FDAH12782026 at WM1574 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'h25302a' of FDAH13302026 at WM1574 has no PULL task (recall H-1330-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'K24025C' of FDAH13332026 at WM1574 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'J26-107A' of FDAH13332026 at WM1574 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W25160A' of FDAH13872026 at WM1574 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT V25105B' of FDAF02642025 at WM1575 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N26-036C' of FDAF02642025 at WM1575 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 't25121b' of FDAF02642025 at WM1575 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT S25258A' of FDAF12162024 at WM1575 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'X26074A' of FDAH00142027 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'H26-001B' of FDAH00142027 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT R24229C' of FDAH00142027 at WM1575 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4212' of FDAH01342026 at WM1575 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0640' of FDAH02602025 at WM1575 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'A26365A' of FDAH04692025 at WM1575 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'H26120A' of FDAH04692025 at WM1575 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528d911' of FDAH05372026 at WM1575 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25086' of FDAH05762025 at WM1575 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT B2025' of FDAH08092026 at WM1575 has no PULL task (recall H-0809-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT UI775' of FDAH08982026 at WM1575 has no PULL task (recall H-0898-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '049022' of FDAH09102026 at WM1575 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'E24190A' of FDAH10752026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S26342C' of FDAH10752026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'S24148A' of FDAH11292026 at WM1575 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2800' of FDAH11852026 at WM1575 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'Z24025A' of FDAH12682026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT P25072B' of FDAH12682026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'Y26-282C' of FDAH12702026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C24323B' of FDAH12702026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT NG2024121501' of FDAH12702026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT C24361A' of FDAH12782026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT 061' of FDAH12782026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '224' of FDAH12782026 at WM1575 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT Z26078B' of FDAH13872026 at WM1575 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT E24191C' of FDAF02642025 at WM1588 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'u24096a' of FDAF02642025 at WM1588 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'h25221a' of FDAF02642025 at WM1588 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'J24315C' of FDAF05462025 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT G24144A' of FDAF05462025 at WM1588 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'I24BI01A' of FDAF06942025 at WM1588 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'h26357c' of FDAH00142027 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'X26-189C' of FDAH00142027 at WM1588 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0450' of FDAH02602025 at WM1588 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0545' of FDAH02602025 at WM1588 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'r24026a' of FDAH06002026 at WM1588 has no PULL task (recall H-0600-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'b2025' of FDAH08092026 at WM1588 has no PULL task (recall H-0809-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'd25066a' of FDAH10752026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT G25005B' of FDAH10752026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'u26192b' of FDAH10752026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'J25-347C' of FDAH11292026 at WM1588 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '60D-0924' of FDAH11742026 at WM1588 has no PULL task (recall H-1174-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2800' of FDAH11852026 at WM1588 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'M25275A' of FDAH12332026 at WM1588 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT P24002C' of FDAH12682026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT B26335A' of FDAH12682026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT G26115B' of FDAH12682026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2025121301' of FDAH12702026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2024121501' of FDAH12702026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'n25148c' of FDAH12782026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '224' of FDAH12782026 at WM1588 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'c24326a' of FDAH13302026 at WM1588 has no PULL task (recall H-1330-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT B26204A' of FDAH13332026 at WM1588 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'R25212A' of FDAH13942026 at WM1588 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'l26211b' of FDAF02642025 at WM1608 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'S25126B' of FDAF02642025 at WM1608 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'K26-344B' of FDAF02642025 at WM1608 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT F26174A' of FDAF05462025 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'm26173b' of FDAF05462025 at WM1608 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'h25054b' of FDAF14832024 at WM1608 has no PULL task (recall F-1483-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'p25255c' of FDAH00142027 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'H25215A' of FDAH00142027 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT R25054B' of FDAH00142027 at WM1608 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4213' of FDAH01342026 at WM1608 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0545' of FDAH02602025 at WM1608 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '1198' of FDAH02602025 at WM1608 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'v24195c' of FDAH04692025 at WM1608 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 0528D911' of FDAH05372026 at WM1608 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B2025' of FDAH08092026 at WM1608 has no PULL task (recall H-0809-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K26313A' of FDAH10752026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'c24347a' of FDAH10752026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT V26149B' of FDAH11292026 at WM1608 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'K26329A' of FDAH11292026 at WM1608 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '60D-0924' of FDAH11742026 at WM1608 has no PULL task (recall H-1174-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2782' of FDAH11852026 at WM1608 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'ca1g24' of FDAH11902026 at WM1608 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N24333B' of FDAH12332026 at WM1608 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'U24121C' of FDAH12702026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'V25120C' of FDAH12702026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 't24093a' of FDAH12702026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT P24165C' of FDAH12782026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '061' of FDAH12782026 at WM1608 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'J25128A' of FDAH13332026 at WM1608 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'F26090A' of FDAH13332026 at WM1608 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'V24283C' of FDAH13942026 at WM1608 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT Z25060A' of FDAH13942026 at WM1608 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 's24335c' of FDAF05462025 at WM1616 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT W25196B' of FDAF05462025 at WM1616 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT P25294C' of FDAH00142027 at WM1616 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'd26007b' of FDAH00142027 at WM1616 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4213' of FDAH01342026 at WM1616 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0545' of FDAH02602025 at WM1616 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'P25-221A' of FDAH03232025 at WM1616 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'A25140C' of FDAH05482026 at WM1616 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'S25253B' of FDAH05482026 at WM1616 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 215' of FDAH06862026 at WM1616 has no PULL task (recall H-0686-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B2-025' of FDAH08092026 at WM1616 has no PULL task (recall H-0809-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '046391' of FDAH09102026 at WM1616 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT T25152C' of FDAH11292026 at WM1616 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'J25-246B' of FDAH11292026 at WM1616 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2800' of FDAH11852026 at WM1616 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C26-093C' of FDAH12682026 at WM1616 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'u24273c' of FDAH12682026 at WM1616 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'E26072B' of FDAH12702026 at WM1616 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P24124C' of FDAH12702026 at WM1616 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'K24101A' of FDAF02642025 at WM1630 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'M26-210A' of FDAF02642025 at WM1630 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'R25267B' of FDAF02642025 at WM1630 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K24-291C' of FDAF05462025 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT Y24030A' of FDAF05462025 at WM1630 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'I24BI01A' of FDAF06942025 at WM1630 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N24165A' of FDAF12162024 at WM1630 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'F26197A' of FDAF12162024 at WM1630 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT E24361C' of FDAH00142027 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'V26-110C' of FDAH00142027 at WM1630 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U25291A' of FDAH03232025 at WM1630 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528D911' of FDAH05372026 at WM1630 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'Z26-146C' of FDAH05482026 at WM1630 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25084' of FDAH05762025 at WM1630 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '1176' of FDAH09102026 at WM1630 has no PULL task (recall H-0910-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'J26282C' of FDAH10752026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'T24-158C' of FDAH10752026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 2800' of FDAH11852026 at WM1630 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2782' of FDAH11852026 at WM1630 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'X26-205C' of FDAH12332026 at WM1630 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K26-146B' of FDAH12682026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K25-068B' of FDAH12682026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'ng2024121501' of FDAH12702026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'j26164c' of FDAH12702026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'X26284C' of FDAH12782026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '061' of FDAH12782026 at WM1630 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT J25316B' of FDAH13332026 at WM1630 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '05222025' of FDAH13712026 at WM1630 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 01222026' of FDAH13712026 at WM1630 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'X25126B' of FDAH13942026 at WM1630 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT K26130C' of FDAH13942026 at WM1630 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'T26-148A' of FDAF02642025 at WM1899 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'X26259A' of FDAF02642025 at WM1899 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'A24129C' of FDAF05462025 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT N26142B' of FDAF05462025 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'L25320C' of FDAF05462025 at WM1899 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'i24bi01a' of FDAF06942025 at WM1899 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'm26261b' of FDAF12162024 at WM1899 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'C24157B' of FDAF12162024 at WM1899 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'a26231c' of FDAH00142027 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'R25-240A' of FDAH00142027 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'A26184C' of FDAH00142027 at WM1899 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT A24281B' of FDAH03232025 at WM1899 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT B26163C' of FDAH04872025 at WM1899 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528D911' of FDAH05372026 at WM1899 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT E25241A' of FDAH06002026 at WM1899 has no PULL task (recall H-0600-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '215' of FDAH06862026 at WM1899 has no PULL task (recall H-0686-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '046391' of FDAH09102026 at WM1899 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2782' of FDAH11852026 at WM1899 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2800' of FDAH11852026 at WM1899 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'P24-011C' of FDAH12332026 at WM1899 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'A24137B' of FDAH12332026 at WM1899 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'D25236C' of FDAH12682026 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'A24270B' of FDAH12682026 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'L26160C' of FDAH12702026 at WM1899 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S25012A' of FDAH12702026 at WM1899 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'M25-050A' of FDAH13302026 at WM1899 has no PULL task (recall H-1330-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N25326A' of FDAH13332026 at WM1899 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'E25244C' of FDAH13872026 at WM1899 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT G25184B' of FDAH13942026 at WM1899 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'G26037A' of FDAH13942026 at WM1899 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT J25216C' of FDAF02642025 at WM1912 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'L24-274C' of FDAF02642025 at WM1912 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'm24188b' of FDAF05462025 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K24103A' of FDAF05462025 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT L26021A' of FDAF05462025 at WM1912 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'i24bi01a' of FDAF06942025 at WM1912 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'E24055A' of FDAF12162024 at WM1912 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'P24249B' of FDAF12162024 at WM1912 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'E26159C' of FDAH00142027 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'N25248C' of FDAH00142027 at WM1912 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '42-82' of FDAH01342026 at WM1912 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4213' of FDAH01342026 at WM1912 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'G24167B' of FDAH03232025 at WM1912 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT B24161C' of FDAH03232025 at WM1912 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'K26001A' of FDAH04872025 at WM1912 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B26235A' of FDAH04872025 at WM1912 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25084' of FDAH05762025 at WM1912 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'W24157B' of FDAH10752026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C25332C' of FDAH10752026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'A24361C' of FDAH11292026 at WM1912 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'V24313A' of FDAH11522026 at WM1912 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT A25225B' of FDAH11522026 at WM1912 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 2800' of FDAH11852026 at WM1912 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'CA1G24' of FDAH11902026 at WM1912 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W25085B' of FDAH12332026 at WM1912 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'N25081A' of FDAH12682026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'G24116B' of FDAH12682026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'J25115A' of FDAH12702026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2025121301' of FDAH12702026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2024121501' of FDAH12702026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '061' of FDAH12782026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '224' of FDAH12782026 at WM1912 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'H25295B' of FDAH13332026 at WM1912 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'Y26179C' of FDAH13332026 at WM1912 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '08212025' of FDAH13712026 at WM1912 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 06122025' of FDAH13712026 at WM1912 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'N25311A' of FDAF05462025 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'V25241A' of FDAF05462025 at WM2028 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'S25187C' of FDAF12162024 at WM2028 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT S25239C' of FDAH00142027 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'A26061A' of FDAH00142027 at WM2028 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4213' of FDAH01342026 at WM2028 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '42-12' of FDAH01342026 at WM2028 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '11-98' of FDAH02602025 at WM2028 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'C26270B' of FDAH04872025 at WM2028 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'M26223C' of FDAH04872025 at WM2028 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25084' of FDAH05762025 at WM2028 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '215' of FDAH06862026 at WM2028 has no PULL task (recall H-0686-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '049021' of FDAH09102026 at WM2028 has no PULL task (recall H-0910-2026, basis lot_range)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'P24275B' of FDAH11292026 at WM2028 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2782' of FDAH11852026 at WM2028 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'ca1g24' of FDAH11902026 at WM2028 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'v26026a' of FDAH12332026 at WM2028 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'H26246C' of FDAH12332026 at WM2028 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C25-271B' of FDAH12682026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'X25008B' of FDAH12682026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'R24216C' of FDAH12682026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S24042A' of FDAH12702026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2025121301' of FDAH12702026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'N26262C' of FDAH12702026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P26066C' of FDAH12782026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '061' of FDAH12782026 at WM2028 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '08212025' of FDAH13712026 at WM2028 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U26-169B' of FDAH13872026 at WM2028 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT E24120C' of FDAH13942026 at WM2028 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N25113B' of FDAF02642025 at WM2333 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'C26089A' of FDAF02642025 at WM2333 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U25-206C' of FDAF12162024 at WM2333 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'n25059a' of FDAF12162024 at WM2333 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'E26248A' of FDAH00142027 at WM2333 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P25-346A' of FDAH00142027 at WM2333 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'D24273A' of FDAH00142027 at WM2333 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'T24054A' of FDAH03232025 at WM2333 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'M26117A' of FDAH03232025 at WM2333 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT J24001C' of FDAH04692025 at WM2333 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'C25114C' of FDAH04692025 at WM2333 has no PULL task (recall H-0469-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528D911' of FDAH05372026 at WM2333 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 25084' of FDAH05762025 at WM2333 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '215' of FDAH06862026 at WM2333 has no PULL task (recall H-0686-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'U25-331C' of FDAH10752026 at WM2333 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'R24119C' of FDAH10752026 at WM2333 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'V24313A' of FDAH10752026 at WM2333 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT M26215A' of FDAH11292026 at WM2333 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'P25-057B' of FDAH11292026 at WM2333 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'k26253c' of FDAH12332026 at WM2333 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'F24-058A' of FDAH12682026 at WM2333 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT R24211C' of FDAH12682026 at WM2333 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'D26328A' of FDAH13942026 at WM2333 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N25113C' of FDAH13942026 at WM2333 has no PULL task (recall H-1394-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'w24255a' of FDAF02642025 at WM2523 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'H24002C' of FDAF02642025 at WM2523 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U26-174B' of FDAF02642025 at WM2523 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'G24363B' of FDAF12162024 at WM2523 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'x25254c' of FDAF14832024 at WM2523 has no PULL task (recall F-1483-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0450' of FDAH02602025 at WM2523 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0039' of FDAH02602025 at WM2523 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528d911' of FDAH05372026 at WM2523 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'A24-283C' of FDAH05482026 at WM2523 has no PULL task (recall H-0548-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '215' of FDAH06862026 at WM2523 has no PULL task (recall H-0686-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'd24214b' of FDAH11292026 at WM2523 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U25192B' of FDAH11522026 at WM2523 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '60d0924' of FDAH11742026 at WM2523 has no PULL task (recall H-1174-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'CA1G24' of FDAH11902026 at WM2523 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'p24108b' of FDAH12702026 at WM2523 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2025-121301' of FDAH12702026 at WM2523 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'g25296b' of FDAH12702026 at WM2523 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT 061' of FDAH12782026 at WM2523 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'G26092A' of FDAH12782026 at WM2523 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'E25001A' of FDAH12782026 at WM2523 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '05222025' of FDAH13712026 at WM2523 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'G26048C' of FDAH13872026 at WM2523 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'W24-153A' of FDAF05462025 at WM3139 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'b24245c' of FDAF05462025 at WM3139 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'K26051B' of FDAF05462025 at WM3139 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'a24107c' of FDAF12162024 at WM3139 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT W24182C' of FDAF12162024 at WM3139 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'z26073b' of FDAF14832024 at WM3139 has no PULL task (recall F-1483-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 4282' of FDAH01342026 at WM3139 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4310' of FDAH01342026 at WM3139 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B2-025' of FDAH08092026 at WM3139 has no PULL task (recall H-0809-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT E26114C' of FDAH10752026 at WM3139 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'N25086A' of FDAH10752026 at WM3139 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'A26354C' of FDAH10752026 at WM3139 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT 2782' of FDAH11852026 at WM3139 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2800' of FDAH11852026 at WM3139 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'CA1G24' of FDAH11902026 at WM3139 has no PULL task (recall H-1190-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'X24063C' of FDAH12782026 at WM3139 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT 224' of FDAH12782026 at WM3139 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT B24054C' of FDAH13872026 at WM3139 has no PULL task (recall H-1387-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT R26338B' of FDAF02642025 at WM3141 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'V25194B' of FDAF02642025 at WM3141 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT S24302A' of FDAF05462025 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'J24313C' of FDAF05462025 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'f25220b' of FDAF05462025 at WM3141 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'I24BI01A' of FDAF06942025 at WM3141 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'W24098B' of FDAF12162024 at WM3141 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'LOT C24080B' of FDAH00142027 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'G25182B' of FDAH00142027 at WM3141 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'S25126B' of FDAH04872025 at WM3141 has no PULL task (recall H-0487-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25086' of FDAH05762025 at WM3141 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '25084' of FDAH05762025 at WM3141 has no PULL task (recall H-0576-2025, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P26163C' of FDAH10752026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'R26163C' of FDAH10752026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'X26317A' of FDAH11522026 at WM3141 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'H24208A' of FDAH12682026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'D24-003A' of FDAH12682026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'x24260c' of FDAH12682026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'NG2024-121501' of FDAH12702026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'L25-072B' of FDAH12702026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'P24-246C' of FDAH12702026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C24305B' of FDAH12782026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '061' of FDAH12782026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '224' of FDAH12782026 at WM3141 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'T24232B' of FDAH13332026 at WM3141 has no PULL task (recall H-1333-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'J24149B' of FDAF05462025 at WM4127 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'A25-081C' of FDAF05462025 at WM4127 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'Z24203B' of FDAF12162024 at WM4127 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'z25344a' of FDAF12162024 at WM4127 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'p24238c' of FDAH00142027 at WM4127 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'C25-360A' of FDAH00142027 at WM4127 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '4310' of FDAH01342026 at WM4127 has no PULL task (recall H-0134-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0450' of FDAH02602025 at WM4127 has no PULL task (recall H-0260-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 't26328b' of FDAH03232025 at WM4127 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'X25-194B' of FDAH03232025 at WM4127 has no PULL task (recall H-0323-2025, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'N26349A' of FDAH06002026 at WM4127 has no PULL task (recall H-0600-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'B26269C' of FDAH11522026 at WM4127 has no PULL task (recall H-1152-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT H24323A' of FDAH12332026 at WM4127 has no PULL task (recall H-1233-2026, basis date_window)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'R25187B' of FDAH12702026 at WM4127 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'T25292C' of FDAH12702026 at WM4127 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'S25240C' of FDAH12782026 at WM4127 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'DYY022' of FDAH12782026 at WM4127 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '061' of FDAH12782026 at WM4127 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'LOT A25019B' of FDAF02642025 at WM5603 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'n24076c' of FDAF02642025 at WM5603 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'U26057A' of FDAF02642025 at WM5603 has no PULL task (recall F-0264-2025, basis all_lots)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'I24BI01A' of FDAF06942025 at WM5603 has no PULL task (recall F-0694-2025, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'T24359B' of FDAF12162024 at WM5603 has no PULL task (recall F-1216-2024, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '0528-D911' of FDAH05372026 at WM5603 has no PULL task (recall H-0537-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'UI775' of FDAH08982026 at WM5603 has no PULL task (recall H-0898-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'j26127b' of FDAH11292026 at WM5603 has no PULL task (recall H-1129-2026, basis date_window)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2800' of FDAH11852026 at WM5603 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '2782' of FDAH11852026 at WM5603 has no PULL task (recall H-1185-2026, basis lot_exact)"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'e25089a' of FDAH12782026 at WM5603 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot 'dyy022' of FDAH12782026 at WM5603 not held or pulled"
+    },
+    {
+      "check": "hold",
+      "severity": "soft",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "ambiguous lot '224' of FDAH12782026 at WM5603 not held or pulled"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot '06122025' of FDAH13712026 at WM5603 has no PULL task (recall H-1371-2026, basis lot_exact)"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "<data>",
+      "type": null,
+      "id": null,
+      "line": null,
+      "msg": "truth-PULL lot 'E24044C' of FDAH13942026 at WM5603 has no PULL task (recall H-1394-2026, basis date_window)"
+    }
+  ]
+}

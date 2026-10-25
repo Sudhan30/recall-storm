@@ -5,7 +5,7 @@ set -u
 cd "$(dirname "$0")/.."
 N="$1"
 PY=.venv/bin/python
-echo "== split";      $PY tools/split_stream.py runs/$N/stream.txt --log runs/$N/stream_log.jsonl --out gen/$N/ | tail -3
+[ "${NOSPLIT:-}" = 1 ] || echo "== split"; [ "${NOSPLIT:-}" = 1 ] || $PY tools/split_stream.py runs/$N/stream.txt --log runs/$N/stream_log.jsonl --out gen/$N/ | tail -3
 echo "== seams";      $PY tools/seam_check.py runs/$N/ --report reports/${N}_seams.json | tail -1
 echo "== code";       $PY tools/verify_code.py gen/$N/ --offsets gen/$N/offsets.jsonl --report reports/${N}_code.json --jobs 6 --timeout 60 | tail -12
 echo "== drill";      PYTHONPATH=gen/$N:. $PY -m recallstorm run --scenario ca_red3 --data data/ --out out/$N/ > reports/${N}_drill_log.txt 2>&1 \

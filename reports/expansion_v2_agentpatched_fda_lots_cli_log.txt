@@ -1,0 +1,1 @@
+cli exit 0; log out/expansion_v2_agentpatched_fda_lots_cli/cli_log.txt

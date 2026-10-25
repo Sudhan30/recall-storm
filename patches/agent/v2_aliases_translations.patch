@@ -1,0 +1,10 @@
+--- a/recallstorm/aliases/translations.py
++++ b/recallstorm/aliases/translations.py
+@@ -106,6 +106,6 @@
+     """Register a new translation term for an additive."""
+     if not term or not isinstance(term, str):
+         raise ValueError("term must be a non-empty string")
+-     bucket = TRANSLATIONS.setdefault(additive.upper().strip(), {}).setdefault(lang.lower().strip(), [])
++    bucket = TRANSLATIONS.setdefault(additive.upper().strip(), {}).setdefault(lang.lower().strip(), [])
+     if term not in bucket:
+         bucket.append(term)

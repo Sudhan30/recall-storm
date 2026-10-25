@@ -1,0 +1,141 @@
+{
+  "run": "runs/expansion_v2_agentpatched",
+  "source": "hops.jsonl",
+  "finished": true,
+  "summary": "SUMMARY: 9 seams (9 continuation, 0 resume), 9 PASS, 0 FAIL, 0 PENDING (source: hops.jsonl, run finished)",
+  "seams": [
+    {
+      "seam_byte": 210273,
+      "status": "PASS",
+      "fails": [],
+      "notes": [],
+      "before_tail": "ans\", \"public\": [\"DsdRecallExecution\", \"RouteDriverSignOff\", \"notify_dsd_bottler",
+      "after_head": "_bakery_dispatcher\", \"schedule_driver_in_store_credit_pickup\", \"verify_backdoor_",
+      "n": 1,
+      "kind": "continuation",
+      "label": "hop 0->1",
+      "tok": 65536,
+      "has_token": true
+    },
+    {
+      "seam_byte": 418663,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside recallstorm/ingest/__init__.py; closed at byte 421928"
+      ],
+      "before_tail": "s_recall,\n    recall_by_state,\n    recall_since,\n)\nfrom recallstorm.ingest.staff",
+      "after_head": "ing import (\n    floater_pool,\n    overnight_shift_window,\n    parse_roster_row,",
+      "n": 2,
+      "kind": "continuation",
+      "label": "hop 1->2",
+      "tok": 131072,
+      "has_token": true
+    },
+    {
+      "seam_byte": 616383,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside recallstorm/gs1/barcodes.py; closed at byte 619222"
+      ],
+      "before_tail": "= 14 and is_valid_gtin(g14)\n<<<END FILE>>>\n<<<FILE path=recallstorm/gs1/barcodes",
+      "after_head": ".py>>>\n\"\"\"UPC-A, EAN-13, and variable-measure barcode parsing.\"\"\"\nfrom __future_",
+      "n": 3,
+      "kind": "continuation",
+      "label": "hop 2->3",
+      "tok": 196608,
+      "has_token": true
+    },
+    {
+      "seam_byte": 814259,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside recallstorm/plan/__init__.py; closed at byte 814511"
+      ],
+      "before_tail": "tion\",\n    \"sub_transfer_handoff\",\n    \"handoff_to_record\",\n    \"pair_handoffs\",",
+      "after_head": "\n    \"handoff_windows\",\n    \"handoff_summary\",\n    \"HandoffBuilder\",\n    \"assemb",
+      "n": 4,
+      "kind": "continuation",
+      "label": "hop 3->4",
+      "tok": 262144,
+      "has_token": true
+    },
+    {
+      "seam_byte": 1011349,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside recallstorm/recall_lots/best_by_window.py; closed at byte 1012060"
+      ],
+      "before_tail": ".fromisoformat(str(best_by_iso))\n    return (d2 - d1).days == int(expected_days)",
+      "after_head": "\n\n\ndef handle_month_year_only_stamps(year: int, month: int) -> tuple[str, str]:\n",
+      "n": 5,
+      "kind": "continuation",
+      "label": "hop 4->5",
+      "tok": 327680,
+      "has_token": true
+    },
+    {
+      "seam_byte": 1219770,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside recallstorm/inventory/reverse_logistics_acct.py; closed at byte 1221657"
+      ],
+      "before_tail": "- expected_lb) / expected_lb\n    return {\"op\": \"reconcile_crushed_bale_weights\",",
+      "after_head": " \"within_tolerance\": diff_pct <= tolerance_pct, \"diff_pct\": round(diff_pct, 4), ",
+      "n": 6,
+      "kind": "continuation",
+      "label": "hop 5->6",
+      "tok": 393216,
+      "has_token": true
+    },
+    {
+      "seam_byte": 1430168,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside recallstorm/comms/shelf_signage_gen.py; closed at byte 1433821"
+      ],
+      "before_tail": " object, name: str = \"arg\") -> None:\n    if val is None or (isinstance(val, str)",
+      "after_head": " and not val.strip()):\n        raise DataValidationError(f\"Invalid {name}\")\n\n\nde",
+      "n": 7,
+      "kind": "continuation",
+      "label": "hop 6->7",
+      "tok": 458752,
+      "has_token": true
+    },
+    {
+      "seam_byte": 1639027,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside tests/unit/test_dc_ops_carrier_tendering.py; closed at byte 1639902"
+      ],
+      "before_tail": "dering():\n    assert ReverseLoadTendering().status == \"ACTIVE\"\n    assert Hazmat",
+      "after_head": "CarrierSelector().status == \"ACTIVE\"\n    assert build_consolidated_recall_return",
+      "n": 8,
+      "kind": "continuation",
+      "label": "hop 7->8",
+      "tok": 524288,
+      "has_token": true
+    },
+    {
+      "seam_byte": 1849250,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside tests/unit/test_governance_access_logs_props.py; closed at byte 1849347"
+      ],
+      "before_tail": "{i}\" for i in range(5, 15)}\n    revoked = set(revoke_terminated_associate_drill_",
+      "after_head": "credentials(active, holders))\n    assert revoked.isdisjoint(active)\n    assert l",
+      "n": 9,
+      "kind": "continuation",
+      "label": "hop 8->9",
+      "tok": 589824,
+      "has_token": true
+    }
+  ]
+}
