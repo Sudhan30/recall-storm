@@ -1,0 +1,186 @@
+{
+  "plan": "out/core_patched/plan.jsonl",
+  "scenario": "ca_red3",
+  "state": "CA",
+  "deadline_local": "2027-01-01T00:00:00",
+  "records": {
+    "run": 1,
+    "evidence": 487,
+    "sku_verdict": 1212,
+    "allocation": 2061,
+    "shelf_task": 13746,
+    "exception": 60,
+    "route_manifest": 6,
+    "handoff": 2090,
+    "store_playbook": 20
+  },
+  "bad_json_lines": 0,
+  "hard_errors": 0,
+  "by_check": {
+    "capacity": {
+      "hard": 0,
+      "soft": 11
+    }
+  },
+  "classification": {
+    "labeled": 1212,
+    "tp": 467,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.9979,
+    "recall": 1.0,
+    "confusion": {
+      "PULL": {
+        "PULL": 467
+      },
+      "KEEP": {
+        "KEEP": 722,
+        "HOLD_VERIFY": 1
+      },
+      "HOLD_VERIFY": {
+        "PULL": 1,
+        "HOLD_VERIFY": 18,
+        "KEEP": 3
+      }
+    },
+    "decoys": 483,
+    "decoys_pulled": 0,
+    "decoys_pulled_ids": [],
+    "missing_verdicts": 0,
+    "false_pulls": [
+      "FDC1879399"
+    ],
+    "missed_pulls": []
+  },
+  "coverage": {
+    "pull_facings": 6718,
+    "pull_facings_tasked": 6718,
+    "rate": 1.0,
+    "hold_facings": 319,
+    "hold_facings_tasked": 265
+  },
+  "events": {
+    "events": 41238,
+    "bad_json": 0,
+    "unknown_task_refs": 0,
+    "kinds": {
+      "MOVE": 13746,
+      "PULL": 7013,
+      "PLACE": 6733,
+      "DONE": 13746
+    }
+  },
+  "by_src": {
+    "recallstorm/plan/planner.py": {
+      "counts": {
+        "capacity:soft": 11
+      },
+      "hard": 0,
+      "tok_range": [
+        9367,
+        17897
+      ]
+    }
+  },
+  "errors": [
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM1588: 191 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM1574: 183 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM1899: 193 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM4127: 109 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM2028: 189 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM3141: 125 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM1575: 195 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store SAMS4735: 72 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM5603: 121 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store SAMS4767: 74 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17568,
+      "msg": "store WM1912: 196 pulled cases not on a stop (DSD vendor-pull exception)"
+    }
+  ]
+}

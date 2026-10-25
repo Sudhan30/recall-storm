@@ -1,0 +1,1037 @@
+{
+  "gen_dir": "gen/core",
+  "generated_at": "2026-10-25T11:12:16",
+  "secs": 0.5,
+  "totals": {
+    "files": 18,
+    "parsed": 18,
+    "unterminated": 0,
+    "manifest_files": 18,
+    "manifest_files_present": 18,
+    "d1_symbol_ok_rate": 1.0,
+    "d2_edges": 78,
+    "d2_resolved": 78,
+    "d2_resolve_rate": 1.0,
+    "d2_calls_checked": 61,
+    "d2_arity_mismatch": 0,
+    "d3_bad_literals": 9,
+    "d3_bad_literals_nontest": 0,
+    "d4_files": 6,
+    "d4_tests": 43,
+    "d4_passed": 43,
+    "d4_by_status": {
+      "passed": 6
+    },
+    "d6_stubs": 0,
+    "d6_placeholders": 0,
+    "d6_dup_share": 0.0058,
+    "d6_near_dup_tests": 0,
+    "max_tok": 22523
+  },
+  "buckets": {
+    "position": {
+      "0-200K": {
+        "files": 18,
+        "parsed": 18,
+        "unterminated": 0,
+        "d1_symbols": 26,
+        "d1_ok": 26,
+        "d2_edges": 78,
+        "d2_ok": 78,
+        "d2_calls": 61,
+        "d2_calls_ok": 61,
+        "d3_bad_literals": 9,
+        "d4_files": 6,
+        "d4_files_passed": 6,
+        "d4_tests": 43,
+        "d4_passed": 43,
+        "d6_dup_lines": 9,
+        "norm_lines": 1557,
+        "parse_rate": 1.0,
+        "d1_rate": 1.0,
+        "d2_resolve_rate": 1.0,
+        "d2_arity_rate": 1.0,
+        "d4_pass_rate": 1.0,
+        "d6_dup_share": 0.0058
+      }
+    },
+    "distance": {
+      "0-50K": {
+        "edges": 29,
+        "edges_ok": 29,
+        "calls": 26,
+        "calls_ok": 26,
+        "edges_ok_rate": 1.0,
+        "calls_ok_rate": 1.0
+      },
+      "unknown": {
+        "edges": 49,
+        "edges_ok": 49,
+        "calls": 35,
+        "calls_ok": 35,
+        "edges_ok_rate": 1.0,
+        "calls_ok_rate": 1.0
+      }
+    }
+  },
+  "parse_errors": [],
+  "files": [
+    {
+      "path": "recallstorm/__init__.py",
+      "start_tok": 1323,
+      "end_tok": 1368,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 4
+    },
+    {
+      "path": "recallstorm/__main__.py",
+      "start_tok": 21559,
+      "end_tok": 22140,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 56
+    },
+    {
+      "path": "recallstorm/aliases/__init__.py",
+      "start_tok": 1368,
+      "end_tok": 1493,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 16
+    },
+    {
+      "path": "recallstorm/aliases/detector.py",
+      "start_tok": 1493,
+      "end_tok": 3700,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 195
+    },
+    {
+      "path": "recallstorm/allocate/__init__.py",
+      "start_tok": 7985,
+      "end_tok": 8047,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 6
+    },
+    {
+      "path": "recallstorm/allocate/allocator.py",
+      "start_tok": 8047,
+      "end_tok": 8603,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 60
+    },
+    {
+      "path": "recallstorm/plan/__init__.py",
+      "start_tok": 9285,
+      "end_tok": 9367,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 6
+    },
+    {
+      "path": "recallstorm/plan/planner.py",
+      "start_tok": 9367,
+      "end_tok": 17897,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 735
+    },
+    {
+      "path": "recallstorm/rules/__init__.py",
+      "start_tok": 4612,
+      "end_tok": 4679,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 6
+    },
+    {
+      "path": "recallstorm/rules/evaluator.py",
+      "start_tok": 4679,
+      "end_tok": 6006,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 134
+    },
+    {
+      "path": "recallstorm/sim/__init__.py",
+      "start_tok": 19445,
+      "end_tok": 19514,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 6
+    },
+    {
+      "path": "recallstorm/sim/simulator.py",
+      "start_tok": 19515,
+      "end_tok": 20834,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 125
+    },
+    {
+      "path": "tests/unit/test_aliases_detector.py",
+      "start_tok": 3700,
+      "end_tok": 4611,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 83
+    },
+    {
+      "path": "tests/unit/test_allocate_allocator.py",
+      "start_tok": 8603,
+      "end_tok": 9284,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 47
+    },
+    {
+      "path": "tests/unit/test_cli_main.py",
+      "start_tok": 22141,
+      "end_tok": 22523,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 30
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "start_tok": 17897,
+      "end_tok": 19444,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 127
+    },
+    {
+      "path": "tests/unit/test_rules_evaluator.py",
+      "start_tok": 6006,
+      "end_tok": 7985,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 148
+    },
+    {
+      "path": "tests/unit/test_sim_simulator.py",
+      "start_tok": 20834,
+      "end_tok": 21559,
+      "terminated": true,
+      "parse_ok": true,
+      "lines": 52
+    }
+  ],
+  "d1": {
+    "files": [
+      {
+        "path": "recallstorm/__init__.py",
+        "status": "ok",
+        "tok": 1323
+      },
+      {
+        "path": "recallstorm/aliases/__init__.py",
+        "status": "ok",
+        "tok": 1368
+      },
+      {
+        "path": "recallstorm/aliases/detector.py",
+        "status": "ok",
+        "tok": 1493
+      },
+      {
+        "path": "tests/unit/test_aliases_detector.py",
+        "status": "ok",
+        "tok": 3700
+      },
+      {
+        "path": "recallstorm/rules/__init__.py",
+        "status": "ok",
+        "tok": 4612
+      },
+      {
+        "path": "recallstorm/rules/evaluator.py",
+        "status": "ok",
+        "tok": 4679
+      },
+      {
+        "path": "tests/unit/test_rules_evaluator.py",
+        "status": "ok",
+        "tok": 6006
+      },
+      {
+        "path": "recallstorm/allocate/__init__.py",
+        "status": "ok",
+        "tok": 7985
+      },
+      {
+        "path": "recallstorm/allocate/allocator.py",
+        "status": "ok",
+        "tok": 8047
+      },
+      {
+        "path": "tests/unit/test_allocate_allocator.py",
+        "status": "ok",
+        "tok": 8603
+      },
+      {
+        "path": "recallstorm/plan/__init__.py",
+        "status": "ok",
+        "tok": 9285
+      },
+      {
+        "path": "recallstorm/plan/planner.py",
+        "status": "ok",
+        "tok": 9367
+      },
+      {
+        "path": "tests/unit/test_plan_planner.py",
+        "status": "ok",
+        "tok": 17897
+      },
+      {
+        "path": "recallstorm/sim/__init__.py",
+        "status": "ok",
+        "tok": 19445
+      },
+      {
+        "path": "recallstorm/sim/simulator.py",
+        "status": "ok",
+        "tok": 19515
+      },
+      {
+        "path": "tests/unit/test_sim_simulator.py",
+        "status": "ok",
+        "tok": 20834
+      },
+      {
+        "path": "recallstorm/__main__.py",
+        "status": "ok",
+        "tok": 21559
+      },
+      {
+        "path": "tests/unit/test_cli_main.py",
+        "status": "ok",
+        "tok": 22141
+      }
+    ],
+    "symbols": [
+      {
+        "path": "recallstorm/__init__.py",
+        "promise": "__version__",
+        "symbol": "__version__",
+        "status": "ok",
+        "detail": null,
+        "tok": 1359
+      },
+      {
+        "path": "recallstorm/aliases/__init__.py",
+        "promise": "AliasMatch",
+        "symbol": "AliasMatch",
+        "status": "ok",
+        "detail": null,
+        "tok": 1558
+      },
+      {
+        "path": "recallstorm/aliases/__init__.py",
+        "promise": "normalize_text",
+        "symbol": "normalize_text",
+        "status": "ok",
+        "detail": null,
+        "tok": 1629
+      },
+      {
+        "path": "recallstorm/aliases/__init__.py",
+        "promise": "find_additive_match",
+        "symbol": "find_additive_match",
+        "status": "ok",
+        "detail": null,
+        "tok": 2919
+      },
+      {
+        "path": "recallstorm/aliases/__init__.py",
+        "promise": "is_unclear_or_generic_color",
+        "symbol": "is_unclear_or_generic_color",
+        "status": "ok",
+        "detail": null,
+        "tok": 3494
+      },
+      {
+        "path": "recallstorm/aliases/detector.py",
+        "promise": "AliasMatch",
+        "symbol": "AliasMatch",
+        "status": "ok",
+        "detail": null,
+        "tok": 1558
+      },
+      {
+        "path": "recallstorm/aliases/detector.py",
+        "promise": "normalize_text(text: str) -> str",
+        "symbol": "normalize_text",
+        "status": "ok",
+        "detail": null,
+        "tok": 1629
+      },
+      {
+        "path": "recallstorm/aliases/detector.py",
+        "promise": "find_additive_match(text: str, aliases: tuple[str, ...], additive: str) -> AliasMatch | None",
+        "symbol": "find_additive_match",
+        "status": "ok",
+        "detail": null,
+        "tok": 2919
+      },
+      {
+        "path": "recallstorm/aliases/detector.py",
+        "promise": "is_unclear_or_generic_color(text: str) -> tuple[bool, str | None, int | None, int | None]",
+        "symbol": "is_unclear_or_generic_color",
+        "status": "ok",
+        "detail": null,
+        "tok": 3494
+      },
+      {
+        "path": "recallstorm/rules/__init__.py",
+        "promise": "evaluate_sku",
+        "symbol": "evaluate_sku",
+        "status": "ok",
+        "detail": null,
+        "tok": 5251
+      },
+      {
+        "path": "recallstorm/rules/__init__.py",
+        "promise": "applicable_rules",
+        "symbol": "applicable_rules",
+        "status": "ok",
+        "detail": null,
+        "tok": 5092
+      },
+      {
+        "path": "recallstorm/rules/evaluator.py",
+        "promise": "applicable_rules(sku: Sku, rules: list[Rule], state: str, at: datetime, store_tz: str | None) -> list[Rule]",
+        "symbol": "applicable_rules",
+        "status": "ok",
+        "detail": null,
+        "tok": 5092
+      },
+      {
+        "path": "recallstorm/rules/evaluator.py",
+        "promise": "evaluate_sku(sku: Sku, rules: list[Rule], state: str, at: datetime, classifier: Classifier | None) -> SkuDecision",
+        "symbol": "evaluate_sku",
+        "status": "ok",
+        "detail": null,
+        "tok": 5251
+      },
+      {
+        "path": "recallstorm/allocate/__init__.py",
+        "promise": "allocate_substitutes",
+        "symbol": "allocate_substitutes",
+        "status": "ok",
+        "detail": null,
+        "tok": 8091
+      },
+      {
+        "path": "recallstorm/allocate/allocator.py",
+        "promise": "allocate_substitutes(demand: dict[tuple[str, str], int], stock: list[DcStock], stores: list[Store]) -> list[Allocation]",
+        "symbol": "allocate_substitutes",
+        "status": "ok",
+        "detail": null,
+        "tok": 8091
+      },
+      {
+        "path": "recallstorm/plan/__init__.py",
+        "promise": "pack_returns",
+        "symbol": "pack_returns",
+        "status": "ok",
+        "detail": null,
+        "tok": 9955
+      },
+      {
+        "path": "recallstorm/plan/__init__.py",
+        "promise": "build_plan",
+        "symbol": "build_plan",
+        "status": "ok",
+        "detail": null,
+        "tok": 11285
+      },
+      {
+        "path": "recallstorm/plan/__init__.py",
+        "promise": "write_plan_jsonl",
+        "symbol": "write_plan_jsonl",
+        "status": "ok",
+        "detail": null,
+        "tok": 17795
+      },
+      {
+        "path": "recallstorm/plan/planner.py",
+        "promise": "pack_returns(pulled_cases: dict[tuple[str, str], int], skus: list[Sku], trucks: list[Truck], stores: list[Store]) -> list[RouteManifest]",
+        "symbol": "pack_returns",
+        "status": "ok",
+        "detail": null,
+        "tok": 9955
+      },
+      {
+        "path": "recallstorm/plan/planner.py",
+        "promise": "build_plan(pack: DataPack, scenario: dict) -> list[dict]",
+        "symbol": "build_plan",
+        "status": "ok",
+        "detail": null,
+        "tok": 11285
+      },
+      {
+        "path": "recallstorm/plan/planner.py",
+        "promise": "write_plan_jsonl(records: list[dict], out_path: str) -> None",
+        "symbol": "write_plan_jsonl",
+        "status": "ok",
+        "detail": null,
+        "tok": 17795
+      },
+      {
+        "path": "recallstorm/sim/__init__.py",
+        "promise": "simulate_events",
+        "symbol": "simulate_events",
+        "status": "ok",
+        "detail": null,
+        "tok": 19790
+      },
+      {
+        "path": "recallstorm/sim/__init__.py",
+        "promise": "write_events_jsonl",
+        "symbol": "write_events_jsonl",
+        "status": "ok",
+        "detail": null,
+        "tok": 20732
+      },
+      {
+        "path": "recallstorm/sim/simulator.py",
+        "promise": "simulate_events(plan_records: list[dict]) -> list[dict]",
+        "symbol": "simulate_events",
+        "status": "ok",
+        "detail": null,
+        "tok": 19790
+      },
+      {
+        "path": "recallstorm/sim/simulator.py",
+        "promise": "write_events_jsonl(events: list[dict], out_path: str) -> None",
+        "symbol": "write_events_jsonl",
+        "status": "ok",
+        "detail": null,
+        "tok": 20732
+      },
+      {
+        "path": "recallstorm/__main__.py",
+        "promise": "main(argv: list[str] | None) -> int",
+        "symbol": "main",
+        "status": "ok",
+        "detail": null,
+        "tok": 21783
+      }
+    ],
+    "files_present": 18,
+    "files_promised": 18,
+    "symbols_ok": 26,
+    "symbols_promised": 26,
+    "symbol_ok_rate": 1.0
+  },
+  "d2": {
+    "edges_bad": [],
+    "calls_bad": [],
+    "calls_checked": 61
+  },
+  "d3": [
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 51,
+      "literal": "SKU_PULL",
+      "tok": 18480,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 24,
+      "literal": "SKU_PULL",
+      "tok": 18046,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 25,
+      "literal": "SKU_HOLD",
+      "tok": 18092,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 26,
+      "literal": "SKU_SUB",
+      "tok": 18139,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 32,
+      "literal": "SKU_PULL",
+      "tok": 18247,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 33,
+      "literal": "SKU_HOLD",
+      "tok": 18273,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 49,
+      "literal": "SKU_SUB",
+      "tok": 18461,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 51,
+      "literal": "SKU_SUB",
+      "tok": 18480,
+      "is_test": true
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "line": 83,
+      "literal": "SKU_PULL",
+      "tok": 18837,
+      "is_test": true
+    }
+  ],
+  "d4": [
+    {
+      "path": "tests/unit/test_aliases_detector.py",
+      "rc": 0,
+      "secs": 0.3,
+      "tok": 3700,
+      "tests": 30,
+      "passed": 30,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, corn syrup, FD&C Red No. 3, red 40-FD&C Red No. 3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, FD&C RED #3, red 40-FD&C RED #3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, Red No. 3, citric acid-Red No. 3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, Red No 3, water-Red No 3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, Red Dye 3, natural flavor-Red Dye 3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, Red Dye #3, water-Red Dye #3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[castor oil, red 3-red 3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, RED #3, water-RED #3]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, erythrosine, water-erythrosine]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, erythros1ne, red 40-erythros1ne]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[water, E127, sugar-E127]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[water, E-127, sugar-E-127]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_detects_all_red3_aliases_and_variants[sugar, Red 3 Lake, corn syrup-Red 3 Lake]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4084,
+          "line": 39
+        },
+        {
+          "name": "test_rejects_decoys[sugar, corn syrup, water, Red 40]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[sugar, FD&C Red No. 40, citric acid]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[sugar,FD&C Red #40, yellow 5]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[water, D&C Red 33, fragrance]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[water, D&C Red No. 33, glycerin]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[water, D&C Red No. 3, wax]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[sugar, corn syrup, 3 red apples]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[water, red 30, titanium dioxide]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[water, Red No. 33, sugar]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_rejects_decoys[sugar, salt, natural flavor]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4364,
+          "line": 61
+        },
+        {
+          "name": "test_detects_unclear_or_generic_color[sugar, corn syrup, color added]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4512,
+          "line": 77
+        },
+        {
+          "name": "test_detects_unclear_or_generic_color[sugar, artificial color, water]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4512,
+          "line": 77
+        },
+        {
+          "name": "test_detects_unclear_or_generic_color[sugar, artificial colors, citric acid]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4512,
+          "line": 77
+        },
+        {
+          "name": "test_detects_unclear_or_generic_color[   ]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4512,
+          "line": 77
+        },
+        {
+          "name": "test_detects_unclear_or_generic_color[???]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4512,
+          "line": 77
+        },
+        {
+          "name": "test_detects_unclear_or_generic_color[[illegible label text]]",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4512,
+          "line": 77
+        },
+        {
+          "name": "test_normalize_text",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 4573,
+          "line": 82
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "tests/unit/test_rules_evaluator.py",
+      "rc": 0,
+      "secs": 0.2,
+      "tok": 6006,
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "test_pull_food_in_ca_at_effective_date",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 6761,
+          "line": 65
+        },
+        {
+          "name": "test_keep_before_effective_date",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 6967,
+          "line": 78
+        },
+        {
+          "name": "test_keep_cosmetic_out_of_scope",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 7081,
+          "line": 87
+        },
+        {
+          "name": "test_keep_drug_before_2028",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 7197,
+          "line": 95
+        },
+        {
+          "name": "test_hold_verify_on_unclear_color",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 7394,
+          "line": 108
+        },
+        {
+          "name": "test_classifier_hook_used_when_provided_on_ambiguous",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 7535,
+          "line": 118
+        },
+        {
+          "name": "test_us_rule_applies_to_ca_after_jan_15",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 7851,
+          "line": 141
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "tests/unit/test_allocate_allocator.py",
+      "rc": 0,
+      "secs": 0.3,
+      "tok": 8603,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "test_allocate_never_exceeds_stock_and_breaks_ties_by_store_id",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 8844,
+          "line": 16
+        },
+        {
+          "name": "test_allocate_zero_or_missing_stock_skipped",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 9169,
+          "line": 42
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "tests/unit/test_plan_planner.py",
+      "rc": 0,
+      "secs": 0.3,
+      "tok": 17897,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "test_pack_returns_respects_limits",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 18807,
+          "line": 81
+        },
+        {
+          "name": "test_build_plan_emits_valid_records_and_respects_deadline",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 18985,
+          "line": 95
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "tests/unit/test_sim_simulator.py",
+      "rc": 0,
+      "secs": 0.2,
+      "tok": 20834,
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "test_simulate_events_generates_move_action_done_in_order",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 20893,
+          "line": 8
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "tests/unit/test_cli_main.py",
+      "rc": 0,
+      "secs": 0.4,
+      "tok": 22141,
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "name": "test_cli_run_end_to_end",
+          "outcome": "passed",
+          "msg": null,
+          "tok": 22199,
+          "line": 10
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "d6": {
+    "stubs": [],
+    "placeholders": [],
+    "dup_window_groups": 2,
+    "dup_lines": 9,
+    "total_norm_lines": 1557,
+    "dup_share": 0.0058,
+    "dup_examples": [
+      {
+        "locations": [
+          {
+            "path": "recallstorm/rules/evaluator.py",
+            "start": 71,
+            "end": 78,
+            "tok": 5343
+          },
+          {
+            "path": "recallstorm/rules/evaluator.py",
+            "start": 124,
+            "end": 131,
+            "tok": 5913
+          }
+        ],
+        "count": 2
+      },
+      {
+        "locations": [
+          {
+            "path": "recallstorm/rules/evaluator.py",
+            "start": 72,
+            "end": 79,
+            "tok": 5351
+          },
+          {
+            "path": "recallstorm/rules/evaluator.py",
+            "start": 125,
+            "end": 132,
+            "tok": 5920
+          }
+        ],
+        "count": 2
+      }
+    ],
+    "near_duplicate_tests": [],
+    "near_duplicate_test_count": 0
+  },
+  "errors": []
+}

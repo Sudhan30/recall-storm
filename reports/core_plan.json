@@ -1,0 +1,2928 @@
+{
+  "plan": "out/core/plan.jsonl",
+  "scenario": "ca_red3",
+  "state": "CA",
+  "deadline_local": "2027-01-01T00:00:00",
+  "records": {
+    "run": 1,
+    "evidence": 543,
+    "sku_verdict": 1212,
+    "allocation": 1746,
+    "shelf_task": 14169,
+    "exception": 60,
+    "route_manifest": 6,
+    "handoff": 1775,
+    "store_playbook": 20
+  },
+  "bad_json_lines": 0,
+  "hard_errors": 350,
+  "by_check": {
+    "coverage": {
+      "hard": 350,
+      "soft": 0
+    },
+    "capacity": {
+      "hard": 0,
+      "soft": 11
+    }
+  },
+  "classification": {
+    "labeled": 1212,
+    "tp": 442,
+    "fp": 1,
+    "fn": 25,
+    "precision": 0.9977,
+    "recall": 0.9465,
+    "confusion": {
+      "PULL": {
+        "PULL": 442,
+        "KEEP": 19,
+        "HOLD_VERIFY": 6
+      },
+      "KEEP": {
+        "KEEP": 645,
+        "HOLD_VERIFY": 78
+      },
+      "HOLD_VERIFY": {
+        "PULL": 1,
+        "HOLD_VERIFY": 16,
+        "KEEP": 5
+      }
+    },
+    "decoys": 483,
+    "decoys_pulled": 0,
+    "decoys_pulled_ids": [],
+    "missing_verdicts": 0,
+    "false_pulls": [
+      "FDC1879399"
+    ],
+    "missed_pulls": [
+      "VAR0037",
+      "VAR0038",
+      "VAR0039",
+      "VAR0040",
+      "VAR0041",
+      "VAR0042",
+      "VAR0043",
+      "VAR0044",
+      "VAR0045",
+      "VAR0046",
+      "VAR0047",
+      "VAR0048",
+      "VAR0049",
+      "VAR0050",
+      "VAR0051",
+      "VAR0052",
+      "VAR0053",
+      "VAR0112",
+      "VAR0113",
+      "VAR0114",
+      "VAR0115",
+      "VAR0116",
+      "VAR0117",
+      "VAR0118",
+      "VAR0119"
+    ]
+  },
+  "coverage": {
+    "pull_facings": 6718,
+    "pull_facings_tasked": 6368,
+    "rate": 0.9479,
+    "hold_facings": 319,
+    "hold_facings_tasked": 227
+  },
+  "events": {
+    "events": 42507,
+    "bad_json": 0,
+    "unknown_task_refs": 0,
+    "kinds": {
+      "MOVE": 14169,
+      "PULL": 7786,
+      "PLACE": 6383,
+      "DONE": 14169
+    }
+  },
+  "by_src": {
+    "recallstorm/plan/planner.py": {
+      "counts": {
+        "capacity:soft": 11
+      },
+      "hard": 0,
+      "tok_range": [
+        9367,
+        17897
+      ]
+    },
+    "recallstorm/rules/evaluator.py": {
+      "counts": {
+        "coverage:hard": 350
+      },
+      "hard": 350,
+      "tok_range": [
+        4679,
+        6006
+      ]
+    }
+  },
+  "errors": [
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1608 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1608 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1608 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1608 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1608 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1616 {'aisle': 'A04', 'bay': 4, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1616 {'aisle': 'A04', 'bay': 5, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1616 {'aisle': 'A04', 'bay': 5, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1630 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1630 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1630 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1630 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1630 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1899 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1899 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1899 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1899 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1899 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM1912 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM1912 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM1912 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM1912 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1912 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0048",
+      "line": 1592,
+      "msg": "no PULL task for truth-PULL VAR0048 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0050",
+      "line": 1594,
+      "msg": "no PULL task for truth-PULL VAR0050 at WM2028 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM2028 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM2028 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM2028 {'aisle': 'A08', 'bay': 1, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1658,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1659,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1660,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM2028 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM2333 {'aisle': 'A04', 'bay': 1, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1582,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM2333 {'aisle': 'A04', 'bay': 1, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM2333 {'aisle': 'A04', 'bay': 1, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1585,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM2333 {'aisle': 'A04', 'bay': 2, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM2333 {'aisle': 'A04', 'bay': 2, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM2333 {'aisle': 'A04', 'bay': 2, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM2333 {'aisle': 'A04', 'bay': 2, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM2333 {'aisle': 'A04', 'bay': 2, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1656,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM2333 {'aisle': 'A04', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM2333 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM2333 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1663,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM2333 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0042",
+      "line": 1586,
+      "msg": "no PULL task for truth-PULL VAR0042 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0043",
+      "line": 1587,
+      "msg": "no PULL task for truth-PULL VAR0043 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0045",
+      "line": 1589,
+      "msg": "no PULL task for truth-PULL VAR0045 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1591,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0052",
+      "line": 1596,
+      "msg": "no PULL task for truth-PULL VAR0052 at WM2523 {'aisle': 'A04', 'bay': 3, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1657,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM2523 {'aisle': 'A04', 'bay': 4, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1661,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM2523 {'aisle': 'A04', 'bay': 4, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1662,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM2523 {'aisle': 'A04', 'bay': 4, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1581,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0039",
+      "line": 1583,
+      "msg": "no PULL task for truth-PULL VAR0039 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0040",
+      "line": 1584,
+      "msg": "no PULL task for truth-PULL VAR0040 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0044",
+      "line": 1588,
+      "msg": "no PULL task for truth-PULL VAR0044 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0046",
+      "line": 1590,
+      "msg": "no PULL task for truth-PULL VAR0046 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0049",
+      "line": 1593,
+      "msg": "no PULL task for truth-PULL VAR0049 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0051",
+      "line": 1595,
+      "msg": "no PULL task for truth-PULL VAR0051 at WM3139 {'aisle': 'A05', 'bay': 1, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/evaluator.py",
+      "type": "sku_verdict",
+      "id": "VAR0053",
+      "line": 1597,
+      "msg": "no PULL task for truth-PULL VAR0053 at WM3139 {'aisle': 'A05', 'bay': 2, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM4127: 105 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM1575: 183 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store SAMS4735: 71 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM1912: 184 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store SAMS4767: 67 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM5603: 113 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM2028: 176 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM1588: 182 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM1574: 175 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM1899: 181 pulled cases not on a stop (DSD vendor-pull exception)"
+    },
+    {
+      "check": "capacity",
+      "severity": "soft",
+      "src": "recallstorm/plan/planner.py",
+      "type": "route_manifest",
+      "id": "MAN-0000",
+      "line": 17732,
+      "msg": "store WM3141: 119 pulled cases not on a stop (DSD vendor-pull exception)"
+    }
+  ]
+}
