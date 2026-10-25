@@ -79,7 +79,7 @@ Continuation was proven before the big runs: a 2-hop probe (`runs/probe/`, 32K-t
 | Expansion v1 + 3 managed-agent patches (`patches/agent/`) | **0** | **467 / 467** | 0 / 483 | 1,262 / 1,270 |
 | Expansion v2, unedited | drill can't start (1 mis-indented line) | — | — | rules can't load; allocate 9/9, route 7/7 |
 | Expansion v2 + 1-line agent fix | 21,459 | 455 / 467 | 3 / 483 | 1,238 / 1,270 |
-| Expansion v2 + 2 agent patches (7 lines changed) | **175** | 455 / 467 | 3 / 483 | 1,238 / 1,270 |
+| Expansion v2 + 2 agent patches (1-line fix + scheduling rewrite, +59 / −22 lines) | **175** | 455 / 467 | 3 / 483 | 1,238 / 1,270 |
 | Baseline D: code only, written by us | 0 | 467 / 467 | 0 / 483 | 1,234 / 1,270 |
 | Baseline C: retrieval + LLM + our code | 0 | 467 / 467 | 0 / 483 | 1,234 / 1,270 |
 
