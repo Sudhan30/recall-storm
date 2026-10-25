@@ -89,20 +89,20 @@ def run_gs1(data_dir: pathlib.Path, out: pathlib.Path, lotinv: bool) -> int:
             else:
                 matched_ids = {r["sim_sku_id"]}
                 win = [g.as_of, "2026-12-31T06:00:00-08:00"]          # as recall_plan does
-                out_recs = [lot_evidence(r["sim_sku_id"], l, g.recall_id) for l in g.lot_codes]
+                out_recs = [lot_evidence(r["sim_sku_id"], l, _rid(g)) for l in _lots(g)]
                 for x in lots:
                     if x["sku_id"] != r["sim_sku_id"]:
                         continue
                     f = next(f for f in pack.facings if f.store_id == x["store_id"] and f.sku_id == x["sku_id"]
                              and dataclasses.asdict(f.loc) == x["loc"])
-                    ts = lot_pull_tasks(x["store_id"], [f], matched_ids, list(g.lot_codes), f"{x['store_id']}-A00", win,
-                                        lot_inventory={(x["store_id"], x["sku_id"]): [x["lot"]]}, recall_id=g.recall_id)
+                    ts = lot_pull_tasks(x["store_id"], [f], matched_ids, list(_lots(g)), f"{x['store_id']}-A00", win,
+                                        lot_inventory={(x["store_id"], x["sku_id"]): [x["lot"]]}, recall_id=_rid(g))
                     for t in ts:
                         L = x["loc"]
                         t["task_id"] += f"-{L['aisle']}{L['bay']}{L['shelf']}{L['pos']}"   # adapter: unique ids
                     out_recs += ts
             recs += out_recs
-            per_recall.append({"recall_number": n, "v1_lot_codes": list(g.lot_codes), "v1_state": g.state,
+            per_recall.append({"recall_number": n, "v1_lot_codes": list(_lots(g)), "v1_state": g.state,
                                "records": len(out_recs),
                                "shelf_tasks": sum(1 for x in out_recs if x.get("type") == "shelf_task")})
         except Exception as e:  # noqa: BLE001 -- capture every v1 crash honestly
@@ -123,6 +123,15 @@ def run_cli(data_dir: pathlib.Path, out: pathlib.Path) -> int:
     (out / "cli_log.txt").write_text(f"$ {' '.join(cmd)}\nexit {p.returncode}\n--- stdout\n{p.stdout}\n--- stderr\n{p.stderr}")
     print(f"cli exit {p.returncode}; log {out/'cli_log.txt'}")
     return p.returncode
+
+
+def _lots(g):
+    """v1 names the field lot_codes; v2 (gen/expansion_v2) names it lots. Adapter-side compatibility only."""
+    return getattr(g, "lot_codes", None) or getattr(g, "lots", None) or ()
+
+
+def _rid(g):
+    return getattr(g, "recall_id", None) or getattr(g, "recall_number", "")
 
 
 def main(argv=None):
