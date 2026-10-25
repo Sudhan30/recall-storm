@@ -2,6 +2,23 @@
 
 Gemini 4 Argon SF Hackathon, Track 1 (Million Token Engineering), Oct 25, 2026.
 
+**In one minute.** On January 1, 2027, California bans food containing Red No. 3, with no sell-through period. We
+asked Gemini 4 Argon to write the whole compliance system that clears it from store shelves overnight, then checked it.
+
+- **One continued generation, 646,825 tokens:** 911 files over 10 hops, every seam clean. After one one-line fix
+  by a managed agent, all 6,581 cross-file links resolve with zero argument mismatches. A test written at token
+  641,687 calls a function written at token 89,603, and passes.
+- **Consistent isn't correct:** our verifier ran the plan and found scheduling flaws at both lengths (7,631
+  double-bookings at 254K tokens; 21,284 scheduling mistakes at 647K). A managed agent fixed the root cause each time,
+  including in stores it never saw.
+- **A working system:** Argon's core, with three small logged fixes, finds all 467 products containing Red No. 3
+  across a 20-store simulated drill, pulls none of the 483 look-alikes, and makes zero plan mistakes. `./demo.sh`
+  runs it live in about 5 seconds.
+
+Everything here was built at the event. Stores, stock and staffing are simulated; every number comes from the
+verifier (`tools/`, `reports/`). Argon's output in `gen/` is unedited; every fix is in `patches/`, including the
+attempts that failed.
+
 A compliance drill for California AB 418 (FD&C Red No. 3 banned in food from 2027-01-01 00:00 local),
 run across simulated store operations. Everything here was built at the event.
 
