@@ -42,7 +42,11 @@ variants and look-alikes we wrote). Ground truth: `data/labels.csv`. Hidden test
 |---|---|---|---|---|---|---|
 | Core (`gen/core`) | 22,523 | 1 | — | 18/18 | all resolve | — |
 | Expansion v1 (`gen/expansion`) | 254,377 | 4 | 3/3 PASS | 314/314 (310 parse as code) | 2,838/2,838 resolve, 0 arity mismatches | ~$3.56 |
-| Expansion v2 (`gen/expansion_v2`) | _pending_ | | | | | |
+| Expansion v2 (`gen/expansion_v2`) | 646,825 | 10 | 9/9 PASS | 911/911 (904 of 907 `.py` parse) | 6,554/6,581 resolve, 0 arity mismatches in 4,862 calls | ~$13.54 |
+
+Expansion v2 broke in one place: a single mis-indented line in `recallstorm/aliases/translations.py` (around
+token 132,000) stops the label-reading package from importing, which takes down the drill, the hidden rules tests and
+171 of v2's 663 test files. Hidden allocate (9/9) and route (7/7) tests pass because they don't import it.
 
 Continuation was proven before the big runs: a 2-hop probe (`runs/probe/`, 32K-token seam) passed `tools/seam_check.py`.
 
