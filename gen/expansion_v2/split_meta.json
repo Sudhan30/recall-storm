@@ -1,0 +1,30 @@
+{
+  "stream": "runs/expansion_v2/stream.txt",
+  "stream_bytes": 2026889,
+  "total_tok_est": 646825,
+  "token_map": {
+    "source": "stream_log+hops",
+    "points": 1442,
+    "kind": "run",
+    "known_until_byte": 2026889.0,
+    "points_kept": 1423
+  },
+  "manifest": {
+    "found": true,
+    "terminated": true,
+    "bad_lines": 0,
+    "start_byte": 0,
+    "end_byte": 289529,
+    "entries": 911
+  },
+  "blocks": 911,
+  "files_written": 911,
+  "unterminated": [],
+  "duplicates": [],
+  "fences_stripped": 0,
+  "manifest_missing_emitted": [],
+  "emitted_not_in_manifest": [],
+  "manifest_done_pct": 100.0,
+  "bytes_outside_blocks": 0,
+  "warnings": []
+}

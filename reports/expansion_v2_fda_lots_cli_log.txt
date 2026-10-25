@@ -1,0 +1,1 @@
+cli exit 1; log out/expansion_v2_fda_lots_cli/cli_log.txt

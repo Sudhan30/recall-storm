@@ -1,0 +1,44 @@
+== split
+2026889 bytes, ~646825 visible tok (map: stream_log+hops, 1423 pts) | manifest 911 entries | 911 blocks, 100.0% of manifest emitted
+== seams
+SUMMARY: 9 seams (9 continuation, 0 resume), 9 PASS, 0 FAIL, 0 PENDING (source: hops.jsonl, run finished)
+== code
+gen/expansion_v2: 907 files, 904 parse, 0 unterminated, max tok ~643792
+  D1 manifest files 911/911, symbols ok 2317/2326
+  D2 internal imports 6554/6581 resolve, 0 arity mismatches in 4862 calls
+  D3 1044 uppercase literals outside the contract vocabulary (527 outside tests)
+  D4 493/667 tests pass in 663 files {'collection_error': 171, 'failed': 3, 'passed': 489}
+  D6 0 stubs, 0 placeholders, dup share 0.0862, 66 near-duplicate tests
+  [0-200K] files 204 parse 0.9951 D1 0.9801 D2 0.9823/1.0 D4 0.4539
+  [200-400K] files 337 parse 0.997 D1 1.0 D2 1.0/1.0 D4 0.8816
+  [400-600K] files 298 parse 0.9966 D1 1.0 D2 1.0/1.0 D4 0.8311
+  [600K+] files 68 parse 1.0 D1 1.0 D2 0.9984/1.0 D4 0.5098
+  report reports/expansion_v2_code.json  deps reports/expansion_v2_deps.jsonl
+== drill
+drill crashed:
+    from recallstorm.adjudicate.classifier import (
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/adjudicate/classifier.py", line 8, in <module>
+    from recallstorm.aliases.detect import find_first_match
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/__init__.py", line 4, in <module>
+    from recallstorm.aliases.bundles import (
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/bundles.py", line 6, in <module>
+    from recallstorm.aliases.detect import MatchResult, find_first_match
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/detect.py", line 8, in <module>
+    from recallstorm.aliases.lexicon import Lexicon, aliases_for, load_lexicon
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/lexicon.py", line 7, in <module>
+    from recallstorm.aliases.translations import TRANSLATIONS, multilingual_patterns
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/translations.py", line 109
+    bucket = TRANSLATIONS.setdefault(additive.upper().strip(), {}).setdefault(lang.lower().strip(), [])
+                                                                                                       ^
+IndentationError: unindent does not match any outer indentation level
+== hidden tests
+1 error in 0.12s
+  rules    1 error in 0.09s
+  allocate 9 passed in 0.15s
+  route    7 passed in 0.09s
+== lot scenario (fda_lots, via adapter)
+  gs1        adapter failed (see reports/expansion_v2_fda_lots_gs1_log.txt)
+  gs1_lotinv adapter failed (see reports/expansion_v2_fda_lots_gs1_lotinv_log.txt)
+  cli        adapter failed (see reports/expansion_v2_fda_lots_cli_log.txt)
+== hops
+10 hops, 646,825 visible tokens, 92.0 min, finish STOP, input 3,537,080, est $13.54

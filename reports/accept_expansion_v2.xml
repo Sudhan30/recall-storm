@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.119" timestamp="2026-10-25T13:25:10.501297-07:00" hostname="Shuruthis-MacBook-Pro.local"><testcase classname="" name="acceptance.test_rules" time="0.000"><error message="collection failure">.venv/lib/python3.11/site-packages/_pytest/python.py:508: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.11/site-packages/_pytest/pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1204: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1176: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1147: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:690: in _load_unlocked
+    ???
+.venv/lib/python3.11/site-packages/_pytest/assertion/rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+acceptance/test_rules.py:8: in &lt;module&gt;
+    rules_mod = pytest.importorskip("recallstorm.rules")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1204: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1176: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1147: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:690: in _load_unlocked
+    ???
+&lt;frozen importlib._bootstrap_external&gt;:940: in exec_module
+    ???
+&lt;frozen importlib._bootstrap&gt;:241: in _call_with_frames_removed
+    ???
+gen/expansion_v2/recallstorm/rules/__init__.py:4: in &lt;module&gt;
+    from recallstorm.rules.ab418 import (
+gen/expansion_v2/recallstorm/rules/ab418.py:7: in &lt;module&gt;
+    from recallstorm.aliases.detect import find_first_match
+gen/expansion_v2/recallstorm/aliases/__init__.py:4: in &lt;module&gt;
+    from recallstorm.aliases.bundles import (
+gen/expansion_v2/recallstorm/aliases/bundles.py:6: in &lt;module&gt;
+    from recallstorm.aliases.detect import MatchResult, find_first_match
+gen/expansion_v2/recallstorm/aliases/detect.py:8: in &lt;module&gt;
+    from recallstorm.aliases.lexicon import Lexicon, aliases_for, load_lexicon
+gen/expansion_v2/recallstorm/aliases/lexicon.py:7: in &lt;module&gt;
+    from recallstorm.aliases.translations import TRANSLATIONS, multilingual_patterns
+E     File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/translations.py", line 109
+E       bucket = TRANSLATIONS.setdefault(additive.upper().strip(), {}).setdefault(lang.lower().strip(), [])
+E                                                                                                          ^
+E   IndentationError: unindent does not match any outer indentation level</error></testcase></testsuite></testsuites>

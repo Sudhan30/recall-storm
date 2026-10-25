@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/__main__.py", line 6, in <module>
+    from recallstorm.cli.main import main
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/cli/__init__.py", line 4, in <module>
+    from recallstorm.cli.main import (
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/cli/main.py", line 13, in <module>
+    from recallstorm.plan.assemble import assemble_plan, plan_to_jsonl
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/plan/__init__.py", line 4, in <module>
+    from recallstorm.plan.assemble import (
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/plan/assemble.py", line 10, in <module>
+    from recallstorm.adjudicate.evidence import build_evidence
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/adjudicate/__init__.py", line 15, in <module>
+    from recallstorm.adjudicate.classifier import (
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/adjudicate/classifier.py", line 8, in <module>
+    from recallstorm.aliases.detect import find_first_match
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/__init__.py", line 4, in <module>
+    from recallstorm.aliases.bundles import (
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/bundles.py", line 6, in <module>
+    from recallstorm.aliases.detect import MatchResult, find_first_match
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/detect.py", line 8, in <module>
+    from recallstorm.aliases.lexicon import Lexicon, aliases_for, load_lexicon
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/lexicon.py", line 7, in <module>
+    from recallstorm.aliases.translations import TRANSLATIONS, multilingual_patterns
+  File "/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2/recallstorm/aliases/translations.py", line 109
+    bucket = TRANSLATIONS.setdefault(additive.upper().strip(), {}).setdefault(lang.lower().strip(), [])
+                                                                                                       ^
+IndentationError: unindent does not match any outer indentation level
