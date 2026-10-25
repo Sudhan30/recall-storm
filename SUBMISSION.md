@@ -43,7 +43,7 @@ https://github.com/Sudhan30/recall-storm
   module specs from our list of domains, and acts as the retrieval-plus-LLM step in one baseline.
 - **Gemini Interactions API, Antigravity managed agent on gemini-4-argon:** a repair loop (`tools/repair_agent.py`)
   that gets one failing file plus failures, with half held out, in a sandbox with network disabled. 10 jobs: 5 fixed,
-  2 improved, 3 not fixed, all logged. We also tested background mode with reconnects.
+  2 improved, 3 not fixed, all logged. We also tested background (Interactions) mode for long runs.
 - **Gemini text-to-speech and the Gemini Omni video model:** narration and the AI-generated illustration shots in
   our demo videos (labelled as such).
 - **Google AI Studio:** API key, quota and rate-limit monitoring.
