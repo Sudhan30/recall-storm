@@ -35,6 +35,7 @@ ap.add_argument("--holdout", action="store_true",
 ap.add_argument("--start-patch", help="apply this patch to the file first (a later repair round)")
 ap.add_argument("--guards", type=int, default=0,
                 help="add N passing labeled SKUs (generic-color boundary, stratified by truth) as must-still-pass cases")
+ap.add_argument("--attach", help="listen on an existing interaction id instead of creating one (after a client timeout)")
 ap.add_argument("--dry-run", action="store_true", help="build the bundle and run tests, skip the agent")
 a = ap.parse_args()
 
@@ -261,8 +262,8 @@ if a.dry_run:
 
 client = genai.Client()
 ev = open(run / "events.jsonl", "a")
-text, t0, iid, last_id, usage, status = [], time.time(), None, None, None, None
-stream = client.interactions.create(
+text, t0, iid, last_id, usage, status = [], time.time(), a.attach, None, None, None
+stream = client.interactions.get(a.attach, stream=True) if a.attach else client.interactions.create(
     agent=AGENT, agent_config={"type": "antigravity", "model": "gemini-4-argon", "max_total_tokens": a.max_tokens},
     environment={"type": "remote", "network": "disabled"},  # sandbox, no egress: the bundle is all it gets
     input=bundle, background=True, stream=True)
