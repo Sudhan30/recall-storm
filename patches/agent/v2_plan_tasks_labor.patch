@@ -1,0 +1,134 @@
+--- a/recallstorm/plan/tasks.py
++++ b/recallstorm/plan/tasks.py
+@@ -181,8 +181,9 @@
+     st_facings.sort(key=lambda f: (ordered_locs.get(f.loc, 0), f.sku_id))
+ 
+     st_assocs = [a for a in associates if a.store_id == store.store_id and not a.is_floater]
++    floaters = [a for a in associates if a.is_floater and a.district == store.district]
+     if not st_assocs:
+-        st_assocs = [a for a in associates if a.is_floater and a.district == store.district]
++        st_assocs = floaters
+     if not st_assocs and associates:
+         st_assocs = [associates[0]]
+ 
+@@ -190,48 +191,90 @@
+     store_allocs = [a for a in allocations if a.store_id == store.store_id and a.qty_cases > 0]
+     used_alloc_ids: set[str] = set()
+ 
++    # Track per-associate current time cursor and effective shift end bound
++    default_start = deadline - timedelta(hours=6)
++    assoc_cur: dict[str, datetime] = {}
++    assoc_bound: dict[str, datetime] = {}
++    pool: list[Associate] = list(st_assocs)
++    seen_ids: set[str] = {a.associate_id for a in pool}
++    for f_assoc in floaters:
++        if f_assoc.associate_id not in seen_ids:
++            pool.append(f_assoc)
++            seen_ids.add(f_assoc.associate_id)
++
++    for a in pool:
++        s_start, s_end = shift_window(a, deadline=deadline)
++        eff_end = min(deadline, s_end, a.shift_end)
++        assoc_cur[a.associate_id] = s_start
++        assoc_bound[a.associate_id] = eff_end
++
++    fallback_id = f"{store.store_id}-A00"
++    assoc_cur.setdefault(fallback_id, default_start)
++    assoc_bound.setdefault(fallback_id, deadline)
++
++    def _pick_associate(preferred_idx: int, needed_mins: float) -> str:
++        if not st_assocs:
++            return fallback_id
++        pref = st_assocs[preferred_idx % len(st_assocs)].associate_id
++        if assoc_cur[pref] + timedelta(minutes=needed_mins + 1.0) <= assoc_bound[pref]:
++            return pref
++        for a in st_assocs:
++            aid = a.associate_id
++            if assoc_cur[aid] + timedelta(minutes=needed_mins + 1.0) <= assoc_bound[aid]:
++                return aid
++        for a in pool:
++            aid = a.associate_id
++            if assoc_cur[aid] + timedelta(minutes=needed_mins + 1.0) <= assoc_bound[aid]:
++                return aid
++        return max(
++            (a.associate_id for a in st_assocs),
++            key=lambda aid: assoc_bound[aid] - assoc_cur[aid],
++        )
++
+     tasks: list[dict] = []
+     seq = 1
+-    if st_assocs:
+-        base_start, _ = shift_window(st_assocs[0], deadline=deadline)
+-    else:
+-        base_start = deadline - timedelta(hours=6)
+-
+-    cur_time = base_start
++
+     for f in st_facings:
+         dec = decisions.get(f.sku_id)
+         if not dec or dec.verdict == Verdict.KEEP:
+             continue
+         ev_id = evidence_by_sku.get(f.sku_id, "")
+-        assoc_id = st_assocs[(seq - 1) % len(st_assocs)].associate_id if st_assocs else f"{store.store_id}-A00"
+ 
+         if dec.verdict == Verdict.HOLD_VERIFY:
+             dur = task_minutes(Action.HOLD_VERIFY, f.units)
+-            win = task_window(cur_time, dur, deadline)
++            assoc_id = _pick_associate(seq - 1, dur)
++            win = task_window(assoc_cur[assoc_id], dur, assoc_bound[assoc_id])
+             tasks.append(hold_verify_task(store.store_id, f, ev_id, assoc_id, win, seq))
+             seq += 1
+-            cur_time = datetime.fromisoformat(win[1])
++            assoc_cur[assoc_id] = datetime.fromisoformat(win[1])
+         elif dec.verdict == Verdict.PULL:
+             dur_p = task_minutes(Action.PULL, f.units)
+-            win_p = task_window(cur_time, dur_p, deadline)
+-            tasks.append(pull_task(store.store_id, f, ev_id, assoc_id, win_p, seq))
+-            seq += 1
+-            cur_time = datetime.fromisoformat(win_p[1])
+-
+             dur_t = task_minutes(Action.TAG_FLASH, 1)
+-            win_t = task_window(cur_time, dur_t, deadline)
+-            tasks.append(tag_flash_task(store.store_id, f, ev_id, assoc_id, win_t, seq))
+-            seq += 1
+-            cur_time = datetime.fromisoformat(win_t[1])
+-
+-            # If a substitute allocation exists for this store, place substitute
+             avail_alloc = next((a for a in store_allocs if a.alloc_id not in used_alloc_ids), None)
++            sub_units = 0
++            dur_s = 0.0
+             if avail_alloc is not None:
+-                used_alloc_ids.add(avail_alloc.alloc_id)
+                 sub_sku = skus.get(avail_alloc.sub_sku_id)
+                 sub_units = avail_alloc.qty_cases * (sub_sku.case_units if sub_sku else 12)
+                 dur_s = task_minutes(Action.PLACE_SUB, sub_units)
+-                win_s = task_window(cur_time, dur_s, deadline)
++
++            total_dur = dur_p + dur_t + dur_s
++            assoc_id = _pick_associate(seq - 1, total_dur)
++            bound = assoc_bound[assoc_id]
++
++            win_p = task_window(assoc_cur[assoc_id], dur_p, bound)
++            tasks.append(pull_task(store.store_id, f, ev_id, assoc_id, win_p, seq))
++            seq += 1
++            assoc_cur[assoc_id] = datetime.fromisoformat(win_p[1])
++
++            win_t = task_window(assoc_cur[assoc_id], dur_t, bound)
++            tasks.append(tag_flash_task(store.store_id, f, ev_id, assoc_id, win_t, seq))
++            seq += 1
++            assoc_cur[assoc_id] = datetime.fromisoformat(win_t[1])
++
++            if avail_alloc is not None:
++                used_alloc_ids.add(avail_alloc.alloc_id)
++                win_s = task_window(assoc_cur[assoc_id], dur_s, bound)
+                 tasks.append(
+                     place_sub_task(
+                         store.store_id,
+@@ -246,6 +289,6 @@
+                     )
+                 )
+                 seq += 1
+-                cur_time = datetime.fromisoformat(win_s[1])
++                assoc_cur[assoc_id] = datetime.fromisoformat(win_s[1])
+ 
+     return tasks
