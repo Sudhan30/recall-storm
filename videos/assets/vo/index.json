@@ -1,0 +1,40 @@
+{
+ "backup_core": {
+  "h1": {
+   "file": "h1_81d12617b064.wav",
+   "text": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period."
+  },
+  "h2": {
+   "file": "h2_ece30963b452.wav",
+   "text": "This is a simulated compliance drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127."
+  },
+  "h3": {
+   "file": "h3_8faabe40c776.wav",
+   "text": "You'll see a working system that Gemini 4 Argon wrote this morning, in one generation."
+  },
+  "c1": {
+   "file": "c1_6ba4c12673ba.wav",
+   "text": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done."
+  },
+  "c2": {
+   "file": "c2_c81bcad0cdf9.wav",
+   "text": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute."
+  },
+  "c3": {
+   "file": "c3_b0527c2caeeb.wav",
+   "text": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf."
+  },
+  "c4": {
+   "file": "c4_1985a716ab04.wav",
+   "text": "Then the verifier. Argon's unedited core: 350 hard errors, and recall 0.947. It missed 25 products spelled like \"F D and C\" with spaces, or Spanish \"rojo\"."
+  },
+  "c5": {
+   "file": "c5_fed9faaab0ee.wav",
+   "text": "After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, and 0 of 483 decoys pulled."
+  },
+  "c6": {
+   "file": "c6_bb7dd36f086e.wav",
+   "text": "Stores, stock and staffing are simulated. Every number came from the verifier."
+  }
+ }
+}

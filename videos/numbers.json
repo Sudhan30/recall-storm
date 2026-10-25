@@ -1,0 +1,518 @@
+{
+ "core_patched.hard_errors": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "hard_errors"
+ },
+ "core_patched.precision": {
+  "value": 0.998,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.precision (rounded to 3 dp)",
+  "raw": 0.9979
+ },
+ "core_patched.recall": {
+  "value": 1.0,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.recall (rounded to 3 dp)",
+  "raw": 1.0
+ },
+ "core_patched.fn": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.fn (missed PULLs)"
+ },
+ "core_patched.decoys": {
+  "value": 483,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.decoys"
+ },
+ "core_patched.decoys_pulled": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.decoys_pulled"
+ },
+ "core_patched.labeled": {
+  "value": 1212,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.labeled (SKUs)"
+ },
+ "core_patched.pull_facings": {
+  "value": 6718,
+  "source": "reports/core_patched_plan.json",
+  "field": "coverage.pull_facings"
+ },
+ "core_patched.pull_facings_tasked": {
+  "value": 6718,
+  "source": "reports/core_patched_plan.json",
+  "field": "coverage.pull_facings_tasked"
+ },
+ "core_patched.stores": {
+  "value": 20,
+  "source": "reports/core_patched_plan.json",
+  "field": "records.store_playbook"
+ },
+ "core_patched.shelf_tasks": {
+  "value": 13746,
+  "source": "reports/core_patched_plan.json",
+  "field": "records.shelf_task"
+ },
+ "core_patched.events": {
+  "value": 41238,
+  "source": "reports/core_patched_plan.json",
+  "field": "events.events"
+ },
+ "core_patched.deadline": {
+  "value": "2027-01-01T00:00:00",
+  "source": "reports/core_patched_plan.json",
+  "field": "deadline_local"
+ },
+ "core_patched.coverage_hard": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "by_check.coverage.hard"
+ },
+ "core.hard_errors": {
+  "value": 350,
+  "source": "reports/core_plan.json",
+  "field": "hard_errors"
+ },
+ "core.precision": {
+  "value": 0.998,
+  "source": "reports/core_plan.json",
+  "field": "classification.precision (rounded to 3 dp)",
+  "raw": 0.9977
+ },
+ "core.recall": {
+  "value": 0.947,
+  "source": "reports/core_plan.json",
+  "field": "classification.recall (rounded to 3 dp)",
+  "raw": 0.9465
+ },
+ "core.fn": {
+  "value": 25,
+  "source": "reports/core_plan.json",
+  "field": "classification.fn (missed PULLs)"
+ },
+ "core.decoys": {
+  "value": 483,
+  "source": "reports/core_plan.json",
+  "field": "classification.decoys"
+ },
+ "core.decoys_pulled": {
+  "value": 0,
+  "source": "reports/core_plan.json",
+  "field": "classification.decoys_pulled"
+ },
+ "core.labeled": {
+  "value": 1212,
+  "source": "reports/core_plan.json",
+  "field": "classification.labeled (SKUs)"
+ },
+ "core.pull_facings": {
+  "value": 6718,
+  "source": "reports/core_plan.json",
+  "field": "coverage.pull_facings"
+ },
+ "core.pull_facings_tasked": {
+  "value": 6368,
+  "source": "reports/core_plan.json",
+  "field": "coverage.pull_facings_tasked"
+ },
+ "core.stores": {
+  "value": 20,
+  "source": "reports/core_plan.json",
+  "field": "records.store_playbook"
+ },
+ "core.shelf_tasks": {
+  "value": 14169,
+  "source": "reports/core_plan.json",
+  "field": "records.shelf_task"
+ },
+ "core.events": {
+  "value": 42507,
+  "source": "reports/core_plan.json",
+  "field": "events.events"
+ },
+ "core.deadline": {
+  "value": "2027-01-01T00:00:00",
+  "source": "reports/core_plan.json",
+  "field": "deadline_local"
+ },
+ "core.coverage_hard": {
+  "value": 350,
+  "source": "reports/core_plan.json",
+  "field": "by_check.coverage.hard"
+ },
+ "patches.core_count": {
+  "value": 3,
+  "source": "patches/LOG.md",
+  "field": "count of '## core/' patch headings"
+ },
+ "patches.argon_unit_passed": {
+  "value": 42,
+  "source": "patches/LOG.md",
+  "field": "Argon's own unit tests passed (before and after)"
+ },
+ "agent.core_pack_returns.result": {
+  "value": "FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "core_pack_returns.result"
+ },
+ "agent.core_pack_returns.secs": {
+  "value": 96,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "core_pack_returns.secs (rounded)",
+  "raw": 96.2
+ },
+ "agent.core_pack_returns.before_failed": {
+  "value": 1,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "core_pack_returns.before.failed"
+ },
+ "agent.core_pack_returns.before_passed": {
+  "value": 6,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "core_pack_returns.before.passed"
+ },
+ "agent.core_pack_returns.after_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "core_pack_returns.after.failed"
+ },
+ "agent.core_pack_returns.after_passed": {
+  "value": 7,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "core_pack_returns.after.passed"
+ },
+ "agent.b_rules_evaluator.result": {
+  "value": "NOT_FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.result"
+ },
+ "agent.b_rules_evaluator.secs": {
+  "value": 498,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.secs (rounded)",
+  "raw": 498.2
+ },
+ "agent.b_rules_evaluator.before_failed": {
+  "value": 16,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.before.failed"
+ },
+ "agent.b_rules_evaluator.before_passed": {
+  "value": 1285,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.before.passed"
+ },
+ "agent.b_rules_evaluator.after_failed": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.after.failed"
+ },
+ "agent.b_rules_evaluator.after_passed": {
+  "value": 1269,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.after.passed"
+ },
+ "agent.b_rules_evaluator.held_out": {
+  "value": 8,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.holdout.held_out"
+ },
+ "agent.b_rules_evaluator.held_out_fixed": {
+  "value": 8,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator.holdout.held_out_fixed"
+ },
+ "agent.b_rules_evaluator.new_failures": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(b_rules_evaluator.holdout.new_failures)"
+ },
+ "agent.b_rules_evaluator_r2.result": {
+  "value": "IMPROVED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.result"
+ },
+ "agent.b_rules_evaluator_r2.secs": {
+  "value": 358,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.secs (rounded)",
+  "raw": 358.5
+ },
+ "agent.b_rules_evaluator_r2.before_failed": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.before.failed"
+ },
+ "agent.b_rules_evaluator_r2.before_passed": {
+  "value": 1269,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.before.passed"
+ },
+ "agent.b_rules_evaluator_r2.after_failed": {
+  "value": 1,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.after.failed"
+ },
+ "agent.b_rules_evaluator_r2.after_passed": {
+  "value": 1300,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.after.passed"
+ },
+ "agent.b_rules_evaluator_r2.held_out": {
+  "value": 16,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.holdout.held_out"
+ },
+ "agent.b_rules_evaluator_r2.held_out_fixed": {
+  "value": 15,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "b_rules_evaluator_r2.holdout.held_out_fixed"
+ },
+ "agent.b_rules_evaluator_r2.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(b_rules_evaluator_r2.holdout.new_failures)"
+ },
+ "agent.exp_plan_tasks_labor.result": {
+  "value": "FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.result"
+ },
+ "agent.exp_plan_tasks_labor.secs": {
+  "value": 241,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.secs (rounded)",
+  "raw": 241.1
+ },
+ "agent.exp_plan_tasks_labor.before_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.before.failed"
+ },
+ "agent.exp_plan_tasks_labor.before_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.before.passed"
+ },
+ "agent.exp_plan_tasks_labor.after_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.after.failed"
+ },
+ "agent.exp_plan_tasks_labor.after_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.after.passed"
+ },
+ "agent.exp_plan_tasks_labor.held_out": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.holdout.held_out"
+ },
+ "agent.exp_plan_tasks_labor.held_out_fixed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_plan_tasks_labor.holdout.held_out_fixed"
+ },
+ "agent.exp_plan_tasks_labor.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(exp_plan_tasks_labor.holdout.new_failures)"
+ },
+ "exp1.visible": {
+  "value": 254377,
+  "source": "runs/expansion/hops.jsonl",
+  "field": "last row visible_total"
+ },
+ "exp1.hops": {
+  "value": 4,
+  "source": "runs/expansion/hops.jsonl",
+  "field": "row count"
+ },
+ "exp1.minutes": {
+  "value": 33.8,
+  "source": "runs/expansion/hops.jsonl",
+  "field": "last row t / 60",
+  "raw": 2025.6
+ },
+ "exp1.cost_usd": {
+  "value": 3.56,
+  "source": "runs/expansion/hops.jsonl",
+  "field": "derived: $10/1M x (visible + thinking) + $2/1M x sum(prompt_hop); same formula as viewer/build_data.py",
+  "derived": true,
+  "prompt_tokens": 506992
+ },
+ "exp1.seams_pass": {
+  "value": 3,
+  "source": "reports/expansion_seams.json",
+  "field": "count status PASS"
+ },
+ "exp1.seams_total": {
+  "value": 3,
+  "source": "reports/expansion_seams.json",
+  "field": "len(seams)"
+ },
+ "exp2.visible": {
+  "value": null,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "run not finished",
+  "pending": true
+ },
+ "exp2.hops": {
+  "value": null,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "run not finished",
+  "pending": true
+ },
+ "exp2.minutes": {
+  "value": null,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "run not finished",
+  "pending": true
+ },
+ "exp2.cost_usd": {
+  "value": null,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "run not finished",
+  "pending": true
+ },
+ "exp2.seams_pass": {
+  "value": null,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "run not finished",
+  "pending": true
+ },
+ "exp1.files": {
+  "value": 310,
+  "source": "reports/expansion_code.json",
+  "field": "totals.files"
+ },
+ "exp1.edges": {
+  "value": 2838,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d2_edges"
+ },
+ "exp1.edges_resolved": {
+  "value": 2838,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d2_resolved"
+ },
+ "exp1.calls_checked": {
+  "value": 2065,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d2_calls_checked"
+ },
+ "exp1.arity_mismatch": {
+  "value": 0,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d2_arity_mismatch"
+ },
+ "exp1.tests": {
+  "value": 226,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d4_tests"
+ },
+ "exp1.tests_passed": {
+  "value": 222,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d4_passed"
+ },
+ "exp1.bad_literals_nontest": {
+  "value": 149,
+  "source": "reports/expansion_code.json",
+  "field": "totals.d3_bad_literals_nontest"
+ },
+ "accept.accept_core.test_rules.tests": {
+  "value": 1254,
+  "source": "reports/accept_core.xml",
+  "field": "testcases in test_rules"
+ },
+ "accept.accept_core.test_rules.passed": {
+  "value": 1143,
+  "source": "reports/accept_core.xml",
+  "field": "testcases in test_rules without failure/error"
+ },
+ "accept.accept_core.test_allocate.tests": {
+  "value": 9,
+  "source": "reports/accept_core.xml",
+  "field": "testcases in test_allocate"
+ },
+ "accept.accept_core.test_allocate.passed": {
+  "value": 9,
+  "source": "reports/accept_core.xml",
+  "field": "testcases in test_allocate without failure/error"
+ },
+ "accept.accept_core_patched.test_rules.tests": {
+  "value": 1254,
+  "source": "reports/accept_core_patched.xml",
+  "field": "testcases in test_rules"
+ },
+ "accept.accept_core_patched.test_rules.passed": {
+  "value": 1249,
+  "source": "reports/accept_core_patched.xml",
+  "field": "testcases in test_rules without failure/error"
+ },
+ "accept.accept_b_rules.test_rules.tests": {
+  "value": 1254,
+  "source": "reports/accept_b_rules.xml",
+  "field": "testcases in test_rules"
+ },
+ "accept.accept_b_rules.test_rules.passed": {
+  "value": 1240,
+  "source": "reports/accept_b_rules.xml",
+  "field": "testcases in test_rules without failure/error"
+ },
+ "accept.accept_b_allocate.test_allocate.tests": {
+  "value": 9,
+  "source": "reports/accept_b_allocate.xml",
+  "field": "testcases in test_allocate"
+ },
+ "accept.accept_b_allocate.test_allocate.passed": {
+  "value": 9,
+  "source": "reports/accept_b_allocate.xml",
+  "field": "testcases in test_allocate without failure/error"
+ },
+ "accept.accept_b_route.test_route.tests": {
+  "value": 7,
+  "source": "reports/accept_b_route.xml",
+  "field": "testcases in test_route"
+ },
+ "accept.accept_b_route.test_route.passed": {
+  "value": 7,
+  "source": "reports/accept_b_route.xml",
+  "field": "testcases in test_route without failure/error"
+ },
+ "baseline_c.calls": {
+  "value": 56,
+  "source": "baselines/README.md",
+  "field": "C's LLM usage calls"
+ },
+ "baseline_c.usd": {
+  "value": 0.13,
+  "source": "baselines/README.md",
+  "field": "C est. cost"
+ },
+ "baseline_c.hard_errors": {
+  "value": 0,
+  "source": "reports/baseline_c_plan.json",
+  "field": "hard_errors"
+ },
+ "baseline_c.recall": {
+  "value": 1.0,
+  "source": "reports/baseline_c_plan.json",
+  "field": "classification.recall"
+ },
+ "baseline_d.hard_errors": {
+  "value": 0,
+  "source": "reports/baseline_d_plan.json",
+  "field": "hard_errors"
+ },
+ "baseline_d.recall": {
+  "value": 1.0,
+  "source": "reports/baseline_d_plan.json",
+  "field": "classification.recall"
+ }
+}

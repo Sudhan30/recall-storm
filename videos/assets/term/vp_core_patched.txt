@@ -1,0 +1,8 @@
+$ python tools/verify_plan.py out/core_patched/plan.jsonl --labels data/labels.csv --data data/ --report $SCRATCH/vp_core_patched.json
+out/core_patched/plan.jsonl: 19683 records {'allocation': 2061, 'evidence': 487, 'exception': 60, 'handoff': 2090, 'route_manifest': 6, 'run': 1, 'shelf_task': 13746, 'sku_verdict': 1212, 'store_playbook': 20}
+  HARD ERRORS: 0   capacity=0(+11 soft)
+  PULL precision 0.9979 recall 1.0 (tp 467 fp 1 fn 0); decoys pulled 0/483; missing verdicts 0
+  HOLD_VERIFY truth -> {'PULL': 1, 'HOLD_VERIFY': 18, 'KEEP': 3}
+  coverage 6718/6718 PULL facings tasked; HOLD 265/319
+  src recallstorm/plan/planner.py tok 9367-17897: 0 hard  {'capacity:soft': 11}
+  report $SCRATCH/vp_core_patched.json

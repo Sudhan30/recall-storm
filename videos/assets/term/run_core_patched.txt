@@ -1,0 +1,8 @@
+$ PYTHONPATH=gen/core_patched:. python -m recallstorm run --scenario ca_red3 --data data/ --out $SCRATCH/out_core_patched/
+real 0.69
+user 0.61
+sys 0.03
+$ wc -l $SCRATCH/out_core_patched/plan.jsonl $SCRATCH/out_core_patched/events.jsonl
+   19683 $SCRATCH/out_core_patched/plan.jsonl
+   41238 $SCRATCH/out_core_patched/events.jsonl
+   60921 total

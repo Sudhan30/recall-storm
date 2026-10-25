@@ -1,0 +1,12 @@
+$ python tools/verify_plan.py out/core/plan.jsonl --labels data/labels.csv --data data/ --report $SCRATCH/vp_core.json
+out/core/plan.jsonl: 19532 records {'allocation': 1746, 'evidence': 543, 'exception': 60, 'handoff': 1775, 'route_manifest': 6, 'run': 1, 'shelf_task': 14169, 'sku_verdict': 1212, 'store_playbook': 20}
+  HARD ERRORS: 350   capacity=0(+11 soft)  coverage=350
+  PULL precision 0.9977 recall 0.9465 (tp 442 fp 1 fn 25); decoys pulled 0/483; missing verdicts 0
+  HOLD_VERIFY truth -> {'PULL': 1, 'HOLD_VERIFY': 16, 'KEEP': 5}
+  coverage 6368/6718 PULL facings tasked; HOLD 227/319
+  src recallstorm/plan/planner.py tok 9367-17897: 0 hard  {'capacity:soft': 11}
+  src recallstorm/rules/evaluator.py tok 4679-6006: 350 hard  {'coverage:hard': 350}
+    [coverage] recallstorm/rules/evaluator.py sku_verdict VAR0038: no PULL task for truth-PULL VAR0038 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 3}
+    [coverage] recallstorm/rules/evaluator.py sku_verdict VAR0043: no PULL task for truth-PULL VAR0043 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 4}
+    [coverage] recallstorm/rules/evaluator.py sku_verdict VAR0046: no PULL task for truth-PULL VAR0046 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 5}
+  report $SCRATCH/vp_core.json
