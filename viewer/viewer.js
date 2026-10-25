@@ -288,6 +288,7 @@ const store3d = (() => {
   const el = $("store3d");
   let renderer, scene, camera, controls, inited = false;
   let facMesh = null, facList = [], hotIdx = [], assocObjs = [], sid = null, group = null;
+  const views = {};
   const tmpM = new THREE.Matrix4(), tmpC = new THREE.Color();
   const AISLE_GAP = 4.2, BAY_LEN = 1.6, SHELF_H = 0.42, DEPTH = 0.8;
   const geo = { aisleX: new Map(), maxBay: 1, posPerBay: 6 };
@@ -411,20 +412,38 @@ const store3d = (() => {
       body.position.y = 0.55;
       const head = new THREE.Mesh(new THREE.SphereGeometry(0.2, 14, 10), new THREE.MeshStandardMaterial({ color: "#f1d3b3" }));
       head.position.y = 1.32;
-      g.add(body, head, label(aid.replace(storeId + "-", ""), new THREE.Vector3(0, 1.9, 0), 0.6));
+      const ring = new THREE.Mesh(new THREE.RingGeometry(0.45, 0.7, 28), new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.85, side: THREE.DoubleSide }));
+      ring.rotation.x = -Math.PI / 2; ring.position.y = 0.04;
+      body.material.emissiveIntensity = 0.9;
+      g.add(body, head, ring, label(aid.replace(storeId + "-", ""), new THREE.Vector3(0, 2.0, 0), 0.75));
+      g.scale.setScalar(1.6);
       group.add(g);
-      assocObjs.push({ aid, list, g });
+      const j = assocObjs.length;                       // fan out so associates at one spot don't stack
+      assocObjs.push({ aid, list, g, off: new THREE.Vector3(((j % 4) - 1.5) * 1.3, 0, (Math.floor(j / 4) % 4 - 1.5) * 1.3) });
     }
     // entrance marker
     const door = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.05, 0.6), new THREE.MeshStandardMaterial({ color: COL.blue, emissive: COL.blue, emissiveIntensity: 0.4 }));
     door.position.set(-2.5, 0.03, -2.5); group.add(door); group.add(label("ENTRANCE", new THREE.Vector3(-2.5, 0.8, -2.5), 0.8));
     const cx = width / 2 - 2, cz = len / 2;
-    camera.position.set(cx - width * 0.4 - 6, Math.max(9, len * 0.55), -len * 0.35 - 6);
-    controls.target.set(cx, 0.8, cz); controls.update();
+    views.overview = { pos: new THREE.Vector3(cx - width * 0.4 - 6, Math.max(9, len * 0.55), -len * 0.35 - 6), target: new THREE.Vector3(cx, 0.8, cz) };
+    const m4 = new THREE.Matrix4(), v3 = new THREE.Vector3(), byX = new Map();
+    for (const i of hotIdx) { facMesh.getMatrixAt(i, m4); v3.setFromMatrixPosition(m4); const k = Math.round(v3.x); const b = byX.get(k) || { n: 0, z: 0 }; b.n++; b.z += v3.z; byX.set(k, b); }
+    let best = null; for (const [x, b] of byX) if (!best || b.n > best.n) best = { x, n: b.n, z: b.z / b.n };
+    views.busy = best ? { pos: new THREE.Vector3(best.x - 9, 7, best.z - 9), target: new THREE.Vector3(best.x, 1, best.z) } : views.overview;
+    setView(best ? "busy" : "overview");
     resize();
     const s = D.storeById.get(storeId) || {};
     $("store3dinfo").innerHTML = `<b style="color:#fff;font-size:20px">${esc(storeId)}</b> ${esc(s.city || "")} · ${esc(s.format || "")} · ${aisles.length} aisles · ${facList.length} facings · ${tasks.length} tasks · ${byA.size} associates<br>
       <span style="color:${COL.red}">■</span> pull pending (flashing) <span style="color:${COL.amber}">■</span> hold &amp; verify <span style="color:${COL.green}">■</span> substitute placed <span style="color:#666">■</span> pulled/empty · drag to orbit, click a product`;
+  }
+  function setView(name) {
+    if (name === "busy" && assocObjs.length) {          // frame the associates where they are now
+      const c = new THREE.Vector3(); for (const a of assocObjs) c.add(a.g.position); c.divideScalar(assocObjs.length);
+      if (c.lengthSq() > 0.01) views.busy = { pos: new THREE.Vector3(c.x - 14, 11, c.z - 14), target: new THREE.Vector3(c.x, 1, c.z) };
+    }
+    const v = views[name]; if (!v || !camera) return;
+    camera.position.copy(v.pos); controls.target.copy(v.target); controls.update();
+    const b = document.getElementById("viewbtn"); if (b) { b.dataset.view = name; b.textContent = name === "busy" ? "View: whole store" : "View: follow associates"; }
   }
   function label(text, pos, scale = 1) {
     const c = document.createElement("canvas"); c.width = 256; c.height = 64;
@@ -476,12 +495,12 @@ const store3d = (() => {
         if (e.kind === "MOVE" && nxt && nxt._t > e._t) p = along(pathPoints(walkPos(prev), walkPos(e._loc)), (t - e._t) / (nxt._t - e._t));
         else p = walkPos(e._loc);
       }
-      a.g.position.lerp(p, R.playing ? 0.5 : 1);
+      a.g.position.lerp(p.add(a.off), R.playing ? 0.5 : 1);
     }
     controls.update();
     renderer.render(scene, camera);
   }
-  return { load, update, resize, get sid() { return sid; } };
+  return { load, update, resize, setView, get sid() { return sid; } };
 })();
 
 // ------------------------------------------------------------------ evidence cards
@@ -565,7 +584,7 @@ $("storesel").onchange = (e) => openStore(e.target.value);
 
 async function loadDrill() {
   const opts = options("drills");
-  fillSelect($("drillsel"), opts);
+  fillSelect($("drillsel"), opts, undefined, opts.find((o) => /(^|:)core_patched$/.test(o.key))?.key);
   if (!opts.length) { $("mapsrc").textContent = "no drill data (live or fixture)"; return; }
   const d = await loadKey("drill", $("drillsel").value);
   if (d === D.data) return;                 // unchanged since the last load: keep the replay where it is
@@ -577,8 +596,10 @@ async function loadDrill() {
   R.lastApplied = -Infinity;
   mapRows = null; buildMap();
   const fix = d.__fixture;
-  setBadges("v-map", fix, ` <span class="badge sim">SIMULATED stores, staffing, stock</span>`);
-  setBadges("v-store", fix, ` <span class="badge sim">SIMULATED</span>`);
+  const prov = /patched/.test($("drillsel").value) ? ` <span class="badge live">CORE + PATCHES (logged in patches/)</span>`
+    : /(^|:)core(_v0)?$/.test($("drillsel").value) ? ` <span class="badge real">ARGON CORE, UNEDITED</span>` : "";
+  setBadges("v-map", fix, ` <span class="badge sim">SIMULATED stores, staffing, stock</span>` + prov);
+  setBadges("v-store", fix, ` <span class="badge sim">SIMULATED</span>` + prov);
   const src = d.source || {};
   $("mapsrc").textContent = `stores: ${src.stores || "?"} · events: ${src.events || "?"} · plan: ${src.plan || "?"}`;
   $("storesrc").textContent = `facings: data/facings.jsonl · tasks: ${src.plan || "?"}`;
@@ -933,3 +954,6 @@ addEventListener("resize", () => { drawHops(); drawWall(); });
   show(VIEWS.includes(v) ? v : "map");
   requestAnimationFrame(tick);
 })();
+
+// camera toggle: busiest aisle <-> whole store
+document.getElementById("viewbtn")?.addEventListener("click", (e) => store3d.setView(e.target.dataset.view === "busy" ? "overview" : "busy"));

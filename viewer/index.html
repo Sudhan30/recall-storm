@@ -139,7 +139,7 @@ canvas.chart { width: 100%; height: 440px; display: block; background: var(--pan
     <button class="btn primary" id="play">▶ Play</button>
     <button class="btn" id="restart" title="Back to the start">⟲</button>
     <select id="speed" title="Replay speed">
-      <option value="20">replay in 20 s</option><option value="10" selected>replay in 10 s</option>
+      <option value="10">replay in 10 s</option><option value="20">replay in 20 s</option><option value="30" selected>replay in 30 s</option>
       <option value="45">replay in 45 s</option><option value="120">replay in 2 min</option>
       <option value="real60">60× real time</option>
     </select>
@@ -172,7 +172,7 @@ canvas.chart { width: 100%; height: 440px; display: block; background: var(--pan
 
 <section class="view" id="v-store">
   <div class="vhead"><h2>Store</h2><select id="storesel"></select><span class="badges"></span>
-    <button class="btn" id="trio">Evidence: demo trio</button><span class="src" id="storesrc"></span></div>
+    <button class="btn" id="trio">Evidence: demo trio</button><button class="btn" id="viewbtn" data-view="busy">View: whole store</button><span class="src" id="storesrc"></span></div>
   <div class="grid2">
     <div id="store3d"><div id="store3dinfo"></div></div>
     <div class="cards" id="cards"></div>
