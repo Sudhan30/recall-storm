@@ -96,6 +96,7 @@ never hands the shelf lots to its own matcher. Given the lots, it finds 20% of t
 ```bash
 ./demo.sh        # runs the core live on 20 stores, verifies it, opens the map (3.6 s; press Space, 20 s replay)
 python3 -m http.server -d . 8000   # viewer at /viewer/, live build status at /viewer/status.html
+# /viewer/compare.html: who is booked twice? v1 as written (7,631 double-bookings) vs v1 + agent fixes (0)
 ```
 
 ## Reproduce

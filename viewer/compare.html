@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Double-Booking Compare</title>
+<style>
+  :root { --bg:#0b0e14; --panel:#131824; --line:#232b3b; --text:#e6ebf3; --mute:#8a96ab; --green:#3ecf8e;
+          --red:#ff4d5e; --blue:#5aa9ff; --amber:#f5b942; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.4 system-ui,-apple-system,sans-serif; }
+  header { display:flex; align-items:center; gap:16px; padding:14px 20px; flex-wrap:wrap; border-bottom:1px solid var(--line); }
+  h1 { margin:0; font-size:22px; } h1 b { color:var(--red); }
+  select { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:6px 10px; font-size:15px; }
+  .badge { font-size:12px; font-weight:700; padding:3px 9px; border-radius:999px; background:#3d3112; color:var(--amber); letter-spacing:.04em; }
+  .lede { color:var(--mute); padding:10px 20px 0; max-width:1100px; }
+  main { display:grid; grid-template-columns:1fr 1fr; gap:14px; padding:14px 16px 20px; }
+  section { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; min-width:0; }
+  .head { display:flex; justify-content:space-between; align-items:flex-end; gap:10px; margin-bottom:10px; }
+  .who { font-size:15px; color:var(--mute); } .who b { color:var(--text); font-size:18px; display:block; }
+  .count { text-align:right; } .count .n { font:800 46px/1 ui-monospace,monospace; } .count .l { color:var(--mute); font-size:13px; }
+  .bad .n { color:var(--red); } .good .n { color:var(--green); }
+  canvas { width:100%; display:block; }
+  .legend { display:flex; gap:16px; flex-wrap:wrap; color:var(--mute); font-size:13px; padding:0 20px 18px; }
+  .legend i { display:inline-block; width:14px; height:10px; border-radius:2px; margin-right:6px; vertical-align:middle; }
+  @media (max-width:900px) { main { grid-template-columns:1fr; } .count .n { font-size:36px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Who is booked <b>twice</b>?</h1>
+  <label>Store <select id="store"></select></label>
+  <span class="badge">SIMULATED ASSOCIATES</span>
+</header>
+<p class="lede">Each row is one simulated associate on the overnight shift. Each bar is a shelf task Argon's code assigned
+  them. <b style="color:var(--red)">Red bars</b> start before that person's previous task has ended: one person sent to
+  two shelves at once. Same store, same staff, same products — left is Argon's code as written, right is after the
+  managed agent's fixes.</p>
+<main>
+  <section id="L"><div class="head"><div class="who" id="Lwho"></div><div class="count bad"><div class="n" id="Ln">–</div><div class="l" id="Ll"></div></div></div><canvas id="Lc"></canvas></section>
+  <section id="R"><div class="head"><div class="who" id="Rwho"></div><div class="count good"><div class="n" id="Rn">–</div><div class="l" id="Rl"></div></div></div><canvas id="Rc"></canvas></section>
+</main>
+<div class="legend">
+  <span><i style="background:var(--red)"></i>double-booked</span>
+  <span><i style="background:#4f7fb8"></i>pull</span><span><i style="background:#2f9e74"></i>place substitute</span>
+  <span><i style="background:#8a7bd8"></i>tag / hold</span><span id="dl"></span>
+  <span id="totals"></span>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const COL = { PULL: "#4f7fb8", PLACE_SUB: "#2f9e74", TAG_FLASH: "#8a7bd8", HOLD_VERIFY: "#8a7bd8" };
+let D = null;
+
+function draw(side, sid) {
+  const s = D[side].stores[sid], cv = $(side[0].toUpperCase() + "c");
+  const rows = s.rows, rowH = 22, padL = 70, padT = 26, W = cv.clientWidth, H = padT + rows.length * rowH + 8;
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = W * dpr; cv.height = H * dpr; cv.style.height = H + "px";
+  const g = cv.getContext("2d"); g.scale(dpr, dpr); g.clearRect(0, 0, W, H);
+  const t0 = Math.floor(D.t0 / 1800) * 1800, t1 = Math.ceil(D.t1 / 1800) * 1800, x = (t) => padL + (W - padL - 8) * (t - t0) / (t1 - t0);
+  const step = (t1 - t0) > 6 * 3600 ? 3600 : 1800;
+  g.font = "12px ui-monospace,monospace"; g.fillStyle = "#8a96ab"; g.strokeStyle = "#232b3b";
+  for (let t = t0; t <= t1; t += step) {                                      // time grid
+    g.beginPath(); g.moveTo(x(t), padT - 6); g.lineTo(x(t), H); g.stroke();
+    const d = new Date(t * 1000);
+    g.fillText(d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" }), x(t) - 18, 14);
+  }
+  rows.forEach((r, i) => {
+    const y = padT + i * rowH;
+    g.fillStyle = "#8a96ab"; g.fillText(r.id.split("-").pop(), 8, y + 15);
+    for (const [a, b, act, bad] of r.tasks) if (!bad) { g.fillStyle = COL[act] || "#4f7fb8"; g.fillRect(x(a), y + 4, Math.max(1.5, x(b) - x(a)), rowH - 8); }
+    for (const [a, b, , bad] of r.tasks) if (bad) { g.fillStyle = "#ff4d5e"; g.fillRect(x(a), y + 2, Math.max(2, x(b) - x(a)), rowH - 4); }
+  });
+  if (D.deadline <= t1) { g.strokeStyle = "#f5b942"; g.lineWidth = 2; g.beginPath(); g.moveTo(x(D.deadline), padT - 6); g.lineTo(x(D.deadline), H); g.stroke(); }
+  const L = side === "left" ? "L" : "R";
+  $(L + "n").textContent = s.overlaps.toLocaleString();
+  $(L + "l").textContent = `double-bookings in this store · ${s.tasks.toLocaleString()} tasks`;
+  $(L + "who").innerHTML = `<b>${D[side].label}</b>${rows.length} associates`;
+}
+function render() { const sid = $("store").value; draw("left", sid); draw("right", sid); }
+
+fetch("data/compare.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
+  D = d;
+  $("store").innerHTML = d.stores.map((s) => `<option value="${s}">${s} — ${d.left.stores[s].overlaps} vs ${d.right.stores[s].overlaps}</option>`).join("");
+  $("totals").textContent = `All 20 stores: ${d.left.overlaps.toLocaleString()} double-bookings → ${d.right.overlaps.toLocaleString()}`;
+  const last = new Date(d.t1 * 1000).toLocaleString("en-US", { weekday: "short", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" });
+  $("dl").innerHTML = `<i style="background:var(--amber)"></i>last task ends ${last}; deadline is Jan 1, 12:00 AM`;
+  render();
+}).catch(() => { document.querySelector(".lede").textContent = "No data yet: run python viewer/build_compare.py"; });
+$("store").onchange = render; addEventListener("resize", render);
+</script>
+</body>
+</html>

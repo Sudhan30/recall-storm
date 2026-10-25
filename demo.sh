@@ -11,4 +11,5 @@ PYTHONPATH=$GEN:. .venv/bin/python -m recallstorm run --scenario ca_red3 --data 
 echo "\$ python tools/verify_plan.py $OUT/plan.jsonl"
 .venv/bin/python tools/verify_plan.py $OUT/plan.jsonl --labels data/labels.csv --data data/ --report reports/demo_plan.json | sed -n 1,4p
 .venv/bin/python viewer/build_data.py >/dev/null
+[ -f out/expansion/plan.jsonl ] && [ -f out/expansion_agentpatched/plan.jsonl ] && .venv/bin/python viewer/build_compare.py >/dev/null
 open "http://localhost:8000/viewer/#map"
