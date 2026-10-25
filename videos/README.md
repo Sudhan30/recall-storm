@@ -129,3 +129,7 @@ total is under ~$20, inside the $40 budget.
 ## Drafts
 
 `drafts/` holds the earlier cuts (`demo_full_draft.mp4`, `one_minute.mp4`), which still show the "[v2 numbers pending]" card. Use `demo_full_final.mp4`, `one_minute_final.mp4` and `backup_core.mp4`.
+
+## Audio clean-up
+
+All four final cuts had their soundtrack cleaned (video untouched): `adeclip, highpass 80 Hz, lowpass 11 kHz, afftdn, agate, loudnorm -16 LUFS`. Originals: `videos/raw/original_audio/` (local only).
