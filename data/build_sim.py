@@ -1,8 +1,10 @@
 """OURS. Seeded generator for the simulated parts of the data pack.
 
-Writes stores (placeholder until build_stores.py lands real CA locations), skus + labels
-(placeholder until build_skus.py lands USDA FDC), and the fully simulated facings, associates,
-trucks, dc_stock, substitutes and notes. Deterministic: seed 418.
+Uses the real stores (data/build_stores.py, OSM) and real SKUs + labels (data/build_skus.py, USDA FDC)
+when their rows carry "_real"; otherwise writes seeded placeholders. Always regenerates the fully
+simulated facings, associates, trucks, dc_stock, substitutes and notes. Deterministic: seed 418.
+
+Order: python data/build_stores.py && python data/build_skus.py && python data/build_sim.py
 
 Usage: python data/build_sim.py [--stores N]
 """
@@ -153,7 +155,7 @@ for f in facings:
         for sub in substitutes[f["sku_id"]][:1]:
             k = (store_dc[f["store_id"]], sub)
             demand[k] = demand.get(k, 0) + 1
-wj("dc_stock.jsonl", [{"dc_id": dc, "sku_id": sub, "cases": max(1, int(n * .7))}
+wj("dc_stock.jsonl", [{"dc_id": dc, "sku_id": sub, "cases": max(1, round(n * .7))}
                       for (dc, sub), n in sorted(demand.items())])
 
 # ---------- notes (ours, written; templated per store) ----------

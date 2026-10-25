@@ -1,0 +1,1213 @@
+sku_id,truth,real,how,match
+FDC1034191,PULL,True,regex alias match,RED #3
+FDC1039055,PULL,True,regex alias match,RED #3
+FDC1096385,PULL,True,regex alias match,RED #3
+FDC1138169,PULL,True,regex alias match,RED 3
+FDC1141715,KEEP,True,no Red 3 alias,
+FDC1150901,KEEP,True,no Red 3 alias,
+FDC1152536,PULL,True,regex alias match,RED 3
+FDC1152555,PULL,True,regex alias match,RED 3
+FDC1457468,KEEP,True,no Red 3 alias,
+FDC1458042,KEEP,True,no Red 3 alias,
+FDC1458167,KEEP,True,no Red 3 alias,
+FDC1458937,KEEP,True,no Red 3 alias,
+FDC1459023,KEEP,True,no Red 3 alias,
+FDC1459062,KEEP,True,no Red 3 alias,
+FDC1459173,KEEP,True,no Red 3 alias,
+FDC1459560,KEEP,True,no Red 3 alias,
+FDC1459579,KEEP,True,no Red 3 alias,
+FDC1459587,KEEP,True,no Red 3 alias,
+FDC1459630,KEEP,True,no Red 3 alias,
+FDC1459871,KEEP,True,no Red 3 alias,
+FDC1460285,KEEP,True,no Red 3 alias,
+FDC1562420,KEEP,True,no Red 3 alias,
+FDC1635996,KEEP,True,no Red 3 alias,
+FDC1726912,KEEP,True,no Red 3 alias,
+FDC1780674,KEEP,True,no Red 3 alias,
+FDC1785146,KEEP,True,no Red 3 alias,
+FDC1800868,KEEP,True,no Red 3 alias,
+FDC1805137,KEEP,True,no Red 3 alias,
+FDC1807249,KEEP,True,no Red 3 alias,
+FDC1824402,KEEP,True,no Red 3 alias,
+FDC1834814,KEEP,True,no Red 3 alias,
+FDC1850809,KEEP,True,no Red 3 alias,
+FDC1850898,PULL,True,regex alias match,RED#3
+FDC1851197,PULL,True,regex alias match,RED 3
+FDC1851866,KEEP,True,no Red 3 alias,
+FDC1853227,KEEP,True,no Red 3 alias,
+FDC1853916,KEEP,True,no Red 3 alias,
+FDC1856958,KEEP,True,no Red 3 alias,
+FDC1858097,KEEP,True,no Red 3 alias,
+FDC1859812,KEEP,True,no Red 3 alias,
+FDC1859999,KEEP,True,no Red 3 alias,
+FDC1860340,KEEP,True,no Red 3 alias,
+FDC1861265,PULL,True,regex alias match,RED 3
+FDC1861839,KEEP,True,no Red 3 alias,
+FDC1863586,KEEP,True,no Red 3 alias,
+FDC1863587,KEEP,True,no Red 3 alias,
+FDC1863607,PULL,True,regex alias match,RED 3
+FDC1863608,KEEP,True,no Red 3 alias,
+FDC1864116,PULL,True,regex alias match,RED #3
+FDC1865974,KEEP,True,no Red 3 alias,
+FDC1866177,KEEP,True,no Red 3 alias,
+FDC1866744,KEEP,True,no Red 3 alias,
+FDC1866900,KEEP,True,no Red 3 alias,
+FDC1867063,KEEP,True,no Red 3 alias,
+FDC1867782,KEEP,True,no Red 3 alias,
+FDC1868859,KEEP,True,no Red 3 alias,
+FDC1871572,KEEP,True,no Red 3 alias,
+FDC1873319,PULL,True,regex alias match,RED 3
+FDC1874472,PULL,True,regex alias match,ERYTHROSINE
+FDC1877171,KEEP,True,no Red 3 alias,
+FDC1878485,PULL,True,regex alias match,RED 3
+FDC1878835,PULL,True,regex alias match,RED 3
+FDC1879399,HOLD_VERIFY,True,HAND: lists ERYTHROSIN '(for USA and Chile: FD&C Red 40...)': US formulation unclear,ERYTHROSIN
+FDC1881552,KEEP,True,no Red 3 alias,
+FDC1884276,KEEP,True,no Red 3 alias,
+FDC1885018,KEEP,True,no Red 3 alias,
+FDC1885241,PULL,True,regex alias match,RED #3
+FDC1885264,PULL,True,regex alias match,RED #3
+FDC1885328,KEEP,True,no Red 3 alias,
+FDC1885345,PULL,True,regex alias match,RED #3
+FDC1885377,KEEP,True,no Red 3 alias,
+FDC1885462,PULL,True,regex alias match,RED #3
+FDC1886623,PULL,True,regex alias match,RED 3
+FDC1889618,KEEP,True,no Red 3 alias,
+FDC1889889,KEEP,True,no Red 3 alias,
+FDC1889890,KEEP,True,no Red 3 alias,
+FDC1889893,PULL,True,regex alias match,RED 3
+FDC1889895,PULL,True,regex alias match,RED 3
+FDC1889896,PULL,True,regex alias match,RED 3
+FDC1889897,PULL,True,regex alias match,RED 3
+FDC1890812,KEEP,True,no Red 3 alias,
+FDC1893727,KEEP,True,no Red 3 alias,
+FDC1893852,KEEP,True,no Red 3 alias,
+FDC1893879,KEEP,True,no Red 3 alias,
+FDC1893880,KEEP,True,no Red 3 alias,
+FDC1893906,KEEP,True,no Red 3 alias,
+FDC1894211,KEEP,True,no Red 3 alias,
+FDC1894217,KEEP,True,no Red 3 alias,
+FDC1894306,KEEP,True,no Red 3 alias,
+FDC1894932,KEEP,True,no Red 3 alias,
+FDC1895171,KEEP,True,no Red 3 alias,
+FDC1897851,PULL,True,regex alias match,RED #3
+FDC1897859,PULL,True,regex alias match,RED #3
+FDC1897860,PULL,True,regex alias match,RED #3
+FDC1897874,KEEP,True,no Red 3 alias,
+FDC1897902,PULL,True,regex alias match,RED #3
+FDC1897907,KEEP,True,no Red 3 alias,
+FDC1897915,PULL,True,regex alias match,RED #3
+FDC1898074,KEEP,True,no Red 3 alias,
+FDC1898076,PULL,True,regex alias match,RED #3
+FDC1899053,PULL,True,regex alias match,RED 3
+FDC1899054,PULL,True,regex alias match,RED 3
+FDC1899062,PULL,True,regex alias match,RED 3
+FDC1899064,PULL,True,regex alias match,RED 3
+FDC1899700,KEEP,True,no Red 3 alias,
+FDC1900806,KEEP,True,no Red 3 alias,
+FDC1901164,KEEP,True,no Red 3 alias,
+FDC1901286,KEEP,True,no Red 3 alias,
+FDC1902145,KEEP,True,no Red 3 alias,
+FDC1903209,PULL,True,regex alias match,RED NO. 3
+FDC1904220,KEEP,True,no Red 3 alias,
+FDC1905282,KEEP,True,no Red 3 alias,
+FDC1907502,KEEP,True,no Red 3 alias,
+FDC1908582,KEEP,True,no Red 3 alias,
+FDC1911911,PULL,True,regex alias match,RED # 3
+FDC1912107,KEEP,True,no Red 3 alias,
+FDC1912557,PULL,True,regex alias match,RED #3
+FDC1912688,PULL,True,regex alias match,RED 3
+FDC1912695,KEEP,True,no Red 3 alias,
+FDC1913562,KEEP,True,no Red 3 alias,
+FDC1913788,KEEP,True,no Red 3 alias,
+FDC1914177,PULL,True,regex alias match,RED #3
+FDC1914179,KEEP,True,no Red 3 alias,
+FDC1914278,KEEP,True,no Red 3 alias,
+FDC1915812,PULL,True,regex alias match,E127
+FDC1917683,KEEP,True,no Red 3 alias,
+FDC1917717,KEEP,True,no Red 3 alias,
+FDC1917898,KEEP,True,no Red 3 alias,
+FDC1920161,KEEP,True,no Red 3 alias,
+FDC1921437,KEEP,True,no Red 3 alias,
+FDC1923402,KEEP,True,no Red 3 alias,
+FDC1924887,KEEP,True,no Red 3 alias,
+FDC1924945,KEEP,True,no Red 3 alias,
+FDC1926922,KEEP,True,no Red 3 alias,
+FDC1928568,KEEP,True,no Red 3 alias,
+FDC1929911,KEEP,True,no Red 3 alias,
+FDC1930933,KEEP,True,no Red 3 alias,
+FDC1931014,KEEP,True,no Red 3 alias,
+FDC1933007,PULL,True,regex alias match,RED #3
+FDC1933008,PULL,True,regex alias match,RED #3
+FDC1933739,KEEP,True,no Red 3 alias,
+FDC1935070,KEEP,True,no Red 3 alias,
+FDC1938946,PULL,True,regex alias match,RED 3
+FDC1939179,KEEP,True,no Red 3 alias,
+FDC1942178,KEEP,True,no Red 3 alias,
+FDC1945818,PULL,True,regex alias match,RED 3
+FDC1948726,KEEP,True,no Red 3 alias,
+FDC1949212,PULL,True,regex alias match,RED #3
+FDC1949720,PULL,True,regex alias match,RED #3
+FDC1950997,PULL,True,regex alias match,RED 3
+FDC1951496,PULL,True,regex alias match,RED 3
+FDC1951885,KEEP,True,no Red 3 alias,
+FDC1952155,KEEP,True,no Red 3 alias,
+FDC1952764,PULL,True,regex alias match,RED 3
+FDC1953190,PULL,True,regex alias match,RED #3
+FDC1953980,PULL,True,regex alias match,RED 3
+FDC1954004,KEEP,True,no Red 3 alias,
+FDC1955277,PULL,True,regex alias match,RED 3
+FDC1956612,PULL,True,regex alias match,RED NO. 3
+FDC1957395,KEEP,True,no Red 3 alias,
+FDC1957443,KEEP,True,no Red 3 alias,
+FDC1958251,KEEP,True,no Red 3 alias,
+FDC1958541,PULL,True,regex alias match,E127
+FDC1959051,PULL,True,regex alias match,RED #3
+FDC1959424,KEEP,True,no Red 3 alias,
+FDC1965997,KEEP,True,no Red 3 alias,
+FDC1967606,PULL,True,regex alias match,RED 3
+FDC1967607,PULL,True,regex alias match,RED 3
+FDC1967886,PULL,True,regex alias match,RED 3
+FDC1970828,PULL,True,regex alias match,RED #3
+FDC1971543,KEEP,True,no Red 3 alias,
+FDC1971547,PULL,True,regex alias match,RED 3
+FDC1971580,PULL,True,regex alias match,RED 3
+FDC1972007,KEEP,True,no Red 3 alias,
+FDC1973390,PULL,True,regex alias match,RED 3
+FDC1975490,KEEP,True,no Red 3 alias,
+FDC1978578,KEEP,True,no Red 3 alias,
+FDC1978593,KEEP,True,no Red 3 alias,
+FDC1978594,KEEP,True,no Red 3 alias,
+FDC1980273,KEEP,True,no Red 3 alias,
+FDC1983505,KEEP,True,no Red 3 alias,
+FDC1983578,KEEP,True,no Red 3 alias,
+FDC1983600,PULL,True,regex alias match,RED #3
+FDC1994514,PULL,True,regex alias match,RED 3
+FDC1994515,KEEP,True,no Red 3 alias,
+FDC1994517,PULL,True,regex alias match,RED 3
+FDC1994909,PULL,True,regex alias match,RED 3
+FDC1995150,PULL,True,regex alias match,RED 3
+FDC1995344,PULL,True,regex alias match,RED 3
+FDC1995376,PULL,True,regex alias match,RED 3
+FDC1996051,KEEP,True,no Red 3 alias,
+FDC1997049,PULL,True,regex alias match,RED NO. 3
+FDC1997541,PULL,True,regex alias match,RED #3
+FDC1997587,KEEP,True,no Red 3 alias,
+FDC1999449,KEEP,True,no Red 3 alias,
+FDC2008546,KEEP,True,no Red 3 alias,
+FDC2009487,KEEP,True,no Red 3 alias,
+FDC2009631,KEEP,True,no Red 3 alias,
+FDC2009748,KEEP,True,no Red 3 alias,
+FDC2009780,KEEP,True,no Red 3 alias,
+FDC2011308,KEEP,True,no Red 3 alias,
+FDC2012731,KEEP,True,no Red 3 alias,
+FDC2013052,KEEP,True,no Red 3 alias,
+FDC2016322,PULL,True,regex alias match,RED #3
+FDC2016644,KEEP,True,no Red 3 alias,
+FDC2016691,KEEP,True,no Red 3 alias,
+FDC2017560,KEEP,True,no Red 3 alias,
+FDC2018472,KEEP,True,no Red 3 alias,
+FDC2019044,KEEP,True,no Red 3 alias,
+FDC2019475,KEEP,True,no Red 3 alias,
+FDC2021004,KEEP,True,no Red 3 alias,
+FDC2021005,KEEP,True,no Red 3 alias,
+FDC2021013,KEEP,True,no Red 3 alias,
+FDC2021041,KEEP,True,no Red 3 alias,
+FDC2021042,KEEP,True,no Red 3 alias,
+FDC2021240,KEEP,True,no Red 3 alias,
+FDC2021469,KEEP,True,no Red 3 alias,
+FDC2021889,KEEP,True,no Red 3 alias,
+FDC2022228,KEEP,True,no Red 3 alias,
+FDC2022231,KEEP,True,no Red 3 alias,
+FDC2022259,PULL,True,regex alias match,RED 3
+FDC2023249,PULL,True,regex alias match,RED #3
+FDC2023739,KEEP,True,no Red 3 alias,
+FDC2025753,KEEP,True,no Red 3 alias,
+FDC2025899,KEEP,True,no Red 3 alias,
+FDC2026216,KEEP,True,no Red 3 alias,
+FDC2026419,PULL,True,regex alias match,RED 3
+FDC2026573,KEEP,True,no Red 3 alias,
+FDC2027944,PULL,True,regex alias match,RED #3
+FDC2028308,KEEP,True,no Red 3 alias,
+FDC2029533,KEEP,True,no Red 3 alias,
+FDC2029911,KEEP,True,no Red 3 alias,
+FDC2030807,KEEP,True,no Red 3 alias,
+FDC2030822,PULL,True,regex alias match,RED 3
+FDC2030891,KEEP,True,no Red 3 alias,
+FDC2031098,KEEP,True,no Red 3 alias,
+FDC2031716,KEEP,True,no Red 3 alias,
+FDC2031941,KEEP,True,no Red 3 alias,
+FDC2032276,PULL,True,regex alias match,RED #3
+FDC2032339,PULL,True,regex alias match,RED NO.3
+FDC2032505,KEEP,True,no Red 3 alias,
+FDC2034057,KEEP,True,no Red 3 alias,
+FDC2036277,KEEP,True,no Red 3 alias,
+FDC2038279,PULL,True,regex alias match,RED 3
+FDC2038331,KEEP,True,no Red 3 alias,
+FDC2041980,KEEP,True,no Red 3 alias,
+FDC2042043,PULL,True,regex alias match,RED 3
+FDC2042075,PULL,True,regex alias match,RED 3
+FDC2042913,KEEP,True,no Red 3 alias,
+FDC2043565,KEEP,True,no Red 3 alias,
+FDC2044527,PULL,True,regex alias match,RED 3
+FDC2045140,KEEP,True,no Red 3 alias,
+FDC2045152,KEEP,True,no Red 3 alias,
+FDC2045320,KEEP,True,no Red 3 alias,
+FDC2045764,PULL,True,regex alias match,RED 3
+FDC2045766,PULL,True,regex alias match,RED 3
+FDC2046149,KEEP,True,no Red 3 alias,
+FDC2047567,PULL,True,regex alias match,RED #3
+FDC2048756,PULL,True,regex alias match,ERYTHROSINE
+FDC2049000,KEEP,True,no Red 3 alias,
+FDC2049356,PULL,True,regex alias match,ERYTHROSINE
+FDC2049510,KEEP,True,no Red 3 alias,
+FDC2049971,PULL,True,regex alias match,RED #3
+FDC2049973,KEEP,True,no Red 3 alias,
+FDC2050372,KEEP,True,no Red 3 alias,
+FDC2051416,KEEP,True,no Red 3 alias,
+FDC2055556,KEEP,True,no Red 3 alias,
+FDC2055653,KEEP,True,no Red 3 alias,
+FDC2055767,PULL,True,regex alias match,RED #3
+FDC2056033,KEEP,True,no Red 3 alias,
+FDC2056217,KEEP,True,no Red 3 alias,
+FDC2056896,KEEP,True,no Red 3 alias,
+FDC2058520,KEEP,True,no Red 3 alias,
+FDC2058527,KEEP,True,no Red 3 alias,
+FDC2061744,PULL,True,regex alias match,RED 3
+FDC2061994,KEEP,True,no Red 3 alias,
+FDC2063924,KEEP,True,no Red 3 alias,
+FDC2063929,KEEP,True,no Red 3 alias,
+FDC2064325,KEEP,True,no Red 3 alias,
+FDC2065372,KEEP,True,no Red 3 alias,
+FDC2065400,KEEP,True,no Red 3 alias,
+FDC2065410,KEEP,True,no Red 3 alias,
+FDC2065565,KEEP,True,no Red 3 alias,
+FDC2065683,KEEP,True,no Red 3 alias,
+FDC2065845,KEEP,True,no Red 3 alias,
+FDC2065977,PULL,True,regex alias match,RED 3
+FDC2065981,PULL,True,regex alias match,RED 3
+FDC2066373,KEEP,True,no Red 3 alias,
+FDC2066376,KEEP,True,no Red 3 alias,
+FDC2066451,KEEP,True,no Red 3 alias,
+FDC2066563,PULL,True,regex alias match,RED 3
+FDC2066567,PULL,True,regex alias match,RED 3
+FDC2066569,PULL,True,regex alias match,RED 3
+FDC2066575,PULL,True,regex alias match,RED 3
+FDC2066930,KEEP,True,no Red 3 alias,
+FDC2067256,KEEP,True,no Red 3 alias,
+FDC2067268,KEEP,True,no Red 3 alias,
+FDC2067930,KEEP,True,no Red 3 alias,
+FDC2071901,PULL,True,regex alias match,RED 3
+FDC2072169,PULL,True,regex alias match,RED #3
+FDC2072562,KEEP,True,no Red 3 alias,
+FDC2073034,PULL,True,regex alias match,RED 3
+FDC2073036,PULL,True,regex alias match,RED 3
+FDC2073216,KEEP,True,no Red 3 alias,
+FDC2073569,PULL,True,regex alias match,RED #3
+FDC2074048,KEEP,True,no Red 3 alias,
+FDC2074260,KEEP,True,no Red 3 alias,
+FDC2074752,KEEP,True,no Red 3 alias,
+FDC2075211,PULL,True,regex alias match,RED 3
+FDC2075515,KEEP,True,no Red 3 alias,
+FDC2076238,KEEP,True,no Red 3 alias,
+FDC2078149,PULL,True,regex alias match,RED 3
+FDC2078150,PULL,True,regex alias match,RED 3
+FDC2078689,KEEP,True,no Red 3 alias,
+FDC2079458,KEEP,True,no Red 3 alias,
+FDC2082283,KEEP,True,no Red 3 alias,
+FDC2082681,KEEP,True,no Red 3 alias,
+FDC2083104,KEEP,True,no Red 3 alias,
+FDC2083170,KEEP,True,no Red 3 alias,
+FDC2083731,KEEP,True,no Red 3 alias,
+FDC2083812,KEEP,True,no Red 3 alias,
+FDC2084003,KEEP,True,no Red 3 alias,
+FDC2084258,KEEP,True,no Red 3 alias,
+FDC2084828,KEEP,True,no Red 3 alias,
+FDC2085473,PULL,True,regex alias match,RED #3
+FDC2085684,KEEP,True,no Red 3 alias,
+FDC2086264,KEEP,True,no Red 3 alias,
+FDC2086275,KEEP,True,no Red 3 alias,
+FDC2087941,KEEP,True,no Red 3 alias,
+FDC2087986,KEEP,True,no Red 3 alias,
+FDC2088661,KEEP,True,no Red 3 alias,
+FDC2089114,KEEP,True,no Red 3 alias,
+FDC2089235,KEEP,True,no Red 3 alias,
+FDC2089278,PULL,True,regex alias match,RED #3
+FDC2089635,KEEP,True,no Red 3 alias,
+FDC2090465,PULL,True,regex alias match,RED #3
+FDC2091091,KEEP,True,no Red 3 alias,
+FDC2091181,PULL,True,regex alias match,RED 3
+FDC2091295,KEEP,True,no Red 3 alias,
+FDC2091758,KEEP,True,no Red 3 alias,
+FDC2092315,KEEP,True,no Red 3 alias,
+FDC2092864,KEEP,True,no Red 3 alias,
+FDC2093122,KEEP,True,no Red 3 alias,
+FDC2093199,KEEP,True,no Red 3 alias,
+FDC2093676,KEEP,True,no Red 3 alias,
+FDC2093745,KEEP,True,no Red 3 alias,
+FDC2093822,KEEP,True,no Red 3 alias,
+FDC2093826,PULL,True,regex alias match,RED #3
+FDC2094249,PULL,True,regex alias match,RED 3
+FDC2094250,PULL,True,regex alias match,RED 3
+FDC2095124,KEEP,True,no Red 3 alias,
+FDC2095705,PULL,True,regex alias match,RED #3
+FDC2096248,KEEP,True,no Red 3 alias,
+FDC2096891,KEEP,True,no Red 3 alias,
+FDC2097414,PULL,True,regex alias match,RED 3
+FDC2098076,KEEP,True,no Red 3 alias,
+FDC2098234,KEEP,True,no Red 3 alias,
+FDC2098668,KEEP,True,no Red 3 alias,
+FDC2098759,KEEP,True,no Red 3 alias,
+FDC2098861,KEEP,True,no Red 3 alias,
+FDC2099147,KEEP,True,no Red 3 alias,
+FDC2099158,KEEP,True,no Red 3 alias,
+FDC2099175,KEEP,True,no Red 3 alias,
+FDC2099176,KEEP,True,no Red 3 alias,
+FDC2099351,KEEP,True,no Red 3 alias,
+FDC2099937,KEEP,True,no Red 3 alias,
+FDC2100770,KEEP,True,no Red 3 alias,
+FDC2100981,KEEP,True,no Red 3 alias,
+FDC2101206,KEEP,True,no Red 3 alias,
+FDC2101396,KEEP,True,no Red 3 alias,
+FDC2101597,KEEP,True,no Red 3 alias,
+FDC2101961,KEEP,True,no Red 3 alias,
+FDC2102219,KEEP,True,no Red 3 alias,
+FDC2102234,KEEP,True,no Red 3 alias,
+FDC2102267,KEEP,True,no Red 3 alias,
+FDC2102896,KEEP,True,no Red 3 alias,
+FDC2103480,KEEP,True,no Red 3 alias,
+FDC2103913,KEEP,True,no Red 3 alias,
+FDC2105158,KEEP,True,no Red 3 alias,
+FDC2105944,KEEP,True,no Red 3 alias,
+FDC2106270,KEEP,True,no Red 3 alias,
+FDC2107349,PULL,True,regex alias match,RED NO. 3
+FDC2108124,PULL,True,regex alias match,RED #3
+FDC2109574,KEEP,True,no Red 3 alias,
+FDC2110226,KEEP,True,no Red 3 alias,
+FDC2110230,KEEP,True,no Red 3 alias,
+FDC2110231,KEEP,True,no Red 3 alias,
+FDC2110238,KEEP,True,no Red 3 alias,
+FDC2110304,KEEP,True,no Red 3 alias,
+FDC2110624,KEEP,True,no Red 3 alias,
+FDC2110738,KEEP,True,no Red 3 alias,
+FDC2111525,KEEP,True,no Red 3 alias,
+FDC2112555,KEEP,True,no Red 3 alias,
+FDC2113004,PULL,True,regex alias match,RED 3
+FDC2114101,KEEP,True,no Red 3 alias,
+FDC2114945,KEEP,True,no Red 3 alias,
+FDC2116181,PULL,True,regex alias match,RED 3
+FDC2116356,KEEP,True,no Red 3 alias,
+FDC2118511,KEEP,True,no Red 3 alias,
+FDC2118662,KEEP,True,no Red 3 alias,
+FDC2119194,KEEP,True,no Red 3 alias,
+FDC2119260,KEEP,True,no Red 3 alias,
+FDC2119269,KEEP,True,no Red 3 alias,
+FDC2119657,KEEP,True,no Red 3 alias,
+FDC2120655,PULL,True,regex alias match,RED 3
+FDC2121428,KEEP,True,no Red 3 alias,
+FDC2122309,KEEP,True,no Red 3 alias,
+FDC2123037,KEEP,True,no Red 3 alias,
+FDC2123307,KEEP,True,no Red 3 alias,
+FDC2123558,KEEP,True,no Red 3 alias,
+FDC2124204,PULL,True,regex alias match,RED 3
+FDC2124294,PULL,True,regex alias match,RED 3
+FDC2127121,KEEP,True,no Red 3 alias,
+FDC2127128,PULL,True,regex alias match,RED 3
+FDC2128432,PULL,True,regex alias match,RED#3
+FDC2128876,KEEP,True,no Red 3 alias,
+FDC2129537,KEEP,True,no Red 3 alias,
+FDC2133159,KEEP,True,no Red 3 alias,
+FDC2133161,KEEP,True,no Red 3 alias,
+FDC2133302,KEEP,True,no Red 3 alias,
+FDC2133371,KEEP,True,no Red 3 alias,
+FDC2133974,PULL,True,regex alias match,RED 3
+FDC2134194,PULL,True,regex alias match,RED 3
+FDC2134195,PULL,True,regex alias match,RED 3
+FDC2137114,PULL,True,regex alias match,RED NO.3
+FDC2137142,PULL,True,regex alias match,RED 3
+FDC2138375,KEEP,True,no Red 3 alias,
+FDC2138393,KEEP,True,no Red 3 alias,
+FDC2138898,KEEP,True,no Red 3 alias,
+FDC2138949,PULL,True,regex alias match,RED 3
+FDC2139265,KEEP,True,no Red 3 alias,
+FDC2140138,PULL,True,regex alias match,RED # 3
+FDC2141472,KEEP,True,no Red 3 alias,
+FDC2141492,PULL,True,regex alias match,RED #3
+FDC2145250,KEEP,True,no Red 3 alias,
+FDC2146053,PULL,True,regex alias match,RED NO. 3
+FDC2146313,KEEP,True,no Red 3 alias,
+FDC2147115,PULL,True,regex alias match,RED 3
+FDC2147256,PULL,True,regex alias match,RED 3
+FDC2147668,PULL,True,regex alias match,RED NO. 3
+FDC2148963,KEEP,True,no Red 3 alias,
+FDC2149890,PULL,True,regex alias match,RED 3
+FDC2150456,KEEP,True,no Red 3 alias,
+FDC2152638,PULL,True,regex alias match,RED 3
+FDC2152992,PULL,True,regex alias match,RED 3
+FDC2153176,PULL,True,regex alias match,RED 3
+FDC2153179,PULL,True,regex alias match,RED 3
+FDC2153209,PULL,True,regex alias match,RED 3
+FDC2153359,KEEP,True,no Red 3 alias,
+FDC2154100,PULL,True,regex alias match,RED 3
+FDC2154213,KEEP,True,no Red 3 alias,
+FDC2156580,PULL,True,regex alias match,RED 3
+FDC2157397,KEEP,True,no Red 3 alias,
+FDC2157753,KEEP,True,no Red 3 alias,
+FDC2159840,KEEP,True,no Red 3 alias,
+FDC2161989,KEEP,True,no Red 3 alias,
+FDC2162245,KEEP,True,no Red 3 alias,
+FDC2163471,KEEP,True,no Red 3 alias,
+FDC2163884,KEEP,True,no Red 3 alias,
+FDC2165234,KEEP,True,no Red 3 alias,
+FDC2165517,KEEP,True,no Red 3 alias,
+FDC2165701,KEEP,True,no Red 3 alias,
+FDC2165978,PULL,True,regex alias match,RED #3
+FDC2167903,PULL,True,regex alias match,RED 3
+FDC2167946,KEEP,True,no Red 3 alias,
+FDC2168506,KEEP,True,no Red 3 alias,
+FDC2169947,KEEP,True,no Red 3 alias,
+FDC2170715,KEEP,True,no Red 3 alias,
+FDC2171020,KEEP,True,no Red 3 alias,
+FDC2171197,KEEP,True,no Red 3 alias,
+FDC2171402,KEEP,True,no Red 3 alias,
+FDC2171940,PULL,True,regex alias match,RED NO.3
+FDC2172194,KEEP,True,no Red 3 alias,
+FDC2172456,KEEP,True,no Red 3 alias,
+FDC2172550,PULL,True,regex alias match,RED 3
+FDC2178255,KEEP,True,no Red 3 alias,
+FDC2193843,KEEP,True,no Red 3 alias,
+FDC2194921,KEEP,True,no Red 3 alias,
+FDC2195583,PULL,True,regex alias match,RED 3
+FDC2195996,PULL,True,regex alias match,RED 3
+FDC2195999,KEEP,True,no Red 3 alias,
+FDC2196485,KEEP,True,no Red 3 alias,
+FDC2210261,KEEP,True,no Red 3 alias,
+FDC2210293,PULL,True,regex alias match,RED 3
+FDC2211254,PULL,True,regex alias match,RED 3
+FDC2211256,PULL,True,regex alias match,RED 3
+FDC2211780,PULL,True,regex alias match,RED 3
+FDC2215683,KEEP,True,no Red 3 alias,
+FDC2217815,KEEP,True,no Red 3 alias,
+FDC2242641,PULL,True,regex alias match,RED #3
+FDC2245882,KEEP,True,no Red 3 alias,
+FDC2247737,KEEP,True,no Red 3 alias,
+FDC2248528,KEEP,True,no Red 3 alias,
+FDC2251424,KEEP,True,no Red 3 alias,
+FDC2251542,KEEP,True,no Red 3 alias,
+FDC2253159,KEEP,True,no Red 3 alias,
+FDC2253254,KEEP,True,no Red 3 alias,
+FDC2271758,KEEP,True,no Red 3 alias,
+FDC2273347,KEEP,True,no Red 3 alias,
+FDC2274409,KEEP,True,no Red 3 alias,
+FDC2275044,PULL,True,regex alias match,RED 3
+FDC2275277,KEEP,True,no Red 3 alias,
+FDC2275396,PULL,True,regex alias match,RED 3
+FDC2276839,KEEP,True,no Red 3 alias,
+FDC2277889,PULL,True,regex alias match,RED 3
+FDC2278504,KEEP,True,no Red 3 alias,
+FDC2279999,KEEP,True,no Red 3 alias,
+FDC2280330,PULL,True,regex alias match,RED 3
+FDC2281770,PULL,True,regex alias match,RED 3
+FDC2281999,KEEP,True,no Red 3 alias,
+FDC2283991,KEEP,True,no Red 3 alias,
+FDC2284520,KEEP,True,no Red 3 alias,
+FDC2285024,KEEP,True,no Red 3 alias,
+FDC2285165,KEEP,True,no Red 3 alias,
+FDC2285323,PULL,True,regex alias match,RED #3
+FDC2286427,PULL,True,regex alias match,RED #3
+FDC2286650,PULL,True,regex alias match,RED 3
+FDC2287003,KEEP,True,no Red 3 alias,
+FDC2288306,PULL,True,regex alias match,RED NO. 3
+FDC2289156,PULL,True,regex alias match,RED 3
+FDC2289635,KEEP,True,no Red 3 alias,
+FDC2289705,KEEP,True,no Red 3 alias,
+FDC2289794,PULL,True,regex alias match,RED #3
+FDC2290100,KEEP,True,no Red 3 alias,
+FDC2290538,KEEP,True,no Red 3 alias,
+FDC2290605,KEEP,True,no Red 3 alias,
+FDC2291275,PULL,True,regex alias match,RED #3
+FDC2292084,KEEP,True,no Red 3 alias,
+FDC2292930,PULL,True,regex alias match,RED 3
+FDC2295016,KEEP,True,no Red 3 alias,
+FDC2295301,PULL,True,regex alias match,RED 3
+FDC2295791,KEEP,True,no Red 3 alias,
+FDC2297244,KEEP,True,no Red 3 alias,
+FDC2297246,PULL,True,regex alias match,RED # 3
+FDC2298698,KEEP,True,no Red 3 alias,
+FDC2300005,PULL,True,regex alias match,RED 3
+FDC2301197,PULL,True,regex alias match,RED 3
+FDC2301761,PULL,True,regex alias match,RED #3
+FDC2301876,PULL,True,regex alias match,RED #3
+FDC2305828,KEEP,True,no Red 3 alias,
+FDC2308934,KEEP,True,no Red 3 alias,
+FDC2309139,KEEP,True,no Red 3 alias,
+FDC2309805,KEEP,True,no Red 3 alias,
+FDC2312268,PULL,True,regex alias match,RED 3
+FDC2312926,KEEP,True,no Red 3 alias,
+FDC2313324,KEEP,True,no Red 3 alias,
+FDC2314254,PULL,True,regex alias match,RED NO. 3
+FDC2316508,KEEP,True,no Red 3 alias,
+FDC2323262,PULL,True,regex alias match,RED #3
+FDC2326035,PULL,True,regex alias match,RED #3
+FDC2327040,PULL,True,regex alias match,RED #3
+FDC2327042,PULL,True,regex alias match,RED #3
+FDC2327043,PULL,True,regex alias match,RED #3
+FDC2338061,KEEP,True,no Red 3 alias,
+FDC2338331,PULL,True,regex alias match,RED 3
+FDC2365938,KEEP,True,no Red 3 alias,
+FDC2366982,PULL,True,regex alias match,RED 3
+FDC2367838,KEEP,True,no Red 3 alias,
+FDC2368197,KEEP,True,no Red 3 alias,
+FDC2368722,KEEP,True,no Red 3 alias,
+FDC2368881,KEEP,True,no Red 3 alias,
+FDC2369332,KEEP,True,no Red 3 alias,
+FDC2369632,KEEP,True,no Red 3 alias,
+FDC2375329,KEEP,True,no Red 3 alias,
+FDC2375655,KEEP,True,no Red 3 alias,
+FDC2375865,KEEP,True,no Red 3 alias,
+FDC2375923,KEEP,True,no Red 3 alias,
+FDC2376823,KEEP,True,no Red 3 alias,
+FDC2377195,PULL,True,regex alias match,RED 3
+FDC2377445,KEEP,True,no Red 3 alias,
+FDC2377480,PULL,True,regex alias match,RED 3
+FDC2378020,KEEP,True,no Red 3 alias,
+FDC2378085,KEEP,True,no Red 3 alias,
+FDC2382341,KEEP,True,no Red 3 alias,
+FDC2389486,PULL,True,regex alias match,RED 3
+FDC2396948,KEEP,True,no Red 3 alias,
+FDC2402338,KEEP,True,no Red 3 alias,
+FDC2402445,KEEP,True,no Red 3 alias,
+FDC2402704,KEEP,True,no Red 3 alias,
+FDC2402911,KEEP,True,no Red 3 alias,
+FDC2411936,KEEP,True,no Red 3 alias,
+FDC2412001,KEEP,True,no Red 3 alias,
+FDC2412035,KEEP,True,no Red 3 alias,
+FDC2414555,PULL,True,regex alias match,RED 3
+FDC2414889,KEEP,True,no Red 3 alias,
+FDC2415424,KEEP,True,no Red 3 alias,
+FDC2415607,KEEP,True,no Red 3 alias,
+FDC2415865,KEEP,True,no Red 3 alias,
+FDC2416533,KEEP,True,no Red 3 alias,
+FDC2416561,PULL,True,regex alias match,RED 3
+FDC2416606,PULL,True,regex alias match,RED 3
+FDC2416714,KEEP,True,no Red 3 alias,
+FDC2416881,KEEP,True,no Red 3 alias,
+FDC2417255,PULL,True,regex alias match,RED 3
+FDC2417425,KEEP,True,no Red 3 alias,
+FDC2419326,KEEP,True,no Red 3 alias,
+FDC2425051,KEEP,True,no Red 3 alias,
+FDC2426550,PULL,True,regex alias match,RED 3
+FDC2427753,KEEP,True,no Red 3 alias,
+FDC2429225,KEEP,True,no Red 3 alias,
+FDC2429227,KEEP,True,no Red 3 alias,
+FDC2429487,KEEP,True,no Red 3 alias,
+FDC2431858,KEEP,True,no Red 3 alias,
+FDC2431912,KEEP,True,no Red 3 alias,
+FDC2433458,KEEP,True,no Red 3 alias,
+FDC2437309,KEEP,True,no Red 3 alias,
+FDC2437433,KEEP,True,no Red 3 alias,
+FDC2438667,KEEP,True,no Red 3 alias,
+FDC2439767,KEEP,True,no Red 3 alias,
+FDC2440040,PULL,True,regex alias match,RED #3
+FDC2441562,KEEP,True,no Red 3 alias,
+FDC2444451,KEEP,True,no Red 3 alias,
+FDC2447726,KEEP,True,no Red 3 alias,
+FDC2447876,KEEP,True,no Red 3 alias,
+FDC2448175,KEEP,True,no Red 3 alias,
+FDC2448176,KEEP,True,no Red 3 alias,
+FDC2448580,KEEP,True,no Red 3 alias,
+FDC2448581,KEEP,True,no Red 3 alias,
+FDC2450172,PULL,True,regex alias match,RED #3
+FDC2450851,PULL,True,regex alias match,RED 3
+FDC2450852,PULL,True,regex alias match,RED 3
+FDC2452125,KEEP,True,no Red 3 alias,
+FDC2452478,KEEP,True,no Red 3 alias,
+FDC2453008,KEEP,True,no Red 3 alias,
+FDC2454001,KEEP,True,no Red 3 alias,
+FDC2454531,PULL,True,regex alias match,RED 3
+FDC2454909,KEEP,True,no Red 3 alias,
+FDC2454921,KEEP,True,no Red 3 alias,
+FDC2454957,KEEP,True,no Red 3 alias,
+FDC2454962,KEEP,True,no Red 3 alias,
+FDC2455258,KEEP,True,no Red 3 alias,
+FDC2455602,KEEP,True,no Red 3 alias,
+FDC2456531,KEEP,True,no Red 3 alias,
+FDC2456532,KEEP,True,no Red 3 alias,
+FDC2460825,KEEP,True,no Red 3 alias,
+FDC2460970,KEEP,True,no Red 3 alias,
+FDC2461222,KEEP,True,no Red 3 alias,
+FDC2461349,KEEP,True,no Red 3 alias,
+FDC2461395,KEEP,True,no Red 3 alias,
+FDC2462596,KEEP,True,no Red 3 alias,
+FDC2463469,KEEP,True,no Red 3 alias,
+FDC2464822,KEEP,True,no Red 3 alias,
+FDC2464856,HOLD_VERIFY,True,"generic colour statement, no dye named",COLOR ADDED
+FDC2465446,KEEP,True,no Red 3 alias,
+FDC2465862,KEEP,True,no Red 3 alias,
+FDC2468948,KEEP,True,no Red 3 alias,
+FDC2471588,KEEP,True,no Red 3 alias,
+FDC2471876,KEEP,True,no Red 3 alias,
+FDC2473150,PULL,True,regex alias match,RED NO. 3
+FDC2474424,KEEP,True,no Red 3 alias,
+FDC2476309,KEEP,True,no Red 3 alias,
+FDC2476366,KEEP,True,no Red 3 alias,
+FDC2476369,KEEP,True,no Red 3 alias,
+FDC2476499,PULL,True,regex alias match,RED 3
+FDC2479453,KEEP,True,no Red 3 alias,
+FDC2482949,KEEP,True,no Red 3 alias,
+FDC2484177,KEEP,True,no Red 3 alias,
+FDC2486258,PULL,True,regex alias match,RED #3
+FDC2489013,KEEP,True,no Red 3 alias,
+FDC2493019,PULL,True,regex alias match,RED 3
+FDC2493510,KEEP,True,no Red 3 alias,
+FDC2493627,PULL,True,regex alias match,RED 3
+FDC2493659,KEEP,True,no Red 3 alias,
+FDC2494183,KEEP,True,no Red 3 alias,
+FDC2494236,KEEP,True,no Red 3 alias,
+FDC2495099,KEEP,True,no Red 3 alias,
+FDC2495278,KEEP,True,no Red 3 alias,
+FDC2495373,KEEP,True,no Red 3 alias,
+FDC2495945,KEEP,True,no Red 3 alias,
+FDC2497316,KEEP,True,no Red 3 alias,
+FDC2497696,KEEP,True,no Red 3 alias,
+FDC2499238,HOLD_VERIFY,True,"generic colour statement, no dye named",ARTIFICIAL COLOR
+FDC2499399,PULL,True,regex alias match,RED 3
+FDC2499774,KEEP,True,no Red 3 alias,
+FDC2499832,KEEP,True,no Red 3 alias,
+FDC2500747,KEEP,True,no Red 3 alias,
+FDC2501775,KEEP,True,no Red 3 alias,
+FDC2502141,KEEP,True,no Red 3 alias,
+FDC2502879,PULL,True,regex alias match,RED 3
+FDC2502880,KEEP,True,no Red 3 alias,
+FDC2503500,KEEP,True,no Red 3 alias,
+FDC2503501,KEEP,True,no Red 3 alias,
+FDC2503503,KEEP,True,no Red 3 alias,
+FDC2503823,KEEP,True,no Red 3 alias,
+FDC2503894,PULL,True,regex alias match,RED 3
+FDC2504065,KEEP,True,no Red 3 alias,
+FDC2504071,PULL,True,regex alias match,RED 3
+FDC2504080,KEEP,True,no Red 3 alias,
+FDC2504170,KEEP,True,no Red 3 alias,
+FDC2505429,KEEP,True,no Red 3 alias,
+FDC2505432,KEEP,True,no Red 3 alias,
+FDC2506198,KEEP,True,no Red 3 alias,
+FDC2506676,KEEP,True,no Red 3 alias,
+FDC2506677,PULL,True,regex alias match,RED 3
+FDC2506678,PULL,True,regex alias match,RED 3
+FDC2506707,PULL,True,regex alias match,RED 3
+FDC2507623,PULL,True,regex alias match,RED 3
+FDC2508583,PULL,True,regex alias match,RED 3
+FDC2508685,KEEP,True,no Red 3 alias,
+FDC2508697,KEEP,True,no Red 3 alias,
+FDC2508713,PULL,True,regex alias match,RED 3
+FDC2509110,KEEP,True,no Red 3 alias,
+FDC2509388,KEEP,True,no Red 3 alias,
+FDC2509396,KEEP,True,no Red 3 alias,
+FDC2511320,PULL,True,regex alias match,ERYTHROSINE
+FDC2523568,KEEP,True,no Red 3 alias,
+FDC2524083,KEEP,True,no Red 3 alias,
+FDC2524175,PULL,True,regex alias match,RED 3
+FDC2524176,PULL,True,regex alias match,RED 3
+FDC2524177,KEEP,True,no Red 3 alias,
+FDC2524569,PULL,True,regex alias match,RED 3
+FDC2524771,PULL,True,regex alias match,RED #3
+FDC2524772,PULL,True,regex alias match,RED #3
+FDC2524811,PULL,True,regex alias match,RED #3
+FDC2524814,PULL,True,regex alias match,RED #3
+FDC2524824,PULL,True,regex alias match,RED 3
+FDC2524825,PULL,True,regex alias match,RED #3
+FDC2524849,PULL,True,regex alias match,RED # 3
+FDC2524906,PULL,True,regex alias match,RED 3
+FDC2524908,KEEP,True,no Red 3 alias,
+FDC2524922,PULL,True,regex alias match,RED 3
+FDC2525111,KEEP,True,no Red 3 alias,
+FDC2525132,KEEP,True,no Red 3 alias,
+FDC2533650,PULL,True,regex alias match,RED 3
+FDC2533837,KEEP,True,no Red 3 alias,
+FDC2533886,KEEP,True,no Red 3 alias,
+FDC2534111,KEEP,True,no Red 3 alias,
+FDC2534435,KEEP,True,no Red 3 alias,
+FDC2535109,KEEP,True,no Red 3 alias,
+FDC2535728,PULL,True,regex alias match,RED 3
+FDC2535895,KEEP,True,no Red 3 alias,
+FDC2538225,KEEP,True,no Red 3 alias,
+FDC2538271,PULL,True,regex alias match,RED 3
+FDC2538297,PULL,True,regex alias match,RED 3
+FDC2538903,KEEP,True,no Red 3 alias,
+FDC2539033,KEEP,True,no Red 3 alias,
+FDC2540675,KEEP,True,no Red 3 alias,
+FDC2540852,KEEP,True,no Red 3 alias,
+FDC2541030,PULL,True,regex alias match,RED 3
+FDC2541096,KEEP,True,no Red 3 alias,
+FDC2541940,KEEP,True,no Red 3 alias,
+FDC2542489,PULL,True,regex alias match,RED 3
+FDC2542632,PULL,True,regex alias match,RED 3
+FDC2542665,KEEP,True,no Red 3 alias,
+FDC2542672,KEEP,True,no Red 3 alias,
+FDC2542714,PULL,True,regex alias match,RED 3
+FDC2543272,PULL,True,regex alias match,RED 3
+FDC2544120,PULL,True,regex alias match,RED 3
+FDC2544160,PULL,True,regex alias match,RED 3
+FDC2544428,KEEP,True,no Red 3 alias,
+FDC2544558,KEEP,True,no Red 3 alias,
+FDC2544969,PULL,True,regex alias match,RED 3
+FDC2545255,KEEP,True,no Red 3 alias,
+FDC2545680,PULL,True,regex alias match,RED 3
+FDC2545721,PULL,True,regex alias match,RED 3
+FDC2545866,KEEP,True,no Red 3 alias,
+FDC2545941,PULL,True,regex alias match,RED 3
+FDC2545955,PULL,True,regex alias match,RED #3
+FDC2546516,PULL,True,regex alias match,RED 3
+FDC2546562,KEEP,True,no Red 3 alias,
+FDC2546656,PULL,True,regex alias match,RED 3
+FDC2547955,KEEP,True,no Red 3 alias,
+FDC2547961,PULL,True,regex alias match,RED 3
+FDC2548082,KEEP,True,no Red 3 alias,
+FDC2549248,KEEP,True,no Red 3 alias,
+FDC2549521,KEEP,True,no Red 3 alias,
+FDC2549644,KEEP,True,no Red 3 alias,
+FDC2550218,KEEP,True,no Red 3 alias,
+FDC2553143,PULL,True,regex alias match,RED 3
+FDC2553993,KEEP,True,no Red 3 alias,
+FDC2554151,PULL,True,regex alias match,RED #3
+FDC2558404,KEEP,True,no Red 3 alias,
+FDC2559896,PULL,True,regex alias match,E127
+FDC2560243,KEEP,True,no Red 3 alias,
+FDC2562625,KEEP,True,no Red 3 alias,
+FDC2563160,KEEP,True,no Red 3 alias,
+FDC2563522,PULL,True,regex alias match,RED 3
+FDC2566866,PULL,True,regex alias match,RED 3
+FDC2567079,KEEP,True,no Red 3 alias,
+FDC2567159,KEEP,True,no Red 3 alias,
+FDC2567743,PULL,True,regex alias match,RED #3
+FDC2568255,PULL,True,regex alias match,RED #3
+FDC2568478,PULL,True,regex alias match,RED 3
+FDC2569008,PULL,True,regex alias match,RED 3
+FDC2576839,PULL,True,regex alias match,RED 3
+FDC2577155,KEEP,True,no Red 3 alias,
+FDC2578087,KEEP,True,no Red 3 alias,
+FDC2578107,KEEP,True,no Red 3 alias,
+FDC2578244,KEEP,True,no Red 3 alias,
+FDC2579298,PULL,True,regex alias match,RED #3
+FDC2579928,KEEP,True,no Red 3 alias,
+FDC2581734,KEEP,True,no Red 3 alias,
+FDC2583012,KEEP,True,no Red 3 alias,
+FDC2583119,KEEP,True,no Red 3 alias,
+FDC2585664,KEEP,True,no Red 3 alias,
+FDC2586169,KEEP,True,no Red 3 alias,
+FDC2586510,KEEP,True,no Red 3 alias,
+FDC2586603,KEEP,True,no Red 3 alias,
+FDC2587852,KEEP,True,no Red 3 alias,
+FDC2589787,KEEP,True,no Red 3 alias,
+FDC2591365,PULL,True,regex alias match,RED 3
+FDC2593423,KEEP,True,no Red 3 alias,
+FDC2593857,KEEP,True,no Red 3 alias,
+FDC2594249,KEEP,True,no Red 3 alias,
+FDC2594947,KEEP,True,no Red 3 alias,
+FDC2596824,KEEP,True,no Red 3 alias,
+FDC2597934,KEEP,True,no Red 3 alias,
+FDC2598744,KEEP,True,no Red 3 alias,
+FDC2598823,KEEP,True,no Red 3 alias,
+FDC2601657,KEEP,True,no Red 3 alias,
+FDC2604238,KEEP,True,no Red 3 alias,
+FDC2604242,KEEP,True,no Red 3 alias,
+FDC2605087,PULL,True,regex alias match,RED 3
+FDC2605980,PULL,True,regex alias match,RED 3
+FDC2605982,PULL,True,regex alias match,RED 3
+FDC2605985,PULL,True,regex alias match,RED 3
+FDC2606002,PULL,True,regex alias match,RED 3
+FDC2606004,PULL,True,regex alias match,RED 3
+FDC2606079,PULL,True,regex alias match,RED 3
+FDC2606080,PULL,True,regex alias match,RED 3
+FDC2606181,KEEP,True,no Red 3 alias,
+FDC2606185,KEEP,True,no Red 3 alias,
+FDC2606211,KEEP,True,no Red 3 alias,
+FDC2606357,PULL,True,regex alias match,RED 3
+FDC2606479,KEEP,True,no Red 3 alias,
+FDC2606511,KEEP,True,no Red 3 alias,
+FDC2606537,KEEP,True,no Red 3 alias,
+FDC2606538,KEEP,True,no Red 3 alias,
+FDC2606546,KEEP,True,no Red 3 alias,
+FDC2606690,KEEP,True,no Red 3 alias,
+FDC2606693,KEEP,True,no Red 3 alias,
+FDC2606701,PULL,True,regex alias match,RED 3
+FDC2606772,PULL,True,regex alias match,RED 3
+FDC2606888,PULL,True,regex alias match,RED 3
+FDC2606894,PULL,True,regex alias match,RED 3
+FDC2607078,PULL,True,regex alias match,RED 3
+FDC2607082,KEEP,True,no Red 3 alias,
+FDC2607089,PULL,True,regex alias match,RED 3
+FDC2609411,KEEP,True,no Red 3 alias,
+FDC2609821,PULL,True,regex alias match,RED #3
+FDC2612060,KEEP,True,no Red 3 alias,
+FDC2612440,KEEP,True,no Red 3 alias,
+FDC2615193,KEEP,True,no Red 3 alias,
+FDC2617487,KEEP,True,no Red 3 alias,
+FDC2617961,KEEP,True,no Red 3 alias,
+FDC2618511,KEEP,True,no Red 3 alias,
+FDC2618593,KEEP,True,no Red 3 alias,
+FDC2618897,KEEP,True,no Red 3 alias,
+FDC2619525,KEEP,True,no Red 3 alias,
+FDC2620272,PULL,True,regex alias match,RED #3
+FDC2620311,KEEP,True,no Red 3 alias,
+FDC2620312,KEEP,True,no Red 3 alias,
+FDC2621952,PULL,True,regex alias match,RED #3
+FDC2622261,KEEP,True,no Red 3 alias,
+FDC2624120,KEEP,True,no Red 3 alias,
+FDC2624465,KEEP,True,no Red 3 alias,
+FDC2625720,KEEP,True,no Red 3 alias,
+FDC2626075,PULL,True,HAND: 'FD&C RED #3 OR ERYTHROSINE': either reading is Red No. 3,RED #3
+FDC2626985,PULL,True,regex alias match,RED 3
+FDC2629218,PULL,True,regex alias match,RED 3
+FDC2629721,KEEP,True,no Red 3 alias,
+FDC2630123,KEEP,True,no Red 3 alias,
+FDC2630579,PULL,True,regex alias match,RED 3
+FDC2630634,PULL,True,regex alias match,RED NO. 3
+FDC2634483,KEEP,True,no Red 3 alias,
+FDC2634761,PULL,True,regex alias match,RED 3
+FDC2634811,KEEP,True,no Red 3 alias,
+FDC2635014,KEEP,True,no Red 3 alias,
+FDC2635111,KEEP,True,no Red 3 alias,
+FDC2635229,KEEP,True,no Red 3 alias,
+FDC2635231,KEEP,True,no Red 3 alias,
+FDC2635381,KEEP,True,no Red 3 alias,
+FDC2635535,KEEP,True,no Red 3 alias,
+FDC2635717,PULL,True,regex alias match,RED 3
+FDC2636159,KEEP,True,no Red 3 alias,
+FDC2637426,KEEP,True,no Red 3 alias,
+FDC2637427,KEEP,True,no Red 3 alias,
+FDC2638028,KEEP,True,no Red 3 alias,
+FDC2638608,PULL,True,regex alias match,RED 3
+FDC2639375,KEEP,True,no Red 3 alias,
+FDC2639779,PULL,True,regex alias match,RED 3
+FDC2640274,KEEP,True,no Red 3 alias,
+FDC2640426,KEEP,True,no Red 3 alias,
+FDC2642156,PULL,True,regex alias match,RED #3
+FDC2643069,KEEP,True,no Red 3 alias,
+FDC2643078,KEEP,True,no Red 3 alias,
+FDC2651476,KEEP,True,no Red 3 alias,
+FDC2651543,PULL,True,regex alias match,RED 3
+FDC2651651,KEEP,True,no Red 3 alias,
+FDC2651690,PULL,True,regex alias match,RED 3
+FDC2652327,KEEP,True,no Red 3 alias,
+FDC2652447,KEEP,True,no Red 3 alias,
+FDC2652490,KEEP,True,no Red 3 alias,
+FDC2653196,PULL,True,regex alias match,RED 3
+FDC2653681,KEEP,True,no Red 3 alias,
+FDC2653876,KEEP,True,no Red 3 alias,
+FDC2654294,KEEP,True,no Red 3 alias,
+FDC2654674,PULL,True,regex alias match,RED #3
+FDC2655151,PULL,True,regex alias match,RED 3
+FDC2655198,PULL,True,regex alias match,RED #3
+FDC2655277,KEEP,True,no Red 3 alias,
+FDC2655725,KEEP,True,no Red 3 alias,
+FDC2655726,PULL,True,regex alias match,RED NO.3
+FDC2655727,PULL,True,regex alias match,RED NO.3
+FDC2655737,PULL,True,regex alias match,RED NO.3
+FDC2655742,PULL,True,regex alias match,RED #3
+FDC2656035,KEEP,True,no Red 3 alias,
+FDC2656709,PULL,True,regex alias match,RED 3
+FDC2656964,PULL,True,regex alias match,RED 3
+FDC2657068,KEEP,True,no Red 3 alias,
+FDC2657182,KEEP,True,no Red 3 alias,
+FDC2657915,KEEP,True,no Red 3 alias,
+FDC2658004,KEEP,True,no Red 3 alias,
+FDC2658219,KEEP,True,no Red 3 alias,
+FDC2658939,KEEP,True,no Red 3 alias,
+FDC2658969,KEEP,True,no Red 3 alias,
+FDC2659529,PULL,True,regex alias match,RED 3
+FDC2659530,PULL,True,regex alias match,RED 3
+FDC2659553,PULL,True,regex alias match,RED 3
+FDC2659616,PULL,True,regex alias match,RED 3
+FDC2659618,PULL,True,regex alias match,RED 3
+FDC2660139,KEEP,True,no Red 3 alias,
+FDC2660141,PULL,True,regex alias match,RED 3
+FDC2660278,KEEP,True,no Red 3 alias,
+FDC2660333,KEEP,True,no Red 3 alias,
+FDC2660335,KEEP,True,no Red 3 alias,
+FDC2660605,KEEP,True,no Red 3 alias,
+FDC2660607,KEEP,True,no Red 3 alias,
+FDC2660638,PULL,True,regex alias match,RED 3
+FDC2660650,PULL,True,regex alias match,RED 3
+FDC2660837,PULL,True,regex alias match,RED 3
+FDC2660872,PULL,True,regex alias match,RED 3
+FDC2660887,KEEP,True,no Red 3 alias,
+FDC2660898,PULL,True,regex alias match,RED 3
+FDC2660926,KEEP,True,no Red 3 alias,
+FDC2660975,KEEP,True,no Red 3 alias,
+FDC2661283,PULL,True,regex alias match,RED 3
+FDC2661414,KEEP,True,no Red 3 alias,
+FDC2661521,PULL,True,regex alias match,RED 3
+FDC2661703,KEEP,True,no Red 3 alias,
+FDC2662036,PULL,True,regex alias match,RED 3
+FDC2663947,HOLD_VERIFY,True,"generic colour statement, no dye named",ARTIFICIAL COLOR
+FDC2664493,KEEP,True,no Red 3 alias,
+FDC2665764,KEEP,True,no Red 3 alias,
+FDC2665977,KEEP,True,no Red 3 alias,
+FDC2666003,KEEP,True,no Red 3 alias,
+FDC2667618,KEEP,True,no Red 3 alias,
+FDC2667789,PULL,True,regex alias match,RED 3
+FDC2668647,KEEP,True,no Red 3 alias,
+FDC2668851,KEEP,True,no Red 3 alias,
+FDC2669074,KEEP,True,no Red 3 alias,
+FDC2669384,KEEP,True,no Red 3 alias,
+FDC2673068,KEEP,True,no Red 3 alias,
+FDC2674552,KEEP,True,no Red 3 alias,
+FDC2675093,KEEP,True,no Red 3 alias,
+FDC2675381,KEEP,True,no Red 3 alias,
+FDC2676346,KEEP,True,no Red 3 alias,
+FDC2676995,KEEP,True,no Red 3 alias,
+FDC2677053,KEEP,True,no Red 3 alias,
+FDC2677903,PULL,True,regex alias match,RED 3
+FDC2677948,KEEP,True,no Red 3 alias,
+FDC2678189,PULL,True,regex alias match,RED 3
+FDC2678194,PULL,True,regex alias match,RED 3
+FDC2678208,KEEP,True,no Red 3 alias,
+FDC2678286,PULL,True,regex alias match,RED 3
+FDC2678697,KEEP,True,no Red 3 alias,
+FDC2678801,KEEP,True,no Red 3 alias,
+FDC2679118,KEEP,True,no Red 3 alias,
+FDC2679337,KEEP,True,no Red 3 alias,
+FDC2679600,KEEP,True,no Red 3 alias,
+FDC2680684,PULL,True,regex alias match,RED 3
+FDC2738037,KEEP,True,no Red 3 alias,
+FDC2752913,KEEP,True,no Red 3 alias,
+FDC2755347,KEEP,True,no Red 3 alias,
+FDC2756199,KEEP,True,no Red 3 alias,
+FDC2773069,KEEP,True,no Red 3 alias,
+FDC2774161,KEEP,True,no Red 3 alias,
+FDC2775790,KEEP,True,no Red 3 alias,
+FDC365120,KEEP,True,no Red 3 alias,
+FDC384901,KEEP,True,no Red 3 alias,
+FDC421530,KEEP,True,no Red 3 alias,
+FDC429607,PULL,True,regex alias match,RED NO. 3
+FDC442374,KEEP,True,no Red 3 alias,
+FDC446441,PULL,True,regex alias match,ERYTHROSINE
+FDC453934,KEEP,True,no Red 3 alias,
+FDC453939,KEEP,True,no Red 3 alias,
+FDC453968,KEEP,True,no Red 3 alias,
+FDC453977,KEEP,True,no Red 3 alias,
+FDC461443,KEEP,True,no Red 3 alias,
+FDC473882,KEEP,True,no Red 3 alias,
+FDC474080,PULL,True,regex alias match,RED 3
+FDC499192,KEEP,True,no Red 3 alias,
+FDC500196,KEEP,True,no Red 3 alias,
+FDC509827,PULL,True,regex alias match,ERYTHROSINE
+FDC518991,KEEP,True,no Red 3 alias,
+FDC524380,KEEP,True,no Red 3 alias,
+FDC556653,PULL,True,regex alias match,ERYTHROSINE
+FDC570224,KEEP,True,no Red 3 alias,
+FDC571000,KEEP,True,no Red 3 alias,
+FDC595770,KEEP,True,no Red 3 alias,
+VAR0001,PULL,False,alias:erythrosine,
+VAR0002,PULL,False,alias:erythrosine,
+VAR0003,PULL,False,alias:erythrosine,
+VAR0004,PULL,False,alias:erythrosine,
+VAR0005,PULL,False,alias:erythrosine,
+VAR0006,PULL,False,alias:erythrosine,
+VAR0007,PULL,False,alias:erythrosine,
+VAR0008,PULL,False,alias:erythrosine,
+VAR0009,PULL,False,alias:erythrosine,
+VAR0010,PULL,False,alias:erythrosine,
+VAR0011,PULL,False,alias:erythrosine,
+VAR0012,PULL,False,alias:erythrosine,
+VAR0013,PULL,False,alias:erythrosine,
+VAR0014,PULL,False,alias:erythrosine,
+VAR0015,PULL,False,alias:erythrosine,
+VAR0016,PULL,False,alias:erythrosine,
+VAR0017,PULL,False,alias:erythrosine,
+VAR0018,PULL,False,alias:erythrosine,
+VAR0019,PULL,False,alias:erythrosine,
+VAR0020,PULL,False,alias:erythrosine,
+VAR0021,PULL,False,alias:E127,
+VAR0022,PULL,False,alias:E127,
+VAR0023,PULL,False,alias:E127,
+VAR0024,PULL,False,alias:E127,
+VAR0025,PULL,False,alias:E127,
+VAR0026,PULL,False,alias:E127,
+VAR0027,PULL,False,alias:E127,
+VAR0028,PULL,False,alias:E127,
+VAR0029,PULL,False,alias:E127,
+VAR0030,PULL,False,alias:E127,
+VAR0031,PULL,False,alias:E127,
+VAR0032,PULL,False,alias:E127,
+VAR0033,PULL,False,alias:E-127,
+VAR0034,PULL,False,alias:E-127,
+VAR0035,PULL,False,alias:E-127,
+VAR0036,PULL,False,alias:E-127,
+VAR0037,PULL,False,alias_es:eritrosina,
+VAR0038,PULL,False,alias_es:eritrosina,
+VAR0039,PULL,False,alias_es:eritrosina,
+VAR0040,PULL,False,alias_es:eritrosina,
+VAR0041,PULL,False,alias_es:eritrosina,
+VAR0042,PULL,False,alias_es:eritrosina,
+VAR0043,PULL,False,alias_es:eritrosina,
+VAR0044,PULL,False,alias_es:eritrosina,
+VAR0045,PULL,False,alias_es:eritrosina,
+VAR0046,PULL,False,alias_es:eritrosina,
+VAR0047,PULL,False,alias_es:eritrosina,
+VAR0048,PULL,False,alias_es:eritrosina,
+VAR0049,PULL,False,alias_es:FD&C Rojo No. 3,
+VAR0050,PULL,False,alias_es:FD&C Rojo No. 3,
+VAR0051,PULL,False,alias_es:FD&C Rojo No. 3,
+VAR0052,PULL,False,alias_es:FD&C Rojo No. 3,
+VAR0053,PULL,False,alias_es:FD&C Rojo No. 3,
+VAR0054,PULL,False,alias:FD&C Red #3,
+VAR0055,PULL,False,alias:FD&C Red #3,
+VAR0056,PULL,False,alias:FD&C Red #3,
+VAR0057,PULL,False,alias:FD&C Red #3,
+VAR0058,PULL,False,alias:FD&C Red #3,
+VAR0059,PULL,False,alias:FD&C Red #3,
+VAR0060,PULL,False,alias:FD&C Red #3,
+VAR0061,PULL,False,alias:FD&C Red #3,
+VAR0062,PULL,False,alias:FD&C Red #3,
+VAR0063,PULL,False,alias:FD&C Red #3,
+VAR0064,PULL,False,alias:FD&C Red #3,
+VAR0065,PULL,False,alias:FD&C Red #3,
+VAR0066,PULL,False,alias_compact:RED3,
+VAR0067,PULL,False,alias_compact:RED3,
+VAR0068,PULL,False,alias_compact:RED3,
+VAR0069,PULL,False,alias_compact:RED3,
+VAR0070,PULL,False,alias_compact:RED3,
+VAR0071,PULL,False,alias_compact:RED3,
+VAR0072,PULL,False,alias_compact:RED3,
+VAR0073,PULL,False,alias_compact:RED3,
+VAR0074,PULL,False,alias_compact:RED3,
+VAR0075,PULL,False,alias_compact:RED3,
+VAR0076,PULL,False,alias_compact:RED3,
+VAR0077,PULL,False,alias_compact:RED3,
+VAR0078,PULL,False,alias:Red Dye 3,
+VAR0079,PULL,False,alias:Red Dye 3,
+VAR0080,PULL,False,alias:Red Dye 3,
+VAR0081,PULL,False,alias:Red Dye 3,
+VAR0082,PULL,False,alias:Red Dye 3,
+VAR0083,PULL,False,alias:Red Dye 3,
+VAR0084,PULL,False,alias:Red Dye 3,
+VAR0085,PULL,False,alias:Red Dye 3,
+VAR0086,PULL,False,alias:Red Dye 3,
+VAR0087,PULL,False,alias:Red Dye 3,
+VAR0088,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0089,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0090,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0091,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0092,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0093,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0094,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0095,PULL,False,alias:F.D.&C. Red No. 3,
+VAR0096,PULL,False,alias_case:red no 3,
+VAR0097,PULL,False,alias_case:red no 3,
+VAR0098,PULL,False,alias_case:red no 3,
+VAR0099,PULL,False,alias_case:red no 3,
+VAR0100,PULL,False,alias_case:red no 3,
+VAR0101,PULL,False,alias_case:red no 3,
+VAR0102,PULL,False,ocr_noise:erythros1ne,
+VAR0103,PULL,False,ocr_noise:erythros1ne,
+VAR0104,PULL,False,ocr_noise:erythros1ne,
+VAR0105,PULL,False,ocr_noise:erythros1ne,
+VAR0106,PULL,False,ocr_noise:erythros1ne,
+VAR0107,PULL,False,ocr_noise:erythros1ne,
+VAR0108,PULL,False,ocr_noise:erythros1ne,
+VAR0109,PULL,False,ocr_noise:erythros1ne,
+VAR0110,PULL,False,ocr_noise:erythros1ne,
+VAR0111,PULL,False,ocr_noise:erythros1ne,
+VAR0112,PULL,False,ocr_noise:RED N0. 3,
+VAR0113,PULL,False,ocr_noise:RED N0. 3,
+VAR0114,PULL,False,ocr_noise:RED N0. 3,
+VAR0115,PULL,False,ocr_noise:RED N0. 3,
+VAR0116,PULL,False,ocr_noise:RED N0. 3,
+VAR0117,PULL,False,ocr_noise:RED N0. 3,
+VAR0118,PULL,False,ocr_noise:RED N0. 3,
+VAR0119,PULL,False,ocr_noise:RED N0. 3,
+VAR0120,PULL,False,ocr_noise:Erythr0sine,
+VAR0121,PULL,False,ocr_noise:Erythr0sine,
+VAR0122,PULL,False,ocr_noise:Erythr0sine,
+VAR0123,PULL,False,ocr_noise:Erythr0sine,
+VAR0124,PULL,False,ocr_noise:Erythr0sine,
+VAR0125,PULL,False,store_brand_clone,
+VAR0126,PULL,False,store_brand_clone,
+VAR0127,PULL,False,store_brand_clone,
+VAR0128,PULL,False,store_brand_clone,
+VAR0129,PULL,False,store_brand_clone,
+VAR0130,PULL,False,store_brand_clone,
+VAR0131,PULL,False,store_brand_clone,
+VAR0132,PULL,False,store_brand_clone,
+VAR0133,PULL,False,store_brand_clone,
+VAR0134,PULL,False,store_brand_clone,
+VAR0135,PULL,False,bundle_kit,
+VAR0136,PULL,False,bundle_kit,
+VAR0137,PULL,False,bundle_kit,
+VAR0138,PULL,False,bundle_kit,
+VAR0139,PULL,False,bundle_kit,
+VAR0140,PULL,False,bundle_kit,
+VAR0141,PULL,False,bundle_kit,
+VAR0142,PULL,False,bundle_kit,
+VAR0143,PULL,False,bundle_kit,
+VAR0144,PULL,False,bundle_kit,
+VAR0145,PULL,False,bundle_kit,
+VAR0146,PULL,False,bundle_kit,
+VAR0147,PULL,False,bundle_kit,
+VAR0148,PULL,False,bundle_kit,
+VAR0149,KEEP,False,decoy_red40,
+VAR0150,KEEP,False,decoy_red40,
+VAR0151,KEEP,False,decoy_red40,
+VAR0152,KEEP,False,decoy_red40,
+VAR0153,KEEP,False,decoy_red40,
+VAR0154,KEEP,False,decoy_red40,
+VAR0155,KEEP,False,decoy_red40,
+VAR0156,KEEP,False,decoy_red40,
+VAR0157,KEEP,False,decoy_red40,
+VAR0158,KEEP,False,decoy_red40,
+VAR0159,KEEP,False,decoy_red40,
+VAR0160,KEEP,False,decoy_red40,
+VAR0161,KEEP,False,decoy_red40,
+VAR0162,KEEP,False,decoy_red40,
+VAR0163,KEEP,False,decoy_red33,
+VAR0164,KEEP,False,decoy_red33,
+VAR0165,KEEP,False,decoy_red33,
+VAR0166,KEEP,False,decoy_red33,
+VAR0167,KEEP,False,decoy_red33,
+VAR0168,KEEP,False,decoy_red33,
+VAR0169,KEEP,False,decoy_red33,
+VAR0170,KEEP,False,decoy_red33,
+VAR0171,KEEP,False,decoy_red33,
+VAR0172,KEEP,False,decoy_red30,
+VAR0173,KEEP,False,decoy_red30,
+VAR0174,KEEP,False,decoy_3_red_apples,
+VAR0175,KEEP,False,decoy_3_red_apples,
+VAR0176,KEEP,False,decoy_3_red_apples,
+VAR0177,KEEP,False,decoy_3_red_apples,
+VAR0178,KEEP,False,decoy_red_3_bean,
+VAR0179,KEEP,False,decoy_red_3_bean,
+VAR0180,KEEP,False,decoy_red_3_bean,
+VAR0181,KEEP,False,decoy_erythorbate,
+VAR0182,KEEP,False,decoy_erythorbate,
+VAR0183,KEEP,False,decoy_erythorbate,
+VAR0184,KEEP,False,decoy_cosmetic,
+VAR0185,KEEP,False,decoy_cosmetic,
+VAR0186,KEEP,False,decoy_cosmetic,
+VAR0187,KEEP,False,decoy_cosmetic,
+VAR0188,KEEP,False,decoy_cosmetic,
+VAR0189,KEEP,False,decoy_cosmetic,
+VAR0190,KEEP,False,decoy_ingested_drug,
+VAR0191,KEEP,False,decoy_ingested_drug,
+VAR0192,KEEP,False,decoy_ingested_drug,
+VAR0193,KEEP,False,decoy_ingested_drug,
+VAR0194,KEEP,False,decoy_ingested_drug,
+VAR0195,HOLD_VERIFY,False,generic_color:artificial color,
+VAR0196,HOLD_VERIFY,False,generic_color:artificial color,
+VAR0197,HOLD_VERIFY,False,generic_color:artificial color,
+VAR0198,HOLD_VERIFY,False,generic_color:artificial color,
+VAR0199,HOLD_VERIFY,False,generic_color:artificial color,
+VAR0200,HOLD_VERIFY,False,generic_color:color added,
+VAR0201,HOLD_VERIFY,False,generic_color:color added,
+VAR0202,HOLD_VERIFY,False,generic_color:color added,
+VAR0203,HOLD_VERIFY,False,generic_color:certified color,
+VAR0204,HOLD_VERIFY,False,generic_color:certified color,
+VAR0205,HOLD_VERIFY,False,illegible:FD&C R#####,
+VAR0206,HOLD_VERIFY,False,illegible:FD&C R#####,
+VAR0207,HOLD_VERIFY,False,illegible:FD&C R#####,
+VAR0208,HOLD_VERIFY,False,illegible:[illegible],
+VAR0209,HOLD_VERIFY,False,illegible:[illegible],
+VAR0210,HOLD_VERIFY,False,illegible:[illegible],
+VAR0211,HOLD_VERIFY,False,illegible:ERYTH▒▒▒▒▒,
+VAR0212,HOLD_VERIFY,False,illegible:ERYTH▒▒▒▒▒,

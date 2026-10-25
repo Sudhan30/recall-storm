@@ -10,7 +10,9 @@ def _rows(d: pathlib.Path, name: str) -> list[dict]:
     p = d / name
     if not p.exists():
         return []
-    return [json.loads(line) for line in p.read_text().splitlines() if line.strip()]
+    # keys starting with "_" are provenance extras (e.g. "_real", "_src"), not contract fields
+    return [{k: v for k, v in json.loads(line).items() if not k.startswith("_")}
+            for line in p.read_text().splitlines() if line.strip()]
 
 
 def _dt(s: str) -> datetime:
