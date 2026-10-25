@@ -33,7 +33,7 @@ import tempfile
 import time
 import traceback
 import xml.etree.ElementTree as ET
-from collections import defaultdict
+from collections import Counter, defaultdict
 from importlib.util import find_spec
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -396,12 +396,14 @@ def sig_accepts(sig: dict, n: int) -> bool:
 
 
 # ------------------------------------------------------------------ D1
-def check_d1(manifest, files: dict[str, GenFile], idx: Index) -> dict:
+def check_d1(manifest, files: dict[str, GenFile], idx: Index, gen: pathlib.Path | None = None) -> dict:
     items, file_rows = [], []
     for m in manifest:
         path = m.get("path", "")
         f = files.get(path)
         status = "ok" if f and not f.parse_error else ("missing_file" if f is None else "parse_error")
+        if f is None and gen is not None and not path.endswith(".py") and (gen / path).is_file():
+            status = "ok_nonpy"
         if f and not f.off.get("terminated", True):
             status = "unterminated" if status == "ok" else status
         file_rows.append({"path": path, "status": status, "tok": f.start_tok if f else None})
@@ -909,7 +911,7 @@ def main(argv=None) -> int:
             load_errors.append({"path": None, "error": f"{label} crashed: {traceback.format_exc()[-800:]}"})
             return default
 
-    d1 = guarded(lambda: check_d1(manifest, files, idx), {"files": [], "symbols": [], "symbol_ok_rate": None}, "D1")
+    d1 = guarded(lambda: check_d1(manifest, files, idx, gen), {"files": [], "symbols": [], "symbol_ok_rate": None}, "D1")
     edges, calls = guarded(lambda: check_d2(files, idx), ([], []), "D2")
     d3 = guarded(lambda: check_d3(files, contract_vocab()), [], "D3")
     d4 = [] if a.no_tests else guarded(lambda: check_d4(gen, files, a.timeout, a.jobs), [], "D4")
@@ -928,6 +930,7 @@ def main(argv=None) -> int:
         "d2_resolve_rate": round(sum(e["status"] in RESOLVED for e in internal) / len(internal), 4)
         if internal else None,
         "d2_calls_checked": len(calls), "d2_arity_mismatch": sum(c["status"] == "arity_mismatch" for c in calls),
+        "d3_top_literals": Counter(r.get("literal") for r in d3 if not r.get("is_test")).most_common(15),
         "d3_bad_literals": len(d3), "d3_bad_literals_nontest": sum(not r.get("is_test") for r in d3),
         "d4_files": len(d4), "d4_tests": sum(r.get("tests", 0) for r in d4),
         "d4_passed": sum(r.get("passed", 0) for r in d4),

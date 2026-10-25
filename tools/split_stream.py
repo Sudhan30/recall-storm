@@ -268,6 +268,8 @@ def split(stream: pathlib.Path, log: pathlib.Path | None, out: pathlib.Path,
     # token map
     log_rows = _read_jsonl(log) if log else []
     kind = detect_log_kind(log_rows) if log_rows else "none"
+    if hops is None and log is not None and (log.parent / "hops.jsonl").exists():
+        hops = log.parent / "hops.jsonl"
     if kind == "bg":
         points, tinfo = token_points_bg(log_rows, len(data))
     elif kind == "run" or (hops and hops.exists()):

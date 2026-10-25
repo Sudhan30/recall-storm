@@ -161,6 +161,8 @@ def check_seam(data: bytes, seam: int, window: int, min_dup: int, strict: bool, 
     if data.find(MAN_OPEN, seam) >= 0 and data.find(MAN_OPEN) < seam:
         fails.append("second <<<MANIFEST>>> after seam (restart)")
 
+    if not after:
+        notes.append("no text after seam yet (not resumed) -> PENDING")
     pending = any("PENDING" in x for x in notes) and not fails
     return {"seam_byte": seam, "status": "FAIL" if fails else ("PENDING" if pending else "PASS"),
             "fails": fails, "notes": notes,
