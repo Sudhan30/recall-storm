@@ -8,7 +8,7 @@ from datetime import datetime
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "viewer" / "data" / "status.json"
 RUNS = ["expansion_v2", "expansion", "probe", "core", "b_rules", "b_allocate", "b_route"]
-TARGETS = {"expansion_v2": 820_000, "expansion": 254_377}   # v2: spec estimate; v1: final
+TARGETS = {"expansion_v2": 665_000, "expansion": 254_377}   # v2: G3b projection (242 tok/fn measured); v1: final
 DEADLINES = [("G3a first v2 seam", "12:01"), ("G3b v2 health", "12:15"), ("Core demo frozen + backup video", "13:30"),
              ("G4 hard stop", "14:45"), ("G5 numbers frozen", "15:30"), ("Push + README", "16:15"), ("Submit", "16:50")]
 
