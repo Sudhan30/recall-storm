@@ -182,92 +182,92 @@ PLAN_TYPES: dict[str, tuple[str, ...]] = {
 
 
 === data/skus.jsonl (20 sample rows) ===
-{"sku_id": "SKU00000", "gtin": "00078000000009", "name": "Candy FD&C #0", "brand": "Kandy Co", "category": "candy", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, FD&C Red No. 3, red 40", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 1.4, "case_weight_lb": 7.1}
-{"sku_id": "SKU00009", "gtin": "00078000000092", "name": "Gummies erythros1ne #0", "brand": "Brite", "category": "gummies", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, erythros1ne, red 40", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 1.01, "case_weight_lb": 8.9}
-{"sku_id": "SKU00018", "gtin": "00078000000184", "name": "Frosting unclear #0", "brand": "Kandy Co", "category": "frosting", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, color added", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 0.57, "case_weight_lb": 7.8}
-{"sku_id": "SKU00027", "gtin": "00078000000276", "name": "Candy FD&C #1", "brand": "Great Value", "category": "candy", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, FD&C RED #3, red 40", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 0.97, "case_weight_lb": 13.8}
-{"sku_id": "SKU00036", "gtin": "00078000000368", "name": "Snacks decoy #1", "brand": "Sweetly", "category": "snacks", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, 3 red apples", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 0.55, "case_weight_lb": 13.6}
-{"sku_id": "SKU00045", "gtin": "00078000000450", "name": "Sprinkles Red #2", "brand": "Great Value", "category": "sprinkles", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, Red Dye 3, red 40", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.13, "case_weight_lb": 12.5}
-{"sku_id": "SKU00054", "gtin": "00078000000542", "name": "Candy decoy #2", "brand": "Brite", "category": "candy", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, Red 40", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.44, "case_weight_lb": 21.2}
-{"sku_id": "SKU00063", "gtin": "00078000000634", "name": "Cherry Lip Tint", "brand": "Kandy Co", "category": "cosmetic", "ingredients": "castor oil, red 3", "is_food": false, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 0.52, "case_weight_lb": 11.5}
-{"sku_id": "SKU00072", "gtin": "00078000000726", "name": "Beverages control #6", "brand": "Sweetly", "category": "beverages", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 0.76, "case_weight_lb": 8.5}
-{"sku_id": "SKU00081", "gtin": "00078000000818", "name": "Frozen control #15", "brand": "Member's Mark", "category": "frozen", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 1.38, "case_weight_lb": 16.0}
-{"sku_id": "SKU00090", "gtin": "00078000000900", "name": "Baking control #24", "brand": "Great Value", "category": "baking", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 0.64, "case_weight_lb": 7.5}
-{"sku_id": "SKU00099", "gtin": "00078000000993", "name": "Candy control #33", "brand": "Member's Mark", "category": "candy", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 0.58, "case_weight_lb": 10.2}
-{"sku_id": "SKU00108", "gtin": "00078000001082", "name": "Candy control #42", "brand": "Kandy Co", "category": "candy", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.14, "case_weight_lb": 6.9}
-{"sku_id": "SKU00117", "gtin": "00078000001174", "name": "Baking control #51", "brand": "Sweetly", "category": "baking", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.58, "case_weight_lb": 12.2}
-{"sku_id": "SKU00126", "gtin": "00078000001266", "name": "Frozen control #60", "brand": "Member's Mark", "category": "frozen", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.29, "case_weight_lb": 14.7}
-{"sku_id": "SKU00135", "gtin": "00078000001358", "name": "Frozen control #69", "brand": "Member's Mark", "category": "frozen", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 0.8, "case_weight_lb": 21.3}
-{"sku_id": "SKU00144", "gtin": "00078000001440", "name": "Cereal control #78", "brand": "Member's Mark", "category": "cereal", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 1.54, "case_weight_lb": 9.2}
-{"sku_id": "SKU00153", "gtin": "00078000001532", "name": "Baking control #87", "brand": "Kandy Co", "category": "baking", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.25, "case_weight_lb": 8.8}
-{"sku_id": "SKU00162", "gtin": "00078000001624", "name": "Frozen control #96", "brand": "Brite", "category": "frozen", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.6, "case_weight_lb": 5.7}
-{"sku_id": "SKU00171", "gtin": "00078000001716", "name": "Candy control #105", "brand": "Great Value", "category": "candy", "ingredients": "sugar, corn syrup, water, citric acid, natural flavor, salt", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 1.83, "case_weight_lb": 18.1}
+{"sku_id": "FDC1034191", "gtin": "07502264930572", "name": "Rainbow Sprinkles", "brand": "Chocolatera De Nayarit, S.A. De C.V.", "category": "baking decorations & dessert toppings", "ingredients": "SUGAR, CORN SYRUP, HYDROGENATED PALM KERNEL OIL, SOY LECITHIN, FD&C BLUE #1, FD&C YELLOW #5, FD&C YELLOW #6, FD&C RED #3, FD&C RED #40, SALT, HBT (BUTYLHYDROXYTOLUENE), CARNAUBA WAX.", "is_food": true, "is_ingested_drug": false, "case_units": 6, "case_cube_ft3": 2.05, "case_weight_lb": 23.2, "_real": true, "_src": "fdc:1034191"}
+{"sku_id": "FDC1878485", "gtin": "00073621007017", "name": "Candy", "brand": "Angry Birds", "category": "candy", "ingredients": "SUGAR, CORN SYRUP, ADIPIC ACID, HYDROG. PALM KERNEL & PALM OILS AND SOYBEAN OIL MONO & DIGLYCERIDES, NATURAL & ARTIFICIAL FLAVORS, ARTIFICIAL COLORS FD&C RED 3, YELLOW 5, YELLOW 6, BLUE 2.", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.51, "case_weight_lb": 6.3, "_real": true, "_src": "fdc:1878485"}
+{"sku_id": "FDC1913788", "gtin": "00811033712026", "name": "Maraschino Cherries Without Stem", "brand": "Bell Foods International", "category": "baking decorations & dessert toppings", "ingredients": "CHERRIES, HIGH FRUCTOSE CORN SYRUP, WATER, POTASSIUM SORBATE (A PRESERVATIVE), SODIUM BENZOATE (A PRESERVATIVE), CITRIC ACID, NATURAL AND ARTIFICIAL FLAVOR, FD&C RED #40, SULFUR DIOXIDE (A PRESERVATIVE).", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.43, "case_weight_lb": 4.6, "_real": true, "_src": "fdc:1913788"}
+{"sku_id": "FDC1983505", "gtin": "00070572244003", "name": "Syrup, Bacon", "brand": "Tropical", "category": "syrups & molasses", "ingredients": "CORN SYRUP, HIGH FRUCTOSE CORN SYRUP, WATER, NATURAL AND ARTIFICIAL FLAVOR, SALT, POTASSIUM SORBATE (A PRESERVATIVE) AND CARAMEL COLOR.", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 1.51, "case_weight_lb": 5.1, "_real": true, "_src": "fdc:1983505"}
+{"sku_id": "FDC2032505", "gtin": "00077290773105", "name": "Candy", "brand": "Bit-O-Honey", "category": "candy", "ingredients": "CORN SYRUP, SUGAR, NONFAT MILK, HYDROGENATED COCONUT OIL, ALMONDS, AND LESS THAN 2% OF HONEY, SALT, EGG WHITES, CANOLA AND/OR SAFFLOWER AND/OR PALM OIL, MODIFIED SOY PROTEIN, NATURAL FLAVOR, TBHQ AND CITRIC ACID (TO PRESERVE FRESHNESS).", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 2.12, "case_weight_lb": 5.2, "_real": true, "_src": "fdc:2032505"}
+{"sku_id": "FDC2072562", "gtin": "00096619783953", "name": "Animal Crackers", "brand": "Kirkland Signature", "category": "cookies & biscuits", "ingredients": "ORGANIC WHEAT FLOUR, ORGANIC CANE SUGAR, ORGANIC PALM OIL, ORGANIC CANE INVERT SYRUP, ORGANIC DEGERMED CORN FLOUR, ORGANIC SUNFLOWER OIL, BAKING SODA, ORGANIC VANILLA EXTRACT, SALT, SOY LECITHIN, CREAM OF TARTAR, NATURAL FLAVOR, ORGANIC SPICE.", "is_food": true, "is_ingested_drug": false, "case_units": 8, "case_cube_ft3": 1.21, "case_weight_lb": 14.0, "_real": true, "_src": "fdc:2072562"}
+{"sku_id": "FDC2099147", "gtin": "00007078446200", "name": "Graham Cracker", "brand": "Tops", "category": "crusts & dough", "ingredients": "GRAHAM CRACKER MEAL (ENRICHED FLOUR [WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMIN MONONITRATE, RIBOFLAVIN, FOLIC ACID], SUGAR, WHOLE WHEAT FLOUR, PALM OIL, HIGH FRUCTOSE CORN SYRUP BROWN SUGAR, HONEY, SODIUM BICARBONATE, MOLASSES, SALT, MALT SYRUP [MALTED BARLEY, CORN], ARTIFICIAL FLAVOR), VEGETABLE SHORTENING (CONTAINS HYDROGENATED PALM KERNEL, PALM OIL, CANOLA OIL), SUGAR, CORNSTARCH.", "is_food": true, "is_ingested_drug": false, "case_units": 36, "case_cube_ft3": 0.82, "case_weight_lb": 6.8, "_real": true, "_src": "fdc:2099147"}
+{"sku_id": "FDC2133371", "gtin": "00741643048683", "name": "Butter Syrup", "brand": "Lowes Foods", "category": "syrups & molasses", "ingredients": "CORN SYRUP, HIGH FRUCTOSE CORN SYRUP, WATER, SUGAR, NATURAL AND ARTIFICIAL FLAVOR, SALT, CARAMEL COLOR, POTASSIUM SORBATE (PRESERVATIVE), CELLULOSE GUM, SODIUM HEXAMETAPHOSPHATE.", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 1.09, "case_weight_lb": 6.4, "_real": true, "_src": "fdc:2133371"}
+{"sku_id": "FDC2195999", "gtin": "00073621012912", "name": "Candy", "brand": "Pez", "category": "candy", "ingredients": "SUGAR, CORN SYRUP, ADIPIC ACID, HYDROGENATED PALM KERNEL & PALM OILS, MONO & DIGLYCERIDES, NATURAL & ARTIFICIAL FLAVORS.", "is_food": true, "is_ingested_drug": false, "case_units": 36, "case_cube_ft3": 1.02, "case_weight_lb": 5.0, "_real": true, "_src": "fdc:2195999"}
+{"sku_id": "FDC2308934", "gtin": "00021333071390", "name": "Gummi Bears Candies, Gummi Bears", "brand": "Fareway", "category": "candy", "ingredients": "CORN SYRUP, SUGAR, WHITE GRAPE JUICE FROM CONCENTRATE, GELATIN, CITRIC ACID, SORBITOL, NATURAL AND ARTIFICIAL FLAVORS, CARNAUBA WAX, ARTIFICIAL COLORS (RED 40, YELLOW 5, YELLOW 6, BLUE 1).", "is_food": true, "is_ingested_drug": false, "case_units": 36, "case_cube_ft3": 1.75, "case_weight_lb": 21.2, "_real": true, "_src": "fdc:2308934"}
+{"sku_id": "FDC2429227", "gtin": "00007789046152", "name": "Fruit Cocktail In 100% Juice, Fruit Cocktail", "brand": "Wegmans", "category": "canned fruit", "ingredients": "DICED PEACHES, DICED PEARS, WATER, GRAPES, PEACH PULP AND JUICE, PINEAPPLE SECTORS, PEAR JUICE CONCENTRATE, HALVED CHERRIES (COLORED RED WITH CARMINE), ASCORBIC ACID (VITAMIN C) TO PROTECT COLOR.", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.87, "case_weight_lb": 3.2, "_real": true, "_src": "fdc:2429227"}
+{"sku_id": "FDC2493510", "gtin": "00011822446921", "name": "3 Pepper Jalapeno Beef Jerky, 3 Pepper Jalapeno", "brand": "Big Win", "category": "other snacks", "ingredients": "BEEF, SUGAR, WATER, SEA SALT, GARLIC POWDER, YEAST EXTRACT, NATURAL FLAVORS (JALAPENO, BLACK PEPPER, RED PEPPER), ONION POWDER, SPICES (OREGANO), CITRIC ACID, ROSEMARY EXTRACT WITH GREEN TEA EXTRACT, CELERY POWDER.", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.18, "case_weight_lb": 5.6, "_real": true, "_src": "fdc:2493510"}
+{"sku_id": "FDC2524922", "gtin": "00078742374871", "name": "Sprinkle Mix", "brand": "Great Value", "category": "baking decorations & dessert toppings", "ingredients": "DEXTROSE, SUGAR, CORN STARCH, DEXTRIN, GLUCOSE SYRUP MAGNESIUM STEARATE, ARTIFICIAL VANILLA FAVOR, CONFECTIONER'S GLAZE, GUM ARABIC, CARNAUBA WAX, RED 40, RED 3, BLUE 1, YELLOW 5, YELLOW 6, BLUE2.", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 0.56, "case_weight_lb": 18.7, "_real": true, "_src": "fdc:2524922"}
+{"sku_id": "FDC2567743", "gtin": "00070506072412", "name": "Rainbow Sprinkles", "brand": "Spice Farms", "category": "baking decorations & dessert toppings", "ingredients": "SUGAR, CORN STARCH, PALM OIL & PALM KERNEL OIL, DEXTRIN, SOY LECITHIN, SUNFLOWER LECITHIN, CARNAUBA WAX, CONFECTIONER'S GLAZE, FD&C YELLOW #5 LAKE, FD&C YELLOW #6 LAKE, FD&C BLUE #1 LAKE, FD&C RED #40 LAKE, FD&C RED #3, FD&C BLUE #2, FD&C RED #40, FD&C BLUE #1", "is_food": true, "is_ingested_drug": false, "case_units": 36, "case_cube_ft3": 1.22, "case_weight_lb": 7.9, "_real": true, "_src": "fdc:2567743"}
+{"sku_id": "FDC2612060", "gtin": "00049646006823", "name": "Candied Jalapenos, Candied", "brand": "Preserved Harvest", "category": "pickles, olives, peppers & relishes", "ingredients": "JALAPENOS, (SALT, VINEGAR & CALCIUM CHLORIDE) SUGAR, WATER, VINEGAR, SALT, SPICES.", "is_food": true, "is_ingested_drug": false, "case_units": 24, "case_cube_ft3": 1.13, "case_weight_lb": 19.9, "_real": true, "_src": "fdc:2612060"}
+{"sku_id": "FDC2655277", "gtin": "00079200079291", "name": "Gummy Clusters Candy, Gummy Clusters", "brand": "Nerds", "category": "candy", "ingredients": "CORN SYRUP, SUGAR, DEXTROSE, GELATIN, MODIFIED CORN STARCH, WATER, CONTAINS 2% OR LESS OF MALIC ACID (DL-MALIC ACID), CITRIC ACID, SODIUM CITRATE, APPLE JUICE CONCENTRATE, NATURAL AND ARTIFICIAL FLAVORS, GUM ARABIC, CARNAUBA WAX, RED 40 LAKE, RED 40, COLOR ADDED.", "is_food": true, "is_ingested_drug": false, "case_units": 36, "case_cube_ft3": 1.66, "case_weight_lb": 11.4, "_real": true, "_src": "fdc:2655277"}
+{"sku_id": "FDC2677948", "gtin": "00085239015223", "name": "Mini Brownies With Frosting, Frosting", "brand": "Market Pantry", "category": "cakes, cupcakes, snack cakes", "ingredients": "BROWNIE: SUGAR, ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), SOYBEAN OIL, EGG WHITE, CORN SYRUP, WATER, SHORTENING (PALM, CANOLA, AND MODIFIED PALM OIL), CHOCOLATE (SUGAR, CHOCOLATE LIQUOR, COCOA BUTTER, SOY LECITHIN, VANILLA EXTRACT), COCOA POWDER (PROCESSED WITH ALKALI), SALT, NATURAL AND ARTIFICIAL FLAVOR, WHEY POWDER, MODIFIED CORN STARCH, LEAVENING (SODIUM ACID PYROPHOSPHATE, SODIUM BICARBONATE, CORN STARCH, MONOCALCIUM PHOSPHATE, CALCIUM SULFATE), SOY LECITHIN. ICING: ICING SUGAR, SHORTENING (CANOLA, PALM, MODIFIED PALM AND PALM KERNEL OIL), INVERT SUGAR, MARGARINE [SOYBEAN AND MODIFIED PALM OIL, WATER, SALT, WHEY POWDER, SOY LECITHIN, MONOGLYCERIDES, NATURAL FLAVOR, VITAMIN A PALMITATE, VITAMIN D3, COLOR (ANNATTO)], GLUCOSE, WATER, MODIFIED CORN STARCH, SKIM MILK POWDER, MONO AND DIGLYCERIDES, YELLOW 5, BLUE 1), ARTIFICIAL FLAVOR, SALT, POLYSORBATE 60. SPRINKLES: SUGAR, MODIFIED CORN STARCH, PALM KERNEL OIL, CORN STARCH, GUM ARABIC, SOY LECITHIN, ARTIFICIAL FLAVOR, POLYSORBATE 60.", "is_food": true, "is_ingested_drug": false, "case_units": 36, "case_cube_ft3": 0.82, "case_weight_lb": 15.7, "_real": true, "_src": "fdc:2677948"}
+{"sku_id": "VAR0021", "gtin": "02000000000213", "name": "Dipped & Sprinkled Pretzels, Dipped & Sprinkled", "brand": "Favorite Day", "category": "popcorn, peanuts, seeds & related snacks", "ingredients": "CONFECTIONERY COATING (SUGAR, PALM KERNEL OIL, NONFAT DRY MILK, LACTOSE, TITANIUM DIOXIDE [COLOR], SOY LECITHIN [AN EMULSIFIER], DISTILLED MONOGLYCERIDES, VANILLA, FRACTIONATED COCONUT OIL, BLUE 1 LAKE, RED 40 LAKE), PRETZELS (ENRICHED WHEAT FLOUR [WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID], CORN SYRUP, SALT, VEGETABLE OIL [MAY CONTAIN ONE OR MORE OF THE FOLLOWING: CANOLA, CORN, SOYBEAN], VITAL WHEAT GLUTEN, SODIUM BICARBONATE, YEAST), NONPAREILS (SUGAR, CORNSTARCH, E127, RED 40, CARNAUBA WAX, CONFECTIONER'S GLAZE, BLUE 1).", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.81, "case_weight_lb": 4.2, "_real": false, "_kind": "alias:E127", "_base": "FDC2605087"}
+{"sku_id": "VAR0081", "gtin": "02000000000817", "name": "Fruit Cocktail In Heavy Syrup", "brand": "Island Sun", "category": "canned fruit", "ingredients": "DICED PEACHES, DICED PEARS, GRAPES, PINEAPPLE SEGMENTS, CHERRIES (Red Dye 3), WATER, SUGAR, CITRIC ACID.", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 1.85, "case_weight_lb": 8.9, "_real": false, "_kind": "alias:Red Dye 3", "_base": "FDC2066569"}
+{"sku_id": "VAR0141", "gtin": "02000000001418", "name": "Easter Basket Candy Pack #7", "brand": "The Candy Shoppe", "category": "seasonal kits", "ingredients": "KIT CONTAINS: Frosted Heart Pretzels, Frosted Heart: WHITE CONFECTIONERY COATING (SUGAR, PALM KERNEL OIL, NONFAT MILK POWDER, LACTOSE, TITANIUM DIOXIDE [COLOR], SOY LECITHIN (AN EMULSIFIERT, DISTILLED MONOGLYCERIDES, VANILLA), HEART SHAPED PRETZELS (ENRICHED WHEAT FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), SALT, VEGETABLE OIL (MAY CONTAIN ONE OR MORE OF THE FOLLOWING: CANOLA, CORN, SOYBEAN], CORN SYRUP, SODIUM BICARBONATE, YEAST), PINK, LIGHT PINK, RED NONPAREILS (SUGAR, CORNSTARCH, RED 3 POWDER, RED 40 POWDER, CONFECTIONER'S GLAZE, CARNAUBA WAX). | Maraschino Cherries With Stems, Maraschino: CHERRIES, WATER, CORN SYRUP, HIGH FRUCTOSE CORN SYRUP, CITRIC ACID, NATURAL AND ARTIFICIAL FLAVOR, POTASSIUM SORBATE AND SODIUM BENZOATE (PRESERVATIVES), RED 40, SULFUR DIOXIDE (PRESERVATIVE).", "is_food": true, "is_ingested_drug": false, "case_units": 12, "case_cube_ft3": 2.03, "case_weight_lb": 4.9, "_real": false, "_kind": "bundle_kit", "_base": "FDC2504071"}
 
 === data/stores.jsonl (20 sample rows) ===
-{"store_id": "CA1000", "format": "SUPERCENTER", "state": "CA", "city": "Sacramento", "lat": 38.5623, "lon": -121.5287, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1001", "format": "SUPERCENTER", "state": "CA", "city": "Fresno", "lat": 36.7042, "lon": -119.7718, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
-{"store_id": "CA1002", "format": "SUPERCENTER", "state": "CA", "city": "Los Angeles", "lat": 34.0234, "lon": -118.2118, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1003", "format": "SUPERCENTER", "state": "CA", "city": "San Diego", "lat": 32.6742, "lon": -117.1724, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1004", "format": "SUPERCENTER", "state": "CA", "city": "San Jose", "lat": 37.3718, "lon": -121.8809, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
-{"store_id": "CA1005", "format": "SUPERCENTER", "state": "CA", "city": "Bakersfield", "lat": 35.3506, "lon": -118.9786, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
-{"store_id": "CA1006", "format": "SUPERCENTER", "state": "CA", "city": "Riverside", "lat": 33.9635, "lon": -117.3957, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1007", "format": "SUPERCENTER", "state": "CA", "city": "Stockton", "lat": 37.9105, "lon": -121.331, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1008", "format": "NEIGHBORHOOD", "state": "CA", "city": "Redding", "lat": 40.6288, "lon": -122.3468, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1009", "format": "NEIGHBORHOOD", "state": "CA", "city": "Chico", "lat": 39.6872, "lon": -121.8274, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1010", "format": "NEIGHBORHOOD", "state": "CA", "city": "Modesto", "lat": 37.5921, "lon": -121.0248, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1011", "format": "NEIGHBORHOOD", "state": "CA", "city": "Anaheim", "lat": 33.8005, "lon": -117.8808, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1012", "format": "NEIGHBORHOOD", "state": "CA", "city": "Oxnard", "lat": 34.25, "lon": -119.1559, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1013", "format": "DISCOUNT", "state": "CA", "city": "Santa Rosa", "lat": 38.4142, "lon": -122.747, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1014", "format": "DISCOUNT", "state": "CA", "city": "Visalia", "lat": 36.3521, "lon": -119.2963, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
-{"store_id": "CA1015", "format": "DISCOUNT", "state": "CA", "city": "Palmdale", "lat": 34.6277, "lon": -118.074, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1016", "format": "DISCOUNT", "state": "CA", "city": "Chula Vista", "lat": 32.5977, "lon": -117.1095, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1017", "format": "SAMS", "state": "CA", "city": "Eureka", "lat": 40.8493, "lon": -124.1851, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
-{"store_id": "CA1018", "format": "SAMS", "state": "CA", "city": "Merced", "lat": 37.3444, "lon": -120.451, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
-{"store_id": "CA1019", "format": "SAMS", "state": "CA", "city": "Ontario", "lat": 34.0851, "lon": -117.6821, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "SAMS4735", "format": "SAMS", "state": "CA", "city": "La Habra", "lat": 33.91287, "lon": -117.97008, "district": "D09", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/563170433", "_name": "Sam's Club", "_addr": "1400 South Beach Boulevard"}
+{"store_id": "SAMS4767", "format": "SAMS", "state": "CA", "city": "Palmdale", "lat": 34.60838, "lon": -118.14441, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/472905677", "_name": "Sam's Club", "_addr": "39940 10th Street West"}
+{"store_id": "SAMS6405", "format": "SAMS", "state": "CA", "city": "Yuba City", "lat": 39.13926, "lon": -121.64549, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:node/11993193507", "_name": "Sam's Club", "_addr": "900 North Walton Avenue"}
+{"store_id": "SAMS6621", "format": "SAMS", "state": "CA", "city": "Roseville", "lat": 38.78642, "lon": -121.28773, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/45368716", "_name": "Sam's Club", "_addr": "904 Pleasant Grove Boulevard"}
+{"store_id": "WM1563", "format": "SUPERCENTER", "state": "CA", "city": "Lancaster", "lat": 34.6938, "lon": -118.17406, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:relation/6955798", "_name": "Walmart Supercenter", "_addr": "44665 Valley Central Way"}
+{"store_id": "WM1574", "format": "SUPERCENTER", "state": "CA", "city": "Bakersfield", "lat": 35.29875, "lon": -119.02938, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/59822569", "_name": "Walmart Supercenter", "_addr": "6225 Colony Street"}
+{"store_id": "WM1575", "format": "SUPERCENTER", "state": "CA", "city": "Oroville", "lat": 39.49063, "lon": -121.57145, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/474456102", "_name": "Walmart Supercenter", "_addr": "465 Cal Oak Road"}
+{"store_id": "WM1588", "format": "SUPERCENTER", "state": "CA", "city": "Victorville", "lat": 34.46512, "lon": -117.35443, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/1008760751", "_name": "Walmart Supercenter", "_addr": "11896 Amargosa Road"}
+{"store_id": "WM1608", "format": "SUPERCENTER", "state": "CA", "city": "Red Bluff", "lat": 40.16293, "lon": -122.23437, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/546732624", "_name": "Walmart Supercenter", "_addr": "608 Luther Road"}
+{"store_id": "WM1616", "format": "DISCOUNT", "state": "CA", "city": "Susanville", "lat": 40.40892, "lon": -120.63758, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/436352557", "_name": "Walmart", "_addr": "2900 Main Street"}
+{"store_id": "WM1630", "format": "SUPERCENTER", "state": "CA", "city": "Yreka", "lat": 41.69865, "lon": -122.64457, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/360427744", "_name": "Walmart Supercenter", "_addr": "1906 Fort Jones Road"}
+{"store_id": "WM1899", "format": "SUPERCENTER", "state": "CA", "city": "Riverside", "lat": 33.93853, "lon": -117.28613, "district": "D09", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/444490322", "_name": "Walmart Supercenter", "_addr": "6250 Valley Springs Parkway"}
+{"store_id": "WM1912", "format": "SUPERCENTER", "state": "CA", "city": "Corona", "lat": 33.89079, "lon": -117.51729, "district": "D09", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/201454867", "_name": "Walmart Supercenter", "_addr": "479 North McKinley Street"}
+{"store_id": "WM2028", "format": "SUPERCENTER", "state": "CA", "city": "Riverside", "lat": 33.93712, "lon": -117.45539, "district": "D09", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:node/928693137", "_name": "Walmart Supercenter", "_addr": "5200 Van Buren Boulevard"}
+{"store_id": "WM2333", "format": "DISCOUNT", "state": "CA", "city": "Apple Valley", "lat": 34.52554, "lon": -117.22309, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/460848367", "_name": "Walmart", "_addr": "20251 Happy Trails Highway"}
+{"store_id": "WM2523", "format": "DISCOUNT", "state": "CA", "city": "Brea", "lat": 33.91346, "lon": -117.86523, "district": "D09", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/142606474", "_name": "Walmart", "_addr": "2595 East Imperial Highway"}
+{"store_id": "WM3139", "format": "NEIGHBORHOOD", "state": "CA", "city": "Bakersfield", "lat": 35.37013, "lon": -119.14746, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:node/5315598907", "_name": "Walmart Neighborhood Market", "_addr": "1249 Allen Road"}
+{"store_id": "WM3141", "format": "NEIGHBORHOOD", "state": "CA", "city": "Bakersfield", "lat": 35.35339, "lon": -118.94765, "district": "D06", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:node/4093403024", "_name": "Walmart Neighborhood Market", "_addr": "5037 East Brundage Lane"}
+{"store_id": "WM4127", "format": "NEIGHBORHOOD", "state": "CA", "city": "Woodland", "lat": 38.68087, "lon": -121.78792, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:node/5315598128", "_name": "Walmart Neighborhood Market", "_addr": "215 California Street"}
+{"store_id": "WM5603", "format": "NEIGHBORHOOD", "state": "CA", "city": "Downey", "lat": 33.92814, "lon": -118.14774, "district": "D09", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles", "_real": true, "_src": "osm:way/351803045", "_name": "Walmart Neighborhood Market", "_addr": "12270 Paramount Boulevard"}
 
 === data/facings.jsonl (20 sample rows) ===
-{"store_id": "CA1000", "sku_id": "SKU00000", "loc": {"aisle": "A01", "bay": 1, "shelf": 1, "pos": 1}, "units": 33}
-{"store_id": "CA1000", "sku_id": "SKU00131", "loc": {"aisle": "A01", "bay": 5, "shelf": 2, "pos": 6}, "units": 30}
-{"store_id": "CA1001", "sku_id": "SKU00076", "loc": {"aisle": "A01", "bay": 3, "shelf": 3, "pos": 5}, "units": 36}
-{"store_id": "CA1002", "sku_id": "SKU00021", "loc": {"aisle": "A01", "bay": 1, "shelf": 4, "pos": 4}, "units": 31}
-{"store_id": "CA1002", "sku_id": "SKU00152", "loc": {"aisle": "A02", "bay": 1, "shelf": 1, "pos": 3}, "units": 5}
-{"store_id": "CA1003", "sku_id": "SKU00097", "loc": {"aisle": "A01", "bay": 4, "shelf": 2, "pos": 2}, "units": 31}
-{"store_id": "CA1004", "sku_id": "SKU00042", "loc": {"aisle": "A01", "bay": 2, "shelf": 3, "pos": 1}, "units": 15}
-{"store_id": "CA1004", "sku_id": "SKU00173", "loc": {"aisle": "A02", "bay": 1, "shelf": 4, "pos": 6}, "units": 32}
-{"store_id": "CA1005", "sku_id": "SKU00118", "loc": {"aisle": "A01", "bay": 4, "shelf": 5, "pos": 5}, "units": 7}
-{"store_id": "CA1006", "sku_id": "SKU00063", "loc": {"aisle": "A01", "bay": 3, "shelf": 1, "pos": 4}, "units": 35}
-{"store_id": "CA1007", "sku_id": "SKU00008", "loc": {"aisle": "A01", "bay": 1, "shelf": 2, "pos": 3}, "units": 15}
-{"store_id": "CA1007", "sku_id": "SKU00139", "loc": {"aisle": "A01", "bay": 5, "shelf": 4, "pos": 2}, "units": 25}
-{"store_id": "CA1008", "sku_id": "SKU00135", "loc": {"aisle": "A01", "bay": 3, "shelf": 5, "pos": 1}, "units": 9}
-{"store_id": "CA1009", "sku_id": "SKU00166", "loc": {"aisle": "A01", "bay": 4, "shelf": 3, "pos": 2}, "units": 10}
-{"store_id": "CA1011", "sku_id": "SKU00016", "loc": {"aisle": "A01", "bay": 1, "shelf": 2, "pos": 5}, "units": 4}
-{"store_id": "CA1012", "sku_id": "SKU00051", "loc": {"aisle": "A01", "bay": 1, "shelf": 5, "pos": 3}, "units": 17}
-{"store_id": "CA1013", "sku_id": "SKU00094", "loc": {"aisle": "A01", "bay": 2, "shelf": 4, "pos": 2}, "units": 35}
-{"store_id": "CA1014", "sku_id": "SKU00167", "loc": {"aisle": "A01", "bay": 4, "shelf": 1, "pos": 2}, "units": 4}
-{"store_id": "CA1016", "sku_id": "SKU00046", "loc": {"aisle": "A01", "bay": 1, "shelf": 4, "pos": 5}, "units": 31}
-{"store_id": "CA1017", "sku_id": "SKU00162", "loc": {"aisle": "A01", "bay": 2, "shelf": 4, "pos": 4}, "units": 24}
+{"store_id": "SAMS4735", "sku_id": "FDC1034191", "loc": {"aisle": "A01", "bay": 1, "shelf": 1, "pos": 1}, "units": 11}
+{"store_id": "SAMS6405", "sku_id": "FDC1458937", "loc": {"aisle": "A01", "bay": 1, "shelf": 1, "pos": 3}, "units": 10}
+{"store_id": "WM1563", "sku_id": "FDC1460285", "loc": {"aisle": "A01", "bay": 1, "shelf": 4, "pos": 3}, "units": 7}
+{"store_id": "WM1563", "sku_id": "FDC2651690", "loc": {"aisle": "A06", "bay": 5, "shelf": 4, "pos": 2}, "units": 9}
+{"store_id": "WM1574", "sku_id": "FDC2314254", "loc": {"aisle": "A04", "bay": 4, "shelf": 2, "pos": 1}, "units": 32}
+{"store_id": "WM1575", "sku_id": "FDC2016322", "loc": {"aisle": "A02", "bay": 2, "shelf": 4, "pos": 6}, "units": 35}
+{"store_id": "WM1575", "sku_id": "VAR0073", "loc": {"aisle": "A08", "bay": 1, "shelf": 4, "pos": 5}, "units": 16}
+{"store_id": "WM1588", "sku_id": "FDC2535728", "loc": {"aisle": "A05", "bay": 5, "shelf": 2, "pos": 4}, "units": 7}
+{"store_id": "WM1608", "sku_id": "FDC2110231", "loc": {"aisle": "A03", "bay": 3, "shelf": 5, "pos": 3}, "units": 17}
+{"store_id": "WM1616", "sku_id": "FDC1893879", "loc": {"aisle": "A01", "bay": 2, "shelf": 3, "pos": 2}, "units": 33}
+{"store_id": "WM1630", "sku_id": "FDC2066567", "loc": {"aisle": "A02", "bay": 5, "shelf": 4, "pos": 4}, "units": 20}
+{"store_id": "WM1630", "sku_id": "VAR0161", "loc": {"aisle": "A08", "bay": 4, "shelf": 4, "pos": 3}, "units": 8}
+{"store_id": "WM1899", "sku_id": "FDC2606004", "loc": {"aisle": "A06", "bay": 3, "shelf": 2, "pos": 2}, "units": 8}
+{"store_id": "WM1912", "sku_id": "FDC2172550", "loc": {"aisle": "A04", "bay": 1, "shelf": 5, "pos": 1}, "units": 30}
+{"store_id": "WM2028", "sku_id": "FDC1924887", "loc": {"aisle": "A01", "bay": 5, "shelf": 2, "pos": 6}, "units": 32}
+{"store_id": "WM2028", "sku_id": "VAR0001", "loc": {"aisle": "A07", "bay": 4, "shelf": 2, "pos": 5}, "units": 21}
+{"store_id": "WM2523", "sku_id": "FDC2009631", "loc": {"aisle": "A01", "bay": 4, "shelf": 1, "pos": 1}, "units": 23}
+{"store_id": "WM3139", "sku_id": "FDC2415607", "loc": {"aisle": "A03", "bay": 2, "shelf": 5, "pos": 2}, "units": 10}
+{"store_id": "WM3141", "sku_id": "FDC2578244", "loc": {"aisle": "A04", "bay": 2, "shelf": 2, "pos": 5}, "units": 9}
+{"store_id": "WM4127", "sku_id": "FDC2752913", "loc": {"aisle": "A05", "bay": 1, "shelf": 3, "pos": 6}, "units": 29}
 
 === data/associates.jsonl (20 sample rows) ===
-{"associate_id": "CA1000-A00", "store_id": "CA1000", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1000-A10", "store_id": "CA1000", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1001-A06", "store_id": "CA1001", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1002-A02", "store_id": "CA1002", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1002-A12", "store_id": "CA1002", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1003-A08", "store_id": "CA1003", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1004-A04", "store_id": "CA1004", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1005-A00", "store_id": "CA1005", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1005-A10", "store_id": "CA1005", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1006-A06", "store_id": "CA1006", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1007-A02", "store_id": "CA1007", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1007-A12", "store_id": "CA1007", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1009-A00", "store_id": "CA1009", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1010-A02", "store_id": "CA1010", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1011-A04", "store_id": "CA1011", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1012-A06", "store_id": "CA1012", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1014-A02", "store_id": "CA1014", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1016-A00", "store_id": "CA1016", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1017-A04", "store_id": "CA1017", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
-{"associate_id": "CA1018-A04", "store_id": "CA1018", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "SAMS4735-A00", "store_id": "SAMS4735", "district": "D09", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "SAMS4767-A01", "store_id": "SAMS4767", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "SAMS6405-A02", "store_id": "SAMS6405", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "SAMS6621-A03", "store_id": "SAMS6621", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1563-A04", "store_id": "WM1563", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1574-A01", "store_id": "WM1574", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1574-A12", "store_id": "WM1574", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1575-A09", "store_id": "WM1575", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1588-A06", "store_id": "WM1588", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1608-A03", "store_id": "WM1608", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1616-A00", "store_id": "WM1616", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1630-A05", "store_id": "WM1630", "district": "D01", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1899-A02", "store_id": "WM1899", "district": "D09", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1899-A13", "store_id": "WM1899", "district": "D09", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM1912-A10", "store_id": "WM1912", "district": "D09", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM2028-A07", "store_id": "WM2028", "district": "D09", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM2333-A04", "store_id": "WM2333", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM3139-A03", "store_id": "WM3139", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM3141-A06", "store_id": "WM3141", "district": "D06", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
+{"associate_id": "WM5603-A01", "store_id": "WM5603", "district": "D09", "is_floater": false, "shift_start": "2026-12-30T22:00:00-08:00", "shift_end": "2026-12-31T06:00:00-08:00"}
 
 === data/trucks.jsonl (20 sample rows) ===
 {"truck_id": "DC_CENTRAL-T0", "dc_id": "DC_CENTRAL", "cube_ft3": 3400.0, "weight_lb": 40000.0, "depart": "2026-12-31T08:00:00-08:00"}
@@ -290,51 +290,51 @@ PLAN_TYPES: dict[str, tuple[str, ...]] = {
 {"truck_id": "DC_SOUTH-T5", "dc_id": "DC_SOUTH", "cube_ft3": 3400.0, "weight_lb": 40000.0, "depart": "2026-12-31T08:00:00-08:00"}
 
 === data/dc_stock.jsonl (20 sample rows) ===
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00013", "cases": 6}
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00034", "cases": 4}
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00055", "cases": 3}
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00083", "cases": 2}
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00114", "cases": 5}
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00150", "cases": 3}
-{"dc_id": "DC_CENTRAL", "sku_id": "SKU00165", "cases": 5}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00014", "cases": 9}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00035", "cases": 6}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00056", "cases": 4}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00092", "cases": 1}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00128", "cases": 4}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00154", "cases": 6}
-{"dc_id": "DC_NORTH", "sku_id": "SKU00178", "cases": 4}
-{"dc_id": "DC_SOUTH", "sku_id": "SKU00033", "cases": 8}
-{"dc_id": "DC_SOUTH", "sku_id": "SKU00054", "cases": 14}
-{"dc_id": "DC_SOUTH", "sku_id": "SKU00073", "cases": 7}
-{"dc_id": "DC_SOUTH", "sku_id": "SKU00112", "cases": 20}
-{"dc_id": "DC_SOUTH", "sku_id": "SKU00147", "cases": 4}
-{"dc_id": "DC_SOUTH", "sku_id": "SKU00163", "cases": 5}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC1141715", "cases": 12}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC2013052", "cases": 5}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC2093122", "cases": 5}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC2178255", "cases": 9}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC2427753", "cases": 5}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC2544428", "cases": 4}
+{"dc_id": "DC_CENTRAL", "sku_id": "FDC2660333", "cases": 4}
+{"dc_id": "DC_NORTH", "sku_id": "FDC1877171", "cases": 4}
+{"dc_id": "DC_NORTH", "sku_id": "FDC2026573", "cases": 3}
+{"dc_id": "DC_NORTH", "sku_id": "FDC2102896", "cases": 2}
+{"dc_id": "DC_NORTH", "sku_id": "FDC2284520", "cases": 6}
+{"dc_id": "DC_NORTH", "sku_id": "FDC2454962", "cases": 11}
+{"dc_id": "DC_NORTH", "sku_id": "FDC2594947", "cases": 3}
+{"dc_id": "DC_NORTH", "sku_id": "FDC421530", "cases": 3}
+{"dc_id": "DC_SOUTH", "sku_id": "FDC1913788", "cases": 6}
+{"dc_id": "DC_SOUTH", "sku_id": "FDC2051416", "cases": 7}
+{"dc_id": "DC_SOUTH", "sku_id": "FDC2122309", "cases": 4}
+{"dc_id": "DC_SOUTH", "sku_id": "FDC2338061", "cases": 2}
+{"dc_id": "DC_SOUTH", "sku_id": "FDC2499832", "cases": 3}
+{"dc_id": "DC_SOUTH", "sku_id": "FDC2612440", "cases": 3}
 
 === data/notes.jsonl (20 sample rows) ===
-{"note_id": "N0000", "store_id": "CA1000", "text": "Endcap 1 holds a vendor Halloween display; candy there is not on the planogram."}
-{"note_id": "N0003", "store_id": "CA1001", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
-{"note_id": "N0006", "store_id": "CA1002", "text": "Topstock above aisle 5 has overflow cases of baking decorations."}
-{"note_id": "N0009", "store_id": "CA1003", "text": "Online pickup totes staged in backroom bay 3 may contain affected items."}
-{"note_id": "N0012", "store_id": "CA1004", "text": "Aisle 9 moved to garden center during remodel; locations are not on planogram."}
-{"note_id": "N0015", "store_id": "CA1005", "text": "Store-brand frosting labels are smudged from a printer fault; check ingredients by hand."}
-{"note_id": "N0018", "store_id": "CA1006", "text": "Endcap 16 holds a vendor Halloween display; candy there is not on the planogram."}
-{"note_id": "N0021", "store_id": "CA1007", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
-{"note_id": "N0024", "store_id": "CA1008", "text": "Topstock above aisle 7 has overflow cases of baking decorations."}
-{"note_id": "N0027", "store_id": "CA1009", "text": "Online pickup totes staged in backroom bay 4 may contain affected items."}
-{"note_id": "N0030", "store_id": "CA1010", "text": "Aisle 9 moved to garden center during remodel; locations are not on planogram."}
-{"note_id": "N0033", "store_id": "CA1011", "text": "Store-brand frosting labels are smudged from a printer fault; check ingredients by hand."}
-{"note_id": "N0036", "store_id": "CA1012", "text": "Endcap 17 holds a vendor Halloween display; candy there is not on the planogram."}
-{"note_id": "N0039", "store_id": "CA1013", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
-{"note_id": "N0042", "store_id": "CA1014", "text": "Topstock above aisle 8 has overflow cases of baking decorations."}
-{"note_id": "N0045", "store_id": "CA1015", "text": "Online pickup totes staged in backroom bay 15 may contain affected items."}
-{"note_id": "N0048", "store_id": "CA1016", "text": "Aisle 5 moved to garden center during remodel; locations are not on planogram."}
-{"note_id": "N0051", "store_id": "CA1017", "text": "Store-brand frosting labels are smudged from a printer fault; check ingredients by hand."}
-{"note_id": "N0054", "store_id": "CA1018", "text": "Endcap 13 holds a vendor Halloween display; candy there is not on the planogram."}
-{"note_id": "N0057", "store_id": "CA1019", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
+{"note_id": "N0000", "store_id": "SAMS4735", "text": "Endcap 16 holds a vendor Halloween display; candy there is not on the planogram."}
+{"note_id": "N0003", "store_id": "SAMS4767", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
+{"note_id": "N0006", "store_id": "SAMS6405", "text": "Topstock above aisle 12 has overflow cases of baking decorations."}
+{"note_id": "N0009", "store_id": "SAMS6621", "text": "Online pickup totes staged in backroom bay 4 may contain affected items."}
+{"note_id": "N0012", "store_id": "WM1563", "text": "Aisle 5 moved to garden center during remodel; locations are not on planogram."}
+{"note_id": "N0015", "store_id": "WM1574", "text": "Store-brand frosting labels are smudged from a printer fault; check ingredients by hand."}
+{"note_id": "N0018", "store_id": "WM1575", "text": "Endcap 14 holds a vendor Halloween display; candy there is not on the planogram."}
+{"note_id": "N0021", "store_id": "WM1588", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
+{"note_id": "N0024", "store_id": "WM1608", "text": "Topstock above aisle 2 has overflow cases of baking decorations."}
+{"note_id": "N0027", "store_id": "WM1616", "text": "Online pickup totes staged in backroom bay 1 may contain affected items."}
+{"note_id": "N0030", "store_id": "WM1630", "text": "Aisle 7 moved to garden center during remodel; locations are not on planogram."}
+{"note_id": "N0033", "store_id": "WM1899", "text": "Store-brand frosting labels are smudged from a printer fault; check ingredients by hand."}
+{"note_id": "N0036", "store_id": "WM1912", "text": "Endcap 20 holds a vendor Halloween display; candy there is not on the planogram."}
+{"note_id": "N0039", "store_id": "WM2028", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
+{"note_id": "N0042", "store_id": "WM2333", "text": "Topstock above aisle 6 has overflow cases of baking decorations."}
+{"note_id": "N0045", "store_id": "WM2523", "text": "Online pickup totes staged in backroom bay 10 may contain affected items."}
+{"note_id": "N0048", "store_id": "WM3139", "text": "Aisle 2 moved to garden center during remodel; locations are not on planogram."}
+{"note_id": "N0051", "store_id": "WM3141", "text": "Store-brand frosting labels are smudged from a printer fault; check ingredients by hand."}
+{"note_id": "N0054", "store_id": "WM4127", "text": "Endcap 2 holds a vendor Halloween display; candy there is not on the planogram."}
+{"note_id": "N0057", "store_id": "WM5603", "text": "Frito-Lay DSD rep restocks Tuesdays; DSD items are vendor-pulled, do not pack for DC return."}
 
 === data/substitutes.json (sample) ===
-{"SKU00000": ["SKU00112"], "SKU00001": ["SKU00154"], "SKU00002": ["SKU00147"], "SKU00003": ["SKU00013", "SKU00165"], "SKU00004": ["SKU00014", "SKU00056"], "SKU00005": ["SKU00054", "SKU00112"], "SKU00006": ["SKU00112"], "SKU00007": ["SKU00073", "SKU00114"], "SKU00008": ["SKU00013"], "SKU00009": ["SKU00035", "SKU00056"], "SKU00010": ["SKU00112"], "SKU00011": ["SKU00034"], "SKU00021": ["SKU00054"], "SKU00022": ["SKU00083"], "SKU00023": ["SKU00154"], "SKU00024": ["SKU00112", "SKU00178"], "SKU00025": ["SKU00056"], "SKU00026": ["SKU00112"], "SKU00027": ["SKU00055"], "SKU00028": ["SKU00165"]}
+{"FDC1034191": ["VAR0172"], "FDC1039055": ["FDC2009631", "FDC2030891"], "FDC1096385": ["FDC2594947", "VAR0182"], "FDC1138169": ["FDC2028308", "FDC2278504"], "FDC1152536": ["VAR0172"], "FDC1152555": ["FDC1863608"], "FDC1850898": ["FDC2101396", "VAR0182"], "FDC1851197": ["FDC2099158", "FDC2099175"], "FDC1861265": ["FDC1858097", "FDC2016691"], "FDC1863607": ["FDC2067256", "FDC2656035"], "FDC1864116": ["FDC1889618"], "FDC1873319": ["FDC2540675", "FDC2606211"], "FDC1874472": ["FDC2525111"], "FDC1878485": ["FDC2415865"], "FDC1878835": ["FDC2541940"], "FDC1885241": ["FDC2630123"], "FDC1885264": ["FDC2375329"], "FDC1885345": ["FDC2016691"], "FDC1885462": ["FDC1889890", "FDC2415607"], "FDC1886623": ["FDC2454957", "VAR0159"]}
 
 OUTPUT PROTOCOL (follow exactly)
 1. First emit the manifest between the lines <<<MANIFEST>>> and <<<END MANIFEST>>>.

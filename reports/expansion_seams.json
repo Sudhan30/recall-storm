@@ -1,0 +1,24 @@
+{
+  "run": "runs/expansion",
+  "source": "hops.jsonl",
+  "finished": false,
+  "summary": "SUMMARY: 1 seams (1 continuation, 0 resume), 0 PASS, 0 FAIL, 1 PENDING (source: hops.jsonl, run live)",
+  "seams": [
+    {
+      "seam_byte": 202880,
+      "status": "PENDING",
+      "fails": [],
+      "notes": [
+        "open_block tests/unit/test_ingest_open_food_facts.py still open (run live) -> PENDING",
+        "no text after seam yet (not resumed) -> PENDING"
+      ],
+      "before_tail": "ge(raw) == \"en\"\n    parsed = parse_off_product({\"product\": raw})\n    assert \"E12",
+      "after_head": "",
+      "n": 1,
+      "kind": "continuation",
+      "label": "hop 0->1",
+      "tok": 65536,
+      "has_token": true
+    }
+  ]
+}
