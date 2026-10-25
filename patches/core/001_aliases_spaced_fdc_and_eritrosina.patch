@@ -1,0 +1,42 @@
+--- a/recallstorm/aliases/detector.py
++++ b/recallstorm/aliases/detector.py
+@@ -32,10 +32,10 @@
+ # Explicit decoy patterns that must never be matched as Red No. 3
+ _DECOY_PATTERNS: tuple[re.Pattern[str], ...] = (
+     # D&C Red No. 3 / 33 / 30 etc. (cosmetic/drug D&C dyes, not FD&C Red 3)
+-    re.compile(r"\b(?<!f)d\s*&\s*c\s+red(?:\s+(?:dye|no\.?|number|#))?\s*\d+\b", re.IGNORECASE),
++    re.compile(r"\b(?<!f)(?<!f )(?<!f\.)d\s*&\s*c\s+red(?:\s+(?:dye|no\.?|number|#))?\s*\d+\b", re.IGNORECASE),
+     # Red 40, Red 33, Red 30, Red 2, Red 28, etc. (any number other than 3 or 03)
+     re.compile(
+-        r"\b(?:fd\s*&\s*c\s+)?red(?:\s+(?:dye|no\.?|number|lake|#))*\s*#?\s*(?:[124-9]\d*|3\d+|0*[124-9]\d*)\b",
++        r"\b(?:f\.?\s*d\.?\s*&\s*c\.?\s+)?red(?:\s+(?:dye|no\.?|number|lake|#))*\s*#?\s*(?:[124-9]\d*|3\d+|0*[124-9]\d*)\b",
+         re.IGNORECASE,
+     ),
+     # Quantified nouns like "3 red apples", "3 red peppers", "red 3-bean"
+@@ -49,7 +49,7 @@
+     (
+         "FD&C Red No. 3",
+         re.compile(
+-            r"\bfd\s*(?:&|and)\s*c\s+red(?:\s+(?:dye|no\.?|number|num\.?))?\s*#?\s*0*3(?:\s+lake)?\b(?!\d)",
++            r"\bf\.?\s*d\.?\s*(?:&|and)\s*c\.?\s+red(?:\s+(?:dye|no\.?|number|num\.?))?\s*#?\s*0*3(?:\s+lake)?\b(?!\d)",
+             re.IGNORECASE,
+         ),
+     ),
+@@ -77,7 +77,7 @@
+     (
+         "erythrosine",
+         re.compile(
+-            r"\be[\W_]*r[\W_]*[y1i][\W_]*t[\W_]*h[\W_]*r[\W_]*[o0][\W_]*[s5][\W_]*[i1l][\W_]*n[\W_]*e?(?:\s+b)?\b",
++            r"\b[eé][\W_]*r[\W_]*[y1i][\W_]*t[\W_]*h?[\W_]*r[\W_]*[o0][\W_]*[s5][\W_]*[i1l][\W_]*n[\W_]*[ea]?(?:\s+b)?\b",
+             re.IGNORECASE,
+         ),
+     ),
+@@ -118,7 +118,7 @@
+                 return True
+     # Also check immediately preceding "D&C " (without F)
+     prefix = text[max(0, start - 10):start]
+-    if re.search(r"(?<![fF])d\s*&\s*c\s*$", prefix, re.IGNORECASE):
++    if re.search(r"(?<![fF])(?<![fF] )(?<![fF]\.)d\s*&\s*c\s*$", prefix, re.IGNORECASE):
+         return True
+     return False
+ 

@@ -5,3 +5,4 @@ __pycache__/
 .venv/
 out/
 runs_*.out
+gen/core_patched/
