@@ -101,32 +101,32 @@
  },
  "one_minute": {
   "o1": {
-   "file": "o1_82e90acad512.wav",
-   "text": "California bans Red No. 3 in food on January 1st, 2027. In a simulated drill on 20 California Walmart and Sam's Club locations, a system Gemini 4 Argon wrote in one generation finds the dye under names like erythrosine and E127."
+   "file": "o1_e8678c55777f.wav",
+   "text": "California bans Red No. 3 in food on January 1st, 2027. Gemini 4 Argon wrote a system, in one generation, that finds it even as erythrosine or E127."
   },
   "o2": {
-   "file": "o2_9fab80a91c8a.wav",
-   "text": "It plans 13,746 shelf tasks and replays the night: tags flash, associates walk, and every store goes green."
+   "file": "o2_1147b2daa1fd.wav",
+   "text": "In a simulated drill on 20 California Walmart and Sam's Club locations, it plans 13,746 shelf tasks, and every store goes green."
   },
   "o3": {
    "file": "o3_9724416a21b4.wav",
    "text": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept."
   },
   "o4": {
-   "file": "o4_c47eb1078cef.wav",
-   "text": "After 3 logged patches, the verifier reports 0 hard errors, recall 1.0, and 0 of 483 decoys pulled."
+   "file": "o4_2318e2e1beef.wav",
+   "text": "After 3 logged patches: 0 hard errors, recall 1.0, 0 of 483 decoys pulled."
   },
   "o5_exp1": {
-   "file": "o5_exp1_0287b7558b36.wav",
-   "text": "The experiment: one continued generation, 254,377 visible tokens over 4 hops. 3 of 3 seams pass, and all 2,838 cross-file references resolve."
+   "file": "o5_exp1_6fbf4cc72831.wav",
+   "text": "The experiment: one continued generation, 254,377 visible tokens over 4 hops; 3 of 3 seams pass."
   },
   "o6": {
    "file": "o6_bc8d74edae82.wav",
    "text": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds."
   },
   "o7": {
-   "file": "o7_d55279e03ee1.wav",
-   "text": "Stores, stock and staffing are simulated. Every number came from the verifier. Open source."
+   "file": "o7_f62214b19e59.wav",
+   "text": "Stores, stock and staffing are simulated; every number came from the verifier."
   }
  },
  "demo_full_final": {
@@ -177,28 +177,28 @@
  },
  "one_minute_final": {
   "o1": {
-   "file": "o1_82e90acad512.wav",
-   "text": "California bans Red No. 3 in food on January 1st, 2027. In a simulated drill on 20 California Walmart and Sam's Club locations, a system Gemini 4 Argon wrote in one generation finds the dye under names like erythrosine and E127."
+   "file": "o1_e8678c55777f.wav",
+   "text": "California bans Red No. 3 in food on January 1st, 2027. Gemini 4 Argon wrote a system, in one generation, that finds it even as erythrosine or E127."
   },
   "o2": {
-   "file": "o2_9fab80a91c8a.wav",
-   "text": "It plans 13,746 shelf tasks and replays the night: tags flash, associates walk, and every store goes green."
+   "file": "o2_1147b2daa1fd.wav",
+   "text": "In a simulated drill on 20 California Walmart and Sam's Club locations, it plans 13,746 shelf tasks, and every store goes green."
   },
   "o3": {
    "file": "o3_9724416a21b4.wav",
    "text": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept."
   },
   "o4": {
-   "file": "o4_c47eb1078cef.wav",
-   "text": "After 3 logged patches, the verifier reports 0 hard errors, recall 1.0, and 0 of 483 decoys pulled."
+   "file": "o4_2318e2e1beef.wav",
+   "text": "After 3 logged patches: 0 hard errors, recall 1.0, 0 of 483 decoys pulled."
   },
   "o6": {
    "file": "o6_bc8d74edae82.wav",
    "text": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds."
   },
   "o7": {
-   "file": "o7_d55279e03ee1.wav",
-   "text": "Stores, stock and staffing are simulated. Every number came from the verifier. Open source."
+   "file": "o7_f62214b19e59.wav",
+   "text": "Stores, stock and staffing are simulated; every number came from the verifier."
   }
  }
 }

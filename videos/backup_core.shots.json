@@ -124,7 +124,7 @@
   },
   {
    "id": "h3",
-   "t": 18.51,
+   "t": 18.52,
    "dur": 6.7,
    "say": "You'll see a working system that Gemini 4 Argon wrote this morning, in one generation.",
    "pending": null
@@ -152,7 +152,7 @@
   },
   {
    "id": "c4",
-   "t": 58.86,
+   "t": 58.87,
    "dur": 15.02,
    "say": "Then the verifier. Argon's unedited core: 350 hard errors, and recall 0.947. It missed 25 products spelled like \"F D and C\" with spaces, or Spanish \"rojo\".",
    "pending": null

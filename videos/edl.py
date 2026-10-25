@@ -98,7 +98,7 @@ def full(v):
         {"id": f"f_e2_{v}", "say": "The code wall puts every file at its token position. All {%s.edges} cross-file references "
                                    "resolve. The longest passing call: ids.py at token {%s.longest_def.start_tok}, used by a "
                                    "test at token {%s.longest_use.start_tok}." % ((v,) * 3),
-         "shots": [{"kind": "cap", "src": "codewall", "w": 0.35, "a": 0, "b": 4.6},
+         "shots": [{"kind": "cap", "src": "codewall" if draft else "codewall_v2", "w": 0.35, "a": 0, "b": 4.6},
                    {"kind": "still", "src": "codewall_longest" if draft else "codewall_longest_v2", "w": 0.65, "zoom": 0.05}],
          "pending_text": "code wall: v2 files, references, longest call"},
         {"id": f"f_e3_{v}", "say": "We run both files' tests live. They pass.",
@@ -141,24 +141,22 @@ def full(v):
 
 def one_minute(v):
     return [
-        {"id": "o1", "say": "California bans Red No. 3 in food on January 1st, 2027. In a simulated drill on "
-                            "{core_patched.stores} California Walmart and Sam's Club locations, a system Gemini 4 Argon "
-                            "wrote in one generation finds the dye under names like erythrosine and E127.",
-         "shots": [{"kind": "ai", "src": "store_night", "w": 0.4}, {"kind": "ai", "src": "aisle_pull", "w": 0.6}]},
-        {"id": "o2", "say": "It plans {core_patched.shelf_tasks} shelf tasks and replays the night: tags flash, associates "
-                            "walk, and every store goes green.",
-         "shots": [{"kind": "cap", "src": "store3d", "w": 0.55, "a": 0, "b": 8, "crop": [0, 250, 1476, 830]},
-                   {"kind": "cap", "src": "map_replay", "w": 0.45, "a": 3, "b": 12.5}]},
+        {"id": "o1", "say": "California bans Red No. 3 in food on January 1st, 2027. Gemini 4 Argon wrote a system, in one "
+                            "generation, that finds it even as erythrosine or E127.",
+         "shots": [{"kind": "ai", "src": "store_night", "w": 0.45}, {"kind": "ai", "src": "scanner_shelf", "w": 0.55}]},
+        {"id": "o2", "say": "In a simulated drill on {core_patched.stores} California Walmart and Sam's Club locations, it plans "
+                            "{core_patched.shelf_tasks} shelf tasks, and every store goes green.",
+         "shots": [{"kind": "ai", "src": "aisle_pull", "w": 0.3, "a": 1, "b": 5},
+                   {"kind": "cap", "src": "store3d", "w": 0.4, "a": 0, "b": 8, "crop": [0, 250, 1476, 830]},
+                   {"kind": "cap", "src": "map_replay", "w": 0.3, "a": 3, "b": 12.5}]},
         {"id": "o3", "say": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept.",
          "shots": [{"kind": "cards", "src": "card", "w": 1}]},
-        {"id": "o4", "say": "After {patches.core_count} logged patches, the verifier reports {core_patched.hard_errors} hard "
-                            "errors, recall {core_patched.recall}, and {core_patched.decoys_pulled} of {core_patched.decoys} "
-                            "decoys pulled.",
+        {"id": "o4", "say": "After {patches.core_count} logged patches: {core_patched.hard_errors} hard errors, recall "
+                            "{core_patched.recall}, {core_patched.decoys_pulled} of {core_patched.decoys} decoys pulled.",
          "shots": [{"kind": "panel", "srcs": ["vcard4", "vcard3"], "w": 1, "colw": 760, "stagger": False,
                     "heads": ["Argon core, unedited", "core + 3 logged patches"], "colors": ["red", "green"]}]},
-        {"id": f"o5_{v}", "say": "The experiment: one continued generation, {%s.visible} visible tokens over {%s.hops} hops. "
-                                 "{%s.seams_pass} of {%s.seams_total} seams pass, and all {exp1.edges} cross-file references "
-                                 "resolve." % ((v,) * 4) if v == "exp1" else
+        {"id": f"o5_{v}", "say": "The experiment: one continued generation, {%s.visible} visible tokens over {%s.hops} hops; "
+                                 "{%s.seams_pass} of {%s.seams_total} seams pass." % ((v,) * 4) if v == "exp1" else
                                  "The experiment: one continued generation, {exp2.visible} visible tokens over {exp2.hops} hops, "
                                  "and {exp2.seams_pass} of {exp2.seams_total} seams pass.",
          "shots": [{"kind": "still", "src": "hops_expansion" if v == "exp1" else "hops_expansion_v2", "w": 0.6, "zoom": 0.03},
@@ -167,7 +165,7 @@ def one_minute(v):
         {"id": "o6", "say": "A managed agent repairs what breaks: {agent.core_pack_returns.after_passed} of "
                             "{agent.core_pack_returns.after_passed} tests passing in {agent.core_pack_returns.secs} seconds.",
          "shots": [{"kind": "term", "src": "agent_log", "w": 1}]},
-        {"id": "o7", "say": "Stores, stock and staffing are simulated. Every number came from the verifier. Open source.",
+        {"id": "o7", "say": "Stores, stock and staffing are simulated; every number came from the verifier.",
          "shots": [{"kind": "title", "src": "end_full", "w": 1}]},
     ]
 

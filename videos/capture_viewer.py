@@ -127,36 +127,39 @@ async def scene_verifier(pg, out):
         await vc.nth(i).screenshot(path=str(out / f"vcard{i + 1}.png"))
 
 
+RUN, SUF = "expansion", ""      # --run expansion_v2 --suffix _v2 for the final cut
+
+
 async def scene_hops(pg, out):
     await key(pg, "3")
-    await pg.select_option("#runsel", "live:expansion")
+    await pg.select_option("#runsel", f"live:{RUN}")
     await pg.clock.run_for(800)
-    await pg.screenshot(path=str(out / "hops_expansion.png"))
+    await pg.screenshot(path=str(out / f"hops_expansion{SUF}.png"))
     seams = pg.locator("#seams > *")
     for i in range(await seams.count()):
-        await seams.nth(i).screenshot(path=str(out / f"seam{i + 1}.png"))
+        await seams.nth(i).screenshot(path=str(out / f"seam{i + 1}{SUF}.png"))
 
 
 async def scene_code(pg, out):
     await key(pg, "4")
-    await pg.select_option("#codesel", "live:expansion")
+    await pg.select_option("#codesel", f"live:{RUN}")
     await pg.clock.run_for(800)
-    await pg.screenshot(path=str(out / "codewall_expansion.png"))
-    r = Rec(pg, out, "codewall")
+    await pg.screenshot(path=str(out / f"codewall_expansion{SUF}.png"))
+    r = Rec(pg, out, f"codewall{SUF}")
     await r.frames(20)
     await pg.click("#longest")
     await r.frames(4 * FPS)
     r.encode(out)
-    await pg.screenshot(path=str(out / "codewall_longest.png"))
+    await pg.screenshot(path=str(out / f"codewall_longest{SUF}.png"))
 
 
 async def scene_gallery(pg, out):
     await key(pg, "5")
-    await pg.select_option("#failsel", "live:expansion")
+    await pg.select_option("#failsel", f"live:{RUN}")
     await pg.clock.run_for(800)
     g = pg.locator("#gallery")
     await g.scroll_into_view_if_needed()
-    await g.screenshot(path=str(out / "gallery_expansion.png"))
+    await g.screenshot(path=str(out / f"gallery_expansion{SUF}.png"))
 
 
 SCENES = {"map": scene_map, "store": scene_store, "cards": scene_cards, "verifier": scene_verifier,
@@ -167,8 +170,12 @@ async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--url", default="http://localhost:8001/viewer/")
     ap.add_argument("--out", default="videos/raw/cap")
+    ap.add_argument("--run", default="expansion")
+    ap.add_argument("--suffix", default="")
     ap.add_argument("scenes", nargs="*")
     a = ap.parse_args()
+    global RUN, SUF
+    RUN, SUF = a.run, a.suffix
     out = pathlib.Path(a.out); out.mkdir(parents=True, exist_ok=True)
     async with async_playwright() as p:
         for s in a.scenes or list(SCENES):

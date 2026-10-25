@@ -1,0 +1,145 @@
+{
+ "video": "videos/one_minute.mp4",
+ "duration": 58.73,
+ "shots": [
+  {
+   "t": 0.0,
+   "dur": 5.93,
+   "seg": "o1",
+   "kind": "ai",
+   "src": "store_night",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 5.93,
+   "dur": 7.27,
+   "seg": "o1",
+   "kind": "ai",
+   "src": "scanner_shelf",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 13.2,
+   "dur": 3.07,
+   "seg": "o2",
+   "kind": "ai",
+   "src": "aisle_pull",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 16.27,
+   "dur": 4.1,
+   "seg": "o2",
+   "kind": "cap",
+   "src": "store3d",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 20.37,
+   "dur": 3.07,
+   "seg": "o2",
+   "kind": "cap",
+   "src": "map_replay",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 23.43,
+   "dur": 7.9,
+   "seg": "o3",
+   "kind": "cards",
+   "src": "card",
+   "label": "REAL CAPTURE \u00b7 viewer evidence cards"
+  },
+  {
+   "t": 31.33,
+   "dur": 7.23,
+   "seg": "o4",
+   "kind": "panel",
+   "src": "vcard4+vcard3",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 38.57,
+   "dur": 5.5,
+   "seg": "o5_exp1",
+   "kind": "still",
+   "src": "hops_expansion",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 44.07,
+   "dur": 3.67,
+   "seg": "o5_exp1",
+   "kind": "still",
+   "src": "codewall_longest",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 47.73,
+   "dur": 5.77,
+   "seg": "o6",
+   "kind": "term",
+   "src": "agent_log",
+   "label": "REAL CAPTURE \u00b7 terminal output"
+  },
+  {
+   "t": 53.5,
+   "dur": 5.23,
+   "seg": "o7",
+   "kind": "title",
+   "src": "end_full",
+   "label": null
+  }
+ ],
+ "segments": [
+  {
+   "id": "o1",
+   "t": 0.0,
+   "dur": 13.19,
+   "say": "California bans Red No. 3 in food on January 1st, 2027. Gemini 4 Argon wrote a system, in one generation, that finds it even as erythrosine or E127.",
+   "pending": null
+  },
+  {
+   "id": "o2",
+   "t": 13.19,
+   "dur": 10.24,
+   "say": "In a simulated drill on 20 California Walmart and Sam's Club locations, it plans 13,746 shelf tasks, and every store goes green.",
+   "pending": null
+  },
+  {
+   "id": "o3",
+   "t": 23.43,
+   "dur": 7.91,
+   "say": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept.",
+   "pending": null
+  },
+  {
+   "id": "o4",
+   "t": 31.34,
+   "dur": 7.23,
+   "say": "After 3 logged patches: 0 hard errors, recall 1.0, 0 of 483 decoys pulled.",
+   "pending": null
+  },
+  {
+   "id": "o5_exp1",
+   "t": 38.58,
+   "dur": 9.15,
+   "say": "The experiment: one continued generation, 254,377 visible tokens over 4 hops; 3 of 3 seams pass.",
+   "pending": null
+  },
+  {
+   "id": "o6",
+   "t": 47.72,
+   "dur": 5.77,
+   "say": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds.",
+   "pending": null
+  },
+  {
+   "id": "o7",
+   "t": 53.5,
+   "dur": 5.23,
+   "say": "Stores, stock and staffing are simulated; every number came from the verifier.",
+   "pending": null
+  }
+ ]
+}

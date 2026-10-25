@@ -367,6 +367,21 @@ def render_shot(shot, out, n):
 
 
 # ---------------------------------------------------------------- assembly
+TEMPO = {"one_minute": 1.1, "one_minute_final": 1.1}       # optional narration speed-up (pitch kept)
+
+
+def prep_wav(wav, bdir, tempo=1.0):
+    """Trim the TTS take's leading/trailing silence (and apply tempo) into the build dir."""
+    out = bdir / f"vo_{wav.stem}_{tempo}.wav"
+    if not out.exists():
+        af = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,areverse,"
+              "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.12,areverse")
+        if tempo != 1.0:
+            af += f",atempo={tempo}"
+        run([FF, "-v", "error", "-y", "-i", str(wav), "-af", af, "-ar", str(SR), "-ac", "1", str(out)])
+    return out
+
+
 def build(video):
     edl = VIDEOS[video]
     numbers = json.loads((HERE / "numbers.json").read_text())
@@ -385,7 +400,7 @@ def build(video):
             segs.append({"id": seg["id"], "t0": t, "dur": seg.get("pending_secs", 4.0), "audio": None, "text": "",
                          "caption": "[v2 numbers pending]", "shots": shots, "pending": missing})
         else:
-            wav = ASSETS / "vo" / vo[seg["id"]]["file"] if seg.get("say") else None
+            wav = prep_wav(ASSETS / "vo" / vo[seg["id"]]["file"], bdir, TEMPO.get(video, 1.0)) if seg.get("say") else None
             alen = 0.0
             if wav:
                 with wave.open(str(wav)) as w:
@@ -462,7 +477,7 @@ def build(video):
     fc.append(f"[1:a]aresample=48000,afade=t=out:st={total - 0.8:.3f}:d=0.8[aout]")
     out = HERE / f"{video}.mp4"
     run([FF, "-v", "error", "-y", "-i", str(base), "-i", str(nar), *inputs, "-filter_complex", ";".join(fc),
-         "-map", "[vout]", "-map", "[aout]", "-c:v", "libx264", "-crf", "19", "-preset", "medium", "-profile:v", "high",
+         "-map", "[vout]", "-map", "[aout]", "-c:v", "libx264", "-crf", "21", "-preset", "medium", "-profile:v", "high",
          "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-movflags", "+faststart",
          "-t", f"{total:.3f}", str(out)])
     meta = {"video": f"videos/{video}.mp4", "duration": round(total, 2), "shots": shotlog,

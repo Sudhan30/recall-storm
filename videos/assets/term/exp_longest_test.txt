@@ -1,0 +1,11 @@
+$ PYTHONPATH=gen/expansion:. pytest gen/expansion/tests/unit/test_core_ids.py gen/expansion/tests/integration/test_flow_10_exceptions_and_handoffs.py -v -p no:cacheprovider
+gen/expansion/tests/unit/test_core_ids.py::test_make_run_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_make_task_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_make_evidence_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_make_alloc_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_make_manifest_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_make_handoff_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_make_exc_id PASSED
+gen/expansion/tests/unit/test_core_ids.py::test_parse_id_and_validate PASSED
+gen/expansion/tests/integration/test_flow_10_exceptions_and_handoffs.py::test_flow_10_exceptions_and_handoffs PASSED
+============================== 9 passed in 0.28s ===============================
