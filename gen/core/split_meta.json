@@ -1,0 +1,30 @@
+{
+  "stream": "runs/core/stream.txt",
+  "stream_bytes": 71180,
+  "total_tok_est": 22523,
+  "token_map": {
+    "source": "stream_log+hops",
+    "points": 869,
+    "kind": "run",
+    "known_until_byte": 71180.0,
+    "points_kept": 868
+  },
+  "manifest": {
+    "found": true,
+    "terminated": true,
+    "bad_lines": 0,
+    "start_byte": 0,
+    "end_byte": 4690,
+    "entries": 18
+  },
+  "blocks": 18,
+  "files_written": 18,
+  "unterminated": [],
+  "duplicates": [],
+  "fences_stripped": 0,
+  "manifest_missing_emitted": [],
+  "emitted_not_in_manifest": [],
+  "manifest_done_pct": 100.0,
+  "bytes_outside_blocks": 0,
+  "warnings": []
+}
