@@ -27,6 +27,9 @@ ap.add_argument("--max-tokens", type=int, default=300_000)
 ap.add_argument("--minutes", type=float, default=15)
 ap.add_argument("--holdout", action="store_true",
                 help="hide every other failing test from the bundle; score seen and held-out failures separately")
+ap.add_argument("--start-patch", help="apply this patch to the file first (a later repair round)")
+ap.add_argument("--guards", type=int, default=0,
+                help="add N passing labeled SKUs (generic-color boundary, stratified by truth) as must-still-pass cases")
 ap.add_argument("--dry-run", action="store_true", help="build the bundle and run tests, skip the agent")
 a = ap.parse_args()
 
@@ -37,6 +40,8 @@ run.mkdir(parents=True)
 gen = ROOT / a.gen
 work = run / "work"
 shutil.copytree(gen, work)
+if a.start_patch:
+    subprocess.run(["patch", "-s", "-p1", "-d", str(work)], stdin=open(ROOT / a.start_patch), check=True)
 
 
 def add_shims(base: pathlib.Path):
@@ -107,6 +112,29 @@ held = tuple(before["failed_ids"][1::2]) if a.holdout else ()
 shown_output = hide_tests(before["output"], held)[-20000:]
 before_unit = run_tests(work, a.unit) if a.unit else None
 src = (work / a.file).read_text()
+
+
+def guard_cases(n: int, failing: set[str]) -> str:
+    """Passing labeled SKUs near the generic-color boundary, n split evenly across truth labels."""
+    import csv, random
+    labels = dict(list(csv.reader(open(ROOT / "data" / "labels.csv")))[1:])
+    skus = {json.loads(l)["sku_id"]: json.loads(l) for l in open(ROOT / "data" / "skus.jsonl")}
+    generic = re.compile(r"artificial(?:ly)? colou?r|colou?rs? added|certified colou?r|fd&c colou?r", re.I)
+    pool = {}
+    for sid, truth in sorted(labels.items()):
+        if sid in failing or sid not in skus or not generic.search(skus[sid]["ingredients"]):
+            continue
+        pool.setdefault(truth, []).append(sid)
+    rng, out = random.Random(418), []
+    for truth in sorted(pool):
+        for sid in rng.sample(pool[truth], min(len(pool[truth]), n // len(pool))):
+            sk = skus[sid]
+            out.append(f"- expected {truth} | food={sk['is_food']} drug={sk['is_ingested_drug']} | {sk['ingredients'][:400]}")
+    return "\n".join(out)
+
+
+failing_skus = {m for t in before["failed_ids"] for m in re.findall(r"\[(\w+)\]", t)}
+guards = guard_cases(a.guards, failing_skus) if a.guards else ""
 manifest = next((l for l in (gen / "manifest.jsonl").read_text().splitlines() if f'"{a.file}"' in l), "{}")
 bundle = f"""You are repairing ONE file of a Python package written by another model. Find the root cause of the
 failing tests below and fix it in this file only. Keep every public name and signature unchanged; do not add
@@ -124,6 +152,7 @@ DIAGNOSIS: <one line: the root cause>
 === signatures this file imports ===
 {imported_signatures(src, work)}
 
+{"=== currently PASSING cases that must still pass after your fix (state=CA, at the deadline) ===" + chr(10) + guards + chr(10) if guards else ""}
 === failing test output (test source is hidden) ===
 {shown_output}
 
