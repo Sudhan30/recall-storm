@@ -77,8 +77,20 @@ def run_drill(base: pathlib.Path, tag: str) -> dict:
 
 
 def store_of(e: dict) -> str:
-    m = re.search(r"TSK-([A-Z0-9]+)-", e.get("id", "") + " " + e.get("msg", ""))
+    txt = e.get("id", "") + " " + e.get("msg", "")
+    m = re.search(r"TSK-([A-Z0-9]+)-", txt) or re.search(r"\bat ([A-Z]+\d+)\b", txt)
     return m.group(1) if m else "?"
+
+
+CHECK_RULES = {
+    "labor": "an associate may not have two tasks whose windows overlap; every window must lie inside that associate's "
+             "shift and end before the scenario deadline.",
+    "coverage": "every SKU whose label contains FD&C Red No. 3 under any alias in the rules (including spacing, "
+                "punctuation, '#', OCR digit-for-letter noise and non-English names) must get a PULL verdict, so every "
+                "shelf facing of it gets a PULL task.",
+    "decoy": "a SKU must not be pulled when its label only names a different dye (Red 40, D&C Red 33) or a phrase like "
+             "'3 red apples'.",
+}
 
 
 def hide_tests(output: str, held: tuple[str, ...]) -> str:
@@ -146,8 +158,7 @@ if drill_before:
     drill_shown_txt = (f"verify_plan hard errors of check '{a.drill_check}' on the drill output "
                        f"({len(shown)} shown, from {len(stores) - len(held_stores)} stores; other stores hidden):\n" +
                        "\n".join(f"- [{e['src']}] {e['type']} {e['id']}: {e['msg']}" for e in shown[:60]) +
-                       "\n\nThe verifier rule: an associate may not have two tasks whose windows overlap; every window "
-                       "must lie inside that associate's shift and end before the scenario deadline.")
+                       "\n\nThe verifier rule: " + CHECK_RULES.get(a.drill_check, "see the error messages."))
 held = tuple(before["failed_ids"][1::2]) if a.holdout else ()
 shown_output = hide_tests(before["output"], held)[-20000:]
 before_unit = run_tests(work, a.unit) if a.unit else None
