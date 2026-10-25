@@ -302,7 +302,7 @@ if final is not None:
     (run / "final.json").write_text(final.model_dump_json(indent=2))
     usage = final.usage.model_dump() if getattr(final, "usage", None) else usage
     status = final.status
-reply = "".join(text) or (final.model_dump_json() if final is not None else "")
+reply = "".join(text) or (getattr(final, "output_text", None) or "" if final is not None else "")
 (run / "reply.txt").write_text(reply)
 diag = (re.search(r"DIAGNOSIS:\s*(.+)", reply) or [None, ""])[1].strip()
 m = re.search(r"<<<FILE path=[^>]*>>>\n(.*?)<<<END FILE>>>", reply, re.S)

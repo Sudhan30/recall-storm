@@ -36,5 +36,169 @@
    "file": "c6_bb7dd36f086e.wav",
    "text": "Stores, stock and staffing are simulated. Every number came from the verifier."
   }
+ },
+ "demo_full_draft": {
+  "h1": {
+   "file": "h1_81d12617b064.wav",
+   "text": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period."
+  },
+  "f_h2": {
+   "file": "f_h2_ae3222444ae7.wav",
+   "text": "This is a simulated drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127."
+  },
+  "f_h3_exp1": {
+   "file": "f_h3_exp1_a4ac9589f5f4.wav",
+   "text": "You'll see a working system Argon wrote this morning, and an experiment where Argon wrote a 254,377-token version in one continued generation."
+  },
+  "c1": {
+   "file": "c1_6ba4c12673ba.wav",
+   "text": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done."
+  },
+  "c2": {
+   "file": "c2_c81bcad0cdf9.wav",
+   "text": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute."
+  },
+  "c3": {
+   "file": "c3_b0527c2caeeb.wav",
+   "text": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf."
+  },
+  "f_c4": {
+   "file": "f_c4_d662d2fd565b.wav",
+   "text": "Argon's unedited core: 350 hard errors, recall 0.947. After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, 0 of 483 decoys pulled."
+  },
+  "f_e1_exp1": {
+   "file": "f_e1_exp1_4db1e0ff73f5.wav",
+   "text": "The experiment: one continued generation over 4 hops, 254,377 visible tokens in 33.8 minutes, about $3.56. Seams, where one hop hands off mid-file: 3 of 3 pass."
+  },
+  "f_e2_exp1": {
+   "file": "f_e2_exp1_aa0bff16d9bb.wav",
+   "text": "The code wall puts every file at its token position. All 2,838 cross-file references resolve. The longest passing call: ids.py at token 36,357, used by a test at token 249,087."
+  },
+  "f_e3_exp1": {
+   "file": "f_e3_exp1_e83749ca95e8.wav",
+   "text": "We run both files' tests live. They pass."
+  },
+  "f_e4_exp1": {
+   "file": "f_e4_exp1_fce2d1ee2094.wav",
+   "text": "What broke as length grew: 3 failing test files in the first 200 thousand tokens, 1 after, and 149 status strings outside the contract's enums."
+  },
+  "f_e5": {
+   "file": "f_e5_d3838bb0ef4c.wav",
+   "text": "A managed repair agent takes failing files: the core's pack_returns went to 7 of 7 passing in 96 seconds. On fresh package B's rules, round two cut failures from 32 to 1, fixed 15 of 16 held-out cases, with 0 new failures."
+  },
+  "f_e6": {
+   "file": "f_e6_8445092bc01f.wav",
+   "text": "Matched packages, same hidden tests. Rules written in-stream pass 1,143 of 1,254; written fresh, 1,240. Allocate: both 9 of 9."
+  },
+  "f_w1": {
+   "file": "f_w1_87f716612569.wav",
+   "text": "RAG plus code is the right way to run a compliance pull, and it's what Argon wrote. We tested whether one long generation can write it coherently, and you've just seen where it held and where it broke."
+  },
+  "f_x1": {
+   "file": "f_x1_6d1665856d5a.wav",
+   "text": "For compliance teams at any big retailer. Stores, stock and staffing are simulated, and every number came from the verifier. Open source."
+  }
+ },
+ "one_minute": {
+  "o1": {
+   "file": "o1_82e90acad512.wav",
+   "text": "California bans Red No. 3 in food on January 1st, 2027. In a simulated drill on 20 California Walmart and Sam's Club locations, a system Gemini 4 Argon wrote in one generation finds the dye under names like erythrosine and E127."
+  },
+  "o2": {
+   "file": "o2_9fab80a91c8a.wav",
+   "text": "It plans 13,746 shelf tasks and replays the night: tags flash, associates walk, and every store goes green."
+  },
+  "o3": {
+   "file": "o3_9724416a21b4.wav",
+   "text": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept."
+  },
+  "o4": {
+   "file": "o4_c47eb1078cef.wav",
+   "text": "After 3 logged patches, the verifier reports 0 hard errors, recall 1.0, and 0 of 483 decoys pulled."
+  },
+  "o5_exp1": {
+   "file": "o5_exp1_0287b7558b36.wav",
+   "text": "The experiment: one continued generation, 254,377 visible tokens over 4 hops. 3 of 3 seams pass, and all 2,838 cross-file references resolve."
+  },
+  "o6": {
+   "file": "o6_bc8d74edae82.wav",
+   "text": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds."
+  },
+  "o7": {
+   "file": "o7_d55279e03ee1.wav",
+   "text": "Stores, stock and staffing are simulated. Every number came from the verifier. Open source."
+  }
+ },
+ "demo_full_final": {
+  "h1": {
+   "file": "h1_81d12617b064.wav",
+   "text": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period."
+  },
+  "f_h2": {
+   "file": "f_h2_ae3222444ae7.wav",
+   "text": "This is a simulated drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127."
+  },
+  "c1": {
+   "file": "c1_6ba4c12673ba.wav",
+   "text": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done."
+  },
+  "c2": {
+   "file": "c2_c81bcad0cdf9.wav",
+   "text": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute."
+  },
+  "c3": {
+   "file": "c3_b0527c2caeeb.wav",
+   "text": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf."
+  },
+  "f_c4": {
+   "file": "f_c4_d662d2fd565b.wav",
+   "text": "Argon's unedited core: 350 hard errors, recall 0.947. After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, 0 of 483 decoys pulled."
+  },
+  "f_e3_exp2": {
+   "file": "f_e3_exp2_e83749ca95e8.wav",
+   "text": "We run both files' tests live. They pass."
+  },
+  "f_e5": {
+   "file": "f_e5_d3838bb0ef4c.wav",
+   "text": "A managed repair agent takes failing files: the core's pack_returns went to 7 of 7 passing in 96 seconds. On fresh package B's rules, round two cut failures from 32 to 1, fixed 15 of 16 held-out cases, with 0 new failures."
+  },
+  "f_e6": {
+   "file": "f_e6_8445092bc01f.wav",
+   "text": "Matched packages, same hidden tests. Rules written in-stream pass 1,143 of 1,254; written fresh, 1,240. Allocate: both 9 of 9."
+  },
+  "f_w1": {
+   "file": "f_w1_87f716612569.wav",
+   "text": "RAG plus code is the right way to run a compliance pull, and it's what Argon wrote. We tested whether one long generation can write it coherently, and you've just seen where it held and where it broke."
+  },
+  "f_x1": {
+   "file": "f_x1_6d1665856d5a.wav",
+   "text": "For compliance teams at any big retailer. Stores, stock and staffing are simulated, and every number came from the verifier. Open source."
+  }
+ },
+ "one_minute_final": {
+  "o1": {
+   "file": "o1_82e90acad512.wav",
+   "text": "California bans Red No. 3 in food on January 1st, 2027. In a simulated drill on 20 California Walmart and Sam's Club locations, a system Gemini 4 Argon wrote in one generation finds the dye under names like erythrosine and E127."
+  },
+  "o2": {
+   "file": "o2_9fab80a91c8a.wav",
+   "text": "It plans 13,746 shelf tasks and replays the night: tags flash, associates walk, and every store goes green."
+  },
+  "o3": {
+   "file": "o3_9724416a21b4.wav",
+   "text": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept."
+  },
+  "o4": {
+   "file": "o4_c47eb1078cef.wav",
+   "text": "After 3 logged patches, the verifier reports 0 hard errors, recall 1.0, and 0 of 483 decoys pulled."
+  },
+  "o6": {
+   "file": "o6_bc8d74edae82.wav",
+   "text": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds."
+  },
+  "o7": {
+   "file": "o7_d55279e03ee1.wav",
+   "text": "Stores, stock and staffing are simulated. Every number came from the verifier. Open source."
+  }
  }
 }

@@ -118,7 +118,33 @@ def title_img(lines, sub=None):
     return img
 
 
+def table_img(shot, numbers):
+    img = title_img([])
+    d = ImageDraw.Draw(img)
+    ft, fh, fc, fn = font(54, "Bold"), font(32, "Semibold"), font(46, "Medium"), font(26)
+    d.text((120, 130), shot["title"], font=ft, fill=COL["text"])
+    xs = [120, 520, 1180]
+    y = 290
+    for x, c in zip(xs, shot["cols"]):
+        d.text((x, y), c.upper(), font=fh, fill=COL["dim"])
+    y += 70
+    for r in shot["rows"]:
+        d.line([(120, y - 18), (W - 120, y - 18)], fill=(42, 51, 68), width=2)
+        for i, (x, c) in enumerate(zip(xs, r)):
+            txt = fill(c, numbers)[0]
+            col = COL["text"] if i == 0 else (COL["dim"] if not re.search(r"\d", txt) else COL["amber"])
+            d.text((x, y), txt, font=fc if re.search(r"\d", txt) or i == 0 else fn, fill=col)
+        y += 110
+    note = fill(shot.get("note", ""), numbers)[0]
+    for i, l in enumerate(textwrap.wrap(note, 110)):
+        d.text((120, y + 20 + i * 38), l, font=fn, fill=COL["dim"])
+    return img
+
+
 TITLES = {
+    "end_full": lambda: title_img([("Recall Storm", 96, "Heavy", COL["text"]),
+                                   ("Compliance drill \u00b7 simulated operations \u00b7 open source", 44, "Medium", COL["amber"])],
+                                  "Stores, stock and staffing are simulated. Every number came from the verifier."),
     "end_core": lambda: title_img([("Recall Storm", 96, "Heavy", COL["text"]),
                                    ("Simulated compliance drill · measured numbers", 44, "Medium", COL["amber"])],
                                   "Stores, stock and staffing are simulated. Every number came from the verifier."),
@@ -271,8 +297,19 @@ def video_clip(src, out, n, a=0.0, b=None, speed=None, crop=None):
 
 LABELS = {"ai": "AI-generated illustration", "cap": "REAL CAPTURE · project viewer",
           "still": "REAL CAPTURE · project viewer", "cards": "REAL CAPTURE · viewer evidence cards",
-          "panel": "REAL CAPTURE · project viewer",
+          "panel": "REAL CAPTURE · project viewer", "table": "OURS · rendered from reports/accept_*.xml",
           "term": "REAL CAPTURE · terminal output", "pending": "PLACEHOLDER"}
+
+
+NUMBERS = {}
+
+
+def asset_missing(shot):
+    k, src = shot["kind"], shot.get("src")
+    p = {"ai": RAW / "veo" / f"{src}.mp4", "cap": RAW / "cap" / f"{src}.mp4", "still": RAW / "cap" / f"{src}.png",
+         "term": ASSETS / "term" / f"{src}.txt"}.get(k)
+    paths = [p] if p else [RAW / "cap" / f"{x}.png" for x in shot.get("srcs", [])]
+    return [str(x.relative_to(HERE)) for x in paths if not x.exists()]
 
 
 def render_shot(shot, out, n):
@@ -284,6 +321,9 @@ def render_shot(shot, out, n):
                    crop=shot.get("crop"))
     elif k == "still":
         still_clip(RAW / "cap" / f"{src}.png", out, n, zoom=shot.get("zoom", 0.045))
+    elif k == "table":
+        p = RAW / "build" / f"table_{abs(hash(shot['title'])) % 10**8}.png"
+        table_img(shot, NUMBERS).save(p); still_clip(p, out, n, zoom=0.015)
     elif k == "title":
         p = RAW / "build" / f"title_{src}.png"
         TITLES[src]().save(p); still_clip(p, out, n, zoom=0.02)
@@ -330,13 +370,17 @@ def render_shot(shot, out, n):
 def build(video):
     edl = VIDEOS[video]
     numbers = json.loads((HERE / "numbers.json").read_text())
+    NUMBERS.clear(); NUMBERS.update(numbers)
     vo = json.loads((ASSETS / "vo" / "index.json").read_text()).get(video, {})
     bdir = RAW / "build" / video
     bdir.mkdir(parents=True, exist_ok=True)
     segs, t = [], 0.0
     for seg in edl:
         text, missing = fill(seg.get("say", ""), numbers) if seg.get("say") else ("", [])
-        if missing or (seg.get("say") and seg["id"] not in vo):
+        lacking = [a for sh in seg.get("shots", []) for a in asset_missing(sh)]
+        if lacking:
+            missing = missing + lacking
+        if missing or "shots" not in seg or (seg.get("say") and seg["id"] not in vo):
             shots = [{"kind": "pending", "src": "pending", "w": 1, "text": seg.get("pending_text", "expansion v2 numbers")}]
             segs.append({"id": seg["id"], "t0": t, "dur": seg.get("pending_secs", 4.0), "audio": None, "text": "",
                          "caption": "[v2 numbers pending]", "shots": shots, "pending": missing})

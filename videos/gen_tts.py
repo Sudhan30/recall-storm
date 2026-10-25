@@ -55,7 +55,7 @@ def main():
             h = hashlib.sha1(f"{MODEL}|{VOICE}|{STYLE}|{text}".encode()).hexdigest()[:12]
             out = VO / f"{seg['id']}_{h}.wav"
             idx[vid][seg["id"]] = {"file": out.name, "text": text}
-            if not out.exists():
+            if not out.exists() and all(o != out for _, o in jobs):
                 jobs.append((text, out))
     with cf.ThreadPoolExecutor(max_workers=4) as ex:
         for (text, out), secs in zip(jobs, ex.map(lambda j: synth(client, *j), jobs)):

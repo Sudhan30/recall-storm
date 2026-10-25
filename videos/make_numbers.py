@@ -93,18 +93,51 @@ def hops(run, prefix):
 hops("expansion", "exp1")
 hops("expansion_v2", "exp2")
 
-code = ROOT / "reports/expansion_code.json"
-if code.exists():
-    t = json.loads(code.read_text())["totals"]
-    p = "reports/expansion_code.json"
-    put("exp1.files", t["files"], p, "totals.files")
-    put("exp1.edges", t["d2_edges"], p, "totals.d2_edges")
-    put("exp1.edges_resolved", t["d2_resolved"], p, "totals.d2_resolved")
-    put("exp1.calls_checked", t["d2_calls_checked"], p, "totals.d2_calls_checked")
-    put("exp1.arity_mismatch", t["d2_arity_mismatch"], p, "totals.d2_arity_mismatch")
-    put("exp1.tests", t["d4_tests"], p, "totals.d4_tests")
-    put("exp1.tests_passed", t["d4_passed"], p, "totals.d4_passed")
-    put("exp1.bad_literals_nontest", t["d3_bad_literals_nontest"], p, "totals.d3_bad_literals_nontest")
+def code_report(run, prefix):
+    code = ROOT / f"reports/{run}_code.json"
+    if not code.exists():
+        for f in ("edges", "longest_def.start_tok", "longest_use.start_tok", "b0.files_failed", "b1.files_failed",
+                  "bad_literals_nontest"):
+            put(f"{prefix}.{f}", None, f"reports/{run}_code.json", "report not written yet", pending=True)
+        return
+    full = json.loads(code.read_text())
+    t = full["totals"]
+    p = f"reports/{run}_code.json"
+    put(f"{prefix}.files", t["files"], p, "totals.files")
+    put(f"{prefix}.edges", t["d2_edges"], p, "totals.d2_edges")
+    put(f"{prefix}.edges_resolved", t["d2_resolved"], p, "totals.d2_resolved")
+    put(f"{prefix}.calls_checked", t["d2_calls_checked"], p, "totals.d2_calls_checked")
+    put(f"{prefix}.arity_mismatch", t["d2_arity_mismatch"], p, "totals.d2_arity_mismatch")
+    put(f"{prefix}.tests", t["d4_tests"], p, "totals.d4_tests")
+    put(f"{prefix}.tests_passed", t["d4_passed"], p, "totals.d4_passed")
+    put(f"{prefix}.bad_literals_nontest", t["d3_bad_literals_nontest"], p, "totals.d3_bad_literals_nontest")
+    put(f"{prefix}.max_tok", t["max_tok"], p, "totals.max_tok")
+    for b, key in (("0-200K", "b0"), ("200-400K", "b1")):
+        bk = full["buckets"]["position"].get(b, {})
+        put(f"{prefix}.{key}.files", bk.get("files"), p, f"buckets.position.{b}.files")
+        put(f"{prefix}.{key}.files_failed", bk.get("d4_files_failed"), p, f"buckets.position.{b}.d4_files_failed")
+    # The longest passing call shown on the code wall. v1 values are the files the viewer's "Longest passing
+    # cross-file call" button opened; for v2, edit LONGEST below after looking at the v2 code wall.
+    byp = {f["path"]: f for f in full["files"]}
+    for key, path in LONGEST.get(run, ()):
+        if path in byp:
+            put(f"{prefix}.{key}.start_tok", byp[path]["start_tok"], p, f"files[{path}].start_tok")
+        else:
+            put(f"{prefix}.{key}.start_tok", None, p, f"{path} not in report", pending=True)
+
+
+LONGEST = {"expansion": (("longest_def", "recallstorm/core/ids.py"),
+                         ("longest_use", "tests/integration/test_flow_10_exceptions_and_handoffs.py")),
+           "expansion_v2": ()}          # fill in from the v2 code wall
+code_report("expansion", "exp1")
+code_report("expansion_v2", "exp2")
+
+# live test run shown in the code-wall beat (real capture, not one of the report files)
+tl = (ROOT / "videos/assets/term/exp_longest_test.txt")
+if tl.exists():
+    m = re.search(r"(\d+) passed", tl.read_text())
+    put("live.longest_tests_passed", int(m.group(1)), "videos/assets/term/exp_longest_test.txt",
+        "live pytest run captured 2026-10-25 (real terminal output)", live=True)
 
 
 # --- matched packages: hidden acceptance tests (same tests for A and B)

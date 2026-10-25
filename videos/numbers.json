@@ -425,6 +425,83 @@
   "source": "reports/expansion_code.json",
   "field": "totals.d3_bad_literals_nontest"
  },
+ "exp1.max_tok": {
+  "value": 251462,
+  "source": "reports/expansion_code.json",
+  "field": "totals.max_tok"
+ },
+ "exp1.b0.files": {
+  "value": 239,
+  "source": "reports/expansion_code.json",
+  "field": "buckets.position.0-200K.files"
+ },
+ "exp1.b0.files_failed": {
+  "value": 3,
+  "source": "reports/expansion_code.json",
+  "field": "buckets.position.0-200K.d4_files_failed"
+ },
+ "exp1.b1.files": {
+  "value": 71,
+  "source": "reports/expansion_code.json",
+  "field": "buckets.position.200-400K.files"
+ },
+ "exp1.b1.files_failed": {
+  "value": 1,
+  "source": "reports/expansion_code.json",
+  "field": "buckets.position.200-400K.d4_files_failed"
+ },
+ "exp1.longest_def.start_tok": {
+  "value": 36357,
+  "source": "reports/expansion_code.json",
+  "field": "files[recallstorm/core/ids.py].start_tok"
+ },
+ "exp1.longest_use.start_tok": {
+  "value": 249087,
+  "source": "reports/expansion_code.json",
+  "field": "files[tests/integration/test_flow_10_exceptions_and_handoffs.py].start_tok"
+ },
+ "exp2.edges": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "exp2.longest_def.start_tok": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "exp2.longest_use.start_tok": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "exp2.b0.files_failed": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "exp2.b1.files_failed": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "exp2.bad_literals_nontest": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "live.longest_tests_passed": {
+  "value": 9,
+  "source": "videos/assets/term/exp_longest_test.txt",
+  "field": "live pytest run captured 2026-10-25 (real terminal output)",
+  "live": true
+ },
  "accept.accept_core.test_rules.tests": {
   "value": 1254,
   "source": "reports/accept_core.xml",
