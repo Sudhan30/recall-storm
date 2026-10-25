@@ -1,0 +1,10 @@
+{
+  "scenario_id": "ca_red3",
+  "state": "CA",
+  "rule_ids": [
+    "CA_AB418_RED3"
+  ],
+  "as_of": "2026-12-30T18:00:00-08:00",
+  "deadline": "2027-01-01T00:00:00-08:00",
+  "note": "every window must end before 2027-01-01T00:00 local"
+}

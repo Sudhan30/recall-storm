@@ -1,0 +1,20 @@
+{"store_id": "CA1000", "format": "SUPERCENTER", "state": "CA", "city": "Sacramento", "lat": 38.5623, "lon": -121.5287, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1001", "format": "SUPERCENTER", "state": "CA", "city": "Fresno", "lat": 36.7042, "lon": -119.7718, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
+{"store_id": "CA1002", "format": "SUPERCENTER", "state": "CA", "city": "Los Angeles", "lat": 34.0234, "lon": -118.2118, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1003", "format": "SUPERCENTER", "state": "CA", "city": "San Diego", "lat": 32.6742, "lon": -117.1724, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1004", "format": "SUPERCENTER", "state": "CA", "city": "San Jose", "lat": 37.3718, "lon": -121.8809, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
+{"store_id": "CA1005", "format": "SUPERCENTER", "state": "CA", "city": "Bakersfield", "lat": 35.3506, "lon": -118.9786, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
+{"store_id": "CA1006", "format": "SUPERCENTER", "state": "CA", "city": "Riverside", "lat": 33.9635, "lon": -117.3957, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1007", "format": "SUPERCENTER", "state": "CA", "city": "Stockton", "lat": 37.9105, "lon": -121.331, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1008", "format": "NEIGHBORHOOD", "state": "CA", "city": "Redding", "lat": 40.6288, "lon": -122.3468, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1009", "format": "NEIGHBORHOOD", "state": "CA", "city": "Chico", "lat": 39.6872, "lon": -121.8274, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1010", "format": "NEIGHBORHOOD", "state": "CA", "city": "Modesto", "lat": 37.5921, "lon": -121.0248, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1011", "format": "NEIGHBORHOOD", "state": "CA", "city": "Anaheim", "lat": 33.8005, "lon": -117.8808, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1012", "format": "NEIGHBORHOOD", "state": "CA", "city": "Oxnard", "lat": 34.25, "lon": -119.1559, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1013", "format": "DISCOUNT", "state": "CA", "city": "Santa Rosa", "lat": 38.4142, "lon": -122.747, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1014", "format": "DISCOUNT", "state": "CA", "city": "Visalia", "lat": 36.3521, "lon": -119.2963, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
+{"store_id": "CA1015", "format": "DISCOUNT", "state": "CA", "city": "Palmdale", "lat": 34.6277, "lon": -118.074, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1016", "format": "DISCOUNT", "state": "CA", "city": "Chula Vista", "lat": 32.5977, "lon": -117.1095, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1017", "format": "SAMS", "state": "CA", "city": "Eureka", "lat": 40.8493, "lon": -124.1851, "district": "D01", "dc_id": "DC_NORTH", "tz": "America/Los_Angeles"}
+{"store_id": "CA1018", "format": "SAMS", "state": "CA", "city": "Merced", "lat": 37.3444, "lon": -120.451, "district": "D01", "dc_id": "DC_CENTRAL", "tz": "America/Los_Angeles"}
+{"store_id": "CA1019", "format": "SAMS", "state": "CA", "city": "Ontario", "lat": 34.0851, "lon": -117.6821, "district": "D01", "dc_id": "DC_SOUTH", "tz": "America/Los_Angeles"}
