@@ -1,8 +1,8 @@
 {
   "run": "runs/expansion",
   "source": "hops.jsonl",
-  "finished": false,
-  "summary": "SUMMARY: 1 seams (1 continuation, 0 resume), 1 PASS, 0 FAIL, 0 PENDING (source: hops.jsonl, run live)",
+  "finished": true,
+  "summary": "SUMMARY: 3 seams (3 continuation, 0 resume), 3 PASS, 0 FAIL, 0 PENDING (source: hops.jsonl, run finished)",
   "seams": [
     {
       "seam_byte": 202880,
@@ -17,6 +17,36 @@
       "kind": "continuation",
       "label": "hop 0->1",
       "tok": 65536,
+      "has_token": true
+    },
+    {
+      "seam_byte": 402959,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside tests/unit/test_adjudicate_queue.py; closed at byte 403744"
+      ],
+      "before_tail": ".queue.\"\"\"\nfrom contract import Verdict\nfrom recallstorm.adjudicate.queue import",
+      "after_head": " (\n    ReviewQueue,\n    dequeue,\n    enqueue,\n    items_for_store,\n    mark_revi",
+      "n": 2,
+      "kind": "continuation",
+      "label": "hop 1->2",
+      "tok": 131072,
+      "has_token": true
+    },
+    {
+      "seam_byte": 602209,
+      "status": "PASS",
+      "fails": [],
+      "notes": [
+        "seam inside tests/unit/test_plan_playbook.py; closed at byte 603247"
+      ],
+      "before_tail": "ws,\n)\n\n\ndef test_playbook_generation():\n    dl = datetime.fromisoformat(\"2027-01",
+      "after_head": "-01T00:00:00-08:00\")\n    pb_builder = PlaybookBuilder(dl)\n    assert pb_builder.",
+      "n": 3,
+      "kind": "continuation",
+      "label": "hop 2->3",
+      "tok": 196608,
       "has_token": true
     }
   ]

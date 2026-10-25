@@ -1,0 +1,5594 @@
+{
+  "plan": "out/expansion/plan.jsonl",
+  "scenario": "ca_red3",
+  "state": "CA",
+  "deadline_local": "2027-01-01T00:00:00",
+  "records": {
+    "run": 1,
+    "sku_verdict": 1212,
+    "evidence": 434,
+    "store_playbook": 20,
+    "shelf_task": 12208,
+    "exception": 60,
+    "allocation": 3419,
+    "handoff": 3439,
+    "route_manifest": 6
+  },
+  "bad_json_lines": 0,
+  "hard_errors": 8441,
+  "by_check": {
+    "decoy": {
+      "hard": 3,
+      "soft": 0
+    },
+    "coverage": {
+      "hard": 806,
+      "soft": 0
+    },
+    "labor": {
+      "hard": 7632,
+      "soft": 0
+    }
+  },
+  "classification": {
+    "labeled": 1212,
+    "tp": 411,
+    "fp": 4,
+    "fn": 56,
+    "precision": 0.9904,
+    "recall": 0.8801,
+    "confusion": {
+      "PULL": {
+        "PULL": 411,
+        "KEEP": 55,
+        "HOLD_VERIFY": 1
+      },
+      "KEEP": {
+        "KEEP": 718,
+        "HOLD_VERIFY": 2,
+        "PULL": 3
+      },
+      "HOLD_VERIFY": {
+        "PULL": 1,
+        "HOLD_VERIFY": 16,
+        "KEEP": 5
+      }
+    },
+    "decoys": 483,
+    "decoys_pulled": 3,
+    "decoys_pulled_ids": [
+      "VAR0178",
+      "VAR0179",
+      "VAR0180"
+    ],
+    "missing_verdicts": 0,
+    "false_pulls": [
+      "FDC1879399",
+      "VAR0178",
+      "VAR0179",
+      "VAR0180"
+    ],
+    "missed_pulls": [
+      "FDC1850898",
+      "FDC2128432",
+      "VAR0002",
+      "VAR0006",
+      "VAR0008",
+      "VAR0011",
+      "VAR0014",
+      "VAR0019",
+      "VAR0020",
+      "VAR0021",
+      "VAR0022",
+      "VAR0023",
+      "VAR0026",
+      "VAR0029",
+      "VAR0032",
+      "VAR0035",
+      "VAR0036",
+      "VAR0037",
+      "VAR0038",
+      "VAR0041",
+      "VAR0047",
+      "VAR0066",
+      "VAR0067",
+      "VAR0068",
+      "VAR0069",
+      "VAR0070",
+      "VAR0071",
+      "VAR0072",
+      "VAR0073",
+      "VAR0074",
+      "VAR0075",
+      "VAR0076",
+      "VAR0077",
+      "VAR0102",
+      "VAR0103",
+      "VAR0104",
+      "VAR0105",
+      "VAR0106",
+      "VAR0107",
+      "VAR0108",
+      "VAR0109",
+      "VAR0110",
+      "VAR0111",
+      "VAR0112",
+      "VAR0113",
+      "VAR0114",
+      "VAR0115",
+      "VAR0116",
+      "VAR0117",
+      "VAR0118"
+    ]
+  },
+  "coverage": {
+    "pull_facings": 6718,
+    "pull_facings_tasked": 5912,
+    "rate": 0.88,
+    "hold_facings": 319,
+    "hold_facings_tasked": 229
+  },
+  "events": {
+    "events": 36624,
+    "bad_json": 0,
+    "unknown_task_refs": 0,
+    "kinds": {
+      "MOVE": 12208,
+      "PULL": 6242,
+      "DONE": 12208,
+      "PLACE": 5966
+    }
+  },
+  "by_src": {
+    "recallstorm/plan/tasks.py": {
+      "counts": {
+        "labor:hard": 7632
+      },
+      "hard": 7632,
+      "tok_range": [
+        191127,
+        193913
+      ]
+    },
+    "recallstorm/rules/engine.py": {
+      "counts": {
+        "decoy:hard": 3,
+        "coverage:hard": 806
+      },
+      "hard": 809,
+      "tok_range": [
+        122236,
+        124907
+      ]
+    }
+  },
+  "errors": [
+    {
+      "check": "decoy",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0178",
+      "line": 1179,
+      "msg": "decoy VAR0178 pulled: 'CORN SYRUP, SUGAR, WATER, GELATIN, MODIFIED CORNSTARCH, CORNSTARCH, LACTIC ACID,'"
+    },
+    {
+      "check": "decoy",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0179",
+      "line": 1180,
+      "msg": "decoy VAR0179 pulled: 'DICED PEACHES, DICED PEARS, WATER, GRAPES, CORN SYRUP, PINEAPPLE SECTORS, HALVED'"
+    },
+    {
+      "check": "decoy",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0180",
+      "line": 1181,
+      "msg": "decoy VAR0180 pulled: 'GLUCOSE SYRUP, SUGAR, WATER, BEEF GELATIN, ARTIFICIAL VANILLA FLAVOR, MODIFIED P'"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC1850898",
+      "line": 34,
+      "msg": "no PULL task for truth-PULL FDC1850898 at SAMS4735 {'aisle': 'A01', 'bay': 1, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at SAMS4735 {'aisle': 'A02', 'bay': 1, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0011",
+      "line": 1012,
+      "msg": "no PULL task for truth-PULL VAR0011 at SAMS4735 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0019",
+      "line": 1020,
+      "msg": "no PULL task for truth-PULL VAR0019 at SAMS4735 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at SAMS4735 {'aisle': 'A03', 'bay': 2, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0032",
+      "line": 1033,
+      "msg": "no PULL task for truth-PULL VAR0032 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0036",
+      "line": 1037,
+      "msg": "no PULL task for truth-PULL VAR0036 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1039,
+      "msg": "no PULL task for truth-PULL VAR0038 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0067",
+      "line": 1068,
+      "msg": "no PULL task for truth-PULL VAR0067 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0068",
+      "line": 1069,
+      "msg": "no PULL task for truth-PULL VAR0068 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0070",
+      "line": 1071,
+      "msg": "no PULL task for truth-PULL VAR0070 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at SAMS4735 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0102",
+      "line": 1103,
+      "msg": "no PULL task for truth-PULL VAR0102 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0104",
+      "line": 1105,
+      "msg": "no PULL task for truth-PULL VAR0104 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0108",
+      "line": 1109,
+      "msg": "no PULL task for truth-PULL VAR0108 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0109",
+      "line": 1110,
+      "msg": "no PULL task for truth-PULL VAR0109 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0122",
+      "line": 1123,
+      "msg": "no PULL task for truth-PULL VAR0122 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0123",
+      "line": 1124,
+      "msg": "no PULL task for truth-PULL VAR0123 at SAMS4735 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at SAMS4767 {'aisle': 'A01', 'bay': 5, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0008",
+      "line": 1009,
+      "msg": "no PULL task for truth-PULL VAR0008 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0026",
+      "line": 1027,
+      "msg": "no PULL task for truth-PULL VAR0026 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1039,
+      "msg": "no PULL task for truth-PULL VAR0038 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1048,
+      "msg": "no PULL task for truth-PULL VAR0047 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0068",
+      "line": 1069,
+      "msg": "no PULL task for truth-PULL VAR0068 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at SAMS4767 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0076",
+      "line": 1077,
+      "msg": "no PULL task for truth-PULL VAR0076 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0111",
+      "line": 1112,
+      "msg": "no PULL task for truth-PULL VAR0111 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1115,
+      "msg": "no PULL task for truth-PULL VAR0114 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1120,
+      "msg": "no PULL task for truth-PULL VAR0119 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0123",
+      "line": 1124,
+      "msg": "no PULL task for truth-PULL VAR0123 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0124",
+      "line": 1125,
+      "msg": "no PULL task for truth-PULL VAR0124 at SAMS4767 {'aisle': 'A03', 'bay': 4, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0008",
+      "line": 1009,
+      "msg": "no PULL task for truth-PULL VAR0008 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0020",
+      "line": 1021,
+      "msg": "no PULL task for truth-PULL VAR0020 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0023",
+      "line": 1024,
+      "msg": "no PULL task for truth-PULL VAR0023 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0029",
+      "line": 1030,
+      "msg": "no PULL task for truth-PULL VAR0029 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0035",
+      "line": 1036,
+      "msg": "no PULL task for truth-PULL VAR0035 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0036",
+      "line": 1037,
+      "msg": "no PULL task for truth-PULL VAR0036 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1042,
+      "msg": "no PULL task for truth-PULL VAR0041 at SAMS6405 {'aisle': 'A03', 'bay': 2, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0067",
+      "line": 1068,
+      "msg": "no PULL task for truth-PULL VAR0067 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0074",
+      "line": 1075,
+      "msg": "no PULL task for truth-PULL VAR0074 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0103",
+      "line": 1104,
+      "msg": "no PULL task for truth-PULL VAR0103 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0107",
+      "line": 1108,
+      "msg": "no PULL task for truth-PULL VAR0107 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0108",
+      "line": 1109,
+      "msg": "no PULL task for truth-PULL VAR0108 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0111",
+      "line": 1112,
+      "msg": "no PULL task for truth-PULL VAR0111 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1114,
+      "msg": "no PULL task for truth-PULL VAR0113 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0122",
+      "line": 1123,
+      "msg": "no PULL task for truth-PULL VAR0122 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0123",
+      "line": 1124,
+      "msg": "no PULL task for truth-PULL VAR0123 at SAMS6405 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at SAMS6621 {'aisle': 'A01', 'bay': 5, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0006",
+      "line": 1007,
+      "msg": "no PULL task for truth-PULL VAR0006 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0022",
+      "line": 1023,
+      "msg": "no PULL task for truth-PULL VAR0022 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0069",
+      "line": 1070,
+      "msg": "no PULL task for truth-PULL VAR0069 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0070",
+      "line": 1071,
+      "msg": "no PULL task for truth-PULL VAR0070 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0076",
+      "line": 1077,
+      "msg": "no PULL task for truth-PULL VAR0076 at SAMS6621 {'aisle': 'A03', 'bay': 3, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0102",
+      "line": 1103,
+      "msg": "no PULL task for truth-PULL VAR0102 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0104",
+      "line": 1105,
+      "msg": "no PULL task for truth-PULL VAR0104 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1116,
+      "msg": "no PULL task for truth-PULL VAR0115 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1117,
+      "msg": "no PULL task for truth-PULL VAR0116 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0122",
+      "line": 1123,
+      "msg": "no PULL task for truth-PULL VAR0122 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0124",
+      "line": 1125,
+      "msg": "no PULL task for truth-PULL VAR0124 at SAMS6621 {'aisle': 'A03', 'bay': 4, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC1850898",
+      "line": 34,
+      "msg": "no PULL task for truth-PULL FDC1850898 at WM1563 {'aisle': 'A01', 'bay': 2, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at WM1563 {'aisle': 'A03', 'bay': 4, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0002",
+      "line": 1003,
+      "msg": "no PULL task for truth-PULL VAR0002 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0006",
+      "line": 1007,
+      "msg": "no PULL task for truth-PULL VAR0006 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0008",
+      "line": 1009,
+      "msg": "no PULL task for truth-PULL VAR0008 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0011",
+      "line": 1012,
+      "msg": "no PULL task for truth-PULL VAR0011 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0014",
+      "line": 1015,
+      "msg": "no PULL task for truth-PULL VAR0014 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0019",
+      "line": 1020,
+      "msg": "no PULL task for truth-PULL VAR0019 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0020",
+      "line": 1021,
+      "msg": "no PULL task for truth-PULL VAR0020 at WM1563 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0022",
+      "line": 1023,
+      "msg": "no PULL task for truth-PULL VAR0022 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0023",
+      "line": 1024,
+      "msg": "no PULL task for truth-PULL VAR0023 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0026",
+      "line": 1027,
+      "msg": "no PULL task for truth-PULL VAR0026 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0029",
+      "line": 1030,
+      "msg": "no PULL task for truth-PULL VAR0029 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0032",
+      "line": 1033,
+      "msg": "no PULL task for truth-PULL VAR0032 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0035",
+      "line": 1036,
+      "msg": "no PULL task for truth-PULL VAR0035 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0036",
+      "line": 1037,
+      "msg": "no PULL task for truth-PULL VAR0036 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1038,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1039,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1042,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1048,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1563 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0066",
+      "line": 1067,
+      "msg": "no PULL task for truth-PULL VAR0066 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0067",
+      "line": 1068,
+      "msg": "no PULL task for truth-PULL VAR0067 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0068",
+      "line": 1069,
+      "msg": "no PULL task for truth-PULL VAR0068 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0069",
+      "line": 1070,
+      "msg": "no PULL task for truth-PULL VAR0069 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0070",
+      "line": 1071,
+      "msg": "no PULL task for truth-PULL VAR0070 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0074",
+      "line": 1075,
+      "msg": "no PULL task for truth-PULL VAR0074 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0076",
+      "line": 1077,
+      "msg": "no PULL task for truth-PULL VAR0076 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0077",
+      "line": 1078,
+      "msg": "no PULL task for truth-PULL VAR0077 at WM1563 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0102",
+      "line": 1103,
+      "msg": "no PULL task for truth-PULL VAR0102 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0103",
+      "line": 1104,
+      "msg": "no PULL task for truth-PULL VAR0103 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0104",
+      "line": 1105,
+      "msg": "no PULL task for truth-PULL VAR0104 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0105",
+      "line": 1106,
+      "msg": "no PULL task for truth-PULL VAR0105 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0106",
+      "line": 1107,
+      "msg": "no PULL task for truth-PULL VAR0106 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0107",
+      "line": 1108,
+      "msg": "no PULL task for truth-PULL VAR0107 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0108",
+      "line": 1109,
+      "msg": "no PULL task for truth-PULL VAR0108 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0109",
+      "line": 1110,
+      "msg": "no PULL task for truth-PULL VAR0109 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0110",
+      "line": 1111,
+      "msg": "no PULL task for truth-PULL VAR0110 at WM1563 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0111",
+      "line": 1112,
+      "msg": "no PULL task for truth-PULL VAR0111 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1114,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1115,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1116,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1117,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1119,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1120,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0120",
+      "line": 1121,
+      "msg": "no PULL task for truth-PULL VAR0120 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0122",
+      "line": 1123,
+      "msg": "no PULL task for truth-PULL VAR0122 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0123",
+      "line": 1124,
+      "msg": "no PULL task for truth-PULL VAR0123 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0124",
+      "line": 1125,
+      "msg": "no PULL task for truth-PULL VAR0124 at WM1563 {'aisle': 'A08', 'bay': 3, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC1850898",
+      "line": 34,
+      "msg": "no PULL task for truth-PULL FDC1850898 at WM1574 {'aisle': 'A01', 'bay': 2, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at WM1574 {'aisle': 'A03', 'bay': 4, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0002",
+      "line": 1003,
+      "msg": "no PULL task for truth-PULL VAR0002 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0006",
+      "line": 1007,
+      "msg": "no PULL task for truth-PULL VAR0006 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0008",
+      "line": 1009,
+      "msg": "no PULL task for truth-PULL VAR0008 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0011",
+      "line": 1012,
+      "msg": "no PULL task for truth-PULL VAR0011 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0014",
+      "line": 1015,
+      "msg": "no PULL task for truth-PULL VAR0014 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0019",
+      "line": 1020,
+      "msg": "no PULL task for truth-PULL VAR0019 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0020",
+      "line": 1021,
+      "msg": "no PULL task for truth-PULL VAR0020 at WM1574 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0022",
+      "line": 1023,
+      "msg": "no PULL task for truth-PULL VAR0022 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0023",
+      "line": 1024,
+      "msg": "no PULL task for truth-PULL VAR0023 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0026",
+      "line": 1027,
+      "msg": "no PULL task for truth-PULL VAR0026 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0029",
+      "line": 1030,
+      "msg": "no PULL task for truth-PULL VAR0029 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0032",
+      "line": 1033,
+      "msg": "no PULL task for truth-PULL VAR0032 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0035",
+      "line": 1036,
+      "msg": "no PULL task for truth-PULL VAR0035 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0036",
+      "line": 1037,
+      "msg": "no PULL task for truth-PULL VAR0036 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1038,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1039,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1042,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1048,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1574 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0066",
+      "line": 1067,
+      "msg": "no PULL task for truth-PULL VAR0066 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0067",
+      "line": 1068,
+      "msg": "no PULL task for truth-PULL VAR0067 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0068",
+      "line": 1069,
+      "msg": "no PULL task for truth-PULL VAR0068 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0069",
+      "line": 1070,
+      "msg": "no PULL task for truth-PULL VAR0069 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0070",
+      "line": 1071,
+      "msg": "no PULL task for truth-PULL VAR0070 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0074",
+      "line": 1075,
+      "msg": "no PULL task for truth-PULL VAR0074 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0076",
+      "line": 1077,
+      "msg": "no PULL task for truth-PULL VAR0076 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0077",
+      "line": 1078,
+      "msg": "no PULL task for truth-PULL VAR0077 at WM1574 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0102",
+      "line": 1103,
+      "msg": "no PULL task for truth-PULL VAR0102 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0103",
+      "line": 1104,
+      "msg": "no PULL task for truth-PULL VAR0103 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0104",
+      "line": 1105,
+      "msg": "no PULL task for truth-PULL VAR0104 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0105",
+      "line": 1106,
+      "msg": "no PULL task for truth-PULL VAR0105 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0106",
+      "line": 1107,
+      "msg": "no PULL task for truth-PULL VAR0106 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0107",
+      "line": 1108,
+      "msg": "no PULL task for truth-PULL VAR0107 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0108",
+      "line": 1109,
+      "msg": "no PULL task for truth-PULL VAR0108 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0109",
+      "line": 1110,
+      "msg": "no PULL task for truth-PULL VAR0109 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0110",
+      "line": 1111,
+      "msg": "no PULL task for truth-PULL VAR0110 at WM1574 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0111",
+      "line": 1112,
+      "msg": "no PULL task for truth-PULL VAR0111 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1114,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1115,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1116,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1117,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1119,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1120,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0120",
+      "line": 1121,
+      "msg": "no PULL task for truth-PULL VAR0120 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0122",
+      "line": 1123,
+      "msg": "no PULL task for truth-PULL VAR0122 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0123",
+      "line": 1124,
+      "msg": "no PULL task for truth-PULL VAR0123 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0124",
+      "line": 1125,
+      "msg": "no PULL task for truth-PULL VAR0124 at WM1574 {'aisle': 'A08', 'bay': 3, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC1850898",
+      "line": 34,
+      "msg": "no PULL task for truth-PULL FDC1850898 at WM1575 {'aisle': 'A01', 'bay': 2, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at WM1575 {'aisle': 'A03', 'bay': 4, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0002",
+      "line": 1003,
+      "msg": "no PULL task for truth-PULL VAR0002 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0006",
+      "line": 1007,
+      "msg": "no PULL task for truth-PULL VAR0006 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0008",
+      "line": 1009,
+      "msg": "no PULL task for truth-PULL VAR0008 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0011",
+      "line": 1012,
+      "msg": "no PULL task for truth-PULL VAR0011 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0014",
+      "line": 1015,
+      "msg": "no PULL task for truth-PULL VAR0014 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0019",
+      "line": 1020,
+      "msg": "no PULL task for truth-PULL VAR0019 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0020",
+      "line": 1021,
+      "msg": "no PULL task for truth-PULL VAR0020 at WM1575 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0022",
+      "line": 1023,
+      "msg": "no PULL task for truth-PULL VAR0022 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0023",
+      "line": 1024,
+      "msg": "no PULL task for truth-PULL VAR0023 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0026",
+      "line": 1027,
+      "msg": "no PULL task for truth-PULL VAR0026 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0029",
+      "line": 1030,
+      "msg": "no PULL task for truth-PULL VAR0029 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0032",
+      "line": 1033,
+      "msg": "no PULL task for truth-PULL VAR0032 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0035",
+      "line": 1036,
+      "msg": "no PULL task for truth-PULL VAR0035 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0036",
+      "line": 1037,
+      "msg": "no PULL task for truth-PULL VAR0036 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1038,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1039,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1042,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1048,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1575 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0066",
+      "line": 1067,
+      "msg": "no PULL task for truth-PULL VAR0066 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0067",
+      "line": 1068,
+      "msg": "no PULL task for truth-PULL VAR0067 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0068",
+      "line": 1069,
+      "msg": "no PULL task for truth-PULL VAR0068 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0069",
+      "line": 1070,
+      "msg": "no PULL task for truth-PULL VAR0069 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0070",
+      "line": 1071,
+      "msg": "no PULL task for truth-PULL VAR0070 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0074",
+      "line": 1075,
+      "msg": "no PULL task for truth-PULL VAR0074 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0076",
+      "line": 1077,
+      "msg": "no PULL task for truth-PULL VAR0076 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0077",
+      "line": 1078,
+      "msg": "no PULL task for truth-PULL VAR0077 at WM1575 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0102",
+      "line": 1103,
+      "msg": "no PULL task for truth-PULL VAR0102 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0103",
+      "line": 1104,
+      "msg": "no PULL task for truth-PULL VAR0103 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0104",
+      "line": 1105,
+      "msg": "no PULL task for truth-PULL VAR0104 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0105",
+      "line": 1106,
+      "msg": "no PULL task for truth-PULL VAR0105 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0106",
+      "line": 1107,
+      "msg": "no PULL task for truth-PULL VAR0106 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0107",
+      "line": 1108,
+      "msg": "no PULL task for truth-PULL VAR0107 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0108",
+      "line": 1109,
+      "msg": "no PULL task for truth-PULL VAR0108 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0109",
+      "line": 1110,
+      "msg": "no PULL task for truth-PULL VAR0109 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0110",
+      "line": 1111,
+      "msg": "no PULL task for truth-PULL VAR0110 at WM1575 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0111",
+      "line": 1112,
+      "msg": "no PULL task for truth-PULL VAR0111 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1114,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1115,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1116,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1117,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1119,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0119",
+      "line": 1120,
+      "msg": "no PULL task for truth-PULL VAR0119 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0120",
+      "line": 1121,
+      "msg": "no PULL task for truth-PULL VAR0120 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0121",
+      "line": 1122,
+      "msg": "no PULL task for truth-PULL VAR0121 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0122",
+      "line": 1123,
+      "msg": "no PULL task for truth-PULL VAR0122 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0123",
+      "line": 1124,
+      "msg": "no PULL task for truth-PULL VAR0123 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 3, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0124",
+      "line": 1125,
+      "msg": "no PULL task for truth-PULL VAR0124 at WM1575 {'aisle': 'A08', 'bay': 3, 'shelf': 3, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC1850898",
+      "line": 34,
+      "msg": "no PULL task for truth-PULL FDC1850898 at WM1588 {'aisle': 'A01', 'bay': 2, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "FDC2128432",
+      "line": 416,
+      "msg": "no PULL task for truth-PULL FDC2128432 at WM1588 {'aisle': 'A03', 'bay': 4, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0002",
+      "line": 1003,
+      "msg": "no PULL task for truth-PULL VAR0002 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0006",
+      "line": 1007,
+      "msg": "no PULL task for truth-PULL VAR0006 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0008",
+      "line": 1009,
+      "msg": "no PULL task for truth-PULL VAR0008 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0011",
+      "line": 1012,
+      "msg": "no PULL task for truth-PULL VAR0011 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0014",
+      "line": 1015,
+      "msg": "no PULL task for truth-PULL VAR0014 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0019",
+      "line": 1020,
+      "msg": "no PULL task for truth-PULL VAR0019 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0020",
+      "line": 1021,
+      "msg": "no PULL task for truth-PULL VAR0020 at WM1588 {'aisle': 'A07', 'bay': 4, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0021",
+      "line": 1022,
+      "msg": "no PULL task for truth-PULL VAR0021 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0022",
+      "line": 1023,
+      "msg": "no PULL task for truth-PULL VAR0022 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0023",
+      "line": 1024,
+      "msg": "no PULL task for truth-PULL VAR0023 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0026",
+      "line": 1027,
+      "msg": "no PULL task for truth-PULL VAR0026 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0029",
+      "line": 1030,
+      "msg": "no PULL task for truth-PULL VAR0029 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0032",
+      "line": 1033,
+      "msg": "no PULL task for truth-PULL VAR0032 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 2, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0035",
+      "line": 1036,
+      "msg": "no PULL task for truth-PULL VAR0035 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0036",
+      "line": 1037,
+      "msg": "no PULL task for truth-PULL VAR0036 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0037",
+      "line": 1038,
+      "msg": "no PULL task for truth-PULL VAR0037 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0038",
+      "line": 1039,
+      "msg": "no PULL task for truth-PULL VAR0038 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0041",
+      "line": 1042,
+      "msg": "no PULL task for truth-PULL VAR0041 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0047",
+      "line": 1048,
+      "msg": "no PULL task for truth-PULL VAR0047 at WM1588 {'aisle': 'A07', 'bay': 5, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0066",
+      "line": 1067,
+      "msg": "no PULL task for truth-PULL VAR0066 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0067",
+      "line": 1068,
+      "msg": "no PULL task for truth-PULL VAR0067 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0068",
+      "line": 1069,
+      "msg": "no PULL task for truth-PULL VAR0068 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 3, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0069",
+      "line": 1070,
+      "msg": "no PULL task for truth-PULL VAR0069 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0070",
+      "line": 1071,
+      "msg": "no PULL task for truth-PULL VAR0070 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0071",
+      "line": 1072,
+      "msg": "no PULL task for truth-PULL VAR0071 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0072",
+      "line": 1073,
+      "msg": "no PULL task for truth-PULL VAR0072 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0073",
+      "line": 1074,
+      "msg": "no PULL task for truth-PULL VAR0073 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0074",
+      "line": 1075,
+      "msg": "no PULL task for truth-PULL VAR0074 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0075",
+      "line": 1076,
+      "msg": "no PULL task for truth-PULL VAR0075 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0076",
+      "line": 1077,
+      "msg": "no PULL task for truth-PULL VAR0076 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0077",
+      "line": 1078,
+      "msg": "no PULL task for truth-PULL VAR0077 at WM1588 {'aisle': 'A08', 'bay': 1, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0102",
+      "line": 1103,
+      "msg": "no PULL task for truth-PULL VAR0102 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0103",
+      "line": 1104,
+      "msg": "no PULL task for truth-PULL VAR0103 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0104",
+      "line": 1105,
+      "msg": "no PULL task for truth-PULL VAR0104 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 4, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0105",
+      "line": 1106,
+      "msg": "no PULL task for truth-PULL VAR0105 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0106",
+      "line": 1107,
+      "msg": "no PULL task for truth-PULL VAR0106 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0107",
+      "line": 1108,
+      "msg": "no PULL task for truth-PULL VAR0107 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0108",
+      "line": 1109,
+      "msg": "no PULL task for truth-PULL VAR0108 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0109",
+      "line": 1110,
+      "msg": "no PULL task for truth-PULL VAR0109 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0110",
+      "line": 1111,
+      "msg": "no PULL task for truth-PULL VAR0110 at WM1588 {'aisle': 'A08', 'bay': 2, 'shelf': 5, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0111",
+      "line": 1112,
+      "msg": "no PULL task for truth-PULL VAR0111 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0112",
+      "line": 1113,
+      "msg": "no PULL task for truth-PULL VAR0112 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 2}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0113",
+      "line": 1114,
+      "msg": "no PULL task for truth-PULL VAR0113 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 3}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0114",
+      "line": 1115,
+      "msg": "no PULL task for truth-PULL VAR0114 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 4}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0115",
+      "line": 1116,
+      "msg": "no PULL task for truth-PULL VAR0115 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 5}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0116",
+      "line": 1117,
+      "msg": "no PULL task for truth-PULL VAR0116 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 1, 'pos': 6}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0117",
+      "line": 1118,
+      "msg": "no PULL task for truth-PULL VAR0117 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 1}"
+    },
+    {
+      "check": "coverage",
+      "severity": "hard",
+      "src": "recallstorm/rules/engine.py",
+      "type": "sku_verdict",
+      "id": "VAR0118",
+      "line": 1119,
+      "msg": "no PULL task for truth-PULL VAR0118 at WM1588 {'aisle': 'A08', 'bay': 3, 'shelf': 2, 'pos': 2}"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2149890-121-D21B39",
+      "line": 1788,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC1034191-001-694162 and TSK-SAMS4735-FDC2149890-121-D21B39"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1034191-002-9166BF",
+      "line": 1669,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2149890-122-94DF3F and TSK-SAMS4735-FDC1034191-002-9166BF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2545680-191-D3B26F",
+      "line": 1858,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2030822-070-CBBFE1 and TSK-SAMS4735-FDC2545680-191-D3B26F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2286427-143-D902F1",
+      "line": 1810,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-VAR0061-262-B4B29B and TSK-SAMS4735-FDC2286427-143-D902F1"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0061-263-DAF3F7",
+      "line": 1930,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2286427-143-D902F1 and TSK-SAMS4735-VAR0061-263-DAF3F7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2286427-144-5CA0EF",
+      "line": 1811,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-VAR0061-263-DAF3F7 and TSK-SAMS4735-FDC2286427-144-5CA0EF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0084-270-283737",
+      "line": 1937,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2327042-149-24A872 and TSK-SAMS4735-VAR0084-270-283737"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2327042-150-70AAAA",
+      "line": 1817,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-VAR0084-270-283737 and TSK-SAMS4735-FDC2327042-150-70AAAA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1899054-031-B6B441",
+      "line": 1698,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2327042-150-70AAAA and TSK-SAMS4735-FDC1899054-031-B6B441"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0084-271-3AF537",
+      "line": 1938,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC1899054-031-B6B441 and TSK-SAMS4735-VAR0084-271-3AF537"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1899054-032-4BD5E0",
+      "line": 1699,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-VAR0084-271-3AF537 and TSK-SAMS4735-FDC1899054-032-4BD5E0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2072169-093-8841A0",
+      "line": 1760,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC1899054-032-4BD5E0 and TSK-SAMS4735-FDC2072169-093-8841A0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2499238-171-852632",
+      "line": 1838,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2127128-110-2081AF and TSK-SAMS4735-FDC2499238-171-852632"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0130-292-B0F8B9",
+      "line": 1959,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-FDC2499238-171-852632 and TSK-SAMS4735-VAR0130-292-B0F8B9"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2678286-234-2DDB26",
+      "line": 1901,
+      "msg": "SAMS4735-A00 overlaps TSK-SAMS4735-VAR0130-293-53253E and TSK-SAMS4735-FDC2678286-234-2DDB26"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1039055-003-218B4D",
+      "line": 1670,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC1995150-062-48D4BD and TSK-SAMS4735-FDC1039055-003-218B4D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2048756-081-19A1D7",
+      "line": 1748,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC1889895-021-5D5E3D and TSK-SAMS4735-FDC2048756-081-19A1D7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2048756-082-15F6F1",
+      "line": 1749,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC1889895-022-D7D081 and TSK-SAMS4735-FDC2048756-082-15F6F1"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0087-272-6001A0",
+      "line": 1939,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC2635717-211-14D5BA and TSK-SAMS4735-VAR0087-272-6001A0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2635717-212-6D4C28",
+      "line": 1879,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-VAR0087-272-6001A0 and TSK-SAMS4735-FDC2635717-212-6D4C28"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1899062-033-90D0D8",
+      "line": 1700,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC2635717-212-6D4C28 and TSK-SAMS4735-FDC1899062-033-90D0D8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0087-273-7F2C23",
+      "line": 1940,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC1899062-033-90D0D8 and TSK-SAMS4735-VAR0087-273-7F2C23"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1899062-034-CA8DB5",
+      "line": 1701,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-VAR0087-273-7F2C23 and TSK-SAMS4735-FDC1899062-034-CA8DB5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2073034-095-814ACA",
+      "line": 1762,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC1899062-034-CA8DB5 and TSK-SAMS4735-FDC2073034-095-814ACA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2660638-221-D78AE0",
+      "line": 1888,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC1938946-040-9C8513 and TSK-SAMS4735-FDC2660638-221-D78AE0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2667789-232-686064",
+      "line": 1899,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC2499399-172-3A8EF9 and TSK-SAMS4735-FDC2667789-232-686064"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2667789-233-761A18",
+      "line": 1900,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC2499399-173-44AFFA and TSK-SAMS4735-FDC2667789-233-761A18"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0131-294-4D7BDE",
+      "line": 1961,
+      "msg": "SAMS4735-A01 overlaps TSK-SAMS4735-FDC2667789-233-761A18 and TSK-SAMS4735-VAR0131-294-4D7BDE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1138169-005-02F723",
+      "line": 1672,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-FDC2152638-124-62F28D and TSK-SAMS4735-FDC1138169-005-02F723"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2607089-205-ECF233",
+      "line": 1872,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-FDC1889896-024-DB1DB6 and TSK-SAMS4735-FDC2607089-205-ECF233"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2655198-215-35F8E2",
+      "line": 1882,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-VAR0088-274-DC2BF9 and TSK-SAMS4735-FDC2655198-215-35F8E2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0088-275-B921B4",
+      "line": 1942,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-FDC2655198-215-35F8E2 and TSK-SAMS4735-VAR0088-275-B921B4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2655198-216-490BF3",
+      "line": 1883,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-VAR0088-275-B921B4 and TSK-SAMS4735-FDC2655198-216-490BF3"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2073036-097-0075DB",
+      "line": 1764,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-FDC2655198-216-490BF3 and TSK-SAMS4735-FDC2073036-097-0075DB"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2660650-223-2AD8F6",
+      "line": 1890,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-FDC2440040-162-13D330 and TSK-SAMS4735-FDC2660650-223-2AD8F6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0001-238-B255A7",
+      "line": 1905,
+      "msg": "SAMS4735-A02 overlaps TSK-SAMS4735-VAR0134-297-575265 and TSK-SAMS4735-VAR0001-238-B255A7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0204-306-2B07EE",
+      "line": 1973,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2023249-065-34CD37 and TSK-SAMS4735-VAR0204-306-2B07EE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2023249-066-F5D4F2",
+      "line": 1733,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-VAR0204-306-2B07EE and TSK-SAMS4735-FDC2023249-066-F5D4F2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1152555-007-495B4C",
+      "line": 1674,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2023249-066-F5D4F2 and TSK-SAMS4735-FDC1152555-007-495B4C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2153179-127-2316F6",
+      "line": 1794,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC1152555-007-495B4C and TSK-SAMS4735-FDC2153179-127-2316F6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1152555-008-C4F2EA",
+      "line": 1675,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2153179-128-3A0010 and TSK-SAMS4735-FDC1152555-008-C4F2EA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1878485-011-32FC71",
+      "line": 1678,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-VAR0046-250-705FB2 and TSK-SAMS4735-FDC1878485-011-32FC71"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0046-251-A793AE",
+      "line": 1918,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC1878485-011-32FC71 and TSK-SAMS4735-VAR0046-251-A793AE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1878485-012-0A4064",
+      "line": 1679,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-VAR0046-251-A793AE and TSK-SAMS4735-FDC1878485-012-0A4064"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2417255-157-AFEBA0",
+      "line": 1824,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC1915812-036-96CFA6 and TSK-SAMS4735-FDC2417255-157-AFEBA0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0092-278-175379",
+      "line": 1945,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2417255-157-AFEBA0 and TSK-SAMS4735-VAR0092-278-175379"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2417255-158-EBF8DF",
+      "line": 1825,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-VAR0092-278-175379 and TSK-SAMS4735-FDC2417255-158-EBF8DF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2655727-219-0308B0",
+      "line": 1886,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2417255-158-EBF8DF and TSK-SAMS4735-FDC2655727-219-0308B0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0092-279-16D242",
+      "line": 1946,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2655727-219-0308B0 and TSK-SAMS4735-VAR0092-279-16D242"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2655727-220-9AAD4D",
+      "line": 1887,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-VAR0092-279-16D242 and TSK-SAMS4735-FDC2655727-220-9AAD4D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1949212-041-F854C2",
+      "line": 1708,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2655727-220-9AAD4D and TSK-SAMS4735-FDC1949212-041-F854C2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2078149-101-2FC4C3",
+      "line": 1768,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC1949212-041-F854C2 and TSK-SAMS4735-FDC2078149-101-2FC4C3"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2078149-102-8D08C2",
+      "line": 1769,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC1949212-042-4F15E5 and TSK-SAMS4735-FDC2078149-102-8D08C2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2094249-103-03E8C0",
+      "line": 1770,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2078149-102-8D08C2 and TSK-SAMS4735-FDC2094249-103-03E8C0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2450852-163-D44BC4",
+      "line": 1830,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2094249-103-03E8C0 and TSK-SAMS4735-FDC2450852-163-D44BC4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2094249-104-132DB8",
+      "line": 1771,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2450852-164-0A018E and TSK-SAMS4735-FDC2094249-104-132DB8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2476499-165-D93B32",
+      "line": 1832,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2094249-104-132DB8 and TSK-SAMS4735-FDC2476499-165-D93B32"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2660872-227-55C1EE",
+      "line": 1894,
+      "msg": "SAMS4735-A04 overlaps TSK-SAMS4735-FDC2476499-166-C1C7EB and TSK-SAMS4735-FDC2660872-227-55C1EE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0208-307-1BD3C8",
+      "line": 1974,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC2026419-067-D0203C and TSK-SAMS4735-VAR0208-307-1BD3C8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1851197-009-CC66A0",
+      "line": 1676,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC2026419-068-5AB9B9 and TSK-SAMS4735-FDC1851197-009-CC66A0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0053-254-D13213",
+      "line": 1921,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC2568478-193-D831AA and TSK-SAMS4735-VAR0053-254-D13213"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2568478-194-7146EC",
+      "line": 1861,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-VAR0053-254-D13213 and TSK-SAMS4735-FDC2568478-194-7146EC"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1885241-015-B2B71D",
+      "line": 1682,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC2568478-194-7146EC and TSK-SAMS4735-FDC1885241-015-B2B71D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0053-255-031746",
+      "line": 1922,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC1885241-015-B2B71D and TSK-SAMS4735-VAR0053-255-031746"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1885241-016-C8EF30",
+      "line": 1683,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-VAR0053-255-031746 and TSK-SAMS4735-FDC1885241-016-C8EF30"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2120655-105-B7657C",
+      "line": 1772,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC1951496-045-B59194 and TSK-SAMS4735-FDC2120655-105-B7657C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2120655-106-2AFE98",
+      "line": 1773,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC1951496-046-D14C46 and TSK-SAMS4735-FDC2120655-106-2AFE98"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2661283-229-56ECAF",
+      "line": 1896,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC2493627-169-93866B and TSK-SAMS4735-FDC2661283-229-56ECAF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2493627-170-BA0000",
+      "line": 1837,
+      "msg": "SAMS4735-A06 overlaps TSK-SAMS4735-FDC2661283-230-2B5243 and TSK-SAMS4735-FDC2493627-170-BA0000"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0141-302-CAFE69",
+      "line": 1969,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-VAR0013-242-CA6B9D and TSK-SAMS4735-VAR0141-302-CAFE69"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0141-303-C474C4",
+      "line": 1970,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-VAR0013-243-9CBA57 and TSK-SAMS4735-VAR0141-303-C474C4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1878835-013-276733",
+      "line": 1680,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-VAR0052-252-75226F and TSK-SAMS4735-FDC1878835-013-276733"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2042043-073-CE5317",
+      "line": 1740,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC1878835-013-276733 and TSK-SAMS4735-FDC2042043-073-CE5317"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0052-253-A28A9C",
+      "line": 1920,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC2042043-073-CE5317 and TSK-SAMS4735-VAR0052-253-A28A9C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1878835-014-ADDCE6",
+      "line": 1681,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-VAR0052-253-A28A9C and TSK-SAMS4735-FDC1878835-014-ADDCE6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2042043-074-477C9F",
+      "line": 1741,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC1878835-014-ADDCE6 and TSK-SAMS4735-FDC2042043-074-477C9F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2065977-089-A25BC2",
+      "line": 1756,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC2295301-148-1E691F and TSK-SAMS4735-FDC2065977-089-A25BC2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1973390-055-1EDBDE",
+      "line": 1722,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC2137114-114-D67DBA and TSK-SAMS4735-FDC1973390-055-1EDBDE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC429607-236-C82D7C",
+      "line": 1903,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC1973390-055-1EDBDE and TSK-SAMS4735-FDC429607-236-C82D7C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1973390-056-7123E7",
+      "line": 1723,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC429607-236-C82D7C and TSK-SAMS4735-FDC1973390-056-7123E7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2524825-177-04553D",
+      "line": 1844,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC1973390-056-7123E7 and TSK-SAMS4735-FDC2524825-177-04553D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC429607-237-12F93A",
+      "line": 1904,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC2524825-177-04553D and TSK-SAMS4735-FDC429607-237-12F93A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2524825-178-0D084B",
+      "line": 1845,
+      "msg": "SAMS4735-A05 overlaps TSK-SAMS4735-FDC429607-237-12F93A and TSK-SAMS4735-FDC2524825-178-0D084B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2156580-129-E0BB19",
+      "line": 1796,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-VAR0209-308-79EE89 and TSK-SAMS4735-FDC2156580-129-E0BB19"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2576839-195-424C5F",
+      "line": 1862,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC2044527-075-1899AF and TSK-SAMS4735-FDC2576839-195-424C5F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0054-256-0043D2",
+      "line": 1923,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC2576839-195-424C5F and TSK-SAMS4735-VAR0054-256-0043D2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2044527-076-F57E82",
+      "line": 1743,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-VAR0054-256-0043D2 and TSK-SAMS4735-FDC2044527-076-F57E82"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2576839-196-83122F",
+      "line": 1863,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC2044527-076-F57E82 and TSK-SAMS4735-FDC2576839-196-83122F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1885264-017-13AE7B",
+      "line": 1684,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC2576839-196-83122F and TSK-SAMS4735-FDC1885264-017-13AE7B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0054-257-E61635",
+      "line": 1924,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC1885264-017-13AE7B and TSK-SAMS4735-VAR0054-257-E61635"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1885264-018-BEEC2D",
+      "line": 1685,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-VAR0054-257-E61635 and TSK-SAMS4735-FDC1885264-018-BEEC2D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1897851-025-131B9F",
+      "line": 1692,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-VAR0079-264-EEFC2F and TSK-SAMS4735-FDC1897851-025-131B9F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0079-265-B82C67",
+      "line": 1932,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC1897851-025-131B9F and TSK-SAMS4735-VAR0079-265-B82C67"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1897851-026-3A1141",
+      "line": 1693,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-VAR0079-265-B82C67 and TSK-SAMS4735-FDC1897851-026-3A1141"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2626075-207-D94991",
+      "line": 1874,
+      "msg": "SAMS4735-A07 overlaps TSK-SAMS4735-FDC1897851-026-3A1141 and TSK-SAMS4735-FDC2626075-207-D94991"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2211256-131-FECCF9",
+      "line": 1798,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2544160-190-EB70F3 and TSK-SAMS4735-FDC2211256-131-FECCF9"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2579298-197-FEF791",
+      "line": 1864,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2045764-077-0ED1B8 and TSK-SAMS4735-FDC2579298-197-FEF791"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2045764-078-EFED10",
+      "line": 1745,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2579298-198-B95C8E and TSK-SAMS4735-FDC2045764-078-EFED10"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1886623-019-5535A8",
+      "line": 1686,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2045764-078-EFED10 and TSK-SAMS4735-FDC1886623-019-5535A8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0056-260-29D52F",
+      "line": 1927,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC1886623-019-5535A8 and TSK-SAMS4735-VAR0056-260-29D52F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1886623-020-CAFBCC",
+      "line": 1687,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-VAR0056-260-29D52F and TSK-SAMS4735-FDC1886623-020-CAFBCC"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2285323-141-EECF45",
+      "line": 1808,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC1886623-020-CAFBCC and TSK-SAMS4735-FDC2285323-141-EECF45"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0056-261-CC8746",
+      "line": 1928,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2285323-141-EECF45 and TSK-SAMS4735-VAR0056-261-CC8746"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2285323-142-24A70A",
+      "line": 1809,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-VAR0056-261-CC8746 and TSK-SAMS4735-FDC2285323-142-24A70A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0081-268-E0B0E2",
+      "line": 1935,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2061744-087-725CCE and TSK-SAMS4735-VAR0081-268-E0B0E2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2061744-088-F8C8A8",
+      "line": 1755,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-VAR0081-268-E0B0E2 and TSK-SAMS4735-FDC2061744-088-F8C8A8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1897902-029-62B3D4",
+      "line": 1696,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2061744-088-F8C8A8 and TSK-SAMS4735-FDC1897902-029-62B3D4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0081-269-EC2F45",
+      "line": 1936,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC1897902-029-62B3D4 and TSK-SAMS4735-VAR0081-269-EC2F45"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1897902-030-AF6073",
+      "line": 1697,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-VAR0081-269-EC2F45 and TSK-SAMS4735-FDC1897902-030-AF6073"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2389486-155-A69150",
+      "line": 1822,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2651690-214-B3A6E3 and TSK-SAMS4735-FDC2389486-155-A69150"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1933007-037-FEDE47",
+      "line": 1704,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-FDC2389486-156-BDDAC7 and TSK-SAMS4735-FDC1933007-037-FEDE47"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0128-290-1F0B98",
+      "line": 1957,
+      "msg": "SAMS4735-A09 overlaps TSK-SAMS4735-VAR0099-289-AB14D2 and TSK-SAMS4735-VAR0128-290-1F0B98"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0180-304-39014A",
+      "line": 1971,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0025-244-B9BB7B and TSK-SAMS4735-VAR0180-304-39014A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0180-305-8044A8",
+      "line": 1972,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0025-245-6BA322 and TSK-SAMS4735-VAR0180-305-8044A8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2281770-139-26EB5F",
+      "line": 1806,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0055-258-06EE2E and TSK-SAMS4735-FDC2281770-139-26EB5F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0055-259-04EBDB",
+      "line": 1926,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC2281770-139-26EB5F and TSK-SAMS4735-VAR0055-259-04EBDB"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2281770-140-314E75",
+      "line": 1807,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0055-259-04EBDB and TSK-SAMS4735-FDC2281770-140-314E75"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1897860-027-1F5EBA",
+      "line": 1694,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0080-266-B47782 and TSK-SAMS4735-FDC1897860-027-1F5EBA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0080-267-892C2A",
+      "line": 1934,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC1897860-027-1F5EBA and TSK-SAMS4735-VAR0080-267-892C2A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1897860-028-AC184B",
+      "line": 1695,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0080-267-892C2A and TSK-SAMS4735-FDC1897860-028-AC184B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2630579-209-E68F1A",
+      "line": 1876,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC1897860-028-AC184B and TSK-SAMS4735-FDC2630579-209-E68F1A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2124294-107-974CF0",
+      "line": 1774,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0098-286-374ADB and TSK-SAMS4735-FDC2124294-107-974CF0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0098-287-6E907B",
+      "line": 1954,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC2124294-107-974CF0 and TSK-SAMS4735-VAR0098-287-6E907B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2124294-108-B32B8C",
+      "line": 1775,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-VAR0098-287-6E907B and TSK-SAMS4735-FDC2124294-108-B32B8C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC1953980-049-9D3892",
+      "line": 1716,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC2124294-108-B32B8C and TSK-SAMS4735-FDC1953980-049-9D3892"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2663947-231-090007",
+      "line": 1898,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC1953980-050-4213CF and TSK-SAMS4735-FDC2663947-231-090007"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2533650-179-FEB376",
+      "line": 1846,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC2147256-119-4A1BB4 and TSK-SAMS4735-FDC2533650-179-FEB376"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2533650-180-AB60FD",
+      "line": 1847,
+      "msg": "SAMS4735-A08 overlaps TSK-SAMS4735-FDC2147256-120-787D6C and TSK-SAMS4735-FDC2533650-180-AB60FD"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2152992-125-F92E85",
+      "line": 1792,
+      "msg": "SAMS4735-A03 overlaps TSK-SAMS4735-FDC2022259-064-DCC5E6 and TSK-SAMS4735-FDC2152992-125-F92E85"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2655726-217-7A2283",
+      "line": 1884,
+      "msg": "SAMS4735-A03 overlaps TSK-SAMS4735-VAR0090-276-41E445 and TSK-SAMS4735-FDC2655726-217-7A2283"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0090-277-25AF0E",
+      "line": 1944,
+      "msg": "SAMS4735-A03 overlaps TSK-SAMS4735-FDC2655726-217-7A2283 and TSK-SAMS4735-VAR0090-277-25AF0E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2655726-218-67011D",
+      "line": 1885,
+      "msg": "SAMS4735-A03 overlaps TSK-SAMS4735-VAR0090-277-25AF0E and TSK-SAMS4735-FDC2655726-218-67011D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-FDC2075211-099-5ACC1F",
+      "line": 1766,
+      "msg": "SAMS4735-A03 overlaps TSK-SAMS4735-FDC2655726-218-67011D and TSK-SAMS4735-FDC2075211-099-5ACC1F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4735-VAR0009-240-EA81B5",
+      "line": 1907,
+      "msg": "SAMS4735-A03 overlaps TSK-SAMS4735-VAR0135-299-F24403 and TSK-SAMS4735-VAR0009-240-EA81B5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0197-306-FDE52B",
+      "line": 2281,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-VAR0013-245-A02519 and TSK-SAMS4767-VAR0197-306-FDE52B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2295301-129-F39D4C",
+      "line": 2104,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC1879399-009-608810 and TSK-SAMS4767-FDC2295301-129-F39D4C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2295301-130-9CC5BA",
+      "line": 2105,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC1879399-010-D55AB0 and TSK-SAMS4767-FDC2295301-130-9CC5BA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0049-256-860757",
+      "line": 2231,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC2605982-195-A2FE02 and TSK-SAMS4767-VAR0049-256-860757"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2493019-143-43D893",
+      "line": 2118,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC1897915-022-0EBC50 and TSK-SAMS4767-FDC2493019-143-43D893"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2137142-097-603302",
+      "line": 2072,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC2524175-156-7508C5 and TSK-SAMS4767-FDC2137142-097-603302"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2524175-157-8286D3",
+      "line": 2132,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC2137142-097-603302 and TSK-SAMS4767-FDC2524175-157-8286D3"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2137142-098-5431FD",
+      "line": 2073,
+      "msg": "SAMS4767-A00 overlaps TSK-SAMS4767-FDC2524175-157-8286D3 and TSK-SAMS4767-FDC2137142-098-5431FD"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2045764-067-6973B8",
+      "line": 2042,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-VAR0015-246-7863B3 and TSK-SAMS4767-FDC2045764-067-6973B8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0199-307-5E51E1",
+      "line": 2282,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2045764-067-6973B8 and TSK-SAMS4767-VAR0199-307-5E51E1"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0015-247-86895F",
+      "line": 2222,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-VAR0199-307-5E51E1 and TSK-SAMS4767-VAR0015-247-86895F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2568255-188-9D7D39",
+      "line": 2163,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-VAR0015-247-86895F and TSK-SAMS4767-FDC2568255-188-9D7D39"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2045764-068-BAAF75",
+      "line": 2043,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2568255-188-9D7D39 and TSK-SAMS4767-FDC2045764-068-BAAF75"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2568255-189-C602C4",
+      "line": 2164,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2045764-068-BAAF75 and TSK-SAMS4767-FDC2568255-189-C602C4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0050-258-A44CE7",
+      "line": 2233,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2606002-197-B89CAB and TSK-SAMS4767-VAR0050-258-A44CE7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2524771-158-47898A",
+      "line": 2133,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC1952764-037-E800B7 and TSK-SAMS4767-FDC2524771-158-47898A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2659530-218-AE906E",
+      "line": 2193,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2524771-158-47898A and TSK-SAMS4767-FDC2659530-218-AE906E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1952764-038-98F0A5",
+      "line": 2013,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2659530-218-AE906E and TSK-SAMS4767-FDC1952764-038-98F0A5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2524771-159-384F07",
+      "line": 2134,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC1952764-038-98F0A5 and TSK-SAMS4767-FDC2524771-159-384F07"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2659530-219-9BFC34",
+      "line": 2194,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2524771-159-384F07 and TSK-SAMS4767-FDC2659530-219-9BFC34"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0139-294-F9E572",
+      "line": 2269,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2678194-234-B707D5 and TSK-SAMS4767-VAR0139-294-F9E572"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2016322-055-40D0F9",
+      "line": 2030,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-VAR0139-294-F9E572 and TSK-SAMS4767-FDC2016322-055-40D0F9"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0139-295-3E0B86",
+      "line": 2270,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2016322-055-40D0F9 and TSK-SAMS4767-VAR0139-295-3E0B86"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2678194-235-20253C",
+      "line": 2210,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-VAR0139-295-3E0B86 and TSK-SAMS4767-FDC2678194-235-20253C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2016322-056-C71FA8",
+      "line": 2031,
+      "msg": "SAMS4767-A01 overlaps TSK-SAMS4767-FDC2678194-235-20253C and TSK-SAMS4767-FDC2016322-056-C71FA8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2547961-182-CF5C3E",
+      "line": 2157,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2032339-061-FD83BC and TSK-SAMS4767-FDC2547961-182-CF5C3E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2032339-062-6F7075",
+      "line": 2037,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2547961-182-CF5C3E and TSK-SAMS4767-FDC2032339-062-6F7075"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2547961-183-2BCADC",
+      "line": 2158,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2032339-062-6F7075 and TSK-SAMS4767-FDC2547961-183-2BCADC"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0204-308-B93BF4",
+      "line": 2283,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-VAR0016-248-B0DFFA and TSK-SAMS4767-VAR0204-308-B93BF4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0052-260-A178A2",
+      "line": 2235,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2606357-199-B2DB1F and TSK-SAMS4767-VAR0052-260-A178A2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2089278-081-21F2C9",
+      "line": 2056,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-VAR0052-260-A178A2 and TSK-SAMS4767-FDC2089278-081-21F2C9"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0052-261-7B2CCF",
+      "line": 2236,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2089278-081-21F2C9 and TSK-SAMS4767-VAR0052-261-7B2CCF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2626985-202-DAF2A5",
+      "line": 2177,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-VAR0052-261-7B2CCF and TSK-SAMS4767-FDC2626985-202-DAF2A5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2089278-082-24C5F6",
+      "line": 2057,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2626985-202-DAF2A5 and TSK-SAMS4767-FDC2089278-082-24C5F6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1898076-023-D7DDAC",
+      "line": 1998,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2089278-082-24C5F6 and TSK-SAMS4767-FDC1898076-023-D7DDAC"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2626985-203-3D7069",
+      "line": 2178,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC1898076-023-D7DDAC and TSK-SAMS4767-FDC2626985-203-3D7069"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1898076-024-42B7E1",
+      "line": 1999,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2626985-203-3D7069 and TSK-SAMS4767-FDC1898076-024-42B7E1"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2642156-210-DBBF7B",
+      "line": 2185,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2506677-150-B5B873 and TSK-SAMS4767-FDC2642156-210-DBBF7B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2506677-151-73A81F",
+      "line": 2126,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2642156-211-C1E1B9 and TSK-SAMS4767-FDC2506677-151-73A81F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2138949-099-C46C99",
+      "line": 2074,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC1955277-039-45EACB and TSK-SAMS4767-FDC2138949-099-C46C99"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2524772-160-552E29",
+      "line": 2135,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2138949-099-C46C99 and TSK-SAMS4767-FDC2524772-160-552E29"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2659553-220-D7E6B7",
+      "line": 2195,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2524772-160-552E29 and TSK-SAMS4767-FDC2659553-220-D7E6B7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1955277-040-83C3FD",
+      "line": 2015,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2659553-220-D7E6B7 and TSK-SAMS4767-FDC1955277-040-83C3FD"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2138949-100-29A9C5",
+      "line": 2075,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC1955277-040-83C3FD and TSK-SAMS4767-FDC2138949-100-29A9C5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2524772-161-6DDE74",
+      "line": 2136,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2138949-100-29A9C5 and TSK-SAMS4767-FDC2524772-161-6DDE74"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2659553-221-CA0118",
+      "line": 2196,
+      "msg": "SAMS4767-A02 overlaps TSK-SAMS4767-FDC2524772-161-6DDE74 and TSK-SAMS4767-FDC2659553-221-CA0118"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1864116-007-E35401",
+      "line": 1982,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-FDC2289794-126-E3CC5C and TSK-SAMS4767-FDC1864116-007-E35401"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1903209-029-BCA1B1",
+      "line": 2004,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-VAR0062-268-45CB0B and TSK-SAMS4767-FDC1903209-029-BCA1B1"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0062-269-9A310E",
+      "line": 2244,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-FDC1903209-029-BCA1B1 and TSK-SAMS4767-VAR0062-269-9A310E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1903209-030-173A01",
+      "line": 2005,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-VAR0062-269-9A310E and TSK-SAMS4767-FDC1903209-030-173A01"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2660650-224-90112E",
+      "line": 2199,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-FDC1971547-043-5CFA1C and TSK-SAMS4767-FDC2660650-224-90112E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0132-284-0B5862",
+      "line": 2259,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-FDC2660650-224-90112E and TSK-SAMS4767-VAR0132-284-0B5862"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1971547-044-00891E",
+      "line": 2019,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-VAR0132-284-0B5862 and TSK-SAMS4767-FDC1971547-044-00891E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2660650-225-9651EE",
+      "line": 2200,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-FDC1971547-044-00891E and TSK-SAMS4767-FDC2660650-225-9651EE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0132-285-E68365",
+      "line": 2260,
+      "msg": "SAMS4767-A06 overlaps TSK-SAMS4767-FDC2660650-225-9651EE and TSK-SAMS4767-VAR0132-285-E68365"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2301876-133-A24A3B",
+      "line": 2108,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC1885345-013-823EAA and TSK-SAMS4767-FDC2301876-133-A24A3B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2301876-134-B86FC4",
+      "line": 2109,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC1885345-014-FBC717 and TSK-SAMS4767-FDC2301876-134-B86FC4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0080-272-1BE90F",
+      "line": 2247,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC2506707-152-10B8E2 and TSK-SAMS4767-VAR0080-272-1BE90F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0080-273-318D85",
+      "line": 2248,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC2506707-153-2D0EC2 and TSK-SAMS4767-VAR0080-273-318D85"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2659616-222-E37482",
+      "line": 2197,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC2524814-162-3C23F5 and TSK-SAMS4767-FDC2659616-222-E37482"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2524814-163-46F70A",
+      "line": 2138,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC2659616-223-EEB963 and TSK-SAMS4767-FDC2524814-163-46F70A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC474080-238-1EC34F",
+      "line": 2213,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC2678286-237-1B259B and TSK-SAMS4767-FDC474080-238-1EC34F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0141-298-CB0283",
+      "line": 2273,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC474080-238-1EC34F and TSK-SAMS4767-VAR0141-298-CB0283"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0141-299-5F373F",
+      "line": 2274,
+      "msg": "SAMS4767-A03 overlaps TSK-SAMS4767-FDC474080-239-47F0AF and TSK-SAMS4767-VAR0141-299-5F373F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2634761-204-C9E38E",
+      "line": 2179,
+      "msg": "SAMS4767-A04 overlaps TSK-SAMS4767-FDC2091181-083-DF9B4A and TSK-SAMS4767-FDC2634761-204-C9E38E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0057-264-A9929E",
+      "line": 2239,
+      "msg": "SAMS4767-A04 overlaps TSK-SAMS4767-FDC2634761-204-C9E38E and TSK-SAMS4767-VAR0057-264-A9929E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2091181-084-009B2F",
+      "line": 2059,
+      "msg": "SAMS4767-A04 overlaps TSK-SAMS4767-VAR0057-264-A9929E and TSK-SAMS4767-FDC2091181-084-009B2F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0057-265-953B72",
+      "line": 2240,
+      "msg": "SAMS4767-A04 overlaps TSK-SAMS4767-FDC2091181-084-009B2F and TSK-SAMS4767-VAR0057-265-953B72"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2634761-205-DA7C8A",
+      "line": 2180,
+      "msg": "SAMS4767-A04 overlaps TSK-SAMS4767-VAR0057-265-953B72 and TSK-SAMS4767-FDC2634761-205-DA7C8A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2042043-065-44D0D8",
+      "line": 2040,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-VAR0180-304-8A88F5 and TSK-SAMS4767-FDC2042043-065-44D0D8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0180-305-0F6EA8",
+      "line": 2280,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2042043-065-44D0D8 and TSK-SAMS4767-VAR0180-305-0F6EA8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2554151-186-93F08F",
+      "line": 2161,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-VAR0180-305-0F6EA8 and TSK-SAMS4767-FDC2554151-186-93F08F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2042043-066-D92D70",
+      "line": 2041,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2554151-186-93F08F and TSK-SAMS4767-FDC2042043-066-D92D70"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2554151-187-9CEA99",
+      "line": 2162,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2042043-066-D92D70 and TSK-SAMS4767-FDC2554151-187-9CEA99"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1938946-035-AA6EDE",
+      "line": 2010,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2653196-214-A92754 and TSK-SAMS4767-FDC1938946-035-AA6EDE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2653196-215-917879",
+      "line": 2190,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC1938946-035-AA6EDE and TSK-SAMS4767-FDC2653196-215-917879"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1938946-036-C36D3B",
+      "line": 2011,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2653196-215-917879 and TSK-SAMS4767-FDC1938946-036-C36D3B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0134-286-978EC7",
+      "line": 2261,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2660872-226-9835CF and TSK-SAMS4767-VAR0134-286-978EC7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0134-287-F1B51B",
+      "line": 2262,
+      "msg": "SAMS4767-A07 overlaps TSK-SAMS4767-FDC2660872-227-D25283 and TSK-SAMS4767-VAR0134-287-F1B51B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0048-254-BD744B",
+      "line": 2229,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2605087-193-617F90 and TSK-SAMS4767-VAR0048-254-BD744B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2366982-139-0BBD2C",
+      "line": 2114,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2066575-078-BB7865 and TSK-SAMS4767-FDC2366982-139-0BBD2C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2656709-216-8DD6E2",
+      "line": 2191,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2134195-095-3C8F3A and TSK-SAMS4767-FDC2656709-216-8DD6E2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2134195-096-7D83F0",
+      "line": 2071,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2656709-216-8DD6E2 and TSK-SAMS4767-FDC2134195-096-7D83F0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2656709-217-E87A5C",
+      "line": 2192,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2134195-096-7D83F0 and TSK-SAMS4767-FDC2656709-217-E87A5C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2538297-168-06FA3E",
+      "line": 2143,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2147668-107-C194C8 and TSK-SAMS4767-FDC2538297-168-06FA3E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2147668-108-FF52DA",
+      "line": 2083,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2538297-168-06FA3E and TSK-SAMS4767-FDC2147668-108-FF52DA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2538297-169-EB8837",
+      "line": 2144,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2147668-108-FF52DA and TSK-SAMS4767-FDC2538297-169-EB8837"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0136-290-7D3AC2",
+      "line": 2265,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2538297-169-EB8837 and TSK-SAMS4767-VAR0136-290-7D3AC2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2677903-232-639DCF",
+      "line": 2207,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-VAR0136-291-5C2C2D and TSK-SAMS4767-FDC2677903-232-639DCF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2195583-113-F9F296",
+      "line": 2088,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2677903-232-639DCF and TSK-SAMS4767-FDC2195583-113-F9F296"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2677903-233-C19A84",
+      "line": 2208,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2195583-113-F9F296 and TSK-SAMS4767-FDC2677903-233-C19A84"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2195583-114-E91783",
+      "line": 2089,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2677903-233-C19A84 and TSK-SAMS4767-FDC2195583-114-E91783"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2027944-059-A583B5",
+      "line": 2034,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2545955-178-BA8F3B and TSK-SAMS4767-FDC2027944-059-A583B5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2545955-179-F2714A",
+      "line": 2154,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2027944-059-A583B5 and TSK-SAMS4767-FDC2545955-179-F2714A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2027944-060-F784EF",
+      "line": 2035,
+      "msg": "SAMS4767-A09 overlaps TSK-SAMS4767-FDC2545955-179-F2714A and TSK-SAMS4767-FDC2027944-060-F784EF"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2038279-063-098A14",
+      "line": 2038,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-VAR0148-302-98C182 and TSK-SAMS4767-FDC2038279-063-098A14"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0148-303-3B0682",
+      "line": 2278,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2038279-063-098A14 and TSK-SAMS4767-VAR0148-303-3B0682"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2553143-184-C743B7",
+      "line": 2159,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-VAR0148-303-3B0682 and TSK-SAMS4767-FDC2553143-184-C743B7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2038279-064-36E769",
+      "line": 2039,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2553143-184-C743B7 and TSK-SAMS4767-FDC2038279-064-36E769"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2553143-185-B2258F",
+      "line": 2160,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2038279-064-36E769 and TSK-SAMS4767-FDC2553143-185-B2258F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0033-250-B9029C",
+      "line": 2225,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-VAR0210-309-A7E5FA and TSK-SAMS4767-VAR0033-250-B9029C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2049971-071-3D6195",
+      "line": 2046,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-VAR0033-250-B9029C and TSK-SAMS4767-FDC2049971-071-3D6195"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0033-251-33CEB6",
+      "line": 2226,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2049971-071-3D6195 and TSK-SAMS4767-VAR0033-251-33CEB6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2049971-072-4E5792",
+      "line": 2047,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-VAR0033-251-33CEB6 and TSK-SAMS4767-FDC2049971-072-4E5792"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0131-282-D1FDEE",
+      "line": 2257,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC1967886-041-D7F0B3 and TSK-SAMS4767-VAR0131-282-D1FDEE"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1967886-042-70FE72",
+      "line": 2017,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-VAR0131-282-D1FDEE and TSK-SAMS4767-FDC1967886-042-70FE72"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0131-283-2743C2",
+      "line": 2258,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC1967886-042-70FE72 and TSK-SAMS4767-VAR0131-283-2743C2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2542489-172-F725F5",
+      "line": 2147,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2667789-231-FA707C and TSK-SAMS4767-FDC2542489-172-F725F5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1997049-053-C6C701",
+      "line": 2028,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2542489-172-F725F5 and TSK-SAMS4767-FDC1997049-053-C6C701"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2542489-173-1ADEA4",
+      "line": 2148,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC1997049-053-C6C701 and TSK-SAMS4767-FDC2542489-173-1ADEA4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC1997049-054-8313D8",
+      "line": 2029,
+      "msg": "SAMS4767-A05 overlaps TSK-SAMS4767-FDC2542489-173-1ADEA4 and TSK-SAMS4767-FDC1997049-054-8313D8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2085473-079-4CC4B1",
+      "line": 2054,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2338331-138-9E4DBB and TSK-SAMS4767-FDC2085473-079-4CC4B1"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2094250-087-77615B",
+      "line": 2062,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2638608-206-A41CA8 and TSK-SAMS4767-FDC2094250-087-77615B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2503894-147-9BF89F",
+      "line": 2122,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2094250-087-77615B and TSK-SAMS4767-FDC2503894-147-9BF89F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2638608-207-5DCBE7",
+      "line": 2182,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2503894-147-9BF89F and TSK-SAMS4767-FDC2638608-207-5DCBE7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2094250-088-3E4D36",
+      "line": 2063,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2638608-207-5DCBE7 and TSK-SAMS4767-FDC2094250-088-3E4D36"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2503894-148-531A47",
+      "line": 2123,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2094250-088-3E4D36 and TSK-SAMS4767-FDC2503894-148-531A47"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2116181-089-14BAF3",
+      "line": 2064,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2503894-148-531A47 and TSK-SAMS4767-FDC2116181-089-14BAF3"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2511320-154-72DED6",
+      "line": 2129,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2133974-093-8CB2E9 and TSK-SAMS4767-FDC2511320-154-72DED6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2133974-094-C9A106",
+      "line": 2069,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2511320-154-72DED6 and TSK-SAMS4767-FDC2133974-094-C9A106"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2511320-155-495037",
+      "line": 2130,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2133974-094-C9A106 and TSK-SAMS4767-FDC2511320-155-495037"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0135-288-2B20E6",
+      "line": 2263,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2660898-228-42741C and TSK-SAMS4767-VAR0135-288-2B20E6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-VAR0135-289-44F4F0",
+      "line": 2264,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2660898-229-DDFF9F and TSK-SAMS4767-VAR0135-289-44F4F0"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2026419-057-CABF6B",
+      "line": 2032,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2545680-176-C6CAA4 and TSK-SAMS4767-FDC2026419-057-CABF6B"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2545680-177-9798D6",
+      "line": 2152,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2026419-057-CABF6B and TSK-SAMS4767-FDC2545680-177-9798D6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS4767-FDC2026419-058-BD6A38",
+      "line": 2033,
+      "msg": "SAMS4767-A08 overlaps TSK-SAMS4767-FDC2545680-177-9798D6 and TSK-SAMS4767-FDC2026419-058-BD6A38"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0083-243-EDED8E",
+      "line": 2527,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC1851197-002-BAC7A4 and TSK-SAMS6405-VAR0083-243-EDED8E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC1971547-025-9E003D",
+      "line": 2309,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-VAR0129-264-F5D82F and TSK-SAMS6405-FDC1971547-025-9E003D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0003-205-A7C9F8",
+      "line": 2489,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC1971547-025-9E003D and TSK-SAMS6405-VAR0003-205-A7C9F8"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0003-206-E75506",
+      "line": 2490,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC1971547-026-DB22C2 and TSK-SAMS6405-VAR0003-206-E75506"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2286650-087-C055C2",
+      "line": 2371,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-VAR0003-206-E75506 and TSK-SAMS6405-FDC2286650-087-C055C2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2576839-149-14817A",
+      "line": 2433,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC2286650-088-C55C3B and TSK-SAMS6405-FDC2576839-149-14817A"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2327042-095-EED623",
+      "line": 2379,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC2606004-154-7A9D22 and TSK-SAMS6405-FDC2327042-095-EED623"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0031-217-0D9B1C",
+      "line": 2501,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC2327042-096-DCB786 and TSK-SAMS6405-VAR0031-217-0D9B1C"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0196-278-186AEB",
+      "line": 2562,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-VAR0031-217-0D9B1C and TSK-SAMS6405-VAR0196-278-186AEB"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0031-218-E1B37D",
+      "line": 2502,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-VAR0196-278-186AEB and TSK-SAMS6405-VAR0031-218-E1B37D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2606888-159-F910B4",
+      "line": 2443,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-VAR0031-218-E1B37D and TSK-SAMS6405-FDC2606888-159-F910B4"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2389486-101-A3AFDB",
+      "line": 2385,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC2606888-160-5D26B3 and TSK-SAMS6405-FDC2389486-101-A3AFDB"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2655726-173-C17839",
+      "line": 2457,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-VAR0059-232-5602D5 and TSK-SAMS6405-FDC2655726-173-C17839"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2499399-115-CB0F67",
+      "line": 2399,
+      "msg": "SAMS6405-A09 overlaps TSK-SAMS6405-FDC2655726-174-964917 and TSK-SAMS6405-FDC2499399-115-CB0F67"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC1897851-011-2342C7",
+      "line": 2295,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC2533886-130-5421D0 and TSK-SAMS6405-FDC1897851-011-2342C7"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2195996-073-F43A01",
+      "line": 2357,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC1897851-012-3A5B08 and TSK-SAMS6405-FDC2195996-073-F43A01"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2544969-135-6391AB",
+      "line": 2419,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC2195996-074-AD0330 and TSK-SAMS6405-FDC2544969-135-6391AB"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2678286-197-0B7B83",
+      "line": 2481,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC2544969-136-AA2618 and TSK-SAMS6405-FDC2678286-197-0B7B83"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0127-259-AECE09",
+      "line": 2543,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC2678286-198-23AA29 and TSK-SAMS6405-VAR0127-259-AECE09"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2567743-145-403786",
+      "line": 2429,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC1967886-024-38D5B3 and TSK-SAMS6405-FDC2567743-145-403786"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0078-239-D20749",
+      "line": 2523,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC2506678-118-C1874C and TSK-SAMS6405-VAR0078-239-D20749"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2506678-119-BC8F5F",
+      "line": 2403,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-VAR0078-239-D20749 and TSK-SAMS6405-FDC2506678-119-BC8F5F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0078-240-C7BA5E",
+      "line": 2524,
+      "msg": "SAMS6405-A07 overlaps TSK-SAMS6405-FDC2506678-119-BC8F5F and TSK-SAMS6405-VAR0078-240-C7BA5E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0086-245-E933EA",
+      "line": 2529,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-FDC1885241-005-760F00 and TSK-SAMS6405-VAR0086-245-E933EA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0086-246-7E086F",
+      "line": 2530,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-FDC1885241-006-A4DC28 and TSK-SAMS6405-VAR0086-246-7E086F"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC1971580-027-9ADC74",
+      "line": 2311,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-VAR0130-266-E4608D and TSK-SAMS6405-FDC1971580-027-9ADC74"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0004-207-B360CA",
+      "line": 2491,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-FDC1971580-027-9ADC74 and TSK-SAMS6405-VAR0004-207-B360CA"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC1971580-028-A52F51",
+      "line": 2312,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-VAR0004-208-C11C8D and TSK-SAMS6405-FDC1971580-028-A52F51"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2042075-039-DA8003",
+      "line": 2323,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-FDC2327043-098-305167 and TSK-SAMS6405-FDC2042075-039-DA8003"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0201-279-436C4D",
+      "line": 2563,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-FDC2042075-039-DA8003 and TSK-SAMS6405-VAR0201-279-436C4D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2655742-175-84F42E",
+      "line": 2459,
+      "msg": "SAMS6405-A00 overlaps TSK-SAMS6405-VAR0063-234-20C145 and TSK-SAMS6405-FDC2655742-175-84F42E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2149890-067-692A79",
+      "line": 2351,
+      "msg": "SAMS6405-A03 overlaps TSK-SAMS6405-FDC1889893-007-E0512A and TSK-SAMS6405-FDC2149890-067-692A79"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2149890-068-51DCC2",
+      "line": 2352,
+      "msg": "SAMS6405-A03 overlaps TSK-SAMS6405-FDC1889893-008-A87BA9 and TSK-SAMS6405-FDC2149890-068-51DCC2"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2554151-141-65F6A5",
+      "line": 2425,
+      "msg": "SAMS6405-A03 overlaps TSK-SAMS6405-FDC429607-200-57839B and TSK-SAMS6405-FDC2554151-141-65F6A5"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2639779-169-58F7E6",
+      "line": 2453,
+      "msg": "SAMS6405-A03 overlaps TSK-SAMS6405-FDC2066569-048-953C9C and TSK-SAMS6405-FDC2639779-169-58F7E6"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2493019-111-1B5D9D",
+      "line": 2395,
+      "msg": "SAMS6405-A03 overlaps TSK-SAMS6405-FDC2639779-170-EF398F and TSK-SAMS6405-FDC2493019-111-1B5D9D"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2542632-131-5B1558",
+      "line": 2415,
+      "msg": "SAMS6405-A04 overlaps TSK-SAMS6405-FDC1889896-010-81E374 and TSK-SAMS6405-FDC2542632-131-5B1558"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-FDC2678189-193-F84739",
+      "line": 2477,
+      "msg": "SAMS6405-A04 overlaps TSK-SAMS6405-FDC2542632-132-875911 and TSK-SAMS6405-FDC2678189-193-F84739"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0093-253-71419E",
+      "line": 2537,
+      "msg": "SAMS6405-A04 overlaps TSK-SAMS6405-FDC2678189-193-F84739 and TSK-SAMS6405-VAR0093-253-71419E"
+    },
+    {
+      "check": "labor",
+      "severity": "hard",
+      "src": "recallstorm/plan/tasks.py",
+      "type": "shelf_task",
+      "id": "TSK-SAMS6405-VAR0093-254-311B3A",
+      "line": 2538,
+      "msg": "SAMS6405-A04 overlaps TSK-SAMS6405-FDC2678189-194-6C5088 and TSK-SAMS6405-VAR0093-254-311B3A"
+    }
+  ]
+}
