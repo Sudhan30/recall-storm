@@ -132,4 +132,8 @@ total is under ~$20, inside the $40 budget.
 
 ## Audio clean-up
 
-All four final cuts had their soundtrack cleaned (video untouched): `adeclip, highpass 80 Hz, lowpass 11 kHz, afftdn, agate, loudnorm -16 LUFS`. Originals: `videos/raw/original_audio/` (local only).
+The narration from the TTS model carried hiss. All four final cuts had their soundtrack re-processed from the
+originals (video streams untouched): `adeclip, highpass 90 Hz, lowpass 6.2 kHz (x2), afftdn (x2), +3 dB at 3 kHz,
+fixed gain to -1.5 dBFS peak, then a full-mute gate (range -60 dB)` so the pauses between lines are silent.
+No loudness normalizer: its one-pass mode lifted the hiss in the gaps. Originals: `videos/raw/original_audio/`
+(local only).
