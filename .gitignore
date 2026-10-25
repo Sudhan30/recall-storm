@@ -13,3 +13,4 @@ viewer/data/status.tmp
 gen/expansion_agentpatched/
 .DS_Store
 viewer/data/compare.json
+reports/demo_plan.json
