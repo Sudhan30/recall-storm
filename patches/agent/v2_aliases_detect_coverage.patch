@@ -1,0 +1,193 @@
+--- a/recallstorm/aliases/detect.py
++++ b/recallstorm/aliases/detect.py
+@@ -22,50 +22,155 @@
+     confidence: float = 1.0
+ 
+ 
++_OCR_CHAR_MAP: dict[str, str] = {
++    "A": "[A4]",
++    "B": "[B8]",
++    "E": "[E3]",
++    "G": "[G6]",
++    "I": "[I1l|]",
++    "L": "[L1I|]",
++    "O": "[O0]",
++    "S": "[S5]",
++    "T": "[T7]",
++    "Z": "[Z2]",
++    "0": "[0O]",
++    "1": "[1Il|]",
++    "5": "[5S]",
++}
++
++_RED3_CORE_ALIASES = {
++    "FD&C RED NO. 3",
++    "FD&C RED NO.3",
++    "F D & C RED NO. 3",
++    "F.D.&C. RED NO. 3",
++    "FD&C RED #3",
++    "FD&C RED # 3",
++    "FD&C RED 3",
++    "RED NO. 3",
++    "RED NO.3",
++    "RED #3",
++    "RED # 3",
++    "RED 3",
++    "RED DYE 3",
++    "RED DYE NO. 3",
++    "RED DYE NO.3",
++    "RED DYE #3",
++    "RED DYE # 3",
++    "FOOD RED 3",
++    "FOOD RED NO. 3",
++}
++
++
++def _ocr_clean_word_digits(text: str) -> str:
++    """Normalize OCR digit-for-letter substitutions inside alphabetic tokens without changing length."""
++    chars = list(text)
++    n = len(chars)
++    repl = {"0": "O", "1": "I", "3": "E", "5": "S", "8": "B"}
++    for i, ch in enumerate(chars):
++        if ch in repl:
++            prev_alpha = i > 0 and chars[i - 1].isalpha()
++            next_alpha = i + 1 < n and chars[i + 1].isalpha()
++            if (prev_alpha and next_alpha) or (
++                ch == "0" and prev_alpha and i + 1 < n and chars[i + 1] == "."
++            ) or (
++                ch == "3" and not prev_alpha and i + 2 < n and chars[i + 1].isalpha() and chars[i + 2].isalpha()
++            ):
++                target = repl[ch]
++                ref = chars[i - 1] if prev_alpha else chars[i + 1]
++                chars[i] = target.lower() if ref.islower() else target
++    return "".join(chars)
++
++
++def _fuzzy_alias_pattern(clean: str) -> str:
++    """Build an OCR- and spacing-tolerant regex pattern for a general alias."""
++    folded = fold_unicode(clean)
++    parts: list[str] = []
++    i = 0
++    n = len(folded)
++    while i < n:
++        ch = folded[i]
++        if ch.isspace():
++            while i < n and folded[i].isspace():
++                i += 1
++            parts.append(r"[\s.\-]*")
++            continue
++        if ch in ".-":
++            while i < n and (folded[i].isspace() or folded[i] in ".-"):
++                i += 1
++            parts.append(r"[\s.\-]*")
++            continue
++        if ch == "&":
++            i += 1
++            while i < n and folded[i].isspace():
++                i += 1
++            parts.append(r"\s*(?:&\s*|\s+AND\s+)\s*")
++            continue
++        upper_ch = ch.upper()
++        if upper_ch in _OCR_CHAR_MAP:
++            parts.append(_OCR_CHAR_MAP[upper_ch])
++        else:
++            parts.append(re.escape(ch))
++        i += 1
++    return "".join(parts)
++
++
+ def _alias_regex(alias: str, additive: str) -> re.Pattern:
+     clean = alias.strip()
+-    upper = clean.upper()
+-    if additive.upper() == "RED3" and upper in {
+-        "FD&C RED NO. 3",
+-        "FD&C RED #3",
+-        "FD&C RED 3",
+-        "RED NO. 3",
+-        "RED #3",
+-        "RED 3",
+-        "RED DYE 3",
+-        "RED DYE NO. 3",
+-        "RED DYE #3",
+-    }:
++    upper = re.sub(r"\s+", " ", clean.upper())
++    if additive.upper() == "RED3" and upper in _RED3_CORE_ALIASES:
+         return re.compile(
+-            r"(?<![A-Za-z0-9&#])(?:FD\s*&\s*C\s+)?RED(?:\s+DYE)?(?:\s*(?:NO\.?|#))?\s*3(?![0-9A-Za-z])(?:\s+(?:LAKE|POWDER|ALUMINUM\s+LAKE))?",
++            r"(?<![A-Za-z0-9&#])"
++            r"(?:F\s*\.?\s*D\s*\.?\s*(?:&\s*|\s+AND\s+)?C\s*\.?\s+|F[O0][O0]D\s+)?"
++            r"R[E3]D(?:\s+DY[E3])?"
++            r"(?:[\s.\-]*(?:N[O0]\.?|#)\s*|\s+|\s*-\s*)3(?![0-9A-Za-z])"
++            r"(?:\s+(?:ALUMIN(?:I)?UM\s+LAKE|LAKE|POWDER|SODIUM|DISODIUM(?:\s+SALT)?))?",
+             re.IGNORECASE,
+         )
+-    escaped = re.escape(fold_unicode(clean))
+-    escaped = re.sub(r"\\\s+", r"\\s+", escaped)
+-    return re.compile(r"(?<![A-Za-z0-9])" + escaped + r"(?![A-Za-z0-9])", re.IGNORECASE)
++    if additive.upper() == "RED3" and upper in {"E127", "E-127", "E 127"}:
++        return re.compile(r"(?<![A-Za-z0-9])[E3][\s\-]*127(?![0-9A-Za-z])", re.IGNORECASE)
++    if additive.upper() == "RED3" and upper in {"CI 45430", "C.I. 45430", "CI NO. 45430", "C.I. NO. 45430"}:
++        return re.compile(
++            r"(?<![A-Za-z0-9])C\.?\s*[I1l|]\.?(?:\s*N[O0]\.?)?\s*4[5S]43[0O](?![0-9A-Za-z])",
++            re.IGNORECASE,
++        )
++    pat_body = _fuzzy_alias_pattern(clean)
++    return re.compile(r"(?<![A-Za-z0-9])" + pat_body + r"(?![A-Za-z0-9])", re.IGNORECASE)
+ 
+ 
+ def decoy_reason(text: str, start: int, end: int, additive: str = "RED3") -> str | None:
+     """Return a reason string if the match at [start, end) is a false-positive decoy."""
+     if not isinstance(text, str):
+         return None
+-    ctx_start = max(0, start - 15)
+-    ctx_end = min(len(text), end + 15)
+-    ctx = text[ctx_start:ctx_end]
+     matched = text[start:end]
++    if not matched.strip():
++        return "Empty match"
+     if additive.upper() == "RED3":
+-        if is_dc_red_33(ctx):
+-            return "D&C Red cosmetic dye, not FD&C Red No. 3"
+         if re.search(r"^\s*\d", text[end : end + 2]):
+             return "Followed by digit (e.g. Red 30/33/40)"
+-        if re.search(r"D\s*&\s*C\s*$", text[max(0, start - 6) : start], re.IGNORECASE) and not re.search(
+-            r"FD\s*&\s*C\s*$", text[max(0, start - 7) : start], re.IGNORECASE
++        pre_window = text[max(0, start - 20) : start]
++        pre_clause = re.split(r"[,;()\[\]:]", pre_window)[-1]
++        if re.search(r"D\s*\.?\s*&\s*C\s*\.?\s*$", pre_clause, re.IGNORECASE) and not re.search(
++            r"F\s*\.?\s*D\s*\.?\s*&\s*C\s*\.?\s*$", pre_clause, re.IGNORECASE
+         ):
+             return "Preceded by D&C rather than FD&C"
+-        if re.search(r"\bRED\s+3\s+(?:PEPPER|BEAN|CHEESE|BERRY)", ctx, re.IGNORECASE):
++        post_window = text[end : min(len(text), end + 15)]
++        post_clause = re.split(r"[,;()\[\]:]", post_window)[0]
++        clause_ctx = pre_clause + matched + post_clause
++        clause_ctx_norm = re.sub(
++            r"F\s*\.?\s*D\s*\.?\s*(?:&\s*|\s+AND\s+)?C\s*\.?",
++            "FD&C",
++            clause_ctx,
++            flags=re.IGNORECASE,
++        )
++        if is_dc_red_33(clause_ctx_norm):
++            return "D&C Red cosmetic dye, not FD&C Red No. 3"
++        ctx = text[max(0, start - 15) : min(len(text), end + 20)]
++        if re.search(
++            r"\bRED\s+3(?:\s*-\s*(?!LAKE\b)[A-Za-z]+|\s+(?:PEPPER|BEAN|CHEESE|BERRY|BERRIES|CHILI|CHILLI|APPLE|POTATO|ONION|GARLIC|TOMATO|CABBAGE|BEET|CARROT|CORN|RICE|GRAIN|SEED|NUT|FRUIT|VEGGIE|VEGETABLE|LENTIL|PEA|MELON|CHERRY|GRAPE|PLUM|PEACH|PEAR|SPICE|HERB|SALSA|SAUCE|SOUP|SALAD|MIX|MEDLEY|BLEND|PACK|PK|CT|COUNT|OZ|LB|GAL|QT|PT|ML|G|KG|MG|PC|PIECE|PART|LAYER|TIER|STAGE|STEP|WAY|STAR|RING)S?\b|\s*%)",
++            ctx,
++            re.IGNORECASE,
++        ):
+             return "Quantity/culinary phrase"
+-    if not matched.strip():
+-        return "Empty match"
+     return None
+ 
+ 
+@@ -78,7 +183,7 @@
+     """Find all non-decoy matches of aliases in text with exact original character spans."""
+     if not isinstance(text, str) or not text.strip():
+         return []
+-    searchable = ocr_fix(fold_unicode(text))
++    searchable = _ocr_clean_word_digits(ocr_fix(fold_unicode(text)))
+     all_aliases = list(aliases)
+     for extra in aliases_for(additive):
+         if extra not in all_aliases:

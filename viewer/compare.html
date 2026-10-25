@@ -29,6 +29,7 @@
 <body>
 <header>
   <h1>Who is booked <b>twice</b>?</h1>
+  <label>Run <select id="run"></select></label>
   <label>Store <select id="store"></select></label>
   <span class="badge">SIMULATED ASSOCIATES</span>
 </header>
@@ -43,13 +44,13 @@
 <div class="legend">
   <span><i style="background:var(--red)"></i>double-booked</span>
   <span><i style="background:#4f7fb8"></i>pull</span><span><i style="background:#2f9e74"></i>place substitute</span>
-  <span><i style="background:#8a7bd8"></i>tag / hold</span><span id="dl"></span>
+  <span><i style="background:#8a7bd8"></i>tag / hold</span><span><i style="background:rgba(62,207,142,0.35)"></i>the 10 PM – 6 AM shift</span><span id="dl"></span>
   <span id="totals"></span>
 </div>
 <script>
 const $ = (id) => document.getElementById(id);
 const COL = { PULL: "#4f7fb8", PLACE_SUB: "#2f9e74", TAG_FLASH: "#8a7bd8", HOLD_VERIFY: "#8a7bd8" };
-let D = null;
+let ALL = null, D = null;
 
 function draw(side, sid) {
   const s = D[side].stores[sid], cv = $(side[0].toUpperCase() + "c");
@@ -58,7 +59,9 @@ function draw(side, sid) {
   cv.width = W * dpr; cv.height = H * dpr; cv.style.height = H + "px";
   const g = cv.getContext("2d"); g.scale(dpr, dpr); g.clearRect(0, 0, W, H);
   const t0 = Math.floor(D.t0 / 1800) * 1800, t1 = Math.ceil(D.t1 / 1800) * 1800, x = (t) => padL + (W - padL - 8) * (t - t0) / (t1 - t0);
-  const step = (t1 - t0) > 6 * 3600 ? 3600 : 1800;
+  const span = t1 - t0, step = span > 16 * 3600 ? 4 * 3600 : span > 6 * 3600 ? 3600 : 1800;
+  g.fillStyle = "rgba(62,207,142,0.07)";                                       // the real overnight shift
+  g.fillRect(x(D.shift[0]), padT - 6, x(D.shift[1]) - x(D.shift[0]), H - padT + 6);
   g.font = "12px ui-monospace,monospace"; g.fillStyle = "#8a96ab"; g.strokeStyle = "#232b3b";
   for (let t = t0; t <= t1; t += step) {                                      // time grid
     g.beginPath(); g.moveTo(x(t), padT - 6); g.lineTo(x(t), H); g.stroke();
@@ -69,25 +72,35 @@ function draw(side, sid) {
     const y = padT + i * rowH;
     g.fillStyle = "#8a96ab"; g.fillText(r.id.split("-").pop(), 8, y + 15);
     for (const [a, b, act, bad] of r.tasks) if (!bad) { g.fillStyle = COL[act] || "#4f7fb8"; g.fillRect(x(a), y + 4, Math.max(1.5, x(b) - x(a)), rowH - 8); }
-    for (const [a, b, , bad] of r.tasks) if (bad) { g.fillStyle = "#ff4d5e"; g.fillRect(x(a), y + 2, Math.max(2, x(b) - x(a)), rowH - 4); }
   });
   if (D.deadline <= t1) { g.strokeStyle = "#f5b942"; g.lineWidth = 2; g.beginPath(); g.moveTo(x(D.deadline), padT - 6); g.lineTo(x(D.deadline), H); g.stroke(); }
+  rows.forEach((r, i) => {                                                     // red on top of everything, at least 5 px
+    const y = padT + i * rowH;
+    for (const [a, b, , bad] of r.tasks) if (bad) { const w = Math.max(5, x(b) - x(a)); g.fillStyle = "#ff4d5e"; g.fillRect(Math.min(x(a), W - 8 - w), y + 2, w, rowH - 4); }
+  });
   const L = side === "left" ? "L" : "R";
   $(L + "n").textContent = s.overlaps.toLocaleString();
-  $(L + "l").textContent = `double-bookings in this store · ${s.tasks.toLocaleString()} tasks`;
+  $(L + "l").textContent = `double-bookings in this store · ${s.tasks.toLocaleString()} tasks` +
+    (s.outside ? ` · ${s.outside.toLocaleString()} outside the shift` : "");
   $(L + "who").innerHTML = `<b>${D[side].label}</b>${rows.length} associates`;
 }
 function render() { const sid = $("store").value; draw("left", sid); draw("right", sid); }
 
-fetch("data/compare.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
-  D = d;
+function pick() {
+  const d = D = ALL[$("run").value];
   $("store").innerHTML = d.stores.map((s) => `<option value="${s}">${s} — ${d.left.stores[s].overlaps} vs ${d.right.stores[s].overlaps}</option>`).join("");
-  $("totals").textContent = `All 20 stores: ${d.left.overlaps.toLocaleString()} double-bookings → ${d.right.overlaps.toLocaleString()}`;
+  $("totals").textContent = `All 20 stores: ${d.left.overlaps.toLocaleString()} double-bookings → ${d.right.overlaps.toLocaleString()}` +
+    (d.left.outside || d.right.outside ? ` · tasks outside the shift ${d.left.outside.toLocaleString()} → ${d.right.outside.toLocaleString()}` : "");
   const last = new Date(d.t1 * 1000).toLocaleString("en-US", { weekday: "short", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" });
   $("dl").innerHTML = `<i style="background:var(--amber)"></i>last task ends ${last}; deadline is Jan 1, 12:00 AM`;
   render();
+}
+fetch("data/compare.json", { cache: "no-store" }).then((r) => r.json()).then((all) => {
+  ALL = all;
+  $("run").innerHTML = Object.keys(all).map((k) => `<option value="${k}">${k} · ${all[k].tokens}</option>`).join("");
+  pick();
 }).catch(() => { document.querySelector(".lede").textContent = "No data yet: run python viewer/build_compare.py"; });
-$("store").onchange = render; addEventListener("resize", render);
+$("store").onchange = render; $("run").onchange = pick; addEventListener("resize", render);
 </script>
 </body>
 </html>

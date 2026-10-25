@@ -1,1 +1,1 @@
-wrote out/expansion_v2_agentpatched_fda_lots_gs1_lotinv/plan.jsonl: 1 records, 0 shelf_tasks; 40 recalls crashed
+wrote out/expansion_v2_agentpatched_fda_lots_gs1_lotinv/plan.jsonl: 8 records, 0 shelf_tasks; 34 recalls crashed

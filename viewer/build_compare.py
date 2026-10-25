@@ -7,10 +7,16 @@ import json, pathlib, sys
 from datetime import datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LEFT, RIGHT = (sys.argv[1:3] if len(sys.argv) >= 3 else ["expansion", "expansion_agentpatched"])
+PAIRS = {"v1": ("expansion", "expansion_agentpatched"), "v2": ("expansion_v2_importfix", "expansion_v2_agentpatched")}
 LABELS = {"expansion": "Expansion v1 — Argon's code, unedited",
           "expansion_agentpatched": "Expansion v1 + managed-agent fixes",
+          "expansion_v2_importfix": "Expansion v2 — Argon's code + 1-line import fix",
+          "expansion_v2_agentpatched": "Expansion v2 + managed-agent fixes",
           "core": "Core — Argon's first draft", "core_patched": "Core + 3 small fixes"}
+
+
+SHIFT = (datetime.fromisoformat("2026-12-30T22:00:00-08:00").timestamp(),
+         datetime.fromisoformat("2026-12-31T06:00:00-08:00").timestamp())   # data/associates.jsonl overnight shift
 
 
 def load(name: str) -> dict:
@@ -35,21 +41,31 @@ def load(name: str) -> dict:
                 if tasks[i][0] < tasks[i - 1][1]:
                     bad.update((i - 1, i)); overlaps += 1
             rows.append({"id": aid, "tasks": [[*t[:3], i in bad] for i, t in enumerate(tasks)]})
-        out[sid] = {"rows": rows, "overlaps": overlaps, "tasks": sum(len(r["tasks"]) for r in rows)}
+        outside = sum(1 for r in rows for t in r["tasks"] if t[0] < SHIFT[0] or t[1] > SHIFT[1])
+        out[sid] = {"rows": rows, "overlaps": overlaps, "outside": outside, "tasks": sum(len(r["tasks"]) for r in rows)}
     return out
 
 
-left, right = load(LEFT), load(RIGHT)
-stores = sorted(set(left) & set(right), key=lambda s: -left[s]["overlaps"])
-starts = [t[0] for d in (left, right) for s in d.values() for r in s["rows"] for t in r["tasks"]]
-ends = [t[1] for d in (left, right) for s in d.values() for r in s["rows"] for t in r["tasks"]]
-data = {"left": {"name": LEFT, "label": LABELS.get(LEFT, LEFT), "stores": {s: left[s] for s in stores},
-                 "overlaps": sum(v["overlaps"] for v in left.values())},
-        "right": {"name": RIGHT, "label": LABELS.get(RIGHT, RIGHT), "stores": {s: right[s] for s in stores},
-                  "overlaps": sum(v["overlaps"] for v in right.values())},
-        "stores": stores, "t0": min(starts), "t1": max(ends),
-        "deadline": datetime.fromisoformat("2027-01-01T00:00:00-08:00").timestamp()}
+out_all = {}
+for key, (LEFT, RIGHT) in PAIRS.items():
+  if not all((ROOT / "out" / n / "plan.jsonl").exists() for n in (LEFT, RIGHT)):
+    continue
+  left, right = load(LEFT), load(RIGHT)
+  stores = sorted(set(left) & set(right), key=lambda s: -left[s]["overlaps"])
+  starts = [t[0] for d in (left, right) for s in d.values() for r in s["rows"] for t in r["tasks"]]
+  ends = [t[1] for d in (left, right) for s in d.values() for r in s["rows"] for t in r["tasks"]]
+  data = {"left": {"name": LEFT, "label": LABELS.get(LEFT, LEFT), "stores": {s: left[s] for s in stores},
+                   "overlaps": sum(v["overlaps"] for v in left.values())},
+          "right": {"name": RIGHT, "label": LABELS.get(RIGHT, RIGHT), "stores": {s: right[s] for s in stores},
+                    "overlaps": sum(v["overlaps"] for v in right.values())},
+          "stores": stores, "t0": min(starts), "t1": max(ends),
+          "deadline": datetime.fromisoformat("2027-01-01T00:00:00-08:00").timestamp()}
+  data["shift"] = SHIFT
+  for side, src in (("left", left), ("right", right)):
+      data[side]["outside"] = sum(v["outside"] for v in src.values())
+  data["tokens"] = {"v1": "254K-token run", "v2": "647K-token run"}[key]
+  out_all[key] = data
+  print(f"stores {len(stores)} | {LEFT} overlaps {data['left']['overlaps']} | {RIGHT} overlaps {data['right']['overlaps']} | "
+        f"worst store {stores[0]} ({left[stores[0]]['overlaps']} vs {right[stores[0]]['overlaps']})")
 (ROOT / "viewer" / "data").mkdir(exist_ok=True)
-(ROOT / "viewer" / "data" / "compare.json").write_text(json.dumps(data, separators=(",", ":")))
-print(f"stores {len(stores)} | {LEFT} overlaps {data['left']['overlaps']} | {RIGHT} overlaps {data['right']['overlaps']} | "
-      f"worst store {stores[0]} ({left[stores[0]]['overlaps']} vs {right[stores[0]]['overlaps']})")
+(ROOT / "viewer" / "data" / "compare.json").write_text(json.dumps(out_all, separators=(",", ":")))

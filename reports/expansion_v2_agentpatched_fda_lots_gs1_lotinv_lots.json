@@ -3,7 +3,8 @@
   "scenario": "fda_lots",
   "deadline": "2026-12-31T08:00:00-08:00",
   "records": {
-    "run": 1
+    "run": 1,
+    "evidence": 7
   },
   "shelf_tasks": 0,
   "hard_errors": 276,

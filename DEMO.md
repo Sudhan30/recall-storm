@@ -54,9 +54,10 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
   > 21 seconds."
 - compare.html.
   > "Each row is one simulated associate. Red means Argon's plan sent the same person to two shelves at once:
-  > 7,631 double-bookings in the 254K-token run." (v2: 21,284.)
+  > 7,631 double-bookings in the 254K-token run." Switch **Run** to v2: "and 7,161 in the 647K-token run."
   > "A managed agent read the verifier's findings, found the root cause and fixed it — 7,631 to zero, including in
-  > ten stores it never saw. The same flaw appeared at both lengths, and the agent fixed it both times."
+  > ten stores it never saw. The same flaw appeared at both lengths, and the agent fixed it both times: v2's plan
+  > went from 21,459 mistakes to 175."
 
 ## 2:35–3:00 · Why it matters
 

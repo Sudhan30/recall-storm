@@ -46,7 +46,9 @@ variants and look-alikes we wrote). Ground truth: `data/labels.csv`. Hidden test
 
 Expansion v2 broke in one place: a single mis-indented line in `recallstorm/aliases/translations.py` (around
 token 132,000) stops the label-reading package from importing, which takes down the drill, the hidden rules tests and
-171 of v2's 663 test files. Hidden allocate (9/9) and route (7/7) tests pass because they don't import it.
+171 of v2's 663 test files. With the agent's one-line fix, all 6,581 cross-file references resolve (0 arity
+mismatches in 4,881 calls), 2,326/2,326 promised names exist, and 656 of 663 test files pass. The longest passing
+link: a test written at token 641,687 calls a function written at token 89,603. Hidden allocate (9/9) and route (7/7) tests pass because they don't import it.
 
 Continuation was proven before the big runs: a 2-hop probe (`runs/probe/`, 32K-token seam) passed `tools/seam_check.py`.
 
@@ -58,6 +60,9 @@ Continuation was proven before the big runs: a 2-hop probe (`runs/probe/`, 32K-t
 | Core + 3 small hand fixes (`patches/core/`) | **0** | **467 / 467** | 0 / 483 | 1,258 / 1,263 |
 | Expansion v1, unedited | 8,441 | 411 / 467 | 3 / 483 | 1,194 / 1,270 |
 | Expansion v1 + 3 managed-agent patches (`patches/agent/`) | **0** | **467 / 467** | 0 / 483 | 1,262 / 1,270 |
+| Expansion v2, unedited | drill can't start (1 mis-indented line) | — | — | rules can't load; allocate 9/9, route 7/7 |
+| Expansion v2 + 1-line agent fix | 21,459 | 455 / 467 | 3 / 483 | 1,238 / 1,270 |
+| Expansion v2 + 2 agent patches (7 lines changed) | **175** | 455 / 467 | 3 / 483 | 1,238 / 1,270 |
 | Baseline D: code only, written by us | 0 | 467 / 467 | 0 / 483 | 1,234 / 1,270 |
 | Baseline C: retrieval + LLM + our code | 0 | 467 / 467 | 0 / 483 | 1,234 / 1,270 |
 
@@ -65,11 +70,11 @@ The core has no `route/` package, so its hidden route tests are skipped (1,263 i
 
 ### Matched packages: written inside one long generation vs fresh short calls (same hidden tests)
 
-| Package | Core (in-stream) | Expansion v1 (in-stream) | Baseline B (fresh short call) |
-|---|---|---|---|
-| rules | 1,143 / 1,254 | 1,179 / 1,254 | 1,240 / 1,254 |
-| allocate | 9 / 9 | 9 / 9 | 9 / 9 |
-| route | — | 6 / 7 | 7 / 7 |
+| Package | Core (in-stream) | Expansion v1 (in-stream) | Expansion v2 + 1-line fix (in-stream) | Baseline B (fresh short call) |
+|---|---|---|---|---|
+| rules | 1,143 / 1,254 | 1,179 / 1,254 | 1,222 / 1,254 | 1,240 / 1,254 |
+| allocate | 9 / 9 | 9 / 9 | 9 / 9 | 9 / 9 |
+| route | — | 6 / 7 | 7 / 7 | 7 / 7 |
 
 ### Managed-agent repair loop (`tools/repair_agent.py`, Antigravity agent on gemini-4-argon, network disabled)
 
@@ -85,6 +90,9 @@ out of its bundle, and we re-score everything locally. Patches are never counted
 | Expansion v1 label matching (`aliases/detect.py`) | IMPROVED | missed shelves 806 → 0 (381 → 0 in unseen stores); hidden tests 75 → 8 failing |
 | Expansion v1 truck packing (`route/packing.py`) | FIXED | hidden route tests 6/7 → 7/7 |
 | Expansion v1 lot parser (openFDA scenario) | NOT_FIXED | lot recall 0.20 → 0.40, but its unit tests regressed |
+| Expansion v2 mis-indented line (`aliases/translations.py`) | FIXED | 21 s; rules tests un-loadable → 1,222/1,254; its 3 test files 0/3 → 3/3 |
+| Expansion v2 scheduling (`plan/tasks.py`) | FIXED | scheduling mistakes 21,284 → 0 (7,161 double-bookings, 14,117 outside the shift), incl. 10,143 → 0 in unseen stores |
+| Expansion v2 label matching (`aliases/detect.py`) | NOT_FIXED | look-alikes 3 → 0, but missed shelves 172 → 180 and 13 new test failures |
 
 All attempts, including the failed ones, are in `patches/agent/LOG.jsonl`.
 

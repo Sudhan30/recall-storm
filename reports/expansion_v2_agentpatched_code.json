@@ -1,7 +1,7 @@
 {
   "gen_dir": "gen/expansion_v2_agentpatched",
-  "generated_at": "2026-10-25T13:27:32",
-  "secs": 32.9,
+  "generated_at": "2026-10-25T13:46:26",
+  "secs": 30.7,
   "totals": {
     "files": 907,
     "parsed": 905,
@@ -88,7 +88,7 @@
     },
     "d6_stubs": 0,
     "d6_placeholders": 0,
-    "d6_dup_share": 0.0862,
+    "d6_dup_share": 0.0861,
     "d6_near_dup_tests": 66,
     "max_tok": 643792
   },
@@ -137,13 +137,13 @@
         "d4_files_collection_error": 1,
         "d4_files_failed": 1,
         "d6_dup_lines": 1033,
-        "norm_lines": 11691,
+        "norm_lines": 11728,
         "parse_rate": 0.997,
         "d1_rate": 1.0,
         "d2_resolve_rate": 1.0,
         "d2_arity_rate": 1.0,
         "d4_pass_rate": 0.9918,
-        "d6_dup_share": 0.0884
+        "d6_dup_share": 0.0881
       },
       "400-600K": {
         "files": 298,
@@ -1430,7 +1430,7 @@
       "end_tok": 251347,
       "terminated": true,
       "parse_ok": true,
-      "lines": 251
+      "lines": 294
     },
     {
       "path": "recallstorm/pricing/__init__.py",
@@ -17358,7 +17358,7 @@
         "symbol": "build_shelf_tasks",
         "status": "ok",
         "detail": null,
-        "tok": 250168
+        "tok": 249909
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17366,7 +17366,7 @@
         "symbol": "pull_task",
         "status": "ok",
         "detail": null,
-        "tok": 249039
+        "tok": 248972
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17374,7 +17374,7 @@
         "symbol": "place_sub_task",
         "status": "ok",
         "detail": null,
-        "tok": 249270
+        "tok": 249163
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17382,7 +17382,7 @@
         "symbol": "tag_flash_task",
         "status": "ok",
         "detail": null,
-        "tok": 249530
+        "tok": 249379
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17390,7 +17390,7 @@
         "symbol": "hold_verify_task",
         "status": "ok",
         "detail": null,
-        "tok": 249764
+        "tok": 249573
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17398,7 +17398,7 @@
         "symbol": "task_sequence",
         "status": "ok",
         "detail": null,
-        "tok": 250005
+        "tok": 249773
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17406,7 +17406,7 @@
         "symbol": "task_window",
         "status": "ok",
         "detail": null,
-        "tok": 248912
+        "tok": 248866
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17414,7 +17414,7 @@
         "symbol": "task_to_record",
         "status": "ok",
         "detail": null,
-        "tok": 250092
+        "tok": 249845
       },
       {
         "path": "recallstorm/plan/tasks.py",
@@ -17422,7 +17422,7 @@
         "symbol": "TaskBuilder",
         "status": "ok",
         "detail": null,
-        "tok": 248820
+        "tok": 248790
       },
       {
         "path": "recallstorm/plan/playbook.py",
@@ -38300,7 +38300,7 @@
     {
       "path": "tests/unit/test_core_clock.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 98958,
       "tests": 2,
       "passed": 2,
@@ -38328,7 +38328,7 @@
     {
       "path": "tests/unit/test_core_clock_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 99416,
       "tests": 1,
       "passed": 1,
@@ -38349,7 +38349,7 @@
     {
       "path": "tests/unit/test_core_clock_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 99618,
       "tests": 1,
       "passed": 1,
@@ -38559,7 +38559,7 @@
     {
       "path": "tests/unit/test_ingest_recall_feeds.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 108709,
       "tests": 1,
       "passed": 1,
@@ -38580,7 +38580,7 @@
     {
       "path": "tests/unit/test_ingest_recall_feeds_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 109074,
       "tests": 1,
       "passed": 1,
@@ -38601,7 +38601,7 @@
     {
       "path": "tests/unit/test_ingest_recall_feeds_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 109287,
       "tests": 1,
       "passed": 1,
@@ -38622,7 +38622,7 @@
     {
       "path": "tests/unit/test_ingest_labels_ocr.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 110655,
       "tests": 1,
       "passed": 1,
@@ -38643,7 +38643,7 @@
     {
       "path": "tests/unit/test_ingest_labels_ocr_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 111028,
       "tests": 1,
       "passed": 1,
@@ -38664,7 +38664,7 @@
     {
       "path": "tests/unit/test_ingest_labels_ocr_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 111198,
       "tests": 1,
       "passed": 1,
@@ -38685,7 +38685,7 @@
     {
       "path": "tests/unit/test_ingest_vendor_catalog.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 112638,
       "tests": 1,
       "passed": 1,
@@ -38706,7 +38706,7 @@
     {
       "path": "tests/unit/test_ingest_vendor_catalog_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 113073,
       "tests": 1,
       "passed": 1,
@@ -38727,7 +38727,7 @@
     {
       "path": "tests/unit/test_ingest_vendor_catalog_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 113233,
       "tests": 1,
       "passed": 1,
@@ -38748,7 +38748,7 @@
     {
       "path": "tests/unit/test_ingest_usda_fdc.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 114563,
       "tests": 1,
       "passed": 1,
@@ -38769,7 +38769,7 @@
     {
       "path": "tests/unit/test_ingest_usda_fdc_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 114950,
       "tests": 1,
       "passed": 1,
@@ -38790,7 +38790,7 @@
     {
       "path": "tests/unit/test_ingest_usda_fdc_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 115107,
       "tests": 1,
       "passed": 1,
@@ -38811,7 +38811,7 @@
     {
       "path": "tests/unit/test_ingest_open_food_facts.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 116521,
       "tests": 1,
       "passed": 1,
@@ -38832,7 +38832,7 @@
     {
       "path": "tests/unit/test_ingest_open_food_facts_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 116931,
       "tests": 1,
       "passed": 1,
@@ -38853,7 +38853,7 @@
     {
       "path": "tests/unit/test_ingest_open_food_facts_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 117088,
       "tests": 1,
       "passed": 1,
@@ -38874,7 +38874,7 @@
     {
       "path": "tests/unit/test_ingest_openfda_enforcement.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 118767,
       "tests": 1,
       "passed": 1,
@@ -38895,7 +38895,7 @@
     {
       "path": "tests/unit/test_ingest_openfda_enforcement_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 119291,
       "tests": 1,
       "passed": 1,
@@ -38916,7 +38916,7 @@
     {
       "path": "tests/unit/test_ingest_openfda_enforcement_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 119499,
       "tests": 1,
       "passed": 1,
@@ -38937,7 +38937,7 @@
     {
       "path": "tests/unit/test_ingest_cpsc.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 120948,
       "tests": 1,
       "passed": 1,
@@ -38958,7 +38958,7 @@
     {
       "path": "tests/unit/test_ingest_cpsc_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 121366,
       "tests": 1,
       "passed": 1,
@@ -38979,7 +38979,7 @@
     {
       "path": "tests/unit/test_ingest_cpsc_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 121519,
       "tests": 1,
       "passed": 1,
@@ -39000,7 +39000,7 @@
     {
       "path": "tests/unit/test_ingest_store_list.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 123038,
       "tests": 1,
       "passed": 1,
@@ -39021,7 +39021,7 @@
     {
       "path": "tests/unit/test_ingest_store_list_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 123473,
       "tests": 1,
       "passed": 1,
@@ -39042,7 +39042,7 @@
     {
       "path": "tests/unit/test_ingest_store_list_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 123651,
       "tests": 1,
       "passed": 1,
@@ -39063,7 +39063,7 @@
     {
       "path": "tests/unit/test_ingest_planogram.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 125177,
       "tests": 1,
       "passed": 1,
@@ -39084,7 +39084,7 @@
     {
       "path": "tests/unit/test_ingest_planogram_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 125597,
       "tests": 1,
       "passed": 1,
@@ -39105,7 +39105,7 @@
     {
       "path": "tests/unit/test_ingest_planogram_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 125809,
       "tests": 1,
       "passed": 1,
@@ -39147,7 +39147,7 @@
     {
       "path": "tests/unit/test_ingest_staffing_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 127576,
       "tests": 1,
       "passed": 1,
@@ -39168,7 +39168,7 @@
     {
       "path": "tests/unit/test_ingest_staffing_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 127742,
       "tests": 1,
       "passed": 1,
@@ -39189,7 +39189,7 @@
     {
       "path": "tests/unit/test_ingest_manifest_io.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 129489,
       "tests": 1,
       "passed": 1,
@@ -39210,7 +39210,7 @@
     {
       "path": "tests/unit/test_ingest_manifest_io_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 130116,
       "tests": 1,
       "passed": 1,
@@ -39231,7 +39231,7 @@
     {
       "path": "tests/unit/test_ingest_manifest_io_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 130281,
       "tests": 1,
       "passed": 1,
@@ -39252,7 +39252,7 @@
     {
       "path": "tests/unit/test_aliases_translations.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 133582,
       "tests": 1,
       "passed": 1,
@@ -39273,7 +39273,7 @@
     {
       "path": "tests/unit/test_aliases_translations_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 133943,
       "tests": 1,
       "passed": 1,
@@ -39294,7 +39294,7 @@
     {
       "path": "tests/unit/test_aliases_translations_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 134116,
       "tests": 1,
       "passed": 1,
@@ -39315,7 +39315,7 @@
     {
       "path": "tests/unit/test_aliases_spans.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 135197,
       "tests": 1,
       "passed": 1,
@@ -39336,7 +39336,7 @@
     {
       "path": "tests/unit/test_aliases_spans_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 135502,
       "tests": 1,
       "passed": 1,
@@ -39357,7 +39357,7 @@
     {
       "path": "tests/unit/test_aliases_spans_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 135713,
       "tests": 1,
       "passed": 1,
@@ -39420,7 +39420,7 @@
     {
       "path": "tests/unit/test_aliases_normalize_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 137554,
       "tests": 1,
       "passed": 1,
@@ -39637,7 +39637,7 @@
     {
       "path": "tests/unit/test_aliases_unclear.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 145460,
       "tests": 1,
       "passed": 1,
@@ -39658,7 +39658,7 @@
     {
       "path": "tests/unit/test_aliases_unclear_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 145851,
       "tests": 1,
       "passed": 1,
@@ -39679,7 +39679,7 @@
     {
       "path": "tests/unit/test_aliases_unclear_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 145987,
       "tests": 1,
       "passed": 1,
@@ -39847,7 +39847,7 @@
     {
       "path": "tests/unit/test_rules_propylparaben_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 152555,
       "tests": 1,
       "passed": 1,
@@ -39889,7 +39889,7 @@
     {
       "path": "tests/unit/test_rules_preemption.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 154129,
       "tests": 1,
       "passed": 1,
@@ -39973,7 +39973,7 @@
     {
       "path": "tests/unit/test_rules_model_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 156499,
       "tests": 1,
       "passed": 1,
@@ -39994,7 +39994,7 @@
     {
       "path": "tests/unit/test_rules_model_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 156610,
       "tests": 1,
       "passed": 1,
@@ -40204,7 +40204,7 @@
     {
       "path": "tests/unit/test_rules_red3.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 164294,
       "tests": 1,
       "passed": 1,
@@ -40225,7 +40225,7 @@
     {
       "path": "tests/unit/test_rules_red3_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 164887,
       "tests": 1,
       "passed": 1,
@@ -40246,7 +40246,7 @@
     {
       "path": "tests/unit/test_rules_red3_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 165213,
       "tests": 1,
       "passed": 1,
@@ -40288,7 +40288,7 @@
     {
       "path": "tests/unit/test_rules_ab418_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 167319,
       "tests": 1,
       "passed": 1,
@@ -40309,7 +40309,7 @@
     {
       "path": "tests/unit/test_rules_ab418_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 167500,
       "tests": 1,
       "passed": 1,
@@ -40330,7 +40330,7 @@
     {
       "path": "tests/unit/test_rules_bvo.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 169212,
       "tests": 1,
       "passed": 1,
@@ -40351,7 +40351,7 @@
     {
       "path": "tests/unit/test_rules_bvo_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 169575,
       "tests": 1,
       "passed": 1,
@@ -40372,7 +40372,7 @@
     {
       "path": "tests/unit/test_rules_bvo_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 169780,
       "tests": 1,
       "passed": 1,
@@ -40393,7 +40393,7 @@
     {
       "path": "tests/unit/test_rules_pfas_mn.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 171564,
       "tests": 1,
       "passed": 1,
@@ -40414,7 +40414,7 @@
     {
       "path": "tests/unit/test_rules_pfas_mn_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 171909,
       "tests": 1,
       "passed": 1,
@@ -40435,7 +40435,7 @@
     {
       "path": "tests/unit/test_rules_pfas_mn_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 172084,
       "tests": 1,
       "passed": 1,
@@ -40456,7 +40456,7 @@
     {
       "path": "tests/unit/test_rules_carb_voc.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 173636,
       "tests": 1,
       "passed": 1,
@@ -40477,7 +40477,7 @@
     {
       "path": "tests/unit/test_rules_carb_voc_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 173992,
       "tests": 1,
       "passed": 1,
@@ -40498,7 +40498,7 @@
     {
       "path": "tests/unit/test_rules_carb_voc_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 174166,
       "tests": 1,
       "passed": 1,
@@ -40981,7 +40981,7 @@
     {
       "path": "tests/unit/test_gs1_gtin_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 194074,
       "tests": 1,
       "passed": 1,
@@ -41019,7 +41019,7 @@
         }
       ],
       "status": "failed",
-      "output_tail": "            assert is_valid_gtin(g14)\n>           assert normalize_gtin(g14[2:]) == g14\nE           AssertionError: assert '00612514041899' == '19612514041899'\nE             \nE             - 19612514041899\nE             ? ^^\nE             + 00612514041899\nE             ? ^^\ngen/expansion_v2_agentpatched/tests/unit/test_gs1_gtin_props.py:13: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/unit/test_gs1_gtin_props.py::test_gtin_check_digit_roundtrip_props\n1 failed in 0.09s"
+      "output_tail": "            assert is_valid_gtin(g14)\n>           assert normalize_gtin(g14[2:]) == g14\nE           AssertionError: assert '00612514041899' == '19612514041899'\nE             \nE             - 19612514041899\nE             ? ^^\nE             + 00612514041899\nE             ? ^^\ngen/expansion_v2_agentpatched/tests/unit/test_gs1_gtin_props.py:13: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/unit/test_gs1_gtin_props.py::test_gtin_check_digit_roundtrip_props\n1 failed in 0.08s"
     },
     {
       "path": "tests/unit/test_gs1_epcis.py",
@@ -41041,12 +41041,12 @@
         }
       ],
       "status": "failed",
-      "output_tail": "        parsed = parse_epcis_event(raw)\n        assert parsed[\"gtins\"] == [gtin]\n        ev2 = epcis_object_event(gtin, \"LOT100\", \"DC_NORTH\", \"2026-12-28T10:00:00Z\")\n        movs = epcis_to_movements([raw, ev2])\n>       assert len(filter_epcis_by_gtin(movs, gtin)) == 2\nE       AssertionError: assert 1 == 2\nE        +  where 1 = len([{'event_time': '2026-12-29T10:00:00Z', 'biz_step': 'shipping', 'location': 'WM1563', 'gtins': ['00073621007017'], ...}])\nE        +    where [{'event_time': '2026-12-29T10:00:00Z', 'biz_step': 'shipping', 'location': 'WM1563', 'gtins': ['00073621007017'], ...}] = filter_epcis_by_gtin([{'event_time': '2026-12-29T10:00:00Z', 'biz_step': 'shipping', 'location': 'WM1563', 'gtins': ['00073621007017'], ...}, {'event_time': '2026-12-30T00:00:00Z', 'biz_step': 'shipping', 'location': 'UNKNOWN', 'gtins': [], ...}], '00073621007017')\ngen/expansion_v2_agentpatched/tests/unit/test_gs1_epcis.py:26: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/unit/test_gs1_epcis.py::test_epcis_events\n1 failed in 0.08s"
+      "output_tail": "        parsed = parse_epcis_event(raw)\n        assert parsed[\"gtins\"] == [gtin]\n        ev2 = epcis_object_event(gtin, \"LOT100\", \"DC_NORTH\", \"2026-12-28T10:00:00Z\")\n        movs = epcis_to_movements([raw, ev2])\n>       assert len(filter_epcis_by_gtin(movs, gtin)) == 2\nE       AssertionError: assert 1 == 2\nE        +  where 1 = len([{'event_time': '2026-12-29T10:00:00Z', 'biz_step': 'shipping', 'location': 'WM1563', 'gtins': ['00073621007017'], ...}])\nE        +    where [{'event_time': '2026-12-29T10:00:00Z', 'biz_step': 'shipping', 'location': 'WM1563', 'gtins': ['00073621007017'], ...}] = filter_epcis_by_gtin([{'event_time': '2026-12-29T10:00:00Z', 'biz_step': 'shipping', 'location': 'WM1563', 'gtins': ['00073621007017'], ...}, {'event_time': '2026-12-30T00:00:00Z', 'biz_step': 'shipping', 'location': 'UNKNOWN', 'gtins': [], ...}], '00073621007017')\ngen/expansion_v2_agentpatched/tests/unit/test_gs1_epcis.py:26: AssertionError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/unit/test_gs1_epcis.py::test_epcis_events\n1 failed in 0.07s"
     },
     {
       "path": "tests/unit/test_gs1_epcis_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 196191,
       "tests": 1,
       "passed": 1,
@@ -41067,7 +41067,7 @@
     {
       "path": "tests/unit/test_gs1_epcis_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 196373,
       "tests": 1,
       "passed": 1,
@@ -41256,7 +41256,7 @@
     {
       "path": "tests/unit/test_gs1_digital_link_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 202327,
       "tests": 1,
       "passed": 1,
@@ -41340,7 +41340,7 @@
     {
       "path": "tests/unit/test_gs1_match.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 206064,
       "tests": 1,
       "passed": 1,
@@ -41361,7 +41361,7 @@
     {
       "path": "tests/unit/test_gs1_match_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 206577,
       "tests": 1,
       "passed": 1,
@@ -41382,7 +41382,7 @@
     {
       "path": "tests/unit/test_gs1_match_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 206679,
       "tests": 1,
       "passed": 1,
@@ -41588,7 +41588,7 @@
         }
       ],
       "status": "collection_error",
-      "output_tail": "    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ast.py:50: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2_agentpatched/tests/unit/test_store_layout_props.py\", line 7\nE       def test_walking_distance_metric_ axioms():\nE                                         ^^^^^^\nE   SyntaxError: expected '('\n=========================== short test summary info ============================\nERROR gen/expansion_v2_agentpatched/tests/unit/test_store_layout_props.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.13s"
+      "output_tail": "    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ast.py:50: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2_agentpatched/tests/unit/test_store_layout_props.py\", line 7\nE       def test_walking_distance_metric_ axioms():\nE                                         ^^^^^^\nE   SyntaxError: expected '('\n=========================== short test summary info ============================\nERROR gen/expansion_v2_agentpatched/tests/unit/test_store_layout_props.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.14s"
     },
     {
       "path": "tests/unit/test_store_facings.py",
@@ -41782,7 +41782,7 @@
     {
       "path": "tests/unit/test_labor_compliance.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 220430,
       "tests": 1,
       "passed": 1,
@@ -41803,7 +41803,7 @@
     {
       "path": "tests/unit/test_labor_compliance_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 220826,
       "tests": 1,
       "passed": 1,
@@ -41824,7 +41824,7 @@
     {
       "path": "tests/unit/test_labor_compliance_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 221029,
       "tests": 1,
       "passed": 1,
@@ -41845,7 +41845,7 @@
     {
       "path": "tests/unit/test_labor_skills.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 222007,
       "tests": 1,
       "passed": 1,
@@ -41866,7 +41866,7 @@
     {
       "path": "tests/unit/test_labor_skills_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 222353,
       "tests": 1,
       "passed": 1,
@@ -41887,7 +41887,7 @@
     {
       "path": "tests/unit/test_labor_skills_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 222468,
       "tests": 1,
       "passed": 1,
@@ -41908,7 +41908,7 @@
     {
       "path": "tests/unit/test_labor_shifts.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 223646,
       "tests": 1,
       "passed": 1,
@@ -41971,7 +41971,7 @@
     {
       "path": "tests/unit/test_labor_estimates.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 225376,
       "tests": 1,
       "passed": 1,
@@ -41992,7 +41992,7 @@
     {
       "path": "tests/unit/test_labor_estimates_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 225655,
       "tests": 1,
       "passed": 1,
@@ -42013,7 +42013,7 @@
     {
       "path": "tests/unit/test_labor_estimates_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 225821,
       "tests": 1,
       "passed": 1,
@@ -42034,7 +42034,7 @@
     {
       "path": "tests/unit/test_labor_floaters.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 227600,
       "tests": 1,
       "passed": 1,
@@ -42055,7 +42055,7 @@
     {
       "path": "tests/unit/test_labor_floaters_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 228094,
       "tests": 1,
       "passed": 1,
@@ -42076,7 +42076,7 @@
     {
       "path": "tests/unit/test_labor_floaters_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 228331,
       "tests": 1,
       "passed": 1,
@@ -42097,7 +42097,7 @@
     {
       "path": "tests/unit/test_labor_assign.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 230295,
       "tests": 1,
       "passed": 1,
@@ -42118,7 +42118,7 @@
     {
       "path": "tests/unit/test_labor_assign_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 230769,
       "tests": 1,
       "passed": 1,
@@ -42139,7 +42139,7 @@
     {
       "path": "tests/unit/test_labor_assign_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 230945,
       "tests": 1,
       "passed": 1,
@@ -42223,7 +42223,7 @@
     {
       "path": "tests/unit/test_allocate_priority.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 234774,
       "tests": 1,
       "passed": 1,
@@ -42244,7 +42244,7 @@
     {
       "path": "tests/unit/test_allocate_priority_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 235138,
       "tests": 1,
       "passed": 1,
@@ -42307,7 +42307,7 @@
     {
       "path": "tests/unit/test_allocate_demand_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 237188,
       "tests": 1,
       "passed": 1,
@@ -42370,7 +42370,7 @@
     {
       "path": "tests/unit/test_allocate_allocator_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 239760,
       "tests": 1,
       "passed": 1,
@@ -42412,7 +42412,7 @@
     {
       "path": "tests/unit/test_allocate_transfers.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 241600,
       "tests": 1,
       "passed": 1,
@@ -42433,7 +42433,7 @@
     {
       "path": "tests/unit/test_allocate_transfers_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 242036,
       "tests": 1,
       "passed": 1,
@@ -42454,7 +42454,7 @@
     {
       "path": "tests/unit/test_allocate_transfers_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 242142,
       "tests": 1,
       "passed": 1,
@@ -42538,7 +42538,7 @@
     {
       "path": "tests/unit/test_plan_deadline.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 246013,
       "tests": 1,
       "passed": 1,
@@ -42853,7 +42853,7 @@
     {
       "path": "tests/unit/test_plan_assemble.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 259808,
       "tests": 1,
       "passed": 1,
@@ -42874,7 +42874,7 @@
     {
       "path": "tests/unit/test_plan_assemble_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 260644,
       "tests": 1,
       "passed": 1,
@@ -42895,7 +42895,7 @@
     {
       "path": "tests/unit/test_plan_assemble_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 260887,
       "tests": 1,
       "passed": 1,
@@ -42916,7 +42916,7 @@
     {
       "path": "tests/unit/test_sim_walking.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 263340,
       "tests": 1,
       "passed": 1,
@@ -42958,7 +42958,7 @@
     {
       "path": "tests/unit/test_sim_walking_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 263846,
       "tests": 1,
       "passed": 1,
@@ -43042,7 +43042,7 @@
     {
       "path": "tests/unit/test_sim_events.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 266725,
       "tests": 1,
       "passed": 1,
@@ -43105,7 +43105,7 @@
     {
       "path": "tests/unit/test_sim_replay.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 269069,
       "tests": 1,
       "passed": 1,
@@ -43168,7 +43168,7 @@
     {
       "path": "tests/unit/test_sim_metrics.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 271568,
       "tests": 1,
       "passed": 1,
@@ -43189,7 +43189,7 @@
     {
       "path": "tests/unit/test_sim_metrics_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 272179,
       "tests": 1,
       "passed": 1,
@@ -43210,7 +43210,7 @@
     {
       "path": "tests/unit/test_sim_metrics_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 272348,
       "tests": 1,
       "passed": 1,
@@ -43231,7 +43231,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_scenario.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 274574,
       "tests": 1,
       "passed": 1,
@@ -43273,7 +43273,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_scenario_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 275112,
       "tests": 1,
       "passed": 1,
@@ -43336,7 +43336,7 @@
     {
       "path": "tests/unit/test_scenario_gs1_lot_pull_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 277601,
       "tests": 1,
       "passed": 1,
@@ -43483,7 +43483,7 @@
     {
       "path": "tests/unit/test_states_il_food_safety_act.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 284432,
       "tests": 1,
       "passed": 1,
@@ -43504,7 +43504,7 @@
     {
       "path": "tests/unit/test_states_il_food_safety_act_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 284904,
       "tests": 1,
       "passed": 1,
@@ -43567,7 +43567,7 @@
     {
       "path": "tests/unit/test_states_pa_synthetic_dyes_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 287230,
       "tests": 1,
       "passed": 1,
@@ -43609,7 +43609,7 @@
     {
       "path": "tests/unit/test_states_wa_toxic_free_kids.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 289004,
       "tests": 1,
       "passed": 1,
@@ -43630,7 +43630,7 @@
     {
       "path": "tests/unit/test_states_wa_toxic_free_kids_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 289458,
       "tests": 1,
       "passed": 1,
@@ -43651,7 +43651,7 @@
     {
       "path": "tests/unit/test_states_wa_toxic_free_kids_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 289632,
       "tests": 1,
       "passed": 1,
@@ -43693,7 +43693,7 @@
     {
       "path": "tests/unit/test_states_wa_pfas_packaging_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 291701,
       "tests": 1,
       "passed": 1,
@@ -43735,7 +43735,7 @@
     {
       "path": "tests/unit/test_states_nj_lead_cadmium.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 293578,
       "tests": 1,
       "passed": 1,
@@ -43756,7 +43756,7 @@
     {
       "path": "tests/unit/test_states_nj_lead_cadmium_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 294045,
       "tests": 1,
       "passed": 1,
@@ -43777,7 +43777,7 @@
     {
       "path": "tests/unit/test_states_nj_lead_cadmium_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 294226,
       "tests": 1,
       "passed": 1,
@@ -43798,7 +43798,7 @@
     {
       "path": "tests/unit/test_states_mn_toxic_free_kids.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 295944,
       "tests": 1,
       "passed": 1,
@@ -43819,7 +43819,7 @@
     {
       "path": "tests/unit/test_states_mn_toxic_free_kids_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 296449,
       "tests": 1,
       "passed": 1,
@@ -43840,7 +43840,7 @@
     {
       "path": "tests/unit/test_states_mn_toxic_free_kids_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 296632,
       "tests": 1,
       "passed": 1,
@@ -43861,7 +43861,7 @@
     {
       "path": "tests/unit/test_states_tx_consumable_hemp.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 298265,
       "tests": 1,
       "passed": 1,
@@ -43924,7 +43924,7 @@
     {
       "path": "tests/unit/test_states_la_seafood_labeling.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 300538,
       "tests": 1,
       "passed": 1,
@@ -43987,7 +43987,7 @@
     {
       "path": "tests/unit/test_states_wv_kratom_hemp_act.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 302742,
       "tests": 1,
       "passed": 1,
@@ -44050,7 +44050,7 @@
     {
       "path": "tests/unit/test_states_ut_cotinine_nicotine.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 305025,
       "tests": 1,
       "passed": 1,
@@ -44071,7 +44071,7 @@
     {
       "path": "tests/unit/test_states_ut_cotinine_nicotine_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 305509,
       "tests": 1,
       "passed": 1,
@@ -44155,7 +44155,7 @@
     {
       "path": "tests/unit/test_states_az_kratom_consumer_act_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 307981,
       "tests": 1,
       "passed": 1,
@@ -44218,7 +44218,7 @@
     {
       "path": "tests/unit/test_states_ca_prop65_warnings_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 310530,
       "tests": 1,
       "passed": 1,
@@ -44365,7 +44365,7 @@
     {
       "path": "tests/unit/test_recall_lots_fda_notice_parser.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 320955,
       "tests": 1,
       "passed": 1,
@@ -44386,7 +44386,7 @@
     {
       "path": "tests/unit/test_recall_lots_fda_notice_parser_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 321457,
       "tests": 1,
       "passed": 1,
@@ -44407,7 +44407,7 @@
     {
       "path": "tests/unit/test_recall_lots_fda_notice_parser_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 321638,
       "tests": 1,
       "passed": 1,
@@ -44428,7 +44428,7 @@
     {
       "path": "tests/unit/test_recall_lots_fsis_notice_parser.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 323200,
       "tests": 1,
       "passed": 1,
@@ -44491,7 +44491,7 @@
     {
       "path": "tests/unit/test_recall_lots_lot_pattern_matcher.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 325577,
       "tests": 1,
       "passed": 1,
@@ -44533,7 +44533,7 @@
     {
       "path": "tests/unit/test_recall_lots_lot_pattern_matcher_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 326242,
       "tests": 1,
       "passed": 1,
@@ -44596,7 +44596,7 @@
     {
       "path": "tests/unit/test_recall_lots_best_by_window_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 328587,
       "tests": 1,
       "passed": 1,
@@ -44639,7 +44639,7 @@
     {
       "path": "tests/unit/test_recall_lots_distribution_list_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 330586,
       "tests": 1,
       "passed": 1,
@@ -44660,7 +44660,7 @@
     {
       "path": "tests/unit/test_recall_lots_distribution_list_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 330803,
       "tests": 1,
       "passed": 1,
@@ -44702,7 +44702,7 @@
     {
       "path": "tests/unit/test_recall_lots_depth_of_recall_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 332800,
       "tests": 1,
       "passed": 1,
@@ -44765,7 +44765,7 @@
     {
       "path": "tests/unit/test_recall_lots_effectiveness_checks_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 335144,
       "tests": 1,
       "passed": 1,
@@ -44786,7 +44786,7 @@
     {
       "path": "tests/unit/test_recall_lots_effectiveness_checks_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 335332,
       "tests": 1,
       "passed": 1,
@@ -44849,7 +44849,7 @@
     {
       "path": "tests/unit/test_recall_lots_serial_traceability_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 337633,
       "tests": 1,
       "passed": 1,
@@ -44933,7 +44933,7 @@
     {
       "path": "tests/unit/test_recall_lots_sub_recall_cascade.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 341885,
       "tests": 1,
       "passed": 1,
@@ -44975,7 +44975,7 @@
     {
       "path": "tests/unit/test_recall_lots_sub_recall_cascade_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 342567,
       "tests": 1,
       "passed": 1,
@@ -44996,7 +44996,7 @@
     {
       "path": "tests/unit/test_recall_lots_consignee_reconciliation.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 344151,
       "tests": 1,
       "passed": 1,
@@ -45017,7 +45017,7 @@
     {
       "path": "tests/unit/test_recall_lots_consignee_reconciliation_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 344635,
       "tests": 1,
       "passed": 1,
@@ -45059,7 +45059,7 @@
     {
       "path": "tests/unit/test_recall_lots_mock_recall_generator.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 346381,
       "tests": 1,
       "passed": 1,
@@ -45080,7 +45080,7 @@
     {
       "path": "tests/unit/test_recall_lots_mock_recall_generator_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 346843,
       "tests": 1,
       "passed": 1,
@@ -45101,7 +45101,7 @@
     {
       "path": "tests/unit/test_recall_lots_mock_recall_generator_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 347026,
       "tests": 1,
       "passed": 1,
@@ -45227,7 +45227,7 @@
     {
       "path": "tests/unit/test_food_safety_allergen_cross_contact_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 355096,
       "tests": 1,
       "passed": 1,
@@ -45311,7 +45311,7 @@
     {
       "path": "tests/unit/test_food_safety_consumer_complaints.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 359307,
       "tests": 1,
       "passed": 1,
@@ -45332,7 +45332,7 @@
     {
       "path": "tests/unit/test_food_safety_consumer_complaints_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 359792,
       "tests": 1,
       "passed": 1,
@@ -45353,7 +45353,7 @@
     {
       "path": "tests/unit/test_food_safety_consumer_complaints_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 359974,
       "tests": 1,
       "passed": 1,
@@ -45437,7 +45437,7 @@
     {
       "path": "tests/unit/test_food_safety_haccp_deviations.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 364164,
       "tests": 1,
       "passed": 1,
@@ -45458,7 +45458,7 @@
     {
       "path": "tests/unit/test_food_safety_haccp_deviations_edge.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 364667,
       "tests": 1,
       "passed": 1,
@@ -45479,7 +45479,7 @@
     {
       "path": "tests/unit/test_food_safety_haccp_deviations_props.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 364865,
       "tests": 1,
       "passed": 1,
@@ -45500,7 +45500,7 @@
     {
       "path": "tests/unit/test_food_safety_foreign_material.py",
       "rc": 0,
-      "secs": 0.6,
+      "secs": 0.3,
       "tok": 366728,
       "tests": 1,
       "passed": 1,
@@ -45521,7 +45521,7 @@
     {
       "path": "tests/unit/test_food_safety_foreign_material_edge.py",
       "rc": 0,
-      "secs": 0.6,
+      "secs": 0.3,
       "tok": 367236,
       "tests": 1,
       "passed": 1,
@@ -45542,7 +45542,7 @@
     {
       "path": "tests/unit/test_food_safety_foreign_material_props.py",
       "rc": 0,
-      "secs": 0.6,
+      "secs": 0.3,
       "tok": 367425,
       "tests": 1,
       "passed": 1,
@@ -45626,7 +45626,7 @@
     {
       "path": "tests/unit/test_food_safety_produce_wash_logs.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 371581,
       "tests": 1,
       "passed": 1,
@@ -45647,7 +45647,7 @@
     {
       "path": "tests/unit/test_food_safety_produce_wash_logs_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 372068,
       "tests": 1,
       "passed": 1,
@@ -45689,7 +45689,7 @@
     {
       "path": "tests/unit/test_food_safety_date_code_audits.py",
       "rc": 0,
-      "secs": 0.6,
+      "secs": 0.3,
       "tok": 373981,
       "tests": 1,
       "passed": 1,
@@ -45710,7 +45710,7 @@
     {
       "path": "tests/unit/test_food_safety_date_code_audits_edge.py",
       "rc": 0,
-      "secs": 0.6,
+      "secs": 0.3,
       "tok": 374470,
       "tests": 1,
       "passed": 1,
@@ -45731,7 +45731,7 @@
     {
       "path": "tests/unit/test_food_safety_date_code_audits_props.py",
       "rc": 0,
-      "secs": 0.6,
+      "secs": 0.3,
       "tok": 374610,
       "tests": 1,
       "passed": 1,
@@ -45752,7 +45752,7 @@
     {
       "path": "tests/unit/test_food_safety_pest_control_holds.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 376410,
       "tests": 1,
       "passed": 1,
@@ -45773,7 +45773,7 @@
     {
       "path": "tests/unit/test_food_safety_pest_control_holds_edge.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 376900,
       "tests": 1,
       "passed": 1,
@@ -45794,7 +45794,7 @@
     {
       "path": "tests/unit/test_food_safety_pest_control_holds_props.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 377078,
       "tests": 1,
       "passed": 1,
@@ -45815,7 +45815,7 @@
     {
       "path": "tests/unit/test_food_safety_salvage_reconditioning.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 378814,
       "tests": 1,
       "passed": 1,
@@ -45836,7 +45836,7 @@
     {
       "path": "tests/unit/test_food_safety_salvage_reconditioning_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 379302,
       "tests": 1,
       "passed": 1,
@@ -45878,7 +45878,7 @@
     {
       "path": "tests/unit/test_inventory_on_hand_reconciliation.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 384506,
       "tests": 1,
       "passed": 1,
@@ -45899,7 +45899,7 @@
     {
       "path": "tests/unit/test_inventory_on_hand_reconciliation_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 384985,
       "tests": 1,
       "passed": 1,
@@ -45920,7 +45920,7 @@
     {
       "path": "tests/unit/test_inventory_on_hand_reconciliation_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 385173,
       "tests": 1,
       "passed": 1,
@@ -45941,7 +45941,7 @@
     {
       "path": "tests/unit/test_inventory_shrink_accounting.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 386930,
       "tests": 1,
       "passed": 1,
@@ -45962,7 +45962,7 @@
     {
       "path": "tests/unit/test_inventory_shrink_accounting_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 387441,
       "tests": 1,
       "passed": 1,
@@ -45983,7 +45983,7 @@
     {
       "path": "tests/unit/test_inventory_shrink_accounting_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 387619,
       "tests": 1,
       "passed": 1,
@@ -46004,7 +46004,7 @@
     {
       "path": "tests/unit/test_inventory_cycle_count_triggers.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 389360,
       "tests": 1,
       "passed": 1,
@@ -46025,7 +46025,7 @@
     {
       "path": "tests/unit/test_inventory_cycle_count_triggers_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 389850,
       "tests": 1,
       "passed": 1,
@@ -46046,7 +46046,7 @@
     {
       "path": "tests/unit/test_inventory_cycle_count_triggers_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 390032,
       "tests": 1,
       "passed": 1,
@@ -46067,7 +46067,7 @@
     {
       "path": "tests/unit/test_inventory_quarantine_bins.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 391559,
       "tests": 1,
       "passed": 1,
@@ -46088,7 +46088,7 @@
     {
       "path": "tests/unit/test_inventory_quarantine_bins_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 392042,
       "tests": 1,
       "passed": 1,
@@ -46109,7 +46109,7 @@
     {
       "path": "tests/unit/test_inventory_quarantine_bins_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 392215,
       "tests": 1,
       "passed": 1,
@@ -46130,7 +46130,7 @@
     {
       "path": "tests/unit/test_inventory_reverse_logistics_acct.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 393833,
       "tests": 1,
       "passed": 1,
@@ -46172,7 +46172,7 @@
     {
       "path": "tests/unit/test_inventory_reverse_logistics_acct_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 394505,
       "tests": 1,
       "passed": 1,
@@ -46193,7 +46193,7 @@
     {
       "path": "tests/unit/test_inventory_lot_level_perpetual.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 396279,
       "tests": 1,
       "passed": 1,
@@ -46214,7 +46214,7 @@
     {
       "path": "tests/unit/test_inventory_lot_level_perpetual_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 396770,
       "tests": 1,
       "passed": 1,
@@ -46235,7 +46235,7 @@
     {
       "path": "tests/unit/test_inventory_lot_level_perpetual_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 396946,
       "tests": 1,
       "passed": 1,
@@ -46256,7 +46256,7 @@
     {
       "path": "tests/unit/test_inventory_in_transit_interception.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 398660,
       "tests": 1,
       "passed": 1,
@@ -46277,7 +46277,7 @@
     {
       "path": "tests/unit/test_inventory_in_transit_interception_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 399162,
       "tests": 1,
       "passed": 1,
@@ -46298,7 +46298,7 @@
     {
       "path": "tests/unit/test_inventory_in_transit_interception_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 399307,
       "tests": 1,
       "passed": 1,
@@ -46319,7 +46319,7 @@
     {
       "path": "tests/unit/test_inventory_ecommerce_dark_stores.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 401008,
       "tests": 1,
       "passed": 1,
@@ -46340,7 +46340,7 @@
     {
       "path": "tests/unit/test_inventory_ecommerce_dark_stores_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 401503,
       "tests": 1,
       "passed": 1,
@@ -46361,7 +46361,7 @@
     {
       "path": "tests/unit/test_inventory_ecommerce_dark_stores_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 401691,
       "tests": 1,
       "passed": 1,
@@ -46382,7 +46382,7 @@
     {
       "path": "tests/unit/test_inventory_consignment_stock.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 403410,
       "tests": 1,
       "passed": 1,
@@ -46403,7 +46403,7 @@
     {
       "path": "tests/unit/test_inventory_consignment_stock_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 403895,
       "tests": 1,
       "passed": 1,
@@ -46424,7 +46424,7 @@
     {
       "path": "tests/unit/test_inventory_consignment_stock_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 404034,
       "tests": 1,
       "passed": 1,
@@ -46445,7 +46445,7 @@
     {
       "path": "tests/unit/test_inventory_sample_demo_stock.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 405681,
       "tests": 1,
       "passed": 1,
@@ -46466,7 +46466,7 @@
     {
       "path": "tests/unit/test_inventory_sample_demo_stock_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 406174,
       "tests": 1,
       "passed": 1,
@@ -46487,7 +46487,7 @@
     {
       "path": "tests/unit/test_inventory_sample_demo_stock_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 406363,
       "tests": 1,
       "passed": 1,
@@ -46508,7 +46508,7 @@
     {
       "path": "tests/unit/test_inventory_cross_dock_allocation.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 407935,
       "tests": 1,
       "passed": 1,
@@ -46529,7 +46529,7 @@
     {
       "path": "tests/unit/test_inventory_cross_dock_allocation_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 408428,
       "tests": 1,
       "passed": 1,
@@ -46550,7 +46550,7 @@
     {
       "path": "tests/unit/test_inventory_cross_dock_allocation_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 408614,
       "tests": 1,
       "passed": 1,
@@ -46571,7 +46571,7 @@
     {
       "path": "tests/unit/test_inventory_destruction_witness.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 410245,
       "tests": 1,
       "passed": 1,
@@ -46592,7 +46592,7 @@
     {
       "path": "tests/unit/test_inventory_destruction_witness_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 410733,
       "tests": 1,
       "passed": 1,
@@ -46613,7 +46613,7 @@
     {
       "path": "tests/unit/test_inventory_destruction_witness_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 410922,
       "tests": 1,
       "passed": 1,
@@ -46634,7 +46634,7 @@
     {
       "path": "tests/unit/test_pricing_pos_sale_blocks.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 416223,
       "tests": 1,
       "passed": 1,
@@ -46697,7 +46697,7 @@
     {
       "path": "tests/unit/test_pricing_price_lookup_blocks.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 418531,
       "tests": 1,
       "passed": 1,
@@ -46760,7 +46760,7 @@
     {
       "path": "tests/unit/test_pricing_register_prompts.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 420874,
       "tests": 1,
       "passed": 1,
@@ -46802,7 +46802,7 @@
     {
       "path": "tests/unit/test_pricing_register_prompts_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 421538,
       "tests": 1,
       "passed": 1,
@@ -46823,7 +46823,7 @@
     {
       "path": "tests/unit/test_pricing_promotion_conflicts.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 423082,
       "tests": 1,
       "passed": 1,
@@ -46844,7 +46844,7 @@
     {
       "path": "tests/unit/test_pricing_promotion_conflicts_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 423583,
       "tests": 1,
       "passed": 1,
@@ -46865,7 +46865,7 @@
     {
       "path": "tests/unit/test_pricing_promotion_conflicts_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 423723,
       "tests": 1,
       "passed": 1,
@@ -46886,7 +46886,7 @@
     {
       "path": "tests/unit/test_pricing_markdown_controls.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 425276,
       "tests": 1,
       "passed": 1,
@@ -46970,7 +46970,7 @@
     {
       "path": "tests/unit/test_pricing_substitute_pricing_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 428326,
       "tests": 1,
       "passed": 1,
@@ -47012,7 +47012,7 @@
     {
       "path": "tests/unit/test_pricing_electronic_shelf_labels.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 430250,
       "tests": 1,
       "passed": 1,
@@ -47033,7 +47033,7 @@
     {
       "path": "tests/unit/test_pricing_electronic_shelf_labels_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 430766,
       "tests": 1,
       "passed": 1,
@@ -47096,7 +47096,7 @@
     {
       "path": "tests/unit/test_pricing_refund_policies_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 433153,
       "tests": 1,
       "passed": 1,
@@ -47117,7 +47117,7 @@
     {
       "path": "tests/unit/test_pricing_refund_policies_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 433337,
       "tests": 1,
       "passed": 1,
@@ -47138,7 +47138,7 @@
     {
       "path": "tests/unit/test_pricing_wic_ebt_blocks.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 434969,
       "tests": 1,
       "passed": 1,
@@ -47159,7 +47159,7 @@
     {
       "path": "tests/unit/test_pricing_wic_ebt_blocks_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 435480,
       "tests": 1,
       "passed": 1,
@@ -47180,7 +47180,7 @@
     {
       "path": "tests/unit/test_pricing_wic_ebt_blocks_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 435662,
       "tests": 1,
       "passed": 1,
@@ -47243,7 +47243,7 @@
     {
       "path": "tests/unit/test_pricing_price_file_governance_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 437942,
       "tests": 1,
       "passed": 1,
@@ -47264,7 +47264,7 @@
     {
       "path": "tests/unit/test_pricing_bottle_deposit_credits.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 439639,
       "tests": 1,
       "passed": 1,
@@ -47327,7 +47327,7 @@
     {
       "path": "tests/unit/test_pricing_coupon_clearinghouse.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 442009,
       "tests": 1,
       "passed": 1,
@@ -47348,7 +47348,7 @@
     {
       "path": "tests/unit/test_pricing_coupon_clearinghouse_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 442520,
       "tests": 1,
       "passed": 1,
@@ -47495,7 +47495,7 @@
     {
       "path": "tests/unit/test_comms_associate_briefings_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 450965,
       "tests": 1,
       "passed": 1,
@@ -47684,7 +47684,7 @@
     {
       "path": "tests/unit/test_comms_regulator_reports_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 458348,
       "tests": 1,
       "passed": 1,
@@ -47873,7 +47873,7 @@
     {
       "path": "tests/unit/test_comms_media_holding_statements_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 465501,
       "tests": 1,
       "passed": 1,
@@ -47999,7 +47999,7 @@
     {
       "path": "tests/unit/test_comms_foodservice_advisories_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 470371,
       "tests": 1,
       "passed": 1,
@@ -48188,7 +48188,7 @@
     {
       "path": "tests/unit/test_vendor_chargeback_engine_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 480961,
       "tests": 1,
       "passed": 1,
@@ -48272,7 +48272,7 @@
     {
       "path": "tests/unit/test_vendor_certificates_of_analysis.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 485228,
       "tests": 1,
       "passed": 1,
@@ -48419,7 +48419,7 @@
     {
       "path": "tests/unit/test_vendor_credit_reconciliation_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 490824,
       "tests": 1,
       "passed": 1,
@@ -48650,7 +48650,7 @@
     {
       "path": "tests/unit/test_vendor_onboarding_gates.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 499970,
       "tests": 1,
       "passed": 1,
@@ -48692,7 +48692,7 @@
     {
       "path": "tests/unit/test_vendor_onboarding_gates_props.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 500718,
       "tests": 1,
       "passed": 1,
@@ -49297,7 +49297,7 @@
         }
       ],
       "status": "collection_error",
-      "output_tail": "    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ast.py:50: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2_agentpatched/tests/unit/test_dc_ops_pallet_license_plates.py\", line 12\nE       elace_check := verify_gs1_128_sscc_check_digit_integrity,\nE                   ^^\nE   SyntaxError: invalid syntax\n=========================== short test summary info ============================\nERROR gen/expansion_v2_agentpatched/tests/unit/test_dc_ops_pallet_license_plates.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.17s"
+      "output_tail": "    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ast.py:50: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/Users/shuruthipalaniappan/Desktop/recall-storm/gen/expansion_v2_agentpatched/tests/unit/test_dc_ops_pallet_license_plates.py\", line 12\nE       elace_check := verify_gs1_128_sscc_check_digit_integrity,\nE                   ^^\nE   SyntaxError: invalid syntax\n=========================== short test summary info ============================\nERROR gen/expansion_v2_agentpatched/tests/unit/test_dc_ops_pallet_license_plates.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.16s"
     },
     {
       "path": "tests/unit/test_dc_ops_pallet_license_plates_edge.py",
@@ -49596,7 +49596,7 @@
     {
       "path": "tests/unit/test_analytics_drill_kpis.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.2,
       "tok": 545877,
       "tests": 1,
       "passed": 1,
@@ -49617,7 +49617,7 @@
     {
       "path": "tests/unit/test_analytics_drill_kpis_edge.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.2,
       "tok": 546345,
       "tests": 1,
       "passed": 1,
@@ -49638,7 +49638,7 @@
     {
       "path": "tests/unit/test_analytics_drill_kpis_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 546519,
       "tests": 1,
       "passed": 1,
@@ -49722,7 +49722,7 @@
     {
       "path": "tests/unit/test_analytics_forecasting_exposure.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 550426,
       "tests": 1,
       "passed": 1,
@@ -49743,7 +49743,7 @@
     {
       "path": "tests/unit/test_analytics_forecasting_exposure_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 550936,
       "tests": 1,
       "passed": 1,
@@ -49764,7 +49764,7 @@
     {
       "path": "tests/unit/test_analytics_forecasting_exposure_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.2,
       "tok": 551127,
       "tests": 1,
       "passed": 1,
@@ -49785,7 +49785,7 @@
     {
       "path": "tests/unit/test_analytics_anomaly_detection.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 553069,
       "tests": 1,
       "passed": 1,
@@ -49806,7 +49806,7 @@
     {
       "path": "tests/unit/test_analytics_anomaly_detection_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 553609,
       "tests": 1,
       "passed": 1,
@@ -49827,7 +49827,7 @@
     {
       "path": "tests/unit/test_analytics_anomaly_detection_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 553800,
       "tests": 1,
       "passed": 1,
@@ -49848,7 +49848,7 @@
     {
       "path": "tests/unit/test_analytics_trend_reports.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 555647,
       "tests": 1,
       "passed": 1,
@@ -49869,7 +49869,7 @@
     {
       "path": "tests/unit/test_analytics_trend_reports_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 556191,
       "tests": 1,
       "passed": 1,
@@ -49911,7 +49911,7 @@
     {
       "path": "tests/unit/test_analytics_root_cause_mining.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 558097,
       "tests": 1,
       "passed": 1,
@@ -49932,7 +49932,7 @@
     {
       "path": "tests/unit/test_analytics_root_cause_mining_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 558620,
       "tests": 1,
       "passed": 1,
@@ -49953,7 +49953,7 @@
     {
       "path": "tests/unit/test_analytics_root_cause_mining_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 558809,
       "tests": 1,
       "passed": 1,
@@ -49995,7 +49995,7 @@
     {
       "path": "tests/unit/test_analytics_labor_efficiency_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 560946,
       "tests": 1,
       "passed": 1,
@@ -50037,7 +50037,7 @@
     {
       "path": "tests/unit/test_analytics_financial_impact.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 562739,
       "tests": 1,
       "passed": 1,
@@ -50058,7 +50058,7 @@
     {
       "path": "tests/unit/test_analytics_financial_impact_edge.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 563253,
       "tests": 1,
       "passed": 1,
@@ -50079,7 +50079,7 @@
     {
       "path": "tests/unit/test_analytics_financial_impact_props.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.3,
       "tok": 563433,
       "tests": 1,
       "passed": 1,
@@ -50100,7 +50100,7 @@
     {
       "path": "tests/unit/test_analytics_shelf_void_impact.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 565177,
       "tests": 1,
       "passed": 1,
@@ -50121,7 +50121,7 @@
     {
       "path": "tests/unit/test_analytics_shelf_void_impact_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 565686,
       "tests": 1,
       "passed": 1,
@@ -50142,7 +50142,7 @@
     {
       "path": "tests/unit/test_analytics_shelf_void_impact_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 565873,
       "tests": 1,
       "passed": 1,
@@ -50163,7 +50163,7 @@
     {
       "path": "tests/unit/test_analytics_supplier_benchmarking.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 567552,
       "tests": 1,
       "passed": 1,
@@ -50205,7 +50205,7 @@
     {
       "path": "tests/unit/test_analytics_supplier_benchmarking_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 568289,
       "tests": 1,
       "passed": 1,
@@ -50226,7 +50226,7 @@
     {
       "path": "tests/unit/test_analytics_simulation_calibration.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 570067,
       "tests": 1,
       "passed": 1,
@@ -50247,7 +50247,7 @@
     {
       "path": "tests/unit/test_analytics_simulation_calibration_edge.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 570565,
       "tests": 1,
       "passed": 1,
@@ -50268,7 +50268,7 @@
     {
       "path": "tests/unit/test_analytics_simulation_calibration_props.py",
       "rc": 0,
-      "secs": 0.3,
+      "secs": 0.2,
       "tok": 570750,
       "tests": 1,
       "passed": 1,
@@ -50289,7 +50289,7 @@
     {
       "path": "tests/unit/test_analytics_executive_briefings.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 572463,
       "tests": 1,
       "passed": 1,
@@ -50310,7 +50310,7 @@
     {
       "path": "tests/unit/test_analytics_executive_briefings_edge.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 573008,
       "tests": 1,
       "passed": 1,
@@ -50331,7 +50331,7 @@
     {
       "path": "tests/unit/test_analytics_executive_briefings_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 573198,
       "tests": 1,
       "passed": 1,
@@ -50814,7 +50814,7 @@
     {
       "path": "tests/unit/test_governance_whistleblower_intake_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 597004,
       "tests": 1,
       "passed": 1,
@@ -50856,7 +50856,7 @@
     {
       "path": "tests/unit/test_governance_third_party_audits.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 599013,
       "tests": 1,
       "passed": 1,
@@ -51360,7 +51360,7 @@
     {
       "path": "tests/unit/test_route_capacity.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 621523,
       "tests": 1,
       "passed": 1,
@@ -51549,7 +51549,7 @@
     {
       "path": "tests/unit/test_route_dispatch.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 628149,
       "tests": 1,
       "passed": 1,
@@ -51570,7 +51570,7 @@
     {
       "path": "tests/unit/test_route_dispatch_edge.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 628556,
       "tests": 1,
       "passed": 1,
@@ -51612,7 +51612,7 @@
     {
       "path": "tests/unit/test_route_packing.py",
       "rc": 0,
-      "secs": 0.2,
+      "secs": 0.3,
       "tok": 631630,
       "tests": 1,
       "passed": 1,
@@ -51692,7 +51692,7 @@
         }
       ],
       "status": "failed",
-      "output_tail": "    def annotated_getattr(obj: object, name: str, ann: str) -> object:\n        try:\n            obj = getattr(obj, name)\n        except AttributeError as e:\n>           raise AttributeError(\n                f\"{type(obj).__name__!r} object at {ann} has no attribute {name!r}\"\n            ) from e\nE           AttributeError: 'function' object at recallstorm.cli.main has no attribute 'load_datapack_extended'\n.venv/lib/python3.11/site-packages/_pytest/monkeypatch.py:97: AttributeError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/unit/test_cli_main.py::test_cli_commands\n1 failed in 0.16s"
+      "output_tail": "    def annotated_getattr(obj: object, name: str, ann: str) -> object:\n        try:\n            obj = getattr(obj, name)\n        except AttributeError as e:\n>           raise AttributeError(\n                f\"{type(obj).__name__!r} object at {ann} has no attribute {name!r}\"\n            ) from e\nE           AttributeError: 'function' object at recallstorm.cli.main has no attribute 'load_datapack_extended'\n.venv/lib/python3.11/site-packages/_pytest/monkeypatch.py:97: AttributeError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/unit/test_cli_main.py::test_cli_commands\n1 failed in 0.14s"
     },
     {
       "path": "tests/unit/test_cli_main_edge.py",
@@ -51739,7 +51739,7 @@
     {
       "path": "tests/integration/test_flow_01_core_to_rules.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.6,
       "tok": 637416,
       "tests": 1,
       "passed": 1,
@@ -51760,7 +51760,7 @@
     {
       "path": "tests/integration/test_flow_02_gs1_to_store.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.7,
       "tok": 637919,
       "tests": 1,
       "passed": 1,
@@ -51781,7 +51781,7 @@
     {
       "path": "tests/integration/test_flow_03_labor_and_allocate.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.6,
       "tok": 638558,
       "tests": 1,
       "passed": 1,
@@ -51802,7 +51802,7 @@
     {
       "path": "tests/integration/test_flow_04_plan_and_sim.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.7,
       "tok": 639309,
       "tests": 1,
       "passed": 1,
@@ -51823,7 +51823,7 @@
     {
       "path": "tests/integration/test_flow_05_states_and_lots.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.6,
       "tok": 639702,
       "tests": 1,
       "passed": 1,
@@ -51844,7 +51844,7 @@
     {
       "path": "tests/integration/test_flow_06_food_safety_inventory.py",
       "rc": 0,
-      "secs": 0.5,
+      "secs": 0.6,
       "tok": 640225,
       "tests": 1,
       "passed": 1,
@@ -51865,7 +51865,7 @@
     {
       "path": "tests/integration/test_flow_07_pricing_and_comms.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 640601,
       "tests": 1,
       "passed": 1,
@@ -51886,7 +51886,7 @@
     {
       "path": "tests/integration/test_flow_08_vendor_and_dc_ops.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 641161,
       "tests": 1,
       "passed": 1,
@@ -51907,7 +51907,7 @@
     {
       "path": "tests/integration/test_flow_09_analytics_governance.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 641611,
       "tests": 1,
       "passed": 1,
@@ -51928,7 +51928,7 @@
     {
       "path": "tests/integration/test_flow_10_route_and_report.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 642060,
       "tests": 1,
       "passed": 1,
@@ -51949,7 +51949,7 @@
     {
       "path": "tests/integration/test_flow_11_cli_end_to_end.py",
       "rc": 1,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 642606,
       "tests": 1,
       "passed": 0,
@@ -51966,12 +51966,12 @@
         }
       ],
       "status": "failed",
-      "output_tail": "    def annotated_getattr(obj: object, name: str, ann: str) -> object:\n        try:\n            obj = getattr(obj, name)\n        except AttributeError as e:\n>           raise AttributeError(\n                f\"{type(obj).__name__!r} object at {ann} has no attribute {name!r}\"\n            ) from e\nE           AttributeError: 'function' object at recallstorm.cli.main has no attribute 'load_datapack_extended'\n.venv/lib/python3.11/site-packages/_pytest/monkeypatch.py:97: AttributeError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/integration/test_flow_11_cli_end_to_end.py::test_flow_cli_end_to_end\n1 failed in 0.14s"
+      "output_tail": "    def annotated_getattr(obj: object, name: str, ann: str) -> object:\n        try:\n            obj = getattr(obj, name)\n        except AttributeError as e:\n>           raise AttributeError(\n                f\"{type(obj).__name__!r} object at {ann} has no attribute {name!r}\"\n            ) from e\nE           AttributeError: 'function' object at recallstorm.cli.main has no attribute 'load_datapack_extended'\n.venv/lib/python3.11/site-packages/_pytest/monkeypatch.py:97: AttributeError\n=========================== short test summary info ============================\nFAILED gen/expansion_v2_agentpatched/tests/integration/test_flow_11_cli_end_to_end.py::test_flow_cli_end_to_end\n1 failed in 0.12s"
     },
     {
       "path": "tests/integration/test_flow_12_invariants_props.py",
       "rc": 0,
-      "secs": 0.4,
+      "secs": 0.3,
       "tok": 643126,
       "tests": 1,
       "passed": 1,
@@ -51995,8 +51995,8 @@
     "placeholders": [],
     "dup_window_groups": 1143,
     "dup_lines": 2750,
-    "total_norm_lines": 31904,
-    "dup_share": 0.0862,
+    "total_norm_lines": 31941,
+    "dup_share": 0.0861,
     "dup_examples": [
       {
         "locations": [
@@ -52126,19 +52126,19 @@
             "path": "recallstorm/plan/tasks.py",
             "start": 56,
             "end": 63,
-            "tok": 249197
+            "tok": 249103
           },
           {
             "path": "recallstorm/plan/tasks.py",
             "start": 113,
             "end": 120,
-            "tok": 249691
+            "tok": 249513
           },
           {
             "path": "recallstorm/plan/tasks.py",
             "start": 140,
             "end": 147,
-            "tok": 249931
+            "tok": 249712
           }
         ],
         "count": 3
