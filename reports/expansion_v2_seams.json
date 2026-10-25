@@ -1,0 +1,21 @@
+{
+  "run": "runs/expansion_v2",
+  "source": "hops.jsonl",
+  "finished": false,
+  "summary": "SUMMARY: 1 seams (1 continuation, 0 resume), 1 PASS, 0 FAIL, 0 PENDING (source: hops.jsonl, run live)",
+  "seams": [
+    {
+      "seam_byte": 210273,
+      "status": "PASS",
+      "fails": [],
+      "notes": [],
+      "before_tail": "ans\", \"public\": [\"DsdRecallExecution\", \"RouteDriverSignOff\", \"notify_dsd_bottler",
+      "after_head": "_bakery_dispatcher\", \"schedule_driver_in_store_credit_pickup\", \"verify_backdoor_",
+      "n": 1,
+      "kind": "continuation",
+      "label": "hop 0->1",
+      "tok": 65536,
+      "has_token": true
+    }
+  ]
+}
