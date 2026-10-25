@@ -120,6 +120,14 @@ Expansion v1's lot code, run as written, pulls 539 good lots: our frozen contrac
 never hands the shelf lots to its own matcher. Given the lots, it finds 20% of the recalled ones. See
 `scenarios/fda_lots/README.md`.
 
+## Gate G5 (numbers frozen, 14:32)
+
+All numbers above were checked against `reports/` and `runs/` (18 checks, 0 mismatches) and are frozen at git tag
+`g5-freeze`. Decision on the second scenario: per BUILD.md, the expansion may run it live only if it passes the drill
+verifier's hard checks. v2 (+ agent patches) does not (175 hard errors). v1 (+ agent patches) does (0), but its lot
+code pulls 539 non-recalled lots as written and finds 20% of recalled lots when given the shelf lots. So the openFDA
+lot scenario is not run live; it is reported above as a failure case.
+
 ## Demo
 
 ```bash

@@ -70,6 +70,10 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
 - `demo.sh` or the map: play `videos/backup_core.mp4`.
 - Anything else: play `videos/demo_full_final.mp4` from the matching beat.
 
+## G5 decision
+
+Don't run the openFDA lot-code scenario live (see README, Gate G5). If asked, use the "What didn't work?" answer.
+
 ## Likely questions
 
 - **Why not just RAG plus code?** It's what Argon wrote, and our baseline C is exactly that (0 plan mistakes).
