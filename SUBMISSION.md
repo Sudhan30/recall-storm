@@ -20,10 +20,10 @@ it holds and fixes where it breaks. Our largest run wrote 646,825 tokens of code
 with every seam clean. After a one-line fix, all 6,581 cross-file links resolve with zero argument mismatches; a test
 written at token 641,687 calls a function written 552,000 tokens earlier, and passes.
 
-An independent verifier then runs the plan as a 20-store simulated drill and finds what consistent code can hide: the
-same scheduling flaw appeared at 254K and 647K tokens, with people booked at two shelves at once. A managed agent,
-given only the failing file and half of the failures, fixed the root cause both times, including in stores it never
-saw (8,441 plan mistakes to 0 in the 254K run). Argon's working core finds all 467 affected products, pulls none of
+An independent verifier then runs the plan as a 20-store simulated drill and finds what consistent code can hide:
+21,459 plan mistakes, mostly people booked at two shelves at once or outside their shift. A managed agent, given only
+the failing file and half of the failures, found the root cause and fixed it: scheduling mistakes went from 21,284 to
+0, including in 10 stores it never saw, and the plan from 21,459 mistakes to 175. Argon's working core finds all 467 affected products, pulls none of
 483 look-alikes, and plans every task before midnight. Stores, stock and staffing are simulated; every number comes
 from the verifier, and Argon's output is unedited in the repo, with every fix logged separately.
 

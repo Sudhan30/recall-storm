@@ -8,9 +8,9 @@ asked Gemini 4 Argon to write the whole compliance system that clears it from st
 - **One continued generation, 646,825 tokens:** 911 files over 10 hops, every seam clean. After one one-line fix
   by a managed agent, all 6,581 cross-file links resolve with zero argument mismatches. A test written at token
   641,687 calls a function written at token 89,603, and passes.
-- **Consistent isn't correct:** our verifier ran the plan and found scheduling flaws at both lengths (7,631
-  double-bookings at 254K tokens; 21,284 scheduling mistakes at 647K). A managed agent fixed the root cause each time,
-  including in stores it never saw.
+- **Consistent isn't correct:** our verifier ran that plan and found 21,459 mistakes, mostly people booked at two
+  shelves at once or outside their shift. A managed agent found the root cause: scheduling mistakes went from 21,284
+  to 0, including in stores it never saw, and the plan from 21,459 mistakes to 175.
 - **A working system:** Argon's core, with three small logged fixes, finds all 467 products containing Red No. 3
   across a 20-store simulated drill, pulls none of the 483 look-alikes, and makes zero plan mistakes. `./demo.sh`
   runs it live in about 5 seconds.
@@ -133,7 +133,7 @@ lot scenario is not run live; it is reported above as a failure case.
 ```bash
 ./demo.sh        # runs the core live on 20 stores, verifies it, opens the map (3.6 s; press Space, 20 s replay)
 python3 -m http.server -d . 8000   # viewer at /viewer/, live build status at /viewer/status.html
-# /viewer/compare.html: who is booked twice? v1 as written (7,631 double-bookings) vs v1 + agent fixes (0)
+# /viewer/compare.html: who is booked twice? v2 (7,161 double-bookings, 14,117 tasks outside the shift) vs v2 + agent fixes (0)
 ```
 
 ## Reproduce

@@ -52,12 +52,12 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
 - Tab **5** (Failures): v2's one break.
   > "One mis-indented line at token 132,000 took down the whole label-reading package. A managed agent fixed it in
   > 21 seconds."
-- compare.html.
-  > "Each row is one simulated associate. Red means Argon's plan sent the same person to two shelves at once:
-  > 7,631 double-bookings in the 254K-token run." Switch **Run** to v2: "and 7,161 in the 647K-token run."
-  > "A managed agent read the verifier's findings, found the root cause and fixed it — 7,631 to zero, including in
-  > ten stores it never saw. The same flaw appeared at both lengths, and the agent fixed it both times: v2's plan
-  > went from 21,459 mistakes to 175."
+- compare.html, **Run = v2** (switch it before you go on).
+  > "Each row is one simulated associate. The shaded band is their 10 PM to 6 AM shift. Argon's plan scattered
+  > 14,117 tasks outside it and piled the rest up at 11:59 PM: 7,161 double-bookings. 21,459 plan mistakes in all."
+  > "A managed agent read the verifier's findings and found the root cause, one shared clock for every associate.
+  > Scheduling mistakes went from 21,284 to zero, including in ten stores it never saw. The plan went from 21,459
+  > mistakes to 175; the rest are 12 products it still misses."
 
 ## 2:35–3:00 · Why it matters
 

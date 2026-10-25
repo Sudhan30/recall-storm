@@ -7,7 +7,7 @@ import json, pathlib, sys
 from datetime import datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAIRS = {"v1": ("expansion", "expansion_agentpatched"), "v2": ("expansion_v2_importfix", "expansion_v2_agentpatched")}
+PAIRS = {"v2": ("expansion_v2_importfix", "expansion_v2_agentpatched"), "v1": ("expansion", "expansion_agentpatched")}   # first = default
 LABELS = {"expansion": "Expansion v1 — Argon's code, unedited",
           "expansion_agentpatched": "Expansion v1 + managed-agent fixes",
           "expansion_v2_importfix": "Expansion v2 — Argon's code + 1-line import fix",
