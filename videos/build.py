@@ -496,17 +496,21 @@ def render_shot(shot, out, n):
 
 
 # ---------------------------------------------------------------- assembly
-TEMPO = {"submission_90s": 1.15, "backup_core": 1.1, "demo_full_final": 1.06, "one_minute_final": 1.07}       # optional narration speed-up (pitch kept)
+TEMPO = {"submission_90s": 1.06, "backup_core": 1.1, "demo_full_final": 1.06, "one_minute_final": 1.07}       # optional narration speed-up (pitch kept)
 
 
 def prep_wav(wav, bdir, tempo=1.0):
     """Trim the TTS take's leading/trailing silence (and apply tempo) into the build dir."""
-    out = bdir / f"vo_{wav.stem}_{tempo}.wav"
+    out = bdir / f"vo_{wav.stem}_{tempo}_clean.wav"
     if not out.exists():
-        af = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,areverse,"
-              "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.12,areverse")
+        # per clip: gentle de-hiss, trim leading/trailing non-speech to nothing, 20 ms fades (gaps stay digital silence)
+        af = ("afftdn=nr=10:nf=-50,"
+              "silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.02,areverse,"
+              "silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.02,areverse,"
+              "afade=t=in:d=0.02")
         if tempo != 1.0:
             af += f",atempo={tempo}"
+        af += ",areverse,afade=t=in:d=0.02,areverse"
         run([FF, "-v", "error", "-y", "-i", str(wav), "-af", af, "-ar", str(SR), "-ac", "1", str(out)])
     return out
 
@@ -569,6 +573,9 @@ def build(video):
                 a = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16)
             o = int((s["t0"] + LEAD) * SR)
             pcm[o:o + len(a)] = a[: len(pcm) - o]
+    peak = np.abs(pcm.astype(np.int32)).max()                 # fixed gain to -1.5 dBFS peak (no loudness filter)
+    if peak:
+        pcm = np.clip(pcm.astype(np.float64) * (32767 * 10 ** (-1.5 / 20) / peak), -32768, 32767).astype(np.int16)
     nar = bdir / "narration.wav"
     with wave.open(str(nar), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm[: int(total * SR)].tobytes())
@@ -609,7 +616,7 @@ def build(video):
         fc.append(f"{last}[{k + 2}:v]overlay={x}:{y}:enable='between(t,{a:.3f},{b:.3f})'{lab}")
         last = lab
     fc.append(f"{last}fade=t=in:st=0:d=0.6,fade=t=out:st={total - 0.8:.3f}:d=0.8,format=yuv420p[vout]")
-    fc.append(f"[1:a]aresample=48000,afade=t=out:st={total - 0.8:.3f}:d=0.8[aout]")
+    fc.append("[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0[aout]")  # plain copy to both channels (default upmix is -3 dB)                   # gaps are exact zeros; no end fade needed (narration ends first)
     out = HERE / f"{video}.mp4"
     run([FF, "-v", "error", "-y", "-i", str(base), "-i", str(nar), *inputs, "-filter_complex", ";".join(fc),
          "-map", "[vout]", "-map", "[aout]", "-c:v", "libx264", "-crf", "21", "-preset", "medium", "-profile:v", "high",

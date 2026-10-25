@@ -26,7 +26,12 @@ def synth(client, text, out):
             response_modalities=["AUDIO"],
             speech_config=types.SpeechConfig(voice_config=types.VoiceConfig(
                 prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name=VOICE)))))
-    pcm = r.candidates[0].content.parts[0].inline_data.data
+    part = r.candidates[0].content.parts[0].inline_data
+    pcm = part.data
+    if pcm[:4] == b"RIFF":            # gemini-3.8-flash-tts returns a whole WAV file (header + trailing metadata chunk);
+        import io                     # writing it as raw PCM put ~0.13 s of static at each line's end and a click at its start
+        with wave.open(io.BytesIO(pcm)) as w2:
+            pcm = w2.readframes(w2.getnframes())
     with wave.open(str(out), "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
     um = r.usage_metadata.model_dump() if r.usage_metadata else None
