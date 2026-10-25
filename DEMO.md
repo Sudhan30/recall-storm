@@ -16,7 +16,7 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
 1. Terminal, font size up, in `~/Desktop/recall-storm`
 2. http://localhost:8000/viewer/ (tab 1, California map; replay speed set to **20 s**)
 3. http://localhost:8000/viewer/compare.html
-4. `videos/demo_full_draft.mp4` paused at 0:00 (backup if anything live fails)
+4. `videos/demo_full_final.mp4` paused at 0:00 (backup if anything live fails)
 
 ## 0:00–0:20 · One night to clear the shelves
 
@@ -68,7 +68,7 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
 ## If something fails live
 
 - `demo.sh` or the map: play `videos/backup_core.mp4`.
-- Anything else: play `videos/demo_full_draft.mp4` from the matching beat.
+- Anything else: play `videos/demo_full_final.mp4` from the matching beat.
 
 ## Likely questions
 

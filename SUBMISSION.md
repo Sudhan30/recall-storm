@@ -27,4 +27,4 @@ gets one failing file plus failures with half held out; we re-score everything l
 **What is real vs simulated:** real rule text, real USDA ingredient labels, real store locations (OpenStreetMap),
 real FDA recall notices; simulated shelves, staff, stock and trucks.
 
-**Repo:** https://github.com/Sudhan30/recall-storm  ·  **Demo:** `./demo.sh`, `viewer/`, `videos/one_minute.mp4`
+**Repo:** https://github.com/Sudhan30/recall-storm  ·  **Demo:** `./demo.sh`, `viewer/`, `videos/one_minute_final.mp4`

@@ -122,3 +122,7 @@ Every call is in `usage.jsonl`. Totals at the time of the last commit are in the
 Cost: TTS and the one text call are well under $1. Video pricing for `gemini-omni-1.1-flash` is not listed in the API
 response. At Veo 3.1 per-second list rates ($0.15/s Fast to $0.40/s standard), 48 s comes to **$7-$19**, so the
 total is under ~$20, inside the $40 budget.
+
+## Drafts
+
+`drafts/` holds the earlier cuts (`demo_full_draft.mp4`, `one_minute.mp4`), which still show the "[v2 numbers pending]" card. Use `demo_full_final.mp4`, `one_minute_final.mp4` and `backup_core.mp4`.
