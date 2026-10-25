@@ -33,7 +33,7 @@ https://github.com/Sudhan30/recall-storm
 
 ## 1-Minute Demo Video*
 
-(upload `videos/one_minute_final.mp4` to YouTube as Unlisted, then paste its link here)
+(upload `videos/submission_90s.mp4` to YouTube as Unlisted, then paste its link here)
 
 ## Describe your use of Google products to build the submitted project:*
 
