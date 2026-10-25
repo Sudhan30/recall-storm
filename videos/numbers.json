@@ -506,6 +506,190 @@
   "source": "patches/agent/LOG.jsonl",
   "field": "len(exp_route_packing.holdout.new_failures)"
  },
+ "agent.v2_aliases_translations.result": {
+  "value": "NOT_FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.result"
+ },
+ "agent.v2_aliases_translations.secs": {
+  "value": 21,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.secs (rounded)",
+  "raw": 21.0
+ },
+ "agent.v2_aliases_translations.before_failed": {
+  "value": 1,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.before.failed"
+ },
+ "agent.v2_aliases_translations.before_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.before.passed"
+ },
+ "agent.v2_aliases_translations.after_failed": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.after.failed"
+ },
+ "agent.v2_aliases_translations.after_passed": {
+  "value": 1222,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.after.passed"
+ },
+ "agent.v2_aliases_translations.held_out": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.holdout.held_out"
+ },
+ "agent.v2_aliases_translations.held_out_fixed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations.holdout.held_out_fixed"
+ },
+ "agent.v2_aliases_translations.new_failures": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(v2_aliases_translations.holdout.new_failures)"
+ },
+ "agent.v2_aliases_translations_regraded.result": {
+  "value": "FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.result"
+ },
+ "agent.v2_aliases_translations_regraded.secs": {
+  "value": 21,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.secs (rounded)",
+  "raw": 21.0
+ },
+ "agent.v2_aliases_translations_regraded.before_failed": {
+  "value": 1,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.before.failed"
+ },
+ "agent.v2_aliases_translations_regraded.before_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.before.passed"
+ },
+ "agent.v2_aliases_translations_regraded.after_failed": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.after.failed"
+ },
+ "agent.v2_aliases_translations_regraded.after_passed": {
+  "value": 1222,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.after.passed"
+ },
+ "agent.v2_aliases_translations_regraded.held_out": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.holdout.held_out"
+ },
+ "agent.v2_aliases_translations_regraded.held_out_fixed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.holdout.held_out_fixed"
+ },
+ "agent.v2_aliases_translations_regraded.new_failures": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(v2_aliases_translations_regraded.holdout.new_failures)"
+ },
+ "agent.v2_plan_tasks_labor.result": {
+  "value": "FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.result"
+ },
+ "agent.v2_plan_tasks_labor.secs": {
+  "value": 72,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.secs (rounded)",
+  "raw": 71.5
+ },
+ "agent.v2_plan_tasks_labor.before_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.before.failed"
+ },
+ "agent.v2_plan_tasks_labor.before_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.before.passed"
+ },
+ "agent.v2_plan_tasks_labor.after_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.after.failed"
+ },
+ "agent.v2_plan_tasks_labor.after_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.after.passed"
+ },
+ "agent.v2_plan_tasks_labor.held_out": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.holdout.held_out"
+ },
+ "agent.v2_plan_tasks_labor.held_out_fixed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.holdout.held_out_fixed"
+ },
+ "agent.v2_plan_tasks_labor.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(v2_plan_tasks_labor.holdout.new_failures)"
+ },
+ "agent.v2_aliases_detect_coverage.result": {
+  "value": "NOT_FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.result"
+ },
+ "agent.v2_aliases_detect_coverage.secs": {
+  "value": 1039,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.secs (rounded)",
+  "raw": 1039.0
+ },
+ "agent.v2_aliases_detect_coverage.before_failed": {
+  "value": 32,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.before.failed"
+ },
+ "agent.v2_aliases_detect_coverage.before_passed": {
+  "value": 1222,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.before.passed"
+ },
+ "agent.v2_aliases_detect_coverage.after_failed": {
+  "value": 28,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.after.failed"
+ },
+ "agent.v2_aliases_detect_coverage.after_passed": {
+  "value": 1226,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.after.passed"
+ },
+ "agent.v2_aliases_detect_coverage.held_out": {
+  "value": 16,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.holdout.held_out"
+ },
+ "agent.v2_aliases_detect_coverage.held_out_fixed": {
+  "value": 9,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_detect_coverage.holdout.held_out_fixed"
+ },
+ "agent.v2_aliases_detect_coverage.new_failures": {
+  "value": 13,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(v2_aliases_detect_coverage.holdout.new_failures)"
+ },
  "exp1.visible": {
   "value": 254377,
   "source": "runs/expansion/hops.jsonl",
@@ -540,34 +724,37 @@
   "field": "len(seams)"
  },
  "exp2.visible": {
-  "value": null,
+  "value": 646825,
   "source": "runs/expansion_v2/hops.jsonl",
-  "field": "run not finished",
-  "pending": true
+  "field": "last row visible_total"
  },
  "exp2.hops": {
-  "value": null,
+  "value": 10,
   "source": "runs/expansion_v2/hops.jsonl",
-  "field": "run not finished",
-  "pending": true
+  "field": "row count"
  },
  "exp2.minutes": {
-  "value": null,
+  "value": 92.0,
   "source": "runs/expansion_v2/hops.jsonl",
-  "field": "run not finished",
-  "pending": true
+  "field": "last row t / 60",
+  "raw": 5519.8
  },
  "exp2.cost_usd": {
-  "value": null,
+  "value": 13.54,
   "source": "runs/expansion_v2/hops.jsonl",
-  "field": "run not finished",
-  "pending": true
+  "field": "derived: $10/1M x (visible + thinking) + $2/1M x sum(prompt_hop); same formula as viewer/build_data.py",
+  "derived": true,
+  "prompt_tokens": 3537080
  },
  "exp2.seams_pass": {
-  "value": null,
-  "source": "runs/expansion_v2/hops.jsonl",
-  "field": "run not finished",
-  "pending": true
+  "value": 9,
+  "source": "reports/expansion_v2_seams.json",
+  "field": "count status PASS"
+ },
+ "exp2.seams_total": {
+  "value": 9,
+  "source": "reports/expansion_v2_seams.json",
+  "field": "len(seams)"
  },
  "exp1.files": {
   "value": 310,
@@ -649,47 +836,75 @@
   "source": "reports/expansion_code.json",
   "field": "files[tests/integration/test_flow_10_exceptions_and_handoffs.py].start_tok"
  },
- "exp2.edges": {
-  "value": null,
+ "exp2.files": {
+  "value": 907,
   "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+  "field": "totals.files"
  },
  "exp2.files_manifest": {
-  "value": null,
-  "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+  "value": 911,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.manifest_files_present (911/911 manifest files emitted)"
  },
- "exp2.longest_def.start_tok": {
-  "value": null,
-  "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+ "exp2.edges": {
+  "value": 6581,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.d2_edges (after the one-line fix)"
  },
- "exp2.longest_use.start_tok": {
-  "value": null,
-  "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+ "exp2.edges_resolved": {
+  "value": 6581,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.d2_resolved"
  },
- "exp2.b0.files_failed": {
-  "value": null,
-  "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+ "exp2.calls_checked": {
+  "value": 4881,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.d2_calls_checked"
  },
- "exp2.b1.files_failed": {
-  "value": null,
+ "exp2.arity_mismatch": {
+  "value": 0,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.d2_arity_mismatch"
+ },
+ "exp2.tests": {
+  "value": 667,
   "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+  "field": "totals.d4_tests"
+ },
+ "exp2.tests_passed": {
+  "value": 493,
+  "source": "reports/expansion_v2_code.json",
+  "field": "totals.d4_passed"
  },
  "exp2.bad_literals_nontest": {
-  "value": null,
+  "value": 527,
   "source": "reports/expansion_v2_code.json",
-  "field": "report not written yet",
-  "pending": true
+  "field": "totals.d3_bad_literals_nontest"
+ },
+ "exp2.max_tok": {
+  "value": 643792,
+  "source": "reports/expansion_v2_code.json",
+  "field": "totals.max_tok"
+ },
+ "exp2.b0.files": {
+  "value": 204,
+  "source": "reports/expansion_v2_code.json",
+  "field": "buckets.position.0-200K.files"
+ },
+ "exp2.b0.files_failed": {
+  "value": 2,
+  "source": "reports/expansion_v2_code.json",
+  "field": "buckets.position.0-200K.d4_files_failed"
+ },
+ "exp2.b1.files": {
+  "value": 337,
+  "source": "reports/expansion_v2_code.json",
+  "field": "buckets.position.200-400K.files"
+ },
+ "exp2.b1.files_failed": {
+  "value": 1,
+  "source": "reports/expansion_v2_code.json",
+  "field": "buckets.position.200-400K.d4_files_failed"
  },
  "live.longest_tests_passed": {
   "value": 9,
@@ -885,10 +1100,11 @@
   "raw": 254377
  },
  "exp2.visible_k": {
-  "value": null,
+  "value": "647,000",
   "source": "runs/expansion_v2/hops.jsonl",
-  "field": "run not finished",
-  "pending": true
+  "field": "visible_total rounded to thousands",
+  "derived": true,
+  "raw": 646825
  },
  "agent.exp_root_causes": {
   "value": 2,
@@ -899,6 +1115,36 @@
   "value": 10,
   "source": "patches/agent/LOG.jsonl",
   "field": "drill_holdout.held_stores with held_after == 0"
+ },
+ "exp2plan.overlaps": {
+  "value": 7161,
+  "source": "viewer/data/compare.json",
+  "field": "v2.left.overlaps (double-bookings; expansion_v2_importfix)"
+ },
+ "exp2plan.outside": {
+  "value": 14117,
+  "source": "viewer/data/compare.json",
+  "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+ },
+ "exp2plan.overlaps_shown_store": {
+  "value": 701,
+  "source": "viewer/data/compare.json",
+  "field": "v2.left.stores[first].overlaps: on screen in compare_both_v2 (not spoken)"
+ },
+ "exp2fixed.overlaps": {
+  "value": 0,
+  "source": "viewer/data/compare.json",
+  "field": "v2.right.overlaps (double-bookings; expansion_v2_agentpatched)"
+ },
+ "exp2fixed.outside": {
+  "value": 0,
+  "source": "viewer/data/compare.json",
+  "field": "v2.right.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_agentpatched)"
+ },
+ "exp2fixed.overlaps_shown_store": {
+  "value": 0,
+  "source": "viewer/data/compare.json",
+  "field": "v2.right.stores[first].overlaps: on screen in compare_both_v2 (not spoken)"
  },
  "exp1plan.double_bookings": {
   "value": 7631,
@@ -929,5 +1175,148 @@
   "value": 0,
   "source": "viewer/data/compare.json",
   "field": "right.stores[first].overlaps: on screen in the compare capture (not spoken; store ID not shown)"
+ },
+ "exp2.context_last_hop": {
+  "value": 648620,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "last row prompt_hop (context read by the last hop)"
+ },
+ "exp2.input_total": {
+  "value": 3537080,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "sum(prompt_hop); = 'input 3,537,080' in reports/expansion_v2_score.txt"
+ },
+ "exp2u.py_files": {
+  "value": 907,
+  "source": "reports/expansion_v2_code.json",
+  "field": "totals.files"
+ },
+ "exp2u.py_parsed": {
+  "value": 904,
+  "source": "reports/expansion_v2_code.json",
+  "field": "totals.parsed"
+ },
+ "exp2u.test_files": {
+  "value": 663,
+  "source": "reports/expansion_v2_code.json",
+  "field": "totals.d4_files"
+ },
+ "exp2u.test_files_noload": {
+  "value": 171,
+  "source": "reports/expansion_v2_code.json",
+  "field": "totals.d4_by_status.collection_error"
+ },
+ "exp2u.badline_tok": {
+  "value": 132125,
+  "source": "reports/expansion_v2_code.json",
+  "field": "files[recallstorm/aliases/translations.py].start_tok (file with the mis-indented line)",
+  "parse_error": {
+   "path": "recallstorm/aliases/translations.py",
+   "tok": 133530,
+   "msg": "unindent does not match any outer indentation level",
+   "line": 109,
+   "col": 105
+  }
+ },
+ "exp2.names": {
+  "value": 2326,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "sum buckets.position.*.d1_symbols"
+ },
+ "exp2.names_ok": {
+  "value": 2326,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "sum buckets.position.*.d1_ok"
+ },
+ "exp2.test_files": {
+  "value": 663,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.d4_files"
+ },
+ "exp2.test_files_pass": {
+  "value": 656,
+  "source": "reports/expansion_v2_agentpatched_code.json",
+  "field": "totals.d4_by_status.passed"
+ },
+ "exp2.longest_def.start_tok": {
+  "value": 89603,
+  "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+  "field": "make_run_id def_tok"
+ },
+ "exp2.longest_use.start_tok": {
+  "value": 641687,
+  "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+  "field": "test_flow_09 use_tok"
+ },
+ "exp2.longest_distance": {
+  "value": 552084,
+  "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+  "field": "distance"
+ },
+ "agent.v2_fix1_secs": {
+  "value": 21,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_aliases_translations_regraded.secs",
+  "raw": 21.0
+ },
+ "exp2plan.mistakes": {
+  "value": 21459,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+ },
+ "exp2plan.labor": {
+  "value": 21284,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+ },
+ "exp2fixed.labor": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "drill_after.by_check.labor.hard"
+ },
+ "exp2.heldout_before": {
+  "value": 10143,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.drill_holdout.held_before"
+ },
+ "exp2.heldout_after": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "v2_plan_tasks_labor.drill_holdout.held_after"
+ },
+ "exp2.heldout_stores": {
+  "value": 10,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(drill_holdout.held_stores)"
+ },
+ "exp2fixed.mistakes": {
+  "value": 175,
+  "source": "reports/expansion_v2_agentpatched_plan.json",
+  "field": "hard_errors (final v2 plan mistakes)"
+ },
+ "exp2fixed.missed_spots": {
+  "value": 172,
+  "source": "reports/expansion_v2_agentpatched_plan.json",
+  "field": "by_check.coverage.hard"
+ },
+ "exp2fixed.decoys_pulled": {
+  "value": 3,
+  "source": "reports/expansion_v2_agentpatched_plan.json",
+  "field": "classification.decoys_pulled"
+ },
+ "exp2fixed.found": {
+  "value": 455,
+  "source": "reports/expansion_v2_agentpatched_plan.json",
+  "field": "classification.tp"
+ },
+ "exp2fixed.missed": {
+  "value": 12,
+  "source": "reports/expansion_v2_agentpatched_plan.json",
+  "field": "classification.fn"
+ },
+ "exp2fixed.truth_pull": {
+  "value": 467,
+  "source": "reports/expansion_v2_agentpatched_plan.json",
+  "field": "classification.tp + fn"
  }
 }

@@ -5,7 +5,8 @@
 | `backup_core.mp4` | 1:31.3 (narration at 1.1× tempo) | Backup for demo steps 1-2: hook + working core |
 | `demo_full_draft.mp4` | 2:45.2 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
 | `one_minute.mp4` | 0:58.2 | Tight cut for the submission (v1 numbers) |
-| `demo_full_final.mp4`, `one_minute_final.mp4` | not built yet | Final cuts. Same scripts with `{exp2.*}` numbers. They render `[v2 numbers pending]` cards until `runs/expansion_v2/` finishes |
+| `demo_full_final.mp4` | 3:01.7 (narration 1.06×) | **Final cut** with expansion v2: 646,825 tokens, 911 files, 10 hops; 6,581 cross-file links after a one-line fix; longest link 552,084 tokens; v2 fix loop 21,459 → 175 |
+| `one_minute_final.mp4` | 0:58.4 (narration 1.05×) | **Final one-minute cut**, which leads with 646,825 tokens |
 
 All videos are 1920x1080, 30 fps, H.264 (high) + AAC 48 kHz stereo, with captions burned in. Each `<video>.shots.json` lists
 every shot (start, duration, kind, source, on-screen label) and every narration line as spoken.
@@ -70,6 +71,17 @@ set -a && source .env && set +a && .venv/bin/python videos/gen_tts.py demo_full_
 Any segment still missing a number or an asset renders a `[v2 numbers pending]` card and lists what it lacks in
 `<video>.shots.json` (`segments[].pending`). Nothing is guessed. If the v2 gen dir or report names differ from
 `expansion_v2`, change the `hops("expansion_v2", ...)` / `code_report("expansion_v2", ...)` calls in `make_numbers.py`.
+
+## Expansion v2 in the final cuts
+
+Sources: `runs/expansion_v2/hops.jsonl`, `reports/expansion_v2_score.txt`, `reports/expansion_v2_code.json` (unedited),
+`reports/expansion_v2_agentpatched_{code,plan}.json` and `_deps.jsonl` (v2 + 2 agent patches), `patches/agent/LOG.jsonl`
+(`v2_aliases_translations_regraded`, `v2_plan_tasks_labor`), and `viewer/data/compare.json` key `v2`. Captures:
+`hops_expansion_v2.png`, `codewall_v2.mp4` and `codewall_longest_v2.png` (code wall `expansion_v2_agentpatched`; the
+"Longest passing cross-file call" button opens `core/ids.py` → `tests/integration/test_flow_09_analytics_governance.py`),
+`compare_left_v2.png` / `compare_both_v2.png` (Run = v2), and `assets/term/exp_longest_test_v2.txt` (live pytest, 1 passed).
+The agent's third v2 attempt (`v2_aliases_detect_coverage`) is NOT_FIXED and is not claimed. The narration says the
+remaining 175 (12 missed products and 3 look-alikes) are still open.
 
 ## Story and language (team lead, 12:35-12:40)
 

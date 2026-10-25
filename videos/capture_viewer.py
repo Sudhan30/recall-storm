@@ -168,9 +168,12 @@ async def scene_compare(p, base, out):
     pg = await (await b.new_context(viewport={"width": 1920, "height": 1080}, device_scale_factor=2)).new_page()
     await pg.goto(base.rstrip("/") + "/compare.html")
     await pg.wait_for_timeout(2500)
-    await pg.locator("#L").screenshot(path=str(out / "compare_left.png"))
+    if SUF:                                              # e.g. --suffix _v2 selects Run = v2
+        await pg.select_option("#run", SUF.strip("_"))
+        await pg.wait_for_timeout(1500)
+    await pg.locator("#L").screenshot(path=str(out / f"compare_left{SUF}.png"))
     l, lg = await pg.locator("#L").bounding_box(), await pg.locator(".legend").bounding_box()
-    await pg.screenshot(path=str(out / "compare_both.png"),
+    await pg.screenshot(path=str(out / f"compare_both{SUF}.png"),
                         clip={"x": 0, "y": l["y"] - 10, "width": 1920, "height": lg["y"] + lg["height"] + 14 - (l["y"] - 10)})
     await b.close()
     print("compare stills")

@@ -209,7 +209,16 @@ put("agent.exp_heldout_stores", len(held), "patches/agent/LOG.jsonl", "drill_hol
 
 cmp_p = ROOT / "viewer/data/compare.json"
 if cmp_p.exists():
-    cmp = json.loads(cmp_p.read_text())
+    cmp_all = json.loads(cmp_p.read_text())
+    cmp = cmp_all.get("v1", cmp_all)
+    v2c = cmp_all.get("v2")
+    if v2c:
+        for side, key in (("left", "exp2plan"), ("right", "exp2fixed")):
+            for f, desc in (("overlaps", "double-bookings"), ("outside", "tasks outside the 10 PM-6 AM shift")):
+                put(f"{key}.{f}", v2c[side][f], "viewer/data/compare.json", f"v2.{side}.{f} ({desc}; {v2c[side]['name']})")
+            sid = next(iter(v2c[side]["stores"]))
+            put(f"{key}.overlaps_shown_store", (v2c[side].get("stores") or {}).get(sid, {}).get("overlaps") if sid else None,
+                "viewer/data/compare.json", f"v2.{side}.stores[first].overlaps: on screen in compare_both_v2 (not spoken)")
     for side, key in (("left", "exp1plan"), ("right", "exp1fixed")):
         put(f"{key}.double_bookings", sum(st["overlaps"] for st in cmp[side]["stores"].values()), "viewer/data/compare.json",
             f"sum of {side}.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on "
@@ -220,10 +229,84 @@ if cmp_p.exists():
         put(f"{key}.double_bookings_shown_store", cmp[side]["stores"][sid]["overlaps"], "viewer/data/compare.json",
             f"{side}.stores[first].overlaps: on screen in the compare capture (not spoken; store ID not shown)")
 
+
+# --- expansion v2 (final, 2026-10-25 ~1:45 PM): unedited vs v2 + agent patches
+def _v2():
+    sc = (ROOT / "reports/expansion_v2_score.txt")
+    if not sc.exists():
+        return
+    rows = jl("runs/expansion_v2/hops.jsonl")
+    put("exp2.context_last_hop", rows[-1]["prompt_hop"], "runs/expansion_v2/hops.jsonl", "last row prompt_hop (context read by the last hop)")
+    put("exp2.input_total", sum(r["prompt_hop"] for r in rows), "runs/expansion_v2/hops.jsonl", "sum(prompt_hop); = 'input 3,537,080' in reports/expansion_v2_score.txt")
+    u = json.loads((ROOT / "reports/expansion_v2_code.json").read_text())
+    t = u["totals"]; p = "reports/expansion_v2_code.json"
+    put("exp2u.py_files", t["files"], p, "totals.files"); put("exp2u.py_parsed", t["parsed"], p, "totals.parsed")
+    put("exp2u.test_files", t["d4_files"], p, "totals.d4_files")
+    put("exp2u.test_files_noload", t["d4_by_status"].get("collection_error", 0), p, "totals.d4_by_status.collection_error")
+    bad = [e for e in u["parse_errors"] if e["path"] == "recallstorm/aliases/translations.py"]
+    put("exp2u.badline_tok", next(f["start_tok"] for f in u["files"] if f["path"] == "recallstorm/aliases/translations.py"),
+        p, "files[recallstorm/aliases/translations.py].start_tok (file with the mis-indented line)", parse_error=bad[0] if bad else None)
+    a = json.loads((ROOT / "reports/expansion_v2_agentpatched_code.json").read_text())
+    t = a["totals"]; p = "reports/expansion_v2_agentpatched_code.json"
+    put("exp2.files_manifest", t["manifest_files_present"], p, "totals.manifest_files_present (911/911 manifest files emitted)")
+    put("exp2.edges", t["d2_edges"], p, "totals.d2_edges (after the one-line fix)")
+    put("exp2.edges_resolved", t["d2_resolved"], p, "totals.d2_resolved")
+    put("exp2.calls_checked", t["d2_calls_checked"], p, "totals.d2_calls_checked")
+    put("exp2.arity_mismatch", t["d2_arity_mismatch"], p, "totals.d2_arity_mismatch")
+    put("exp2.names", sum(b.get("d1_symbols", 0) for b in a["buckets"]["position"].values()), p, "sum buckets.position.*.d1_symbols")
+    put("exp2.names_ok", sum(b.get("d1_ok", 0) for b in a["buckets"]["position"].values()), p, "sum buckets.position.*.d1_ok")
+    put("exp2.test_files", t["d4_files"], p, "totals.d4_files")
+    put("exp2.test_files_pass", t["d4_by_status"].get("passed", 0), p, "totals.d4_by_status.passed")
+    dep = [json.loads(l) for l in (ROOT / "reports/expansion_v2_agentpatched_deps.jsonl").read_text().splitlines()
+           if '"make_run_id"' in l and "test_flow_09_analytics_governance" in l]
+    if dep:
+        put("exp2.longest_def.start_tok", dep[0]["def_tok"], "reports/expansion_v2_agentpatched_deps.jsonl", "make_run_id def_tok")
+        put("exp2.longest_use.start_tok", dep[0]["use_tok"], "reports/expansion_v2_agentpatched_deps.jsonl", "test_flow_09 use_tok")
+        put("exp2.longest_distance", dep[0]["distance"], "reports/expansion_v2_agentpatched_deps.jsonl", "distance")
+    ag = {r["name"]: r for r in jl("patches/agent/LOG.jsonl")}
+    fx = ag.get("v2_aliases_translations_regraded")
+    if fx:
+        put("agent.v2_fix1_secs", round(fx["secs"]), "patches/agent/LOG.jsonl", "v2_aliases_translations_regraded.secs", raw=fx["secs"])
+    lb = ag.get("v2_plan_tasks_labor")
+    if lb:
+        L = "patches/agent/LOG.jsonl"
+        put("exp2plan.mistakes", lb["drill_before"]["hard"], L, "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)")
+        put("exp2plan.labor", lb["drill_before"]["by_check"]["labor"]["hard"], L, "v2_plan_tasks_labor.drill_before.by_check.labor.hard")
+        put("exp2fixed.labor", lb["drill_after"]["by_check"].get("labor", {}).get("hard", 0), L, "drill_after.by_check.labor.hard")
+        dh = lb["drill_holdout"]
+        put("exp2.heldout_before", dh["held_before"], L, "v2_plan_tasks_labor.drill_holdout.held_before")
+        put("exp2.heldout_after", dh["held_after"], L, "v2_plan_tasks_labor.drill_holdout.held_after")
+        put("exp2.heldout_stores", len(dh["held_stores"]), L, "len(drill_holdout.held_stores)")
+    r = jload("reports/expansion_v2_agentpatched_plan.json"); p = "reports/expansion_v2_agentpatched_plan.json"
+    c = r["classification"]
+    put("exp2fixed.mistakes", r["hard_errors"], p, "hard_errors (final v2 plan mistakes)")
+    put("exp2fixed.missed_spots", r["by_check"].get("coverage", {}).get("hard", 0), p, "by_check.coverage.hard")
+    put("exp2fixed.decoys_pulled", c["decoys_pulled"], p, "classification.decoys_pulled")
+    put("exp2fixed.found", c["tp"], p, "classification.tp"); put("exp2fixed.missed", c["fn"], p, "classification.fn")
+    put("exp2fixed.truth_pull", c["tp"] + c["fn"], p, "classification.tp + fn")
+
+
+_v2()
+
 PHRASES = {
     "Each row is one simulated associate. Red means Argon's plan sent the same person to two shelves at once: "
     "7,631 double-bookings across 20 stores": ["exp1plan.double_bookings", "exp1plan.double_booking_stores"],
     "after the agent's fixes: 0 double-bookings": ["exp1fixed.double_bookings"],
+    "646,825 tokens of code, 911 files, over 10 hops": ["exp2.visible", "exp2.files_manifest", "exp2.hops"],
+    "every one of its 6,581 cross-file links lines up after a single one-line fix":
+        ["exp2.edges", "exp2.edges_resolved", "exp2u.py_parsed", "exp2u.py_files", "exp2u.badline_tok"],
+    "after a one-line fix the agent made in 21 seconds (one mis-indented line)": ["agent.v2_fix1_secs", "exp2u.badline_tok"],
+    "The rest, 12 missed products and 3 look-alikes, are still open": ["exp2fixed.missed", "exp2fixed.decoys_pulled", "exp2fixed.missed_spots"],
+    "a test written at token 641,687 calls a function written 552,084 tokens earlier":
+        ["exp2.longest_use.start_tok", "exp2.longest_distance", "exp2.longest_def.start_tok"],
+    "The same scheduling flaw showed up at both lengths": ["exp1plan.double_bookings", "exp2plan.overlaps", "exp2plan.outside"],
+    "plan mistakes from 21,459 to 175": ["exp2plan.mistakes", "exp2fixed.mistakes"],
+    "scheduling mistakes to 0, including in 10 stores it never saw":
+        ["exp2plan.labor", "exp2fixed.labor", "exp2.heldout_before", "exp2.heldout_after", "exp2.heldout_stores"],
+    "Large run: the same fix loop (bars card)": ["exp2plan.mistakes", "exp2fixed.mistakes", "exp2plan.labor", "exp2fixed.labor",
+        "exp2plan.overlaps", "exp2plan.outside", "exp2fixed.missed_spots", "exp2fixed.decoys_pulled", "exp2.heldout_stores"],
+    "the 175 left: 172 shelf spots from 12 missed products, and 3 look-alikes":
+        ["exp2fixed.mistakes", "exp2fixed.missed_spots", "exp2fixed.missed", "exp2fixed.decoys_pulled"],
     "nearly 300 California stores": ["stores_all.ca"],
     "the drill runs on 20 stores": ["core_patched.stores"],
     "Found all 467 products that contain Red No. 3": ["core_patched.tp", "core_patched.truth_pull"],
@@ -240,7 +323,7 @@ PHRASES = {
     "314 files, and every one of its 2,838 cross-file links lines up": ["exp1.files_manifest", "exp1.edges", "exp1.edges_resolved"],
     "hundreds of products (467 contain Red No. 3)": ["core_patched.truth_pull"],
     "thousands of shelf spots (6,718 affected)": ["core_patched.pull_facings"],
-    "7,632 of them: one associate booked in two places at once": ["exp1plan.labor"],
+    "7,631 double-bookings: one associate in two places at once (card)": ["exp1plan.double_bookings", "exp1plan.labor"],
     "the plan had 8,441 mistakes, mostly the same associate booked for two shelves at once": ["exp1plan.mistakes", "exp1plan.labor"],
     "the managed agent found the two root causes, fixed them, and the mistakes went to 0":
         ["agent.exp_root_causes", "exp1fixed.mistakes"],

@@ -1,0 +1,304 @@
+{
+ "video": "videos/demo_full_final.mp4",
+ "duration": 181.69,
+ "shots": [
+  {
+   "t": 0.0,
+   "dur": 7.13,
+   "seg": "s1a",
+   "kind": "ai",
+   "src": "store_night",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 7.13,
+   "dur": 6.53,
+   "seg": "s1b",
+   "kind": "ai",
+   "src": "scanner_shelf",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 13.67,
+   "dur": 6.5,
+   "seg": "s1b",
+   "kind": "ai",
+   "src": "aisle_pull",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 20.17,
+   "dur": 7.87,
+   "seg": "s1c",
+   "kind": "cards",
+   "src": "card",
+   "label": "REAL CAPTURE \u00b7 viewer evidence cards"
+  },
+  {
+   "t": 28.03,
+   "dur": 6.43,
+   "seg": "s1c",
+   "kind": "ai",
+   "src": "dc_trucks",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 34.47,
+   "dur": 7.33,
+   "seg": "s2",
+   "kind": "ai",
+   "src": "dc_interior",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 41.8,
+   "dur": 11.03,
+   "seg": "s2",
+   "kind": "title",
+   "src": "parts",
+   "label": null
+  },
+  {
+   "t": 52.83,
+   "dur": 14.53,
+   "seg": "s3_exp2",
+   "kind": "still",
+   "src": "hops_expansion_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 67.37,
+   "dur": 11.9,
+   "seg": "s3_exp2",
+   "kind": "cap",
+   "src": "codewall_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 79.27,
+   "dur": 6.63,
+   "seg": "s3b_exp2v",
+   "kind": "still",
+   "src": "codewall_longest_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 85.9,
+   "dur": 5.43,
+   "seg": "s3b_exp2v",
+   "kind": "term",
+   "src": "exp_longest_test_v2",
+   "label": "REAL CAPTURE \u00b7 terminal output"
+  },
+  {
+   "t": 91.33,
+   "dur": 4.47,
+   "seg": "s4_exp2v",
+   "kind": "stats",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 95.8,
+   "dur": 7.13,
+   "seg": "s4_exp2v",
+   "kind": "still",
+   "src": "compare_left",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 102.93,
+   "dur": 6.27,
+   "seg": "s4_exp2v",
+   "kind": "still",
+   "src": "compare_both_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 109.2,
+   "dur": 5.33,
+   "seg": "s5a",
+   "kind": "still",
+   "src": "compare_both",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 114.53,
+   "dur": 2.37,
+   "seg": "s5a",
+   "kind": "term",
+   "src": "agent_log",
+   "label": "REAL CAPTURE \u00b7 terminal output"
+  },
+  {
+   "t": 116.9,
+   "dur": 4.13,
+   "seg": "s5a",
+   "kind": "bars",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 121.03,
+   "dur": 5.9,
+   "seg": "s5a2",
+   "kind": "still",
+   "src": "compare_both_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 126.93,
+   "dur": 10.93,
+   "seg": "s5a2",
+   "kind": "bars",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 137.87,
+   "dur": 5.33,
+   "seg": "s5b",
+   "kind": "cap",
+   "src": "store3d",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 143.2,
+   "dur": 4.37,
+   "seg": "s5b",
+   "kind": "cap",
+   "src": "map_replay",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 147.57,
+   "dur": 16.43,
+   "seg": "s5c",
+   "kind": "stats",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 164.0,
+   "dur": 10.47,
+   "seg": "s6a",
+   "kind": "ai",
+   "src": "highway_trucks",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 174.47,
+   "dur": 7.23,
+   "seg": "s6b",
+   "kind": "title",
+   "src": "end_full",
+   "label": null
+  }
+ ],
+ "segments": [
+  {
+   "id": "s1a",
+   "t": 0.0,
+   "dur": 7.13,
+   "say": "On January 1st, 2027, California bans food with Red No. 3. There's no sell-through period.",
+   "beat": "One night to clear the shelves",
+   "pending": null
+  },
+  {
+   "id": "s1b",
+   "t": 7.13,
+   "dur": 13.02,
+   "say": "The dye hides under many names: erythrosine, E127, \"Red 3\", even scanning typos. It's in hundreds of products, on thousands of shelf spots, and stores get one overnight shift to clear it.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "s1c",
+   "t": 20.16,
+   "dur": 14.31,
+   "say": "Miss one, and it's a violation. Pull the wrong one, since Red 40 looks almost the same on a label, and you empty shelves for nothing. Our simulated drill is for a large big-box retailer with nearly 300 California stores.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "s2",
+   "t": 34.47,
+   "dur": 18.36,
+   "say": "That's hard for software. A compliance pull isn't one program. It's many parts that must agree: reading labels, the law's dates, every shelf location, who works which shift, which substitute goes where, which truck takes the returns. Written in pieces, those pieces drift apart at the seams.",
+   "beat": "Many parts that must agree",
+   "pending": null
+  },
+  {
+   "id": "s3_exp2",
+   "t": 52.83,
+   "dur": 26.43,
+   "say": "Gemini 4 Argon can hold the whole system in one continued generation. In our largest run it wrote 646,825 tokens of code, 911 files, over 10 hops, and every one of its 6,581 cross-file links lines up, after a one-line fix the agent made in 21 seconds. That's the point of a million-token model: the whole system in one head.",
+   "beat": "The whole system in one generation",
+   "pending": null
+  },
+  {
+   "id": "s3b_exp2v",
+   "t": 79.25,
+   "dur": 12.09,
+   "say": "Its longest link: a test written at token 641,687 calls a function written 552,084 tokens earlier. The test passes, live.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "s4_exp2v",
+   "t": 91.35,
+   "dur": 17.86,
+   "say": "But consistent code isn't correct code. In our first, smaller run, the verifier found 8,441 plan mistakes. Each row here is one simulated associate. Red means Argon's plan sent the same person to two shelves at once. The same scheduling flaw showed up at both lengths.",
+   "beat": "Consistent isn't correct",
+   "pending": null
+  },
+  {
+   "id": "s5a",
+   "t": 109.21,
+   "dur": 11.82,
+   "say": "A managed agent read the verifier's findings, found the 2 root causes, and fixed them. Mistakes went from 8,441 to 0, including in 10 stores it never saw.",
+   "beat": "8,441 \u2192 0",
+   "pending": null
+  },
+  {
+   "id": "s5a2",
+   "t": 121.02,
+   "dur": 16.83,
+   "say": "In the large run, the same fix loop took plan mistakes from 21,459 to 175. Scheduling mistakes went to 0, even in 10 stores it never saw. The rest, 12 missed products and 3 look-alikes, are still open.",
+   "beat": "21,459 \u2192 175",
+   "pending": null
+  },
+  {
+   "id": "s5b",
+   "t": 137.85,
+   "dur": 9.72,
+   "say": "And the working core Argon wrote this morning, on 20 stores, overnight: tags flash, associates walk to each shelf, and every store goes green.",
+   "beat": "The working core",
+   "pending": null
+  },
+  {
+   "id": "s5c",
+   "t": 147.57,
+   "dur": 16.43,
+   "say": "With three small logged fixes to its first draft, it found all 467 products with Red No. 3, pulled none of the 483 look-alikes, covered every one of 6,718 shelf spots, and finished every task before midnight.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "s6a",
+   "t": 163.99,
+   "dur": 10.47,
+   "say": "When a law changes overnight, a retailer needs the system built, checked and fixed fast. Argon writes the whole thing at once, the verifier proves it, the agent repairs it.",
+   "beat": "Why it matters",
+   "pending": null
+  },
+  {
+   "id": "s6b",
+   "t": 174.47,
+   "dur": 7.22,
+   "say": "Simulated drill, simulated operations, every number from the verifier. Open source.",
+   "beat": "",
+   "pending": null
+  }
+ ]
+}

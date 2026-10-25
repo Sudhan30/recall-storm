@@ -126,17 +126,25 @@
    "file": "s2_c1a974283e91.wav",
    "text": "That's hard for software. A compliance pull isn't one program. It's many parts that must agree: reading labels, the law's dates, every shelf location, who works which shift, which substitute goes where, which truck takes the returns. Written in pieces, those pieces drift apart at the seams."
   },
-  "s3b_exp2": {
-   "file": "s3b_exp2_1e0667724d70.wav",
-   "text": "Here's its longest link: a file written early, used by a test near the end. Its tests pass, live."
+  "s3_exp2": {
+   "file": "s3_exp2_dc9239cf1e6e.wav",
+   "text": "Gemini 4 Argon can hold the whole system in one continued generation. In our largest run it wrote 646,825 tokens of code, 911 files, over 10 hops, and every one of its 6,581 cross-file links lines up, after a one-line fix the agent made in 21 seconds. That's the point of a million-token model: the whole system in one head."
   },
-  "s4_exp2": {
-   "file": "s4_exp2_3624fdc0894e.wav",
-   "text": "But consistent code isn't correct code. In the first run, our verifier ran the plan and found 8,441 mistakes. Each row here is one simulated associate. Red means Argon's plan sent the same person to two shelves at once: 7,631 double-bookings across 20 stores."
+  "s3b_exp2v": {
+   "file": "s3b_exp2v_38867fb215b8.wav",
+   "text": "Its longest link: a test written at token 641,687 calls a function written 552,084 tokens earlier. The test passes, live."
+  },
+  "s4_exp2v": {
+   "file": "s4_exp2v_fab0d912a7b5.wav",
+   "text": "But consistent code isn't correct code. In our first, smaller run, the verifier found 8,441 plan mistakes. Each row here is one simulated associate. Red means Argon's plan sent the same person to two shelves at once. The same scheduling flaw showed up at both lengths."
   },
   "s5a": {
    "file": "s5a_78a0d9652bfc.wav",
    "text": "A managed agent read the verifier's findings, found the 2 root causes, and fixed them. Mistakes went from 8,441 to 0, including in 10 stores it never saw."
+  },
+  "s5a2": {
+   "file": "s5a2_6548b53042a2.wav",
+   "text": "In the large run, the same fix loop took plan mistakes from 21,459 to 175. Scheduling mistakes went to 0, even in 10 stores it never saw. The rest, 12 missed products and 3 look-alikes, are still open."
   },
   "s5b": {
    "file": "s5b_dd388bfc2be0.wav",
@@ -159,6 +167,10 @@
   "m1": {
    "file": "m1_68411148cf90.wav",
    "text": "On January 1st, 2027, California bans food with Red No. 3. Stores get one overnight shift to clear it, even when it hides as erythrosine or E127."
+  },
+  "m3_exp2": {
+   "file": "m3_exp2_27e40780d0ed.wav",
+   "text": "Gemini 4 Argon holds the whole system in one continued generation: 646,825 tokens of code, and after a one-line fix, every one of its 6,581 cross-file links lines up."
   },
   "m5a": {
    "file": "m5a_1cce3c1575b3.wav",

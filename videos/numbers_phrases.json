@@ -21,6 +21,275 @@
    "field": "sum of right.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion_agentpatched/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
   }
  ],
+ "646,825 tokens of code, 911 files, over 10 hops": [
+  {
+   "key": "exp2.visible",
+   "value": 646825,
+   "source": "runs/expansion_v2/hops.jsonl",
+   "field": "last row visible_total"
+  },
+  {
+   "key": "exp2.files_manifest",
+   "value": 911,
+   "source": "reports/expansion_v2_agentpatched_code.json",
+   "field": "totals.manifest_files_present (911/911 manifest files emitted)"
+  },
+  {
+   "key": "exp2.hops",
+   "value": 10,
+   "source": "runs/expansion_v2/hops.jsonl",
+   "field": "row count"
+  }
+ ],
+ "every one of its 6,581 cross-file links lines up after a single one-line fix": [
+  {
+   "key": "exp2.edges",
+   "value": 6581,
+   "source": "reports/expansion_v2_agentpatched_code.json",
+   "field": "totals.d2_edges (after the one-line fix)"
+  },
+  {
+   "key": "exp2.edges_resolved",
+   "value": 6581,
+   "source": "reports/expansion_v2_agentpatched_code.json",
+   "field": "totals.d2_resolved"
+  },
+  {
+   "key": "exp2u.py_parsed",
+   "value": 904,
+   "source": "reports/expansion_v2_code.json",
+   "field": "totals.parsed"
+  },
+  {
+   "key": "exp2u.py_files",
+   "value": 907,
+   "source": "reports/expansion_v2_code.json",
+   "field": "totals.files"
+  },
+  {
+   "key": "exp2u.badline_tok",
+   "value": 132125,
+   "source": "reports/expansion_v2_code.json",
+   "field": "files[recallstorm/aliases/translations.py].start_tok (file with the mis-indented line)",
+   "parse_error": {
+    "path": "recallstorm/aliases/translations.py",
+    "tok": 133530,
+    "msg": "unindent does not match any outer indentation level",
+    "line": 109,
+    "col": 105
+   }
+  }
+ ],
+ "after a one-line fix the agent made in 21 seconds (one mis-indented line)": [
+  {
+   "key": "agent.v2_fix1_secs",
+   "value": 21,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_aliases_translations_regraded.secs",
+   "raw": 21.0
+  },
+  {
+   "key": "exp2u.badline_tok",
+   "value": 132125,
+   "source": "reports/expansion_v2_code.json",
+   "field": "files[recallstorm/aliases/translations.py].start_tok (file with the mis-indented line)",
+   "parse_error": {
+    "path": "recallstorm/aliases/translations.py",
+    "tok": 133530,
+    "msg": "unindent does not match any outer indentation level",
+    "line": 109,
+    "col": 105
+   }
+  }
+ ],
+ "The rest, 12 missed products and 3 look-alikes, are still open": [
+  {
+   "key": "exp2fixed.missed",
+   "value": 12,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.fn"
+  },
+  {
+   "key": "exp2fixed.decoys_pulled",
+   "value": 3,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.decoys_pulled"
+  },
+  {
+   "key": "exp2fixed.missed_spots",
+   "value": 172,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "by_check.coverage.hard"
+  }
+ ],
+ "a test written at token 641,687 calls a function written 552,084 tokens earlier": [
+  {
+   "key": "exp2.longest_use.start_tok",
+   "value": 641687,
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "test_flow_09 use_tok"
+  },
+  {
+   "key": "exp2.longest_distance",
+   "value": 552084,
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "distance"
+  },
+  {
+   "key": "exp2.longest_def.start_tok",
+   "value": 89603,
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "make_run_id def_tok"
+  }
+ ],
+ "The same scheduling flaw showed up at both lengths": [
+  {
+   "key": "exp1plan.double_bookings",
+   "value": 7631,
+   "source": "viewer/data/compare.json",
+   "field": "sum of left.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+  },
+  {
+   "key": "exp2plan.overlaps",
+   "value": 7161,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.overlaps (double-bookings; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2plan.outside",
+   "value": 14117,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+  }
+ ],
+ "plan mistakes from 21,459 to 175": [
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2fixed.mistakes",
+   "value": 175,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "hard_errors (final v2 plan mistakes)"
+  }
+ ],
+ "scheduling mistakes to 0, including in 10 stores it never saw": [
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  },
+  {
+   "key": "exp2fixed.labor",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_after.by_check.labor.hard"
+  },
+  {
+   "key": "exp2.heldout_before",
+   "value": 10143,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_before"
+  },
+  {
+   "key": "exp2.heldout_after",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_after"
+  },
+  {
+   "key": "exp2.heldout_stores",
+   "value": 10,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "len(drill_holdout.held_stores)"
+  }
+ ],
+ "Large run: the same fix loop (bars card)": [
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2fixed.mistakes",
+   "value": 175,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "hard_errors (final v2 plan mistakes)"
+  },
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  },
+  {
+   "key": "exp2fixed.labor",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_after.by_check.labor.hard"
+  },
+  {
+   "key": "exp2plan.overlaps",
+   "value": 7161,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.overlaps (double-bookings; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2plan.outside",
+   "value": 14117,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2fixed.missed_spots",
+   "value": 172,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "by_check.coverage.hard"
+  },
+  {
+   "key": "exp2fixed.decoys_pulled",
+   "value": 3,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.decoys_pulled"
+  },
+  {
+   "key": "exp2.heldout_stores",
+   "value": 10,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "len(drill_holdout.held_stores)"
+  }
+ ],
+ "the 175 left: 172 shelf spots from 12 missed products, and 3 look-alikes": [
+  {
+   "key": "exp2fixed.mistakes",
+   "value": 175,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "hard_errors (final v2 plan mistakes)"
+  },
+  {
+   "key": "exp2fixed.missed_spots",
+   "value": 172,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "by_check.coverage.hard"
+  },
+  {
+   "key": "exp2fixed.missed",
+   "value": 12,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.fn"
+  },
+  {
+   "key": "exp2fixed.decoys_pulled",
+   "value": 3,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.decoys_pulled"
+  }
+ ],
  "nearly 300 California stores": [
   {
    "key": "stores_all.ca",
@@ -225,7 +494,13 @@
    "field": "coverage.pull_facings"
   }
  ],
- "7,632 of them: one associate booked in two places at once": [
+ "7,631 double-bookings: one associate in two places at once (card)": [
+  {
+   "key": "exp1plan.double_bookings",
+   "value": 7631,
+   "source": "viewer/data/compare.json",
+   "field": "sum of left.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+  },
   {
    "key": "exp1plan.labor",
    "value": 7632,

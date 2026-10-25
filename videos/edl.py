@@ -38,12 +38,48 @@ FIRST_DRAFT = {"kind": "bars", "title": "Argon's first draft → after 3 small l
      "before_caption": "first draft", "after_caption": "after the fixes"}]}
 MISTAKES = {"kind": "stats", "items": [
     {"n": "exp1plan.mistakes", "label": "plan mistakes found by the verifier", "color": "red"},
-    {"n": "exp1plan.labor", "label": "of them: one associate booked in two places at once", "color": "red"}]}
+    {"n": "exp1plan.double_bookings", "label": "double-bookings: one associate in two places at once", "color": "red"}]}
 FIXLOOP = {"kind": "bars", "title": "Managed agent: {agent.exp_root_causes} root causes fixed", "at": 0.3,
            "done": "0 mistakes, including {agent.exp_heldout_stores} stores the agent never saw", "rows": [
     {"label": "Plan mistakes", "before": "exp1plan.mistakes", "after": "exp1fixed.mistakes",
      "before_caption": "before (reports/expansion_plan.json)", "after_caption": "after (reports/expansion_agentpatched_plan.json)"}]}
+FIXLOOP_V2 = {"kind": "bars", "title": "Large run: the same fix loop", "at": 0.3, "rows": [
+    {"label": "Plan mistakes", "before": "exp2plan.mistakes", "after": "exp2fixed.mistakes",
+     "before_caption": "with the one-line fix (patches/agent/LOG.jsonl)",
+     "after_caption": "after the scheduling fix: {exp2fixed.missed_spots} missed shelf spots + {exp2fixed.decoys_pulled} look-alikes left"},
+    {"label": "Scheduling mistakes", "before": "exp2plan.labor", "after": "exp2fixed.labor",
+     "before_caption": "{exp2plan.overlaps} double-bookings + {exp2plan.outside} tasks outside the shift + more",
+     "after_caption": "including {exp2.heldout_stores} stores the agent never saw"}]}
 END = {"kind": "title", "src": "end_full"}
+
+# Final cut (expansion v2 done): segments that replace or follow the draft's, keyed by draft segment id.
+FINAL_FULL = {
+    "s3_exp2": {"id": "s3_exp2", "beat": "The whole system in one generation",
+                "say": "Gemini 4 Argon can hold the whole system in one continued generation. In our largest run it wrote "
+                       "{exp2.visible} tokens of code, {exp2.files_manifest} files, over {exp2.hops} hops, and every one of its "
+                       "{exp2.edges} cross-file links lines up, after a one-line fix the agent made in "
+                       "{agent.v2_fix1_secs} seconds. That's the point of a million-token model: the whole system in one head.",
+                "shots": [{"kind": "still", "src": "hops_expansion_v2", "w": 0.55, "zoom": 0.03},
+                          {"kind": "cap", "src": "codewall_v2", "w": 0.45, "a": 0, "b": 4.6}]},
+    "s3b_exp2": {"id": "s3b_exp2v",
+                 "say": "Its longest link: a test written at token {exp2.longest_use.start_tok} calls a function written "
+                        "{exp2.longest_distance} tokens earlier. The test passes, live.",
+                 "shots": [{"kind": "still", "src": "codewall_longest_v2", "w": 0.55, "zoom": 0.05},
+                           {"kind": "term", "src": "exp_longest_test_v2", "w": 0.45}]},
+    "s4_exp2": {"id": "s4_exp2v", "beat": "Consistent isn't correct",
+                "say": "But consistent code isn't correct code. In our first, smaller run, the verifier found "
+                       "{exp1plan.mistakes} plan mistakes. Each row here is one simulated associate. Red means Argon's plan "
+                       "sent the same person to two shelves at once. The same scheduling flaw showed up at both lengths.",
+                "shots": [{**MISTAKES, "w": 0.25}, {"kind": "still", "src": "compare_left", "w": 0.4, "zoom": 0.04},
+                          {"kind": "still", "src": "compare_both_v2", "w": 0.35, "zoom": 0.03}]},
+}
+FINAL_AFTER = {
+    "s5a": {"id": "s5a2", "beat": "{exp2plan.mistakes} \u2192 {exp2fixed.mistakes}",
+            "say": "In the large run, the same fix loop took plan mistakes from {exp2plan.mistakes} to {exp2fixed.mistakes}. "
+                   "Scheduling mistakes went to {exp2fixed.labor}, even in {exp2.heldout_stores} stores it never saw. "
+                   "The rest, {exp2fixed.missed} missed products and {exp2fixed.decoys_pulled} look-alikes, are still open.",
+            "shots": [{"kind": "still", "src": "compare_both_v2", "w": 0.35, "zoom": 0.03}, {**FIXLOOP_V2, "w": 0.65}]},
+}
 PARTS = {"kind": "title", "src": "parts"}
 
 # ---------------------------------------------------------------- beat 1: the problem (shared)
@@ -138,6 +174,13 @@ def full(v):
         {"id": "s6b", "say": "Simulated drill, simulated operations, every number from the verifier. Open source.",
          "shots": [{**END, "w": 1}]},
     ]
+    if not draft:
+        out = []
+        for sg in segs:
+            out.append(FINAL_FULL.get(sg["id"], sg))
+            if sg["id"] in FINAL_AFTER:
+                out.append(FINAL_AFTER[sg["id"]])
+        segs = out
     return segs
 
 
@@ -150,8 +193,10 @@ def one_minute(v):
                 "even when it hides as erythrosine or E127.",
          "shots": [{"kind": "ai", "src": "store_night", "w": 0.45}, {"kind": "ai", "src": "scanner_shelf", "w": 0.55}]},
         {"id": f"m3_{v}", "beat": "The whole system in one generation",
-         "say": "Gemini 4 Argon holds the whole system in one continued generation: about {%s.visible_k} tokens of code, "
-                "and every one of its {%s.edges} cross-file links lines up." % (v, v),
+         "say": ("Gemini 4 Argon holds the whole system in one continued generation: about {exp1.visible_k} tokens of code, "
+                 "and every one of its {exp1.edges} cross-file links lines up.") if draft else
+                ("Gemini 4 Argon holds the whole system in one continued generation: {exp2.visible} tokens of code, and "
+                 "after a one-line fix, every one of its {exp2.edges} cross-file links lines up."),
          "shots": [{"kind": "still", "src": "hops_expansion" if draft else "hops_expansion_v2", "w": 0.5, "zoom": 0.03},
                    {"kind": "still", "src": "codewall_longest" if draft else "codewall_longest_v2", "w": 0.5, "zoom": 0.04}],
          "pending_text": "v2 tokens and cross-file links", "pending_secs": 5.0},
