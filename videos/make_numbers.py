@@ -252,6 +252,9 @@ def _v2():
     bad = [e for e in u["parse_errors"] if e["path"] == "recallstorm/aliases/translations.py"]
     put("exp2u.badline_tok", next(f["start_tok"] for f in u["files"] if f["path"] == "recallstorm/aliases/translations.py"),
         p, "files[recallstorm/aliases/translations.py].start_tok (file with the mis-indented line)", parse_error=bad[0] if bad else None)
+    bt = N["exp2u.badline_tok"]["value"]
+    put("exp2u.badline_tok_k", f"{round(bt / 1000):,},000", p, "translations.py start_tok rounded to thousands (132,125)",
+        derived=True, raw=bt)
     a = json.loads((ROOT / "reports/expansion_v2_agentpatched_code.json").read_text())
     t = a["totals"]; p = "reports/expansion_v2_agentpatched_code.json"
     put("exp2.files_manifest", t["manifest_files_present"], p, "totals.manifest_files_present (911/911 manifest files emitted)")
@@ -321,6 +324,12 @@ PHRASES = {
         ["exp2plan.mistakes", "exp2plan.overlaps", "exp2plan.outside"],
     "Scheduling mistakes went to zero, even in stores it never saw (bars card also shows 21,459 -> 175)":
         ["exp2plan.labor", "exp2fixed.labor", "exp2.heldout_after", "exp2plan.mistakes", "exp2fixed.mistakes"],
+    "One mis-indented line near token 132,000 stopped the label package loading; the managed agent fixed it in 21 seconds":
+        ["exp2u.badline_tok_k", "exp2u.badline_tok", "agent.v2_fix1_secs"],
+    "Each row here is one simulated associate: 7,161 double-bookings, and 14,117 tasks outside the 10 PM to 6 AM shift":
+        ["exp2plan.overlaps", "exp2plan.outside"],
+    "traced it to one root cause, one shared time cursor for all associates; scheduling mistakes went from 21,284 to zero, even in 10 stores it never saw":
+        ["exp2plan.labor", "exp2fixed.labor", "exp2.heldout_before", "exp2.heldout_after", "exp2.heldout_stores"],
     "all 9 hand-offs between hops came out clean": ["exp2.seams_pass", "exp2.seams_total"],
     "Our verifier ran the plan and found 21,459 mistakes, 21,284 of them in scheduling":
         ["exp2plan.mistakes", "exp2plan.mistakes_report", "exp2plan.labor"],

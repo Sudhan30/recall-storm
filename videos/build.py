@@ -225,8 +225,7 @@ def bars_frame(shot, t, d_total, numbers):
 def parts_img():
     img = title_img([])
     d = ImageDraw.Draw(img)
-    ft = font(54, "Bold"); t = "A compliance pull is many parts that must agree"
-    d.text(((W - ft.getbbox(t)[2]) // 2, 130), t, font=ft, fill=COL["text"])
+    # no heading: the segment's beat title ("Every part depends on every other") sits at the top of this card
     parts = [("Read labels", "erythrosine, E127, \u201cRed 3\u201d, typos"), ("The law's dates", "effective 2027-01-01, no sell-through"),
              ("Every shelf spot", "aisle, bay, shelf, position"), ("Who works when", "associates and shifts"),
              ("What goes back in", "substitutes per shelf"), ("Which truck", "returns to the DC")]

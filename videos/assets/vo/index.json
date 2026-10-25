@@ -110,37 +110,49 @@
   }
  },
  "demo_full_final": {
-  "s1a": {
-   "file": "s1a_cec0e8fc4e85.wav",
-   "text": "On January 1st, 2027, California bans food with Red No. 3. There's no sell-through period."
+  "p1": {
+   "file": "p1_068843e0eb23.wav",
+   "text": "At midnight on January 1st, 2027, every product in California with Red No. 3 becomes illegal to sell. No grace period."
   },
-  "s1b": {
-   "file": "s1b_67070cebd38f.wav",
-   "text": "The dye hides under many names: erythrosine, E127, \"Red 3\", even scanning typos. It's in hundreds of products, on thousands of shelf spots, and stores get one overnight shift to clear it."
+  "p1b": {
+   "file": "p1b_95012aa0e1be.wav",
+   "text": "The dye hides under many names. Stores get one night."
   },
-  "s1c": {
-   "file": "s1c_c7d1f7bd9b2a.wav",
-   "text": "Miss one, and it's a violation. Pull the wrong one, since Red 40 looks almost the same on a label, and you empty shelves for nothing. Our simulated drill is for a large big-box retailer with nearly 300 California stores."
+  "p2": {
+   "file": "p2_130a4b8cb38d.wav",
+   "text": "Reading a label decides what's pulled. What's pulled decides which shelves, which people, which shifts, which substitutes, which trucks. Change one rule and it ripples through all of them. A system like this has to agree with itself, everywhere at once."
   },
-  "s2": {
-   "file": "s2_c1a974283e91.wav",
-   "text": "That's hard for software. A compliance pull isn't one program. It's many parts that must agree: reading labels, the law's dates, every shelf location, who works which shift, which substitute goes where, which truck takes the returns. Written in pieces, those pieces drift apart at the seams."
+  "p3": {
+   "file": "p3_6c78f81bc8e6.wav",
+   "text": "So we asked Gemini 4 Argon to write the whole system in one continued generation: one author, holding every part in mind at once."
   },
-  "f2_s3": {
-   "file": "f2_s3_a45177b49387.wav",
-   "text": "Gemini 4 Argon can hold the whole system in one continued generation. In our largest run it wrote 646,825 tokens of code, 911 files, over 10 hops, and all 9 hand-offs between hops came out clean. After a one-line fix the agent made in 21 seconds, every one of its 6,581 cross-file links lines up. That's the point of a million-token model: the whole system in one head."
+  "p3a": {
+   "file": "p3a_cce55b12dfb1.wav",
+   "text": "646,825 tokens. 911 files. Ten hops, nine hand-offs, every one clean."
   },
-  "s3b_exp2v": {
-   "file": "s3b_exp2v_38867fb215b8.wav",
-   "text": "Its longest link: a test written at token 641,687 calls a function written 552,084 tokens earlier. The test passes, live."
+  "fx_p3b": {
+   "file": "fx_p3b_cc41e9a943b9.wav",
+   "text": "After a one-line fix, all 6,581 cross-file links line up. One mis-indented line near token 132,000 stopped the label package loading; the managed agent fixed it in 21 seconds."
   },
-  "f2_s4": {
-   "file": "f2_s4_5d781f22db9f.wav",
-   "text": "But consistent code isn't correct code. Our verifier ran the plan and found 21,459 mistakes, 21,284 of them in scheduling. Each row here is one simulated associate: 7,161 times the plan sent someone to two shelves at once, and 14,117 tasks fell outside the 10 PM to 6 AM shift."
+  "p3c": {
+   "file": "p3c_42eba3512885.wav",
+   "text": "A test written at token 641,687 calls a function Argon wrote 552,000 tokens earlier."
   },
-  "f2_s5": {
-   "file": "f2_s5_3e9821aa146f.wav",
-   "text": "A managed agent read the findings and found the root cause: one shared time cursor for all associates. After its fix, scheduling mistakes went from 21,284 to 0, even in 10 stores it never saw. Plan mistakes went from 21,459 to 175: 12 missed products and 3 look-alikes, still open."
+  "p3d": {
+   "file": "p3d_a591a970fcd5.wav",
+   "text": "And it passes."
+  },
+  "p3e": {
+   "file": "p3e_cb90d99e1641.wav",
+   "text": "That's what a million-token model is for: the whole system in one head."
+  },
+  "fx_p4": {
+   "file": "fx_p4_ece4f785a456.wav",
+   "text": "But consistent code isn't correct code. Our verifier found 21,459 plan mistakes: people double-booked, tasks outside the shift. Each row here is one simulated associate: 7,161 double-bookings, and 14,117 tasks outside the 10 PM to 6 AM shift."
+  },
+  "fx_p5": {
+   "file": "fx_p5_331cd24969a1.wav",
+   "text": "A managed agent traced it to one root cause, one shared time cursor for all associates, and fixed it. Scheduling mistakes went from 21,284 to zero, even in 10 stores it never saw. Plan mistakes went from 21,459 to 175: 12 missed products and 3 look-alikes, still open."
   },
   "s5b": {
    "file": "s5b_dd388bfc2be0.wav",
@@ -150,13 +162,9 @@
    "file": "s5c_2c3add73ee27.wav",
    "text": "With three small logged fixes to its first draft, it found all 467 products with Red No. 3, pulled none of the 483 look-alikes, covered every one of 6,718 shelf spots, and finished every task before midnight."
   },
-  "s6a": {
-   "file": "s6a_5bd6eb5408f8.wav",
-   "text": "When a law changes overnight, a retailer needs the system built, checked and fixed fast. Argon writes the whole thing at once, the verifier proves it, the agent repairs it."
-  },
-  "s6b": {
-   "file": "s6b_d35379a46e4f.wav",
-   "text": "Simulated drill, simulated operations, every number from the verifier. Open source."
+  "p6": {
+   "file": "p6_0a17d96f33c9.wav",
+   "text": "When a law changes overnight, you don't have months. Argon writes the whole system at once, the verifier proves it, the agent repairs it."
   }
  },
  "one_minute_final": {

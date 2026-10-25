@@ -282,6 +282,82 @@
    "field": "hard_errors (final v2 plan mistakes)"
   }
  ],
+ "One mis-indented line near token 132,000 stopped the label package loading; the managed agent fixed it in 21 seconds": [
+  {
+   "key": "exp2u.badline_tok_k",
+   "value": "132,000",
+   "source": "reports/expansion_v2_code.json",
+   "field": "translations.py start_tok rounded to thousands (132,125)",
+   "derived": true,
+   "raw": 132125
+  },
+  {
+   "key": "exp2u.badline_tok",
+   "value": 132125,
+   "source": "reports/expansion_v2_code.json",
+   "field": "files[recallstorm/aliases/translations.py].start_tok (file with the mis-indented line)",
+   "parse_error": {
+    "path": "recallstorm/aliases/translations.py",
+    "tok": 133530,
+    "msg": "unindent does not match any outer indentation level",
+    "line": 109,
+    "col": 105
+   }
+  },
+  {
+   "key": "agent.v2_fix1_secs",
+   "value": 21,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_aliases_translations_regraded.secs",
+   "raw": 21.0
+  }
+ ],
+ "Each row here is one simulated associate: 7,161 double-bookings, and 14,117 tasks outside the 10 PM to 6 AM shift": [
+  {
+   "key": "exp2plan.overlaps",
+   "value": 7161,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.overlaps (double-bookings; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2plan.outside",
+   "value": 14117,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+  }
+ ],
+ "traced it to one root cause, one shared time cursor for all associates; scheduling mistakes went from 21,284 to zero, even in 10 stores it never saw": [
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  },
+  {
+   "key": "exp2fixed.labor",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_after.by_check.labor.hard"
+  },
+  {
+   "key": "exp2.heldout_before",
+   "value": 10143,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_before"
+  },
+  {
+   "key": "exp2.heldout_after",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_after"
+  },
+  {
+   "key": "exp2.heldout_stores",
+   "value": 10,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "len(drill_holdout.held_stores)"
+  }
+ ],
  "all 9 hand-offs between hops came out clean": [
   {
    "key": "exp2.seams_pass",

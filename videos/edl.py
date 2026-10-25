@@ -211,10 +211,11 @@ def full(v):
         {"id": "s6b", "say": "Simulated drill, simulated operations, every number from the verifier. Open source.",
          "shots": [{**END, "w": 1}]},
     ]
-    if not draft:                       # final cut: every experiment number from the 646,825-token run (v2)
+    if not draft:                       # final cut: same story and words as submission_90s, with more room
         by = {sg["id"]: sg for sg in segs}
-        segs = list(B1) + [by["s2"], FINAL_V2["s3"], FINAL_V2["s3b"], FINAL_V2["s4"], FINAL_V2["s5"],
-                           by["s5b"], by["s5c"], by["s6a"], by["s6b"]]
+        P = {sg["id"]: sg for sg in SUBMISSION_90S}
+        segs = [P["p1"], P["p1b"], P["p2"], P["p3"], P["p3a"], FULL_EXTRA["p3b"], P["p3c"], P["p3pause"], P["p3d"],
+                P["p3e"], FULL_EXTRA["p4"], FULL_EXTRA["p5"], by["s5b"], by["s5c"], P["p6"], P["p7"]]
     return segs
 
 
@@ -301,6 +302,24 @@ SUBMISSION_90S = [
      "shots": [{"kind": "ai", "src": "highway_trucks", "w": 1, "a": 0, "b": 8}]},
     {"id": "p7", "secs": 3.0, "shots": [{"kind": "title", "src": "end_sub", "w": 1}]},
 ]
+
+FULL_EXTRA = {
+    "p3b": {"id": "fx_p3b", "say": "After a one-line fix, all {exp2.edges} cross-file links line up. One mis-indented line near "
+                                   "token {exp2u.badline_tok_k} stopped the label package loading; the managed agent fixed it "
+                                   "in {agent.v2_fix1_secs} seconds.",
+            "shots": [{"kind": "cap", "src": "codewall_v2", "w": 1, "a": 0, "b": 4.6}]},
+    "p4": {"id": "fx_p4", "beat": "Consistent isn't correct",
+           "say": "But consistent code isn't correct code. Our verifier found {exp2plan.mistakes} plan mistakes: people "
+                  "double-booked, tasks outside the shift. Each row here is one simulated associate: {exp2plan.overlaps} "
+                  "double-bookings, and {exp2plan.outside} tasks outside the 10 PM to 6 AM shift.",
+           "shots": [{**MISTAKES_V2, "w": 0.35}, {"kind": "still", "src": "compare_left_v2", "w": 0.65, "zoom": 0.04}]},
+    "p5": {"id": "fx_p5", "beat": "Scheduling mistakes \u2192 {exp2fixed.labor}",
+           "say": "A managed agent traced it to one root cause, one shared time cursor for all associates, and fixed it. "
+                  "Scheduling mistakes went from {exp2plan.labor} to zero, even in {exp2.heldout_stores} stores it never saw. "
+                  "Plan mistakes went from {exp2plan.mistakes} to {exp2fixed.mistakes}: {exp2fixed.missed} missed products "
+                  "and {exp2fixed.decoys_pulled} look-alikes, still open.",
+           "shots": [{"kind": "still", "src": "compare_both_v2", "w": 0.4, "zoom": 0.03}, {**FIXLOOP_V2, "w": 0.6}]},
+}
 
 VIDEOS = {"backup_core": BACKUP_CORE, "submission_90s": SUBMISSION_90S,
           "demo_full_draft": full("exp1"),          # expansion v1 numbers + "[v2 numbers pending]" card

@@ -1224,6 +1224,13 @@
    "col": 105
   }
  },
+ "exp2u.badline_tok_k": {
+  "value": "132,000",
+  "source": "reports/expansion_v2_code.json",
+  "field": "translations.py start_tok rounded to thousands (132,125)",
+  "derived": true,
+  "raw": 132125
+ },
  "exp2.names": {
   "value": 2326,
   "source": "reports/expansion_v2_agentpatched_code.json",
