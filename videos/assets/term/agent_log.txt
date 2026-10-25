@@ -1,5 +1,8 @@
 $ python3 videos/show_agent_log.py
-core_pack_returns      FIXED        96.2 s  1 failed, 6 passed     -> 7 passed
-b_rules_evaluator      NOT_FIXED   498.2 s  16 failed, 1285 passed -> 32 failed, 1269 passed  held-out fixed 8/8, new failures 32
-b_rules_evaluator_r2   IMPROVED    358.5 s  32 failed, 1269 passed -> 1 failed, 1300 passed  held-out fixed 15/16, new failures 0
-exp_plan_tasks_labor   FIXED       241.1 s  no tests               -> no tests
+core_pack_returns            FIXED        96.2 s
+b_rules_evaluator            NOT_FIXED   498.2 s
+b_rules_evaluator_r2         IMPROVED    358.5 s
+exp_plan_tasks_labor         FIXED       241.1 s  plan mistakes 8,441 -> 809; 10 unseen stores 3,759 -> 0
+exp_aliases_detect_coverage  IMPROVED     82.8 s  plan mistakes 8,441 -> 9,671; 10 unseen stores 381 -> 0
+exp_openfda_lots             NOT_FIXED   545.5 s
+both expansion patches together (reports/expansion_agentpatched_plan.json): plan mistakes 0

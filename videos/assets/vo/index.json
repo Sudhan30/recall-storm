@@ -1,204 +1,176 @@
 {
  "backup_core": {
-  "h1": {
-   "file": "h1_81d12617b064.wav",
-   "text": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period."
+  "s1a": {
+   "file": "s1a_cec0e8fc4e85.wav",
+   "text": "On January 1st, 2027, California bans food with Red No. 3. There's no sell-through period."
   },
-  "h2": {
-   "file": "h2_ece30963b452.wav",
-   "text": "This is a simulated compliance drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127."
+  "s1b": {
+   "file": "s1b_67070cebd38f.wav",
+   "text": "The dye hides under many names: erythrosine, E127, \"Red 3\", even scanning typos. It's in hundreds of products, on thousands of shelf spots, and stores get one overnight shift to clear it."
   },
-  "h3": {
-   "file": "h3_8faabe40c776.wav",
-   "text": "You'll see a working system that Gemini 4 Argon wrote this morning, in one generation."
+  "s1c": {
+   "file": "s1c_c7d1f7bd9b2a.wav",
+   "text": "Miss one, and it's a violation. Pull the wrong one, since Red 40 looks almost the same on a label, and you empty shelves for nothing. Our simulated drill is for a large big-box retailer with nearly 300 California stores."
   },
-  "c1": {
-   "file": "c1_6ba4c12673ba.wav",
-   "text": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done."
+  "k1b": {
+   "file": "k1b_2087c9b2f1c2.wav",
+   "text": "Gemini 4 Argon wrote this working system this morning, in one generation. Here it runs on 20 of those stores, overnight."
   },
-  "c2": {
-   "file": "c2_c81bcad0cdf9.wav",
-   "text": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute."
+  "k2": {
+   "file": "k2_c80cdf60ceaf.wav",
+   "text": "Inside a store, flashing tags are pulls still to do. Associates walk to each shelf, pull the product, and put a substitute in its place."
   },
-  "c3": {
-   "file": "c3_b0527c2caeeb.wav",
-   "text": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf."
+  "k3b": {
+   "file": "k3b_fb4ff6647ec0.wav",
+   "text": "Every decision shows its evidence: erythrosine found, a vague \"artificial color\" held for a person, a Red 40 look-alike left on the shelf."
   },
-  "c4": {
-   "file": "c4_1985a716ab04.wav",
-   "text": "Then the verifier. Argon's unedited core: 350 hard errors, and recall 0.947. It missed 25 products spelled like \"F D and C\" with spaces, or Spanish \"rojo\"."
+  "k4b": {
+   "file": "k4b_4701efae0b8e.wav",
+   "text": "It found all 467 products with Red No. 3, pulled 0 of the 483 look-alikes, and covered all 6,718 shelf spots, with 0 plan mistakes. 1 extra item was pulled, one our rules say to check by hand."
   },
-  "c5": {
-   "file": "c5_fed9faaab0ee.wav",
-   "text": "After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, and 0 of 483 decoys pulled."
+  "k6b": {
+   "file": "k6b_7f47b83271ce.wav",
+   "text": "Argon's first draft missed 25 of the 467, leaving 350 shelf spots with banned product. Three small logged fixes closed the gap."
   },
-  "c6": {
-   "file": "c6_bb7dd36f086e.wav",
-   "text": "Stores, stock and staffing are simulated. Every number came from the verifier."
+  "z1b": {
+   "file": "z1b_bebcd881462c.wav",
+   "text": "Simulated drill, simulated operations, every number from the verifier."
   }
  },
  "demo_full_draft": {
-  "h1": {
-   "file": "h1_81d12617b064.wav",
-   "text": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period."
+  "s1a": {
+   "file": "s1a_cec0e8fc4e85.wav",
+   "text": "On January 1st, 2027, California bans food with Red No. 3. There's no sell-through period."
   },
-  "f_h2": {
-   "file": "f_h2_ae3222444ae7.wav",
-   "text": "This is a simulated drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127."
+  "s1b": {
+   "file": "s1b_67070cebd38f.wav",
+   "text": "The dye hides under many names: erythrosine, E127, \"Red 3\", even scanning typos. It's in hundreds of products, on thousands of shelf spots, and stores get one overnight shift to clear it."
   },
-  "f_h3_exp1": {
-   "file": "f_h3_exp1_a4ac9589f5f4.wav",
-   "text": "You'll see a working system Argon wrote this morning, and an experiment where Argon wrote a 254,377-token version in one continued generation."
+  "s1c": {
+   "file": "s1c_c7d1f7bd9b2a.wav",
+   "text": "Miss one, and it's a violation. Pull the wrong one, since Red 40 looks almost the same on a label, and you empty shelves for nothing. Our simulated drill is for a large big-box retailer with nearly 300 California stores."
   },
-  "c1": {
-   "file": "c1_6ba4c12673ba.wav",
-   "text": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done."
+  "s2": {
+   "file": "s2_c1a974283e91.wav",
+   "text": "That's hard for software. A compliance pull isn't one program. It's many parts that must agree: reading labels, the law's dates, every shelf location, who works which shift, which substitute goes where, which truck takes the returns. Written in pieces, those pieces drift apart at the seams."
   },
-  "c2": {
-   "file": "c2_c81bcad0cdf9.wav",
-   "text": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute."
+  "s3_exp1": {
+   "file": "s3_exp1_c610ce5a92fd.wav",
+   "text": "Gemini 4 Argon can hold the whole system in one continued generation. In our experiment it wrote about 254,000 tokens of code, 314 files, and every one of its 2,838 cross-file links lines up. That's the point of a million-token model: the whole system in one head."
   },
-  "c3": {
-   "file": "c3_b0527c2caeeb.wav",
-   "text": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf."
+  "s3b_exp1": {
+   "file": "s3b_exp1_1e0667724d70.wav",
+   "text": "Here's its longest link: a file written early, used by a test near the end. Its tests pass, live."
   },
-  "f_c4": {
-   "file": "f_c4_d662d2fd565b.wav",
-   "text": "Argon's unedited core: 350 hard errors, recall 0.947. After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, 0 of 483 decoys pulled."
+  "s4_exp1": {
+   "file": "s4_exp1_5859b49a1be8.wav",
+   "text": "But consistent code isn't correct code. Our verifier ran the plan and found 8,441 mistakes, mostly one associate booked for two shelves at once."
   },
-  "f_e1_exp1": {
-   "file": "f_e1_exp1_4db1e0ff73f5.wav",
-   "text": "The experiment: one continued generation over 4 hops, 254,377 visible tokens in 33.8 minutes, about $3.56. Seams, where one hop hands off mid-file: 3 of 3 pass."
+  "s5a": {
+   "file": "s5a_78a0d9652bfc.wav",
+   "text": "A managed agent read the verifier's findings, found the 2 root causes, and fixed them. Mistakes went from 8,441 to 0, including in 10 stores it never saw."
   },
-  "f_e2_exp1": {
-   "file": "f_e2_exp1_aa0bff16d9bb.wav",
-   "text": "The code wall puts every file at its token position. All 2,838 cross-file references resolve. The longest passing call: ids.py at token 36,357, used by a test at token 249,087."
+  "s5b": {
+   "file": "s5b_dd388bfc2be0.wav",
+   "text": "And the working core Argon wrote this morning, on 20 stores, overnight: tags flash, associates walk to each shelf, and every store goes green."
   },
-  "f_e3_exp1": {
-   "file": "f_e3_exp1_e83749ca95e8.wav",
-   "text": "We run both files' tests live. They pass."
+  "s5c": {
+   "file": "s5c_2c3add73ee27.wav",
+   "text": "With three small logged fixes to its first draft, it found all 467 products with Red No. 3, pulled none of the 483 look-alikes, covered every one of 6,718 shelf spots, and finished every task before midnight."
   },
-  "f_e4_exp1": {
-   "file": "f_e4_exp1_fce2d1ee2094.wav",
-   "text": "What broke as length grew: 3 failing test files in the first 200 thousand tokens, 1 after, and 149 status strings outside the contract's enums."
+  "s6a": {
+   "file": "s6a_5bd6eb5408f8.wav",
+   "text": "When a law changes overnight, a retailer needs the system built, checked and fixed fast. Argon writes the whole thing at once, the verifier proves it, the agent repairs it."
   },
-  "f_e5": {
-   "file": "f_e5_d3838bb0ef4c.wav",
-   "text": "A managed repair agent takes failing files: the core's pack_returns went to 7 of 7 passing in 96 seconds. On fresh package B's rules, round two cut failures from 32 to 1, fixed 15 of 16 held-out cases, with 0 new failures."
-  },
-  "f_e6": {
-   "file": "f_e6_8445092bc01f.wav",
-   "text": "Matched packages, same hidden tests. Rules written in-stream pass 1,143 of 1,254; written fresh, 1,240. Allocate: both 9 of 9."
-  },
-  "f_w1": {
-   "file": "f_w1_87f716612569.wav",
-   "text": "RAG plus code is the right way to run a compliance pull, and it's what Argon wrote. We tested whether one long generation can write it coherently, and you've just seen where it held and where it broke."
-  },
-  "f_x1": {
-   "file": "f_x1_6d1665856d5a.wav",
-   "text": "For compliance teams at any big retailer. Stores, stock and staffing are simulated, and every number came from the verifier. Open source."
+  "s6b": {
+   "file": "s6b_d35379a46e4f.wav",
+   "text": "Simulated drill, simulated operations, every number from the verifier. Open source."
   }
  },
  "one_minute": {
-  "o1": {
-   "file": "o1_e8678c55777f.wav",
-   "text": "California bans Red No. 3 in food on January 1st, 2027. Gemini 4 Argon wrote a system, in one generation, that finds it even as erythrosine or E127."
+  "m1": {
+   "file": "m1_68411148cf90.wav",
+   "text": "On January 1st, 2027, California bans food with Red No. 3. Stores get one overnight shift to clear it, even when it hides as erythrosine or E127."
   },
-  "o2": {
-   "file": "o2_1147b2daa1fd.wav",
-   "text": "In a simulated drill on 20 California Walmart and Sam's Club locations, it plans 13,746 shelf tasks, and every store goes green."
+  "m3_exp1": {
+   "file": "m3_exp1_af5141c8b664.wav",
+   "text": "Gemini 4 Argon holds the whole system in one continued generation: about 254,000 tokens of code, and every one of its 2,838 cross-file links lines up."
   },
-  "o3": {
-   "file": "o3_9724416a21b4.wav",
-   "text": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept."
+  "m5a": {
+   "file": "m5a_23d0b2b41666.wav",
+   "text": "Our verifier still found 8,441 plan mistakes. A managed agent fixed the 2 root causes, and they went to 0, even in 10 stores it never saw."
   },
-  "o4": {
-   "file": "o4_2318e2e1beef.wav",
-   "text": "After 3 logged patches: 0 hard errors, recall 1.0, 0 of 483 decoys pulled."
+  "m5b": {
+   "file": "m5b_4d6d6602973e.wav",
+   "text": "The working core, on 20 stores, found all 467 products with Red No. 3 and pulled none of the 483 look-alikes."
   },
-  "o5_exp1": {
-   "file": "o5_exp1_6fbf4cc72831.wav",
-   "text": "The experiment: one continued generation, 254,377 visible tokens over 4 hops; 3 of 3 seams pass."
-  },
-  "o6": {
-   "file": "o6_bc8d74edae82.wav",
-   "text": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds."
-  },
-  "o7": {
-   "file": "o7_f62214b19e59.wav",
-   "text": "Stores, stock and staffing are simulated; every number came from the verifier."
+  "m6": {
+   "file": "m6_9c472de4bc26.wav",
+   "text": "Argon writes the whole thing at once, the verifier proves it, the agent repairs it. Simulated drill; every number from the verifier."
   }
  },
  "demo_full_final": {
-  "h1": {
-   "file": "h1_81d12617b064.wav",
-   "text": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period."
+  "s1a": {
+   "file": "s1a_cec0e8fc4e85.wav",
+   "text": "On January 1st, 2027, California bans food with Red No. 3. There's no sell-through period."
   },
-  "f_h2": {
-   "file": "f_h2_ae3222444ae7.wav",
-   "text": "This is a simulated drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127."
+  "s1b": {
+   "file": "s1b_67070cebd38f.wav",
+   "text": "The dye hides under many names: erythrosine, E127, \"Red 3\", even scanning typos. It's in hundreds of products, on thousands of shelf spots, and stores get one overnight shift to clear it."
   },
-  "c1": {
-   "file": "c1_6ba4c12673ba.wav",
-   "text": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done."
+  "s1c": {
+   "file": "s1c_c7d1f7bd9b2a.wav",
+   "text": "Miss one, and it's a violation. Pull the wrong one, since Red 40 looks almost the same on a label, and you empty shelves for nothing. Our simulated drill is for a large big-box retailer with nearly 300 California stores."
   },
-  "c2": {
-   "file": "c2_c81bcad0cdf9.wav",
-   "text": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute."
+  "s2": {
+   "file": "s2_c1a974283e91.wav",
+   "text": "That's hard for software. A compliance pull isn't one program. It's many parts that must agree: reading labels, the law's dates, every shelf location, who works which shift, which substitute goes where, which truck takes the returns. Written in pieces, those pieces drift apart at the seams."
   },
-  "c3": {
-   "file": "c3_b0527c2caeeb.wav",
-   "text": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf."
+  "s3b_exp2": {
+   "file": "s3b_exp2_1e0667724d70.wav",
+   "text": "Here's its longest link: a file written early, used by a test near the end. Its tests pass, live."
   },
-  "f_c4": {
-   "file": "f_c4_d662d2fd565b.wav",
-   "text": "Argon's unedited core: 350 hard errors, recall 0.947. After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, 0 of 483 decoys pulled."
+  "s4_exp2": {
+   "file": "s4_exp2_00f2e0133b6c.wav",
+   "text": "But consistent code isn't correct code. In the first run, our verifier ran the plan and found 8,441 mistakes, mostly one associate booked for two shelves at once."
   },
-  "f_e3_exp2": {
-   "file": "f_e3_exp2_e83749ca95e8.wav",
-   "text": "We run both files' tests live. They pass."
+  "s5a": {
+   "file": "s5a_78a0d9652bfc.wav",
+   "text": "A managed agent read the verifier's findings, found the 2 root causes, and fixed them. Mistakes went from 8,441 to 0, including in 10 stores it never saw."
   },
-  "f_e5": {
-   "file": "f_e5_d3838bb0ef4c.wav",
-   "text": "A managed repair agent takes failing files: the core's pack_returns went to 7 of 7 passing in 96 seconds. On fresh package B's rules, round two cut failures from 32 to 1, fixed 15 of 16 held-out cases, with 0 new failures."
+  "s5b": {
+   "file": "s5b_dd388bfc2be0.wav",
+   "text": "And the working core Argon wrote this morning, on 20 stores, overnight: tags flash, associates walk to each shelf, and every store goes green."
   },
-  "f_e6": {
-   "file": "f_e6_8445092bc01f.wav",
-   "text": "Matched packages, same hidden tests. Rules written in-stream pass 1,143 of 1,254; written fresh, 1,240. Allocate: both 9 of 9."
+  "s5c": {
+   "file": "s5c_2c3add73ee27.wav",
+   "text": "With three small logged fixes to its first draft, it found all 467 products with Red No. 3, pulled none of the 483 look-alikes, covered every one of 6,718 shelf spots, and finished every task before midnight."
   },
-  "f_w1": {
-   "file": "f_w1_87f716612569.wav",
-   "text": "RAG plus code is the right way to run a compliance pull, and it's what Argon wrote. We tested whether one long generation can write it coherently, and you've just seen where it held and where it broke."
+  "s6a": {
+   "file": "s6a_5bd6eb5408f8.wav",
+   "text": "When a law changes overnight, a retailer needs the system built, checked and fixed fast. Argon writes the whole thing at once, the verifier proves it, the agent repairs it."
   },
-  "f_x1": {
-   "file": "f_x1_6d1665856d5a.wav",
-   "text": "For compliance teams at any big retailer. Stores, stock and staffing are simulated, and every number came from the verifier. Open source."
+  "s6b": {
+   "file": "s6b_d35379a46e4f.wav",
+   "text": "Simulated drill, simulated operations, every number from the verifier. Open source."
   }
  },
  "one_minute_final": {
-  "o1": {
-   "file": "o1_e8678c55777f.wav",
-   "text": "California bans Red No. 3 in food on January 1st, 2027. Gemini 4 Argon wrote a system, in one generation, that finds it even as erythrosine or E127."
+  "m1": {
+   "file": "m1_68411148cf90.wav",
+   "text": "On January 1st, 2027, California bans food with Red No. 3. Stores get one overnight shift to clear it, even when it hides as erythrosine or E127."
   },
-  "o2": {
-   "file": "o2_1147b2daa1fd.wav",
-   "text": "In a simulated drill on 20 California Walmart and Sam's Club locations, it plans 13,746 shelf tasks, and every store goes green."
+  "m5a": {
+   "file": "m5a_23d0b2b41666.wav",
+   "text": "Our verifier still found 8,441 plan mistakes. A managed agent fixed the 2 root causes, and they went to 0, even in 10 stores it never saw."
   },
-  "o3": {
-   "file": "o3_9724416a21b4.wav",
-   "text": "Every verdict carries evidence: erythrosine pulled, a vague \"artificial color\" held, a Red 40 decoy kept."
+  "m5b": {
+   "file": "m5b_4d6d6602973e.wav",
+   "text": "The working core, on 20 stores, found all 467 products with Red No. 3 and pulled none of the 483 look-alikes."
   },
-  "o4": {
-   "file": "o4_2318e2e1beef.wav",
-   "text": "After 3 logged patches: 0 hard errors, recall 1.0, 0 of 483 decoys pulled."
-  },
-  "o6": {
-   "file": "o6_bc8d74edae82.wav",
-   "text": "A managed agent repairs what breaks: 7 of 7 tests passing in 96 seconds."
-  },
-  "o7": {
-   "file": "o7_f62214b19e59.wav",
-   "text": "Stores, stock and staffing are simulated; every number came from the verifier."
+  "m6": {
+   "file": "m6_9c472de4bc26.wav",
+   "text": "Argon writes the whole thing at once, the verifier proves it, the agent repairs it. Simulated drill; every number from the verifier."
   }
  }
 }

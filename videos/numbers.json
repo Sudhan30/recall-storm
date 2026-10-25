@@ -322,6 +322,144 @@
   "source": "patches/agent/LOG.jsonl",
   "field": "len(exp_plan_tasks_labor.holdout.new_failures)"
  },
+ "agent.exp_aliases_detect_coverage.result": {
+  "value": "FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.result"
+ },
+ "agent.exp_aliases_detect_coverage.secs": {
+  "value": 83,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.secs (rounded)",
+  "raw": 82.8
+ },
+ "agent.exp_aliases_detect_coverage.before_failed": {
+  "value": 75,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.before.failed"
+ },
+ "agent.exp_aliases_detect_coverage.before_passed": {
+  "value": 1179,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.before.passed"
+ },
+ "agent.exp_aliases_detect_coverage.after_failed": {
+  "value": 8,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.after.failed"
+ },
+ "agent.exp_aliases_detect_coverage.after_passed": {
+  "value": 1246,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.after.passed"
+ },
+ "agent.exp_aliases_detect_coverage.held_out": {
+  "value": 37,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.holdout.held_out"
+ },
+ "agent.exp_aliases_detect_coverage.held_out_fixed": {
+  "value": 33,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage.holdout.held_out_fixed"
+ },
+ "agent.exp_aliases_detect_coverage.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(exp_aliases_detect_coverage.holdout.new_failures)"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.result": {
+  "value": "IMPROVED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.result"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.secs": {
+  "value": 83,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.secs (rounded)",
+  "raw": 82.8
+ },
+ "agent.exp_aliases_detect_coverage_regraded.before_failed": {
+  "value": 75,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.before.failed"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.before_passed": {
+  "value": 1179,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.before.passed"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.after_failed": {
+  "value": 8,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.after.failed"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.after_passed": {
+  "value": 1246,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.after.passed"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.held_out": {
+  "value": 37,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.holdout.held_out"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.held_out_fixed": {
+  "value": 33,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_aliases_detect_coverage_regraded.holdout.held_out_fixed"
+ },
+ "agent.exp_aliases_detect_coverage_regraded.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(exp_aliases_detect_coverage_regraded.holdout.new_failures)"
+ },
+ "agent.exp_openfda_lots.result": {
+  "value": "NOT_FIXED",
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.result"
+ },
+ "agent.exp_openfda_lots.secs": {
+  "value": 546,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.secs (rounded)",
+  "raw": 545.5
+ },
+ "agent.exp_openfda_lots.before_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.before.failed"
+ },
+ "agent.exp_openfda_lots.before_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.before.passed"
+ },
+ "agent.exp_openfda_lots.after_failed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.after.failed"
+ },
+ "agent.exp_openfda_lots.after_passed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.after.passed"
+ },
+ "agent.exp_openfda_lots.held_out": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.holdout.held_out"
+ },
+ "agent.exp_openfda_lots.held_out_fixed": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "exp_openfda_lots.holdout.held_out_fixed"
+ },
+ "agent.exp_openfda_lots.new_failures": {
+  "value": 0,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "len(exp_openfda_lots.holdout.new_failures)"
+ },
  "exp1.visible": {
   "value": 254377,
   "source": "runs/expansion/hops.jsonl",
@@ -389,6 +527,11 @@
   "value": 310,
   "source": "reports/expansion_code.json",
   "field": "totals.files"
+ },
+ "exp1.files_manifest": {
+  "value": 314,
+  "source": "reports/expansion_code.json",
+  "field": "totals.manifest_files_present (files the stream wrote)"
  },
  "exp1.edges": {
   "value": 2838,
@@ -461,6 +604,12 @@
   "field": "files[tests/integration/test_flow_10_exceptions_and_handoffs.py].start_tok"
  },
  "exp2.edges": {
+  "value": null,
+  "source": "reports/expansion_v2_code.json",
+  "field": "report not written yet",
+  "pending": true
+ },
+ "exp2.files_manifest": {
   "value": null,
   "source": "reports/expansion_v2_code.json",
   "field": "report not written yet",
@@ -591,5 +740,118 @@
   "value": 1.0,
   "source": "reports/baseline_d_plan.json",
   "field": "classification.recall"
+ },
+ "stores_all.ca": {
+  "value": 286,
+  "source": "data/stores_all.jsonl",
+  "field": "line count (all CA); spoken as 'nearly 300'"
+ },
+ "core_patched.tp": {
+  "value": 467,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.tp (products with Red No. 3 found)"
+ },
+ "core_patched.fp": {
+  "value": 1,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.fp (extra pulls)"
+ },
+ "core_patched.truth_pull": {
+  "value": 467,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.tp + fn (products that contain Red No. 3)"
+ },
+ "core_patched.uncovered_facings": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "coverage.pull_facings - pull_facings_tasked (shelf spots left with banned product)"
+ },
+ "core_patched.labor_hard": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "by_check.labor.hard (double-booking etc.)"
+ },
+ "core_patched.deadline_hard": {
+  "value": 0,
+  "source": "reports/core_patched_plan.json",
+  "field": "by_check.deadline.hard"
+ },
+ "core.tp": {
+  "value": 442,
+  "source": "reports/core_plan.json",
+  "field": "classification.tp (products with Red No. 3 found)"
+ },
+ "core.fp": {
+  "value": 1,
+  "source": "reports/core_plan.json",
+  "field": "classification.fp (extra pulls)"
+ },
+ "core.truth_pull": {
+  "value": 467,
+  "source": "reports/core_plan.json",
+  "field": "classification.tp + fn (products that contain Red No. 3)"
+ },
+ "core.uncovered_facings": {
+  "value": 350,
+  "source": "reports/core_plan.json",
+  "field": "coverage.pull_facings - pull_facings_tasked (shelf spots left with banned product)"
+ },
+ "core.labor_hard": {
+  "value": 0,
+  "source": "reports/core_plan.json",
+  "field": "by_check.labor.hard (double-booking etc.)"
+ },
+ "core.deadline_hard": {
+  "value": 0,
+  "source": "reports/core_plan.json",
+  "field": "by_check.deadline.hard"
+ },
+ "core_patched.fp_truth_hold": {
+  "value": 1,
+  "source": "reports/core_patched_plan.json",
+  "field": "classification.confusion.HOLD_VERIFY.PULL (the extra pull is labeled 'check by hand')"
+ },
+ "exp1plan.mistakes": {
+  "value": 8441,
+  "source": "reports/expansion_plan.json",
+  "field": "hard_errors (spoken as 'plan mistakes')"
+ },
+ "exp1plan.labor": {
+  "value": 7632,
+  "source": "reports/expansion_plan.json",
+  "field": "by_check.labor.hard (associate overlaps)"
+ },
+ "exp1fixed.mistakes": {
+  "value": 0,
+  "source": "reports/expansion_agentpatched_plan.json",
+  "field": "hard_errors (spoken as 'plan mistakes')"
+ },
+ "exp1fixed.labor": {
+  "value": 0,
+  "source": "reports/expansion_agentpatched_plan.json",
+  "field": "by_check.labor.hard (associate overlaps)"
+ },
+ "exp1.visible_k": {
+  "value": "254,000",
+  "source": "runs/expansion/hops.jsonl",
+  "field": "visible_total rounded to thousands",
+  "derived": true,
+  "raw": 254377
+ },
+ "exp2.visible_k": {
+  "value": null,
+  "source": "runs/expansion_v2/hops.jsonl",
+  "field": "run not finished",
+  "pending": true
+ },
+ "agent.exp_root_causes": {
+  "value": 2,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "expansion repairs applied: ['exp_aliases_detect_coverage_regraded', 'exp_plan_tasks_labor']"
+ },
+ "agent.exp_heldout_stores": {
+  "value": 10,
+  "source": "patches/agent/LOG.jsonl",
+  "field": "drill_holdout.held_stores with held_after == 0"
  }
 }

@@ -1,0 +1,250 @@
+{
+ "nearly 300 California stores": [
+  {
+   "key": "stores_all.ca",
+   "value": 286,
+   "source": "data/stores_all.jsonl",
+   "field": "line count (all CA); spoken as 'nearly 300'"
+  }
+ ],
+ "the drill runs on 20 stores": [
+  {
+   "key": "core_patched.stores",
+   "value": 20,
+   "source": "reports/core_patched_plan.json",
+   "field": "records.store_playbook"
+  }
+ ],
+ "Found all 467 products that contain Red No. 3": [
+  {
+   "key": "core_patched.tp",
+   "value": 467,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.tp (products with Red No. 3 found)"
+  },
+  {
+   "key": "core_patched.truth_pull",
+   "value": 467,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.tp + fn (products that contain Red No. 3)"
+  }
+ ],
+ "Pulled 0 of 483 look-alikes like Red 40": [
+  {
+   "key": "core_patched.decoys_pulled",
+   "value": 0,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.decoys_pulled"
+  },
+  {
+   "key": "core_patched.decoys",
+   "value": 483,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.decoys"
+  }
+ ],
+ "1 extra item pulled that our rules mark as 'check by hand'": [
+  {
+   "key": "core_patched.fp",
+   "value": 1,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.fp (extra pulls)"
+  },
+  {
+   "key": "core_patched.fp_truth_hold",
+   "value": 1,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.confusion.HOLD_VERIFY.PULL (the extra pull is labeled 'check by hand')"
+  }
+ ],
+ "Every one of 6,718 affected shelf spots has a pull task": [
+  {
+   "key": "core_patched.pull_facings",
+   "value": 6718,
+   "source": "reports/core_patched_plan.json",
+   "field": "coverage.pull_facings"
+  },
+  {
+   "key": "core_patched.pull_facings_tasked",
+   "value": 6718,
+   "source": "reports/core_patched_plan.json",
+   "field": "coverage.pull_facings_tasked"
+  }
+ ],
+ "0 plan mistakes: nobody double-booked, every task finished before midnight": [
+  {
+   "key": "core_patched.hard_errors",
+   "value": 0,
+   "source": "reports/core_patched_plan.json",
+   "field": "hard_errors"
+  },
+  {
+   "key": "core_patched.labor_hard",
+   "value": 0,
+   "source": "reports/core_patched_plan.json",
+   "field": "by_check.labor.hard (double-booking etc.)"
+  },
+  {
+   "key": "core_patched.deadline_hard",
+   "value": 0,
+   "source": "reports/core_patched_plan.json",
+   "field": "by_check.deadline.hard"
+  }
+ ],
+ "Argon's first draft missed 25 of the 467 products, leaving 350 shelf spots with banned product": [
+  {
+   "key": "core.fn",
+   "value": 25,
+   "source": "reports/core_plan.json",
+   "field": "classification.fn (missed PULLs)"
+  },
+  {
+   "key": "core.truth_pull",
+   "value": 467,
+   "source": "reports/core_plan.json",
+   "field": "classification.tp + fn (products that contain Red No. 3)"
+  },
+  {
+   "key": "core.uncovered_facings",
+   "value": 350,
+   "source": "reports/core_plan.json",
+   "field": "coverage.pull_facings - pull_facings_tasked (shelf spots left with banned product)"
+  }
+ ],
+ "Three small fixes closed the gap": [
+  {
+   "key": "patches.core_count",
+   "value": 3,
+   "source": "patches/LOG.md",
+   "field": "count of '## core/' patch headings"
+  },
+  {
+   "key": "core_patched.fn",
+   "value": 0,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.fn (missed PULLs)"
+  },
+  {
+   "key": "core_patched.uncovered_facings",
+   "value": 0,
+   "source": "reports/core_patched_plan.json",
+   "field": "coverage.pull_facings - pull_facings_tasked (shelf spots left with banned product)"
+  }
+ ],
+ "about 254,000 tokens of code in one continued generation": [
+  {
+   "key": "exp1.visible_k",
+   "value": "254,000",
+   "source": "runs/expansion/hops.jsonl",
+   "field": "visible_total rounded to thousands",
+   "derived": true,
+   "raw": 254377
+  },
+  {
+   "key": "exp1.visible",
+   "value": 254377,
+   "source": "runs/expansion/hops.jsonl",
+   "field": "last row visible_total"
+  }
+ ],
+ "Every file and every cross-file call lined up": [
+  {
+   "key": "exp1.edges",
+   "value": 2838,
+   "source": "reports/expansion_code.json",
+   "field": "totals.d2_edges"
+  },
+  {
+   "key": "exp1.edges_resolved",
+   "value": 2838,
+   "source": "reports/expansion_code.json",
+   "field": "totals.d2_resolved"
+  },
+  {
+   "key": "exp1.arity_mismatch",
+   "value": 0,
+   "source": "reports/expansion_code.json",
+   "field": "totals.d2_arity_mismatch"
+  }
+ ],
+ "314 files, and every one of its 2,838 cross-file links lines up": [
+  {
+   "key": "exp1.files_manifest",
+   "value": 314,
+   "source": "reports/expansion_code.json",
+   "field": "totals.manifest_files_present (files the stream wrote)"
+  },
+  {
+   "key": "exp1.edges",
+   "value": 2838,
+   "source": "reports/expansion_code.json",
+   "field": "totals.d2_edges"
+  },
+  {
+   "key": "exp1.edges_resolved",
+   "value": 2838,
+   "source": "reports/expansion_code.json",
+   "field": "totals.d2_resolved"
+  }
+ ],
+ "hundreds of products (467 contain Red No. 3)": [
+  {
+   "key": "core_patched.truth_pull",
+   "value": 467,
+   "source": "reports/core_patched_plan.json",
+   "field": "classification.tp + fn (products that contain Red No. 3)"
+  }
+ ],
+ "thousands of shelf spots (6,718 affected)": [
+  {
+   "key": "core_patched.pull_facings",
+   "value": 6718,
+   "source": "reports/core_patched_plan.json",
+   "field": "coverage.pull_facings"
+  }
+ ],
+ "7,632 of them: one associate booked in two places at once": [
+  {
+   "key": "exp1plan.labor",
+   "value": 7632,
+   "source": "reports/expansion_plan.json",
+   "field": "by_check.labor.hard (associate overlaps)"
+  }
+ ],
+ "the plan had 8,441 mistakes, mostly the same associate booked for two shelves at once": [
+  {
+   "key": "exp1plan.mistakes",
+   "value": 8441,
+   "source": "reports/expansion_plan.json",
+   "field": "hard_errors (spoken as 'plan mistakes')"
+  },
+  {
+   "key": "exp1plan.labor",
+   "value": 7632,
+   "source": "reports/expansion_plan.json",
+   "field": "by_check.labor.hard (associate overlaps)"
+  }
+ ],
+ "the managed agent found the two root causes, fixed them, and the mistakes went to 0": [
+  {
+   "key": "agent.exp_root_causes",
+   "value": 2,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "expansion repairs applied: ['exp_aliases_detect_coverage_regraded', 'exp_plan_tasks_labor']"
+  },
+  {
+   "key": "exp1fixed.mistakes",
+   "value": 0,
+   "source": "reports/expansion_agentpatched_plan.json",
+   "field": "hard_errors (spoken as 'plan mistakes')"
+  }
+ ],
+ "including in 10 stores it never saw": [
+  {
+   "key": "agent.exp_heldout_stores",
+   "value": 10,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_holdout.held_stores with held_after == 0"
+  }
+ ]
+}

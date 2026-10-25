@@ -84,7 +84,7 @@ def caption_png(text, out):
 
 
 def chunk_caption(text, maxc=100):
-    parts = re.split(r"(?<=[.!?])\s+", text.strip())
+    parts = re.split(r"(?<!No\.)(?<=[.!?])\s+", text.strip())
     out = []
     for p in parts:
         while len(p) > maxc:
@@ -141,7 +141,120 @@ def table_img(shot, numbers):
     return img
 
 
+def ease(x):
+    x = max(0.0, min(1.0, x)); return 1 - (1 - x) ** 3
+
+
+def draw_check(d, cx, cy, r, color):
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=color, width=8)
+    d.line([(cx - r * 0.45, cy + r * 0.02), (cx - r * 0.1, cy + r * 0.38), (cx + r * 0.5, cy - r * 0.35)], fill=color, width=10)
+
+
+def stats_frame(shot, t, numbers):
+    """Big counters that count up, one card per item, staggered."""
+    img = title_img([])
+    d = ImageDraw.Draw(img)
+    items = shot["items"]
+    if shot.get("title"):
+        ft = font(50, "Bold"); tt = fill(shot["title"], numbers)[0]
+        d.text(((W - ft.getbbox(tt)[2]) // 2, 120), tt, font=ft, fill=COL["text"])
+    k = len(items); gap = 40; cw = min(760, (W - 160 - (k - 1) * gap) // k); ch = 520
+    x0 = (W - k * cw - (k - 1) * gap) // 2; y0 = 250
+    for i, it in enumerate(items):
+        f = ease((t - 0.35 * i) / 1.0)
+        if f <= 0:
+            continue
+        x = x0 + i * (cw + gap)
+        col = COL[it.get("color", "green")]
+        rounded(d, (x, y0, x + cw, y0 + ch), 26, COL["panel"], outline=col, width=4)
+        target = numbers[it["n"]]["value"]
+        cur = round(target * f) if isinstance(target, int) else target
+        big = f"{cur:,}"
+        if it.get("of"):
+            big += f" / {numbers[it['of']]['value']:,}"
+        size = 150
+        fb = font(size, "Heavy")
+        while fb.getbbox(big)[2] > cw - 60 and size > 60:
+            size -= 6; fb = font(size, "Heavy")
+        bw = fb.getbbox(big)[2]
+        d.text((x + (cw - bw) // 2, y0 + 90), big, font=fb, fill=col)
+        if it.get("icon") == "check" and f >= 1:
+            draw_check(d, x + cw - 70, y0 + 70, 34, col)
+        fl = font(40, "Semibold")
+        for j, line in enumerate(textwrap.wrap(fill(it["label"], numbers)[0], 28)):
+            lw = fl.getbbox(line)[2]
+            d.text((x + (cw - lw) // 2, y0 + 300 + j * 54), line, font=fl, fill=COL["text"])
+    return img
+
+
+def bars_frame(shot, t, d_total, numbers):
+    """Before -> after bars: bar starts at the 'before' value and shrinks to 'after'."""
+    img = title_img([])
+    d = ImageDraw.Draw(img)
+    ft = font(50, "Bold"); tt = fill(shot["title"], numbers)[0]
+    d.text(((W - ft.getbbox(tt)[2]) // 2, 200), tt, font=ft, fill=COL["text"])
+    rows = shot["rows"]
+    t_shrink = shot.get("at", 0.35) * d_total
+    f = ease((t - t_shrink) / 1.4)
+    fb, fl, fs = font(84, "Heavy"), font(38, "Semibold"), font(30, "Medium")
+    y = 330 if len(rows) > 1 else 420
+    X0, X1 = 160, W - 160
+    for r in rows:
+        b = numbers[r["before"]]["value"]; a = numbers[r["after"]]["value"]
+        cur = round(b + (a - b) * f)
+        d.text((X0, y), fill(r["label"], numbers)[0], font=fl, fill=COL["text"])
+        by = y + 62
+        rounded(d, (X0, by, X1, by + 70), 14, COL["panel2"])
+        frac = cur / b if b else 0
+        col = COL["red"] if f < 0.98 else COL["green"]
+        if frac > 0.004:
+            rounded(d, (X0, by, X0 + int((X1 - X0) * frac), by + 70), 14, col)
+        num = f"{cur:,}"
+        d.text((X1 - fb.getbbox(num)[2] if frac > 0.5 else X0 + int((X1 - X0) * frac) + 24, by - 4), num, font=fb,
+               fill=(0, 0, 0) if frac > 0.5 else col)
+        cap = r["before_caption"] if f < 0.5 else r["after_caption"]
+        d.text((X0, by + 86), fill(cap, numbers)[0], font=fs, fill=COL["dim"])
+        y += 280
+    if f >= 1 and shot.get("done"):
+        tx = fill(shot["done"], numbers)[0]
+        draw_check(d, W // 2 - fl.getbbox(tx)[2] // 2 - 50, y + 10, 26, COL["green"])
+        d.text((W // 2 - fl.getbbox(tx)[2] // 2, y - 12), tx, font=fl, fill=COL["green"])
+    return img
+
+
+def parts_img():
+    img = title_img([])
+    d = ImageDraw.Draw(img)
+    ft = font(54, "Bold"); t = "A compliance pull is many parts that must agree"
+    d.text(((W - ft.getbbox(t)[2]) // 2, 130), t, font=ft, fill=COL["text"])
+    parts = [("Read labels", "erythrosine, E127, \u201cRed 3\u201d, typos"), ("The law's dates", "effective 2027-01-01, no sell-through"),
+             ("Every shelf spot", "aisle, bay, shelf, position"), ("Who works when", "associates and shifts"),
+             ("What goes back in", "substitutes per shelf"), ("Which truck", "returns to the DC")]
+    fb, fs = font(44, "Bold"), font(30)
+    cw, ch, gx, gy = 520, 200, 50, 50
+    x0 = (W - 3 * cw - 2 * gx) // 2
+    for i, (a, b) in enumerate(parts):
+        x = x0 + (i % 3) * (cw + gx); y = 300 + (i // 3) * (ch + gy)
+        rounded(d, (x, y, x + cw, y + ch), 22, COL["panel"], outline=COL["blue"], width=3)
+        d.text((x + 30, y + 40), a, font=fb, fill=COL["blue"]); d.text((x + 30, y + 110), b, font=fs, fill=COL["dim"])
+    ff = font(34, "Medium"); t = "Written in pieces, the pieces drift apart at the seams."
+    d.text(((W - ff.getbbox(t)[2]) // 2, 830), t, font=ff, fill=COL["amber"])
+    return img
+
+
+def beat_png(text, out):
+    f = font(46, "Bold")
+    tw = f.getbbox(text)[2]
+    img = Image.new("RGBA", (tw + 70, 80), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    rounded(d, (0, 0, tw + 69, 79), 18, (11, 14, 19, 215), outline=COL["amber"] + (255,), width=3)
+    d.text((35, 12), text, font=f, fill=COL["amber"] + (255,))
+    img.save(out)
+    return img.size
+
+
 TITLES = {
+    "parts": parts_img,
     "end_full": lambda: title_img([("Recall Storm", 96, "Heavy", COL["text"]),
                                    ("Compliance drill \u00b7 simulated operations \u00b7 open source", 44, "Medium", COL["amber"])],
                                   "Stores, stock and staffing are simulated. Every number came from the verifier."),
@@ -298,6 +411,7 @@ def video_clip(src, out, n, a=0.0, b=None, speed=None, crop=None):
 LABELS = {"ai": "AI-generated illustration", "cap": "REAL CAPTURE · project viewer",
           "still": "REAL CAPTURE · project viewer", "cards": "REAL CAPTURE · viewer evidence cards",
           "panel": "REAL CAPTURE · project viewer", "table": "OURS · rendered from reports/accept_*.xml",
+          "stats": "OURS · numbers from the verifier reports", "bars": "OURS · numbers from the verifier reports",
           "term": "REAL CAPTURE · terminal output", "pending": "PLACEHOLDER"}
 
 
@@ -321,6 +435,20 @@ def render_shot(shot, out, n):
                    crop=shot.get("crop"))
     elif k == "still":
         still_clip(RAW / "cap" / f"{src}.png", out, n, zoom=shot.get("zoom", 0.045))
+    elif k == "stats":
+        def at(i):
+            t = round(i / FPS, 2) if i / FPS < 0.35 * len(shot["items"]) + 1.05 else 99
+            return t, (lambda: stats_frame(shot, t, NUMBERS))
+        pipe_frames(out, n, at)
+    elif k == "bars":
+        d_total = n / FPS
+        t_end = shot.get("at", 0.35) * d_total + 1.45
+
+        def at(i):
+            t = i / FPS
+            t = round(t, 2) if shot.get("at", 0.35) * d_total - 0.1 < t < t_end else (0 if t <= t_end else 99)
+            return t, (lambda: bars_frame(shot, t, d_total, NUMBERS))
+        pipe_frames(out, n, at)
     elif k == "table":
         p = RAW / "build" / f"table_{abs(hash(shot['title'])) % 10**8}.png"
         table_img(shot, NUMBERS).save(p); still_clip(p, out, n, zoom=0.015)
@@ -367,7 +495,7 @@ def render_shot(shot, out, n):
 
 
 # ---------------------------------------------------------------- assembly
-TEMPO = {"one_minute": 1.1, "one_minute_final": 1.1}       # optional narration speed-up (pitch kept)
+TEMPO = {"backup_core": 1.1}       # optional narration speed-up (pitch kept)
 
 
 def prep_wav(wav, bdir, tempo=1.0):
@@ -407,7 +535,7 @@ def build(video):
                     alen = w.getnframes() / w.getframerate()
             dur = max(seg.get("min", 0), alen + LEAD + TAIL) if wav else seg.get("secs", 3.0)
             segs.append({"id": seg["id"], "t0": t, "dur": dur, "audio": wav, "alen": alen, "text": text,
-                         "caption": text, "shots": seg["shots"]})
+                         "caption": text, "shots": seg["shots"], "beat": fill(seg.get("beat", ""), numbers)[0]})
         t += segs[-1]["dur"]
     total = t
 
@@ -423,7 +551,8 @@ def build(video):
             render_shot(sh, out, n)
             clips.append(out)
             shotlog.append({"t": round(frame_t / FPS, 2), "dur": round(n / FPS, 2), "seg": s["id"], "kind": sh["kind"],
-                            "src": sh.get("src") or "+".join(sh.get("srcs", [])), "label": LABELS.get(sh["kind"])})
+                            "src": sh.get("src") or "+".join(sh.get("srcs", [])),
+                            "label": sh.get("label") or LABELS.get(sh["kind"])})
             frame_t += n
         print(f"  {s['id']}: {s['dur']:.1f}s, {len(s['shots'])} shot(s)", flush=True)
     lst = bdir / "concat.txt"
@@ -452,6 +581,11 @@ def build(video):
         p = bdir / f"badge_{i}.png"
         bw, bh = badge_png(lab, "ai" if sh["kind"] == "ai" else "real", p)
         ovs.append((p, 36, 28 if sh["kind"] != "term" else 22, sh["t"], sh["t"] + sh["dur"]))
+    for s in segs:
+        if s.get("beat"):
+            p = bdir / f"beat_{s['id']}.png"
+            bw, bh = beat_png(s["beat"], p)
+            ovs.append((p, (W - bw) // 2, 90, s["t0"] + 0.1, s["t0"] + min(3.6, s["dur"])))
     for s in segs:
         chunks = chunk_caption(s["caption"]) if s["caption"] else []
         if not chunks:
@@ -482,7 +616,7 @@ def build(video):
          "-t", f"{total:.3f}", str(out)])
     meta = {"video": f"videos/{video}.mp4", "duration": round(total, 2), "shots": shotlog,
             "segments": [{"id": s["id"], "t": round(s["t0"], 2), "dur": round(s["dur"], 2), "say": s["text"],
-                          "pending": s.get("pending")} for s in segs]}
+                          "beat": s.get("beat"), "pending": s.get("pending")} for s in segs]}
     (HERE / f"{video}.shots.json").write_text(json.dumps(meta, indent=1))
     print(f"{out}  {total:.1f}s  {len(shotlog)} shots", flush=True)
 

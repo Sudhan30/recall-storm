@@ -2,9 +2,9 @@
 
 | File | Length | What it is |
 |---|---|---|
-| `backup_core.mp4` | 1:30.8 | Backup for demo steps 1-2: hook + working core |
-| `demo_full_draft.mp4` | 3:10.5 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
-| `one_minute.mp4` | 0:58.7 (narration at 1.1× tempo) | Tight cut for the submission (v1 numbers) |
+| `backup_core.mp4` | 1:31.3 (narration at 1.1× tempo) | Backup for demo steps 1-2: hook + working core |
+| `demo_full_draft.mp4` | 2:36.6 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
+| `one_minute.mp4` | 0:55.7 | Tight cut for the submission (v1 numbers) |
 | `demo_full_final.mp4`, `one_minute_final.mp4` | not built yet | Final cuts. Same scripts with `{exp2.*}` numbers. They render `[v2 numbers pending]` cards until `runs/expansion_v2/` finishes |
 
 All videos are 1920x1080, 30 fps, H.264 (high) + AAC 48 kHz stereo, with captions burned in. Each `<video>.shots.json` lists
@@ -71,12 +71,26 @@ Any segment still missing a number or an asset renders a `[v2 numbers pending]` 
 `<video>.shots.json` (`segments[].pending`). Nothing is guessed. If the v2 gen dir or report names differ from
 `expansion_v2`, change the `hops("expansion_v2", ...)` / `code_report("expansion_v2", ...)` calls in `make_numbers.py`.
 
-## Script notes (deviations from BUILD.md section 14, on purpose)
+## Story and language (team lead, 12:35-12:40)
 
-- Hook: "about 300 California ... locations" became **"20 California Walmart and Sam's Club locations"**. 300 is not in any report; 20 is `records.store_playbook` in `reports/core_patched_plan.json`. In the draft, "a 760K-token version" is spoken as the v1 number (254,377). The final cut uses `{exp2.visible}`.
-- Section 4: "the right way to run a **recall**" became "the right way to run a **compliance pull**" (hard rule: never "recall" for Red No. 3).
-- The openFDA lot-code scenario is not shown (G5 status unknown).
-- Never said: "Walmart data", "5,000 stores", "1M tokens in one request", "no other model can".
+- **Arc:** the problem (one night to clear the shelves) -> many parts that must agree -> the whole system in one
+  generation -> consistent isn't correct (8,441 plan mistakes) -> the fix loop (8,441 -> 0) and the working core -> why
+  it matters. Each beat has a short on-screen title. `one_minute` covers beats 1, 3, 5 and 6. `backup_core` covers beat 1 plus
+  the working core.
+- **No brand names** in narration, captions or cards. The retailer is "a large big-box retailer with nearly 300 California
+  stores" (286 in `data/stores_all.jsonl`), and the drill runs on 20 of them. Store IDs in real viewer captures are cropped out
+  of the map and the 3D store, and never read aloud.
+- **No jargon** (precision, recall, hard errors). Numbers are phrased for a store manager. `numbers_phrases.json` maps
+  every phrase to its keys and source files. "Plan mistakes" = verify_plan hard errors. "Cross-file links" = resolved
+  cross-file references (`totals.d2_edges`). "314 files" = `totals.manifest_files_present` (310 of them parse as code).
+- **New visuals (ours):** count-up cards (467 / 467 found, 0 / 483 look-alikes pulled, 6,718 / 6,718 shelf spots) and
+  before -> after bars (first draft 25 -> 0 missed, 350 -> 0 shelf spots; plan mistakes 8,441 -> 0). Labelled
+  "OURS · numbers from the verifier reports".
+- **Dropped from the full cut:** the matched-packages table and its numbers (not in the plain-language list) and the
+  RAG-plus-code beat (not in the new arc). The openFDA lot-code scenario is not shown.
+- **Never said:** brand names, "recall" for Red No. 3, "1M tokens in one request", "no other model can", "revolutionary".
+- On-screen exceptions are real captures only: the `verify_plan` terminal output in `backup_core` and the agent-log
+  terminal show the tool's own wording.
 
 ## API usage
 

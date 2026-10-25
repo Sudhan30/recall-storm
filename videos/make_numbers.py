@@ -96,7 +96,7 @@ hops("expansion_v2", "exp2")
 def code_report(run, prefix):
     code = ROOT / f"reports/{run}_code.json"
     if not code.exists():
-        for f in ("edges", "longest_def.start_tok", "longest_use.start_tok", "b0.files_failed", "b1.files_failed",
+        for f in ("edges", "files_manifest", "longest_def.start_tok", "longest_use.start_tok", "b0.files_failed", "b1.files_failed",
                   "bad_literals_nontest"):
             put(f"{prefix}.{f}", None, f"reports/{run}_code.json", "report not written yet", pending=True)
         return
@@ -104,6 +104,7 @@ def code_report(run, prefix):
     t = full["totals"]
     p = f"reports/{run}_code.json"
     put(f"{prefix}.files", t["files"], p, "totals.files")
+    put(f"{prefix}.files_manifest", t["manifest_files_present"], p, "totals.manifest_files_present (files the stream wrote)")
     put(f"{prefix}.edges", t["d2_edges"], p, "totals.d2_edges")
     put(f"{prefix}.edges_resolved", t["d2_resolved"], p, "totals.d2_resolved")
     put(f"{prefix}.calls_checked", t["d2_calls_checked"], p, "totals.d2_calls_checked")
@@ -167,7 +168,72 @@ for name in ("baseline_c", "baseline_d"):
     put(f"{name}.hard_errors", r["hard_errors"], f"reports/{name}_plan.json", "hard_errors")
     put(f"{name}.recall", round(r["classification"]["recall"], 3), f"reports/{name}_plan.json", "classification.recall")
 
+
+# --- plain-language numbers (team lead, 12:35): store-manager phrasing, each phrase mapped to its sources
+stores_all = [l for l in (ROOT / "data/stores_all.jsonl").read_text().splitlines() if l.strip()]
+put("stores_all.ca", len(stores_all), "data/stores_all.jsonl", "line count (all CA); spoken as 'nearly 300'")
+for name in ("core_patched", "core"):
+    p = f"reports/{name}_plan.json"; r = jload(p); c = r["classification"]
+    put(f"{name}.tp", c["tp"], p, "classification.tp (products with Red No. 3 found)")
+    put(f"{name}.fp", c["fp"], p, "classification.fp (extra pulls)")
+    put(f"{name}.truth_pull", c["tp"] + c["fn"], p, "classification.tp + fn (products that contain Red No. 3)")
+    put(f"{name}.uncovered_facings", r["coverage"]["pull_facings"] - r["coverage"]["pull_facings_tasked"], p,
+        "coverage.pull_facings - pull_facings_tasked (shelf spots left with banned product)")
+    put(f"{name}.labor_hard", r["by_check"].get("labor", {}).get("hard", 0), p, "by_check.labor.hard (double-booking etc.)")
+    put(f"{name}.deadline_hard", r["by_check"].get("deadline", {}).get("hard", 0), p, "by_check.deadline.hard")
+r = jload("reports/core_patched_plan.json")
+put("core_patched.fp_truth_hold", r["classification"]["confusion"]["HOLD_VERIFY"].get("PULL", 0), "reports/core_patched_plan.json",
+    "classification.confusion.HOLD_VERIFY.PULL (the extra pull is labeled 'check by hand')")
+for name, key in (("expansion_plan", "exp1plan"), ("expansion_agentpatched_plan", "exp1fixed")):
+    p = f"reports/{name}.json"
+    if (ROOT / p).exists():
+        r = jload(p)
+        put(f"{key}.mistakes", r["hard_errors"], p, "hard_errors (spoken as 'plan mistakes')")
+        put(f"{key}.labor", r["by_check"].get("labor", {}).get("hard", 0), p, "by_check.labor.hard (associate overlaps)")
+for pre, run in (("exp1", "expansion"), ("exp2", "expansion_v2")):
+    vis = N.get(f"{pre}.visible", {}).get("value")
+    if vis:
+        put(f"{pre}.visible_k", f"{round(vis / 1000):,},000", f"runs/{run}/hops.jsonl",
+            "visible_total rounded to thousands", derived=True, raw=vis)
+    else:
+        put(f"{pre}.visible_k", None, f"runs/{run}/hops.jsonl", "run not finished", pending=True)
+agent = {r["name"]: r for r in jl("patches/agent/LOG.jsonl")}
+roots = [n for n in ("exp_aliases_detect_coverage_regraded", "exp_plan_tasks_labor") if n in agent]
+put("agent.exp_root_causes", len(roots), "patches/agent/LOG.jsonl", f"expansion repairs applied: {roots}")
+held = set()
+for n in roots:
+    dh = agent[n].get("drill_holdout") or {}
+    if dh.get("held_after") == 0:
+        held |= set(dh.get("held_stores", []))
+put("agent.exp_heldout_stores", len(held), "patches/agent/LOG.jsonl", "drill_holdout.held_stores with held_after == 0")
+
+PHRASES = {
+    "nearly 300 California stores": ["stores_all.ca"],
+    "the drill runs on 20 stores": ["core_patched.stores"],
+    "Found all 467 products that contain Red No. 3": ["core_patched.tp", "core_patched.truth_pull"],
+    "Pulled 0 of 483 look-alikes like Red 40": ["core_patched.decoys_pulled", "core_patched.decoys"],
+    "1 extra item pulled that our rules mark as 'check by hand'": ["core_patched.fp", "core_patched.fp_truth_hold"],
+    "Every one of 6,718 affected shelf spots has a pull task": ["core_patched.pull_facings", "core_patched.pull_facings_tasked"],
+    "0 plan mistakes: nobody double-booked, every task finished before midnight":
+        ["core_patched.hard_errors", "core_patched.labor_hard", "core_patched.deadline_hard"],
+    "Argon's first draft missed 25 of the 467 products, leaving 350 shelf spots with banned product":
+        ["core.fn", "core.truth_pull", "core.uncovered_facings"],
+    "Three small fixes closed the gap": ["patches.core_count", "core_patched.fn", "core_patched.uncovered_facings"],
+    "about 254,000 tokens of code in one continued generation": ["exp1.visible_k", "exp1.visible"],
+    "Every file and every cross-file call lined up": ["exp1.edges", "exp1.edges_resolved", "exp1.arity_mismatch"],
+    "314 files, and every one of its 2,838 cross-file links lines up": ["exp1.files_manifest", "exp1.edges", "exp1.edges_resolved"],
+    "hundreds of products (467 contain Red No. 3)": ["core_patched.truth_pull"],
+    "thousands of shelf spots (6,718 affected)": ["core_patched.pull_facings"],
+    "7,632 of them: one associate booked in two places at once": ["exp1plan.labor"],
+    "the plan had 8,441 mistakes, mostly the same associate booked for two shelves at once": ["exp1plan.mistakes", "exp1plan.labor"],
+    "the managed agent found the two root causes, fixed them, and the mistakes went to 0":
+        ["agent.exp_root_causes", "exp1fixed.mistakes"],
+    "including in 10 stores it never saw": ["agent.exp_heldout_stores"],
+}
+
 if __name__ == "__main__":
     out = pathlib.Path(__file__).resolve().parent / "numbers.json"
     out.write_text(json.dumps(N, indent=1) + "\n")
+    ph = {k: [{"key": x, **N[x]} for x in v] for k, v in PHRASES.items()}
+    (out.parent / "numbers_phrases.json").write_text(json.dumps(ph, indent=1) + "\n")
     print(f"{len(N)} numbers -> {out}; pending: {[k for k, v in N.items() if v.get('pending')]}")

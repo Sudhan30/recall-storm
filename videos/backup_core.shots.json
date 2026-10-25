@@ -1,174 +1,191 @@
 {
  "video": "videos/backup_core.mp4",
- "duration": 90.8,
+ "duration": 91.33,
  "shots": [
   {
    "t": 0.0,
-   "dur": 7.43,
-   "seg": "h1",
+   "dur": 6.9,
+   "seg": "s1a",
    "kind": "ai",
    "src": "store_night",
    "label": "AI-generated illustration"
   },
   {
-   "t": 7.43,
-   "dur": 6.63,
-   "seg": "h2",
-   "kind": "ai",
-   "src": "aisle_pull",
-   "label": "AI-generated illustration"
-  },
-  {
-   "t": 14.07,
-   "dur": 4.43,
-   "seg": "h2",
+   "t": 6.9,
+   "dur": 6.27,
+   "seg": "s1b",
    "kind": "ai",
    "src": "scanner_shelf",
    "label": "AI-generated illustration"
   },
   {
-   "t": 18.5,
-   "dur": 6.7,
-   "seg": "h3",
+   "t": 13.17,
+   "dur": 6.3,
+   "seg": "s1b",
    "kind": "ai",
-   "src": "dc_trucks",
+   "src": "aisle_pull",
    "label": "AI-generated illustration"
   },
   {
-   "t": 25.2,
-   "dur": 2.57,
-   "seg": "c1",
-   "kind": "term",
-   "src": "run_core_patched",
-   "label": "REAL CAPTURE \u00b7 terminal output"
-  },
-  {
-   "t": 27.77,
-   "dur": 9.17,
-   "seg": "c1",
-   "kind": "cap",
-   "src": "map_replay",
-   "label": "REAL CAPTURE \u00b7 project viewer"
-  },
-  {
-   "t": 36.93,
-   "dur": 6.67,
-   "seg": "c2",
-   "kind": "cap",
-   "src": "store3d",
-   "label": "REAL CAPTURE \u00b7 project viewer"
-  },
-  {
-   "t": 43.6,
-   "dur": 4.1,
-   "seg": "c2",
-   "kind": "cap",
-   "src": "store3d",
-   "label": "REAL CAPTURE \u00b7 project viewer"
-  },
-  {
-   "t": 47.7,
-   "dur": 11.17,
-   "seg": "c3",
+   "t": 19.47,
+   "dur": 7.6,
+   "seg": "s1c",
    "kind": "cards",
    "src": "card",
    "label": "REAL CAPTURE \u00b7 viewer evidence cards"
   },
   {
-   "t": 58.87,
-   "dur": 15.0,
-   "seg": "c4",
-   "kind": "term",
-   "src": "vp_core",
-   "label": "REAL CAPTURE \u00b7 terminal output"
+   "t": 27.07,
+   "dur": 6.23,
+   "seg": "s1c",
+   "kind": "ai",
+   "src": "dc_trucks",
+   "label": "AI-generated illustration"
   },
   {
-   "t": 73.87,
-   "dur": 5.97,
-   "seg": "c5",
+   "t": 33.3,
+   "dur": 9.17,
+   "seg": "k1b",
+   "kind": "cap",
+   "src": "map_replay",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 42.47,
+   "dur": 5.0,
+   "seg": "k2",
+   "kind": "cap",
+   "src": "store3d",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 47.47,
+   "dur": 3.07,
+   "seg": "k2",
+   "kind": "cap",
+   "src": "store3d",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 50.53,
+   "dur": 9.3,
+   "seg": "k3b",
+   "kind": "cards",
+   "src": "card",
+   "label": "REAL CAPTURE \u00b7 viewer evidence cards"
+  },
+  {
+   "t": 59.83,
+   "dur": 8.83,
+   "seg": "k4b",
+   "kind": "stats",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 68.67,
+   "dur": 4.0,
+   "seg": "k4b",
+   "kind": "stats",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 72.67,
+   "dur": 3.23,
+   "seg": "k4b",
    "kind": "term",
    "src": "vp_core_patched",
    "label": "REAL CAPTURE \u00b7 terminal output"
   },
   {
-   "t": 79.83,
-   "dur": 4.87,
-   "seg": "c5",
-   "kind": "panel",
-   "src": "vcard4+vcard3",
-   "label": "REAL CAPTURE \u00b7 project viewer"
+   "t": 75.9,
+   "dur": 10.17,
+   "seg": "k6b",
+   "kind": "bars",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 84.7,
-   "dur": 6.1,
-   "seg": "c6",
+   "t": 86.07,
+   "dur": 5.27,
+   "seg": "z1b",
    "kind": "title",
-   "src": "end_core",
+   "src": "end_full",
    "label": null
   }
  ],
  "segments": [
   {
-   "id": "h1",
+   "id": "s1a",
    "t": 0.0,
-   "dur": 7.42,
-   "say": "On January 1st, 2027, California bans Red No. 3 in food, with no sell-through period.",
+   "dur": 6.9,
+   "say": "On January 1st, 2027, California bans food with Red No. 3. There's no sell-through period.",
+   "beat": "One night to clear the shelves",
    "pending": null
   },
   {
-   "id": "h2",
-   "t": 7.42,
-   "dur": 11.1,
-   "say": "This is a simulated compliance drill on 20 California Walmart and Sam's Club locations, where the dye hides under names like erythrosine and E127.",
+   "id": "s1b",
+   "t": 6.9,
+   "dur": 12.58,
+   "say": "The dye hides under many names: erythrosine, E127, \"Red 3\", even scanning typos. It's in hundreds of products, on thousands of shelf spots, and stores get one overnight shift to clear it.",
+   "beat": "",
    "pending": null
   },
   {
-   "id": "h3",
-   "t": 18.52,
-   "dur": 6.7,
-   "say": "You'll see a working system that Gemini 4 Argon wrote this morning, in one generation.",
+   "id": "s1c",
+   "t": 19.48,
+   "dur": 13.8,
+   "say": "Miss one, and it's a violation. Pull the wrong one, since Red 40 looks almost the same on a label, and you empty shelves for nothing. Our simulated drill is for a large big-box retailer with nearly 300 California stores.",
+   "beat": "",
    "pending": null
   },
   {
-   "id": "c1",
-   "t": 25.21,
-   "dur": 11.74,
-   "say": "Here's the drill. We run the core on all 20 stores: 13,746 shelf tasks, replayed overnight against the midnight deadline. Each dot turns green when its store is done.",
+   "id": "k1b",
+   "t": 33.29,
+   "dur": 9.2,
+   "say": "Gemini 4 Argon wrote this working system this morning, in one generation. Here it runs on 20 of those stores, overnight.",
+   "beat": "A working system, written this morning",
    "pending": null
   },
   {
-   "id": "c2",
-   "t": 36.95,
-   "dur": 10.74,
-   "say": "Click a Supercenter and you're inside it. Flashing tags are pulls still pending. Associates walk to each facing, pull the product, and place a substitute.",
+   "id": "k2",
+   "t": 42.48,
+   "dur": 8.07,
+   "say": "Inside a store, flashing tags are pulls still to do. Associates walk to each shelf, pull the product, and put a substitute in its place.",
+   "beat": "",
    "pending": null
   },
   {
-   "id": "c3",
-   "t": 47.69,
-   "dur": 11.18,
-   "say": "Every verdict carries its evidence. Erythrosine: caught and pulled. A vague \"artificial color\": held to verify. A Red 40 decoy: kept on the shelf.",
+   "id": "k3b",
+   "t": 50.55,
+   "dur": 9.3,
+   "say": "Every decision shows its evidence: erythrosine found, a vague \"artificial color\" held for a person, a Red 40 look-alike left on the shelf.",
+   "beat": "",
    "pending": null
   },
   {
-   "id": "c4",
-   "t": 58.87,
-   "dur": 15.02,
-   "say": "Then the verifier. Argon's unedited core: 350 hard errors, and recall 0.947. It missed 25 products spelled like \"F D and C\" with spaces, or Spanish \"rojo\".",
+   "id": "k4b",
+   "t": 59.85,
+   "dur": 16.04,
+   "say": "It found all 467 products with Red No. 3, pulled 0 of the 483 look-alikes, and covered all 6,718 shelf spots, with 0 plan mistakes. 1 extra item was pulled, one our rules say to check by hand.",
+   "beat": "What the verifier found",
    "pending": null
   },
   {
-   "id": "c5",
-   "t": 73.88,
-   "dur": 10.82,
-   "say": "After 3 small logged patches: 0 hard errors, recall 1.0, precision 0.998, and 0 of 483 decoys pulled.",
+   "id": "k6b",
+   "t": 75.88,
+   "dur": 10.17,
+   "say": "Argon's first draft missed 25 of the 467, leaving 350 shelf spots with banned product. Three small logged fixes closed the gap.",
+   "beat": "",
    "pending": null
   },
   {
-   "id": "c6",
-   "t": 84.7,
-   "dur": 6.1,
-   "say": "Stores, stock and staffing are simulated. Every number came from the verifier.",
+   "id": "z1b",
+   "t": 86.06,
+   "dur": 5.27,
+   "say": "Simulated drill, simulated operations, every number from the verifier.",
+   "beat": "",
    "pending": null
   }
  ]
