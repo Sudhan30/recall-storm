@@ -1,0 +1,46 @@
+<<<MANIFEST>>>
+{"path": "recallstorm/__init__.py", "purpose": "pkg", "public": [], "depends_on": []}
+{"path": "recallstorm/aliases/norm.py", "purpose": "normalize + detect", "public": ["normalize(text) -> str", "find_red3(text, aliases) -> tuple"], "depends_on": ["contract.py"]}
+{"path": "recallstorm/rules/engine.py", "purpose": "rules", "public": ["evaluate_sku(sku, rules, state, at, classifier) -> SkuDecision"], "depends_on": ["recallstorm/aliases/norm.py"]}
+{"path": "tests/unit/test_aliases_norm.py", "purpose": "tests", "public": [], "depends_on": []}
+<<<END MANIFEST>>>
+<<<FILE path=recallstorm/__init__.py>>>
+"""Recall Storm."""
+__version__ = "0.1"
+<<<END FILE>>>
+<<<FILE path=recallstorm/aliases/norm.py>>>
+```python
+import re
+from contract import Verdict
+
+
+def normalize(text):
+    """Lowercase and collapse whitespace."""
+    t = text.lower().replace("1", "i")
+    return re.sub(r"\s+", " ", t)
+
+
+def find_red3(text, aliases):
+    """Return (start, end) of the first alias match or None."""
+    n = normalize(text)
+    for a in aliases:
+        i = n.find(a.lower())
+        if i >= 0:
+            return (i, i + len(a))
+    return None
+
+
+def code():
+    return "PULL" if Verdict.PULL else "BOGUS_CODE"
+```
+<<<END FILE>>>
+<<<FILE path=recallstorm/rules/engine.py>>>
+from contract import SkuDecision, Verdict, DecidedBy
+from recallstorm.aliases.norm import find_red3, normalize, missing_fn
+
+
+def evaluate_sku(sku, rules, state, at, classifier=None):
+    m = find_red3(sku.ingredients)
+    return SkuDecision(sku.sku_id, Verdict.KEEP, None, None, None, None, (), DecidedBy.RULE, "x")
+
+

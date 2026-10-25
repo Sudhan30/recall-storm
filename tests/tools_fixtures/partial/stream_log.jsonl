@@ -1,0 +1,12 @@
+{"hop": 0, "t": 1.5, "chars": 150, "out_bytes": 150, "visible_hop": 37, "thinking_hop": 10, "checkpoint": false}
+{"hop": 0, "t": 3.0, "chars": 150, "out_bytes": 300, "visible_hop": 75, "thinking_hop": 10, "checkpoint": false}
+{"hop": 0, "t": 4.5, "chars": 150, "out_bytes": 450, "visible_hop": 112, "thinking_hop": 10, "checkpoint": false}
+{"hop": 0, "t": 6.0, "chars": 150, "out_bytes": 600, "visible_hop": 150, "thinking_hop": 10, "checkpoint": false}
+{"hop": 0, "t": 7.5, "chars": 150, "out_bytes": 750, "visible_hop": 187, "thinking_hop": 10, "checkpoint": false}
+{"hop": 0, "t": 9.0, "chars": 150, "out_bytes": 900, "visible_hop": 225, "thinking_hop": 10, "checkpoint": false}
+{"hop": 0, "t": 9.11, "chars": 150, "out_bytes": 911, "visible_hop": 227, "thinking_hop": 10, "checkpoint": false}
+{"hop": 1, "t": 10.61, "chars": 150, "out_bytes": 1061, "visible_hop": 37, "thinking_hop": 10, "checkpoint": false}
+{"hop": 1, "t": 12.11, "chars": 150, "out_bytes": 1211, "visible_hop": 75, "thinking_hop": 10, "checkpoint": false}
+{"hop": 1, "t": 13.61, "chars": 150, "out_bytes": 1361, "visible_hop": 112, "thinking_hop": 10, "checkpoint": false}
+{"hop": 1, "t": 15.11, "chars": 150, "out_bytes": 1511, "visible_hop": 150, "thinking_hop": 10, "checkpoint": false}
+{"hop": 1, "t": 15.98, "chars": 150, "out_bytes": 1598, "visible_hop": 171, "thinking_hop": 10, "checkpoint": false}

@@ -1,0 +1,14 @@
+{"t": 0, "type": "interaction.created", "event_id": "e0", "id": "int-1"}
+{"t": 1, "type": "step.delta", "event_id": "e1", "chars": 200, "out_bytes": 200}
+{"t": 2, "type": "step.delta", "event_id": "e2", "chars": 200, "out_bytes": 400}
+{"t": 3, "type": "step.delta", "event_id": "e3", "chars": 200, "out_bytes": 600}
+{"t": 4, "type": "step.delta", "event_id": "e4", "chars": 200, "out_bytes": 800}
+{"t": 5, "type": "step.delta", "event_id": "e5", "chars": 200, "out_bytes": 1000}
+{"t": 6, "type": "interaction.status_update", "event_id": "e6", "status": "in_progress", "has_token": true, "usage": {"total_output_tokens": 250, "total_thought_tokens": 50}, "seam_byte": 1000}
+{"t": 7, "type": "step.delta", "event_id": "e7", "chars": 200, "out_bytes": 1200}
+{"t": 8, "type": "step.delta", "event_id": "e8", "chars": 200, "out_bytes": 1400}
+{"t": 9, "type": "step.delta", "event_id": "e9", "chars": 200, "out_bytes": 1600}
+{"t": 10, "type": "step.delta", "event_id": "e10", "chars": 200, "out_bytes": 1800}
+{"t": 11, "type": "step.delta", "event_id": "e11", "chars": 200, "out_bytes": 1983}
+{"t": 12, "type": "interaction.status_update", "event_id": "e12", "status": "completed", "has_token": false, "usage": {"total_output_tokens": 495, "total_thought_tokens": 90}, "seam_byte": 1983}
+{"t": 13, "type": "interaction.completed", "event_id": "e13", "detail": "done"}

@@ -1,0 +1,2 @@
+{"hop": 0, "finish": "CONTINUATION", "has_token": true, "secs": 1.0, "t": 9.11, "visible_hop": 227, "thinking_hop": 10, "prompt_hop": 5000, "visible_total": 227, "chars_hop": 911, "seam_byte": 911}
+{"hop": 1, "finish": "STOP", "has_token": false, "secs": 1.0, "t": 21.18, "visible_hop": 301, "thinking_hop": 10, "prompt_hop": 5000, "visible_total": 528, "chars_hop": 1207, "seam_byte": 2118}
