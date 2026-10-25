@@ -361,7 +361,7 @@ def main(argv=None) -> int:
         print(f"{meta['stream_bytes']} bytes, ~{meta['total_tok_est']} visible tok "
               f"(map: {meta['token_map']['source']}, {meta['token_map']['points_kept']} pts) | "
               f"manifest {meta['manifest']['entries']} entries"
-              f"{'' if meta['manifest']['terminated'] else ' (UNTERMINATED)'} | "
+              f"{'' if meta['manifest']['terminated'] else (' (UNTERMINATED)' if meta['manifest']['found'] else ' (NOT FOUND)')} | "
               f"{meta['blocks']} blocks, {meta['manifest_done_pct']}% of manifest emitted")
         if meta["unterminated"]:
             print("  unterminated:", ", ".join(meta["unterminated"]))
