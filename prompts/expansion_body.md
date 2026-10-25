@@ -13,3 +13,10 @@ Each package is followed by its unit tests. route/ must be the last package befo
 For every package, implement the full public API listed in the manifest you write, with docstrings,
 input validation, and error handling. Integration tests must exercise modules from every earlier package.
 
+
+Required public APIs carried over from contract.py (the acceptance tests import exactly these):
+- recallstorm/rules/:    evaluate_sku(sku, rules, state, at, classifier=None) -> SkuDecision
+- recallstorm/allocate/: allocate_substitutes(demand, stock, stores) -> list[Allocation]
+- recallstorm/route/:    pack_returns(pulled_cases, skus, trucks, stores) -> list[RouteManifest]
+- recallstorm/__main__.py: python -m recallstorm run --scenario ID --data DIR --out DIR
+Later packages must import and call earlier packages by the exact names declared in your manifest.

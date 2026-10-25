@@ -1,10 +1,11 @@
-"""Usage: python tools/argon_run.py NAME PROMPT_FILE MAX_OUT [--no-stream] [--level medium]"""
+"""Usage: python tools/argon_run.py NAME PROMPT_FILE MAX_OUT [--no-stream] [--level medium] [--max-hops N]"""
 import json, sys, time, pathlib
 from google import genai
 from google.genai import types
 
 name, prompt_file, max_out = sys.argv[1], sys.argv[2], int(sys.argv[3])
 stream = "--no-stream" not in sys.argv
+max_hops = int(sys.argv[sys.argv.index("--max-hops") + 1]) if "--max-hops" in sys.argv else 10**6
 level = sys.argv[sys.argv.index("--level") + 1] if "--level" in sys.argv else "medium"
 run = pathlib.Path("runs") / name; run.mkdir(parents=True, exist_ok=True)
 prompt = pathlib.Path(prompt_file).read_text()
@@ -62,5 +63,8 @@ while True:
            "seam_byte": out.tell()}
     hops.write(json.dumps(rec) + "\n"); hops.flush(); print(rec, flush=True)
     if rec["finish"] != "CONTINUATION" or not token:
+        break
+    if hop + 1 >= max_hops:
+        (run / "resume_token.bin").write_bytes(token); print("stopping at --max-hops", flush=True)
         break
     hop += 1
