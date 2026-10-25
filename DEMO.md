@@ -50,7 +50,7 @@ Open in Chrome, in this tab order, and hard-reload each (Cmd+Shift+R):
 ## 1:50–2:35 · Consistent isn't correct
 
 - Tab **5** (Failures): v2's one break.
-  > "One mis-indented line at token 132,000 took down the whole label-reading package. A managed agent fixed it in
+  > "One mis-indented line near token 132,000 took down the whole label-reading package. A managed agent fixed it in
   > 21 seconds."
 - compare.html, **Run = v2** (switch it before you go on).
   > "Each row is one simulated associate. The shaded band is their 10 PM to 6 AM shift. Argon's plan scattered
