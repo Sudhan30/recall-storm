@@ -25,6 +25,8 @@ ap.add_argument("--unit", nargs="*", default=[])
 ap.add_argument("--shim", action="append", default=[])
 ap.add_argument("--max-tokens", type=int, default=300_000)
 ap.add_argument("--minutes", type=float, default=15)
+ap.add_argument("--holdout", action="store_true",
+                help="hide every other failing test from the bundle; score seen and held-out failures separately")
 ap.add_argument("--dry-run", action="store_true", help="build the bundle and run tests, skip the agent")
 a = ap.parse_args()
 
@@ -47,16 +49,35 @@ def add_shims(base: pathlib.Path):
             p.write_text(f'"""OURS. Test shim exposing {target} as {mod}.{name}."""\nfrom {tmod} import {name}\n')
 
 
+def hide_tests(output: str, held: tuple[str, ...]) -> str:
+    """Drop held-out tests' traceback sections, FAILED lines and the counts line from pytest output."""
+    names = {h.split("::", 1)[1] for h in held}
+    keep, skipping = [], False
+    for line in output.splitlines():
+        sec = re.match(r"^_{3,} (.+?) _{3,}$", line)
+        if sec:
+            skipping = sec.group(1) in names
+        if re.match(r"^=+ short test summary", line) or re.match(r"^=+ \d+ (failed|passed)", line):
+            skipping = False
+        if skipping or (line.startswith("FAILED ") and re.sub(r" - .*$", "", line[7:]).split("::", 1)[-1] in names):
+            continue
+        if re.match(r"^=+ \d+ (failed|passed)", line):
+            continue
+        keep.append(line)
+    return "\n".join(keep)
+
+
 def run_tests(base: pathlib.Path, files: list[str]) -> dict:
     files = [str((ROOT / f) if f.startswith("acceptance") else (base / f)) for f in files]
     env = {"PYTHONPATH": f"{base}:{ROOT}", "PATH": "/usr/bin:/bin"}
     r = subprocess.run([sys.executable, "-m", "pytest", *files, "-q", "--no-header", "-p", "no:cacheprovider",
-                        "--tb=short"], capture_output=True, text=True, env=env,
+                        "--tb=short", "-rf"], capture_output=True, text=True, env=env,
                        cwd=base, timeout=300)
     tail = r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr[-300:]
     m = {k: int(v) for v, k in re.findall(r"(\d+) (passed|failed|error|errors|skipped)", tail)}
     return {"summary": tail, "passed": m.get("passed", 0), "failed": m.get("failed", 0) + m.get("error", 0)
-            + m.get("errors", 0), "output": r.stdout[-6000:]}
+            + m.get("errors", 0), "output": r.stdout,
+            "failed_ids": sorted(set(re.findall(r"^FAILED (.+?::.+?)(?: - .*)?$", r.stdout, re.M)))}
 
 
 def imported_signatures(src: str, base: pathlib.Path) -> str:
@@ -82,6 +103,8 @@ def imported_signatures(src: str, base: pathlib.Path) -> str:
 
 add_shims(work)
 before = run_tests(work, a.tests)
+held = tuple(before["failed_ids"][1::2]) if a.holdout else ()
+shown_output = hide_tests(before["output"], held)[-20000:]
 before_unit = run_tests(work, a.unit) if a.unit else None
 src = (work / a.file).read_text()
 manifest = next((l for l in (gen / "manifest.jsonl").read_text().splitlines() if f'"{a.file}"' in l), "{}")
@@ -102,7 +125,7 @@ DIAGNOSIS: <one line: the root cause>
 {imported_signatures(src, work)}
 
 === failing test output (test source is hidden) ===
-{before['output']}
+{shown_output}
 
 === {a.file} ===
 {src}
@@ -168,6 +191,11 @@ else:
     new = m.group(1)
     (work / a.file).write_text(new)
     after = run_tests(work, a.tests)
+    still = set(after["failed_ids"])
+    seen = [t for t in before["failed_ids"] if t not in held]
+    entry["holdout"] = {"seen": len(seen), "seen_fixed": sum(t not in still for t in seen),
+                        "held_out": len(held), "held_out_fixed": sum(t not in still for t in held),
+                        "new_failures": sorted(still - set(before["failed_ids"]))}
     after_unit = run_tests(work, a.unit) if a.unit else None
     entry.update(after={k: after[k] for k in ("summary", "passed", "failed")},
                  after_unit=after_unit and {k: after_unit[k] for k in ("summary", "passed", "failed")},
