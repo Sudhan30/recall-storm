@@ -258,7 +258,51 @@ def one_minute(v):
     return segs
 
 
-VIDEOS = {"backup_core": BACKUP_CORE,
+# ---------------------------------------------------------------- submission_90s: why ONE generation (lead, ~15:30)
+SUBMISSION_90S = [
+    {"id": "p1", "beat": "Midnight, January 1st",
+     "say": "At midnight on January 1st, 2027, every product in California with Red No. 3 becomes illegal to sell. "
+            "No grace period.",
+     "shots": [{"kind": "ai", "src": "store_night", "w": 0.5, "a": 1, "b": 6}, {"kind": "ai", "src": "scanner_shelf", "w": 0.5, "a": 0, "b": 5}]},
+    {"id": "p1b", "say": "The dye hides under many names. Stores get one night.",
+     "shots": [{"kind": "ai", "src": "aisle_pull", "w": 0.5, "a": 1, "b": 4}, {"kind": "cards", "src": "card", "w": 0.5}]},
+    {"id": "p2", "beat": "Every part depends on every other",
+     "say": "Reading a label decides what's pulled. What's pulled decides which shelves, which people, which shifts, "
+            "which substitutes, which trucks. Change one rule and it ripples through all of them. A system like this has "
+            "to agree with itself, everywhere at once.",
+     "shots": [{**PARTS, "w": 0.5}, {"kind": "ai", "src": "dc_interior", "w": 0.25, "a": 0, "b": 4}, {**STORE, "w": 0.25, "a": 2, "b": 8}]},
+    {"id": "p3", "beat": "Why one generation",
+     "say": "So we asked Gemini 4 Argon to write the whole system in one continued generation: one author, holding every "
+            "part in mind at once.",
+     "shots": [{"kind": "ai", "src": "dc_trucks", "w": 1}]},
+    {"id": "p3a", "say": "{exp2.visible} tokens. {exp2.files_manifest} files. Ten hops, nine hand-offs, every one clean.",
+     "shots": [{"kind": "still", "src": "hops_expansion_v2", "w": 1, "zoom": 0.04}]},
+    {"id": "p3b", "say": "After a one-line fix, all {exp2.edges} cross-file links line up.",
+     "shots": [{"kind": "cap", "src": "codewall_v2", "w": 1, "a": 0, "b": 4.6}]},
+    {"id": "p3c", "say": "A test written at token {exp2.longest_use.start_tok} calls a function Argon wrote "
+                         "{exp2.longest_distance_k} tokens earlier.",
+     "shots": [{"kind": "still", "src": "codewall_longest_v2", "w": 1, "zoom": 0.05}]},
+    {"id": "p3pause", "secs": 1.2, "shots": [{"kind": "still", "src": "codewall_longest_v2", "w": 1, "zoom": 0.01}]},
+    {"id": "p3d", "say": "And it passes.", "min": 2.8,
+     "shots": [{"kind": "term", "src": "exp_longest_test_v2", "w": 1}]},
+    {"id": "p3e", "say": "That's what a million-token model is for: the whole system in one head.",
+     "shots": [{"kind": "still", "src": "codewall_expansion_v2", "w": 1, "zoom": 0.04}]},
+    {"id": "p4", "beat": "Consistent isn't correct",
+     "say": "But consistent code isn't correct code. Our verifier found {exp2plan.mistakes} plan mistakes: people "
+            "double-booked, tasks outside the shift.",
+     "shots": [{**MISTAKES_V2, "w": 0.35}, {"kind": "still", "src": "compare_left_v2", "w": 0.65, "zoom": 0.04}]},
+    {"id": "p5", "beat": "Scheduling mistakes \u2192 {exp2fixed.labor}",
+     "say": "A managed agent traced it to one root cause and fixed it. Scheduling mistakes went to zero, even in stores "
+            "it never saw.",
+     "shots": [{"kind": "still", "src": "compare_both_v2", "w": 0.5, "zoom": 0.03}, {**FIXLOOP_V2, "w": 0.5}]},
+    {"id": "p6", "beat": "Why it matters",
+     "say": "When a law changes overnight, you don't have months. Argon writes the whole system at once, the verifier "
+            "proves it, the agent repairs it.",
+     "shots": [{"kind": "ai", "src": "highway_trucks", "w": 1, "a": 0, "b": 8}]},
+    {"id": "p7", "secs": 3.0, "shots": [{"kind": "title", "src": "end_sub", "w": 1}]},
+]
+
+VIDEOS = {"backup_core": BACKUP_CORE, "submission_90s": SUBMISSION_90S,
           "demo_full_draft": full("exp1"),          # expansion v1 numbers + "[v2 numbers pending]" card
           "demo_full_final": full("exp2"),          # final cut: v2 numbers; pending cards until runs/expansion_v2 finishes
           "one_minute": one_minute("exp1"),

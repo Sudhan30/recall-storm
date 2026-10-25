@@ -6,6 +6,7 @@
 | `demo_full_draft.mp4` | 2:45.2 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
 | `one_minute.mp4` | 0:58.2 | Tight cut for the submission (v1 numbers) |
 | `demo_full_final.mp4` | 3:00.0 (narration 1.06×) | **Final cut, v2 only.** Every experiment number comes from the 646,825-token run; no v1 numbers or shots |
+| `submission_90s.mp4` | 1:34.5 (narration 1.15×) | **Submission cut**: "why one generation". v2 numbers only, a 1.2 s silent pause before "And it passes" (live pytest: 1 passed) |
 | `one_minute_final.mp4` | 0:59.3 (narration 1.07×) | **Final one-minute cut, v2 only** |
 
 All videos are 1920x1080, 30 fps, H.264 (high) + AAC 48 kHz stereo, with captions burned in. Each `<video>.shots.json` lists

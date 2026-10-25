@@ -142,6 +142,146 @@
    "field": "make_run_id def_tok"
   }
  ],
+ "646,825 tokens. 911 files. Ten hops, nine hand-offs, every one clean (submission_90s)": [
+  {
+   "key": "exp2.visible",
+   "value": 646825,
+   "source": "runs/expansion_v2/hops.jsonl",
+   "field": "last row visible_total"
+  },
+  {
+   "key": "exp2.files_manifest",
+   "value": 911,
+   "source": "reports/expansion_v2_agentpatched_code.json",
+   "field": "totals.manifest_files_present (911/911 manifest files emitted)"
+  },
+  {
+   "key": "exp2.hops",
+   "value": 10,
+   "source": "runs/expansion_v2/hops.jsonl",
+   "field": "row count"
+  },
+  {
+   "key": "exp2.seams_pass",
+   "value": 9,
+   "source": "reports/expansion_v2_seams.json",
+   "field": "count status PASS"
+  },
+  {
+   "key": "exp2.seams_total",
+   "value": 9,
+   "source": "reports/expansion_v2_seams.json",
+   "field": "len(seams)"
+  }
+ ],
+ "After a one-line fix, all 6,581 cross-file links line up": [
+  {
+   "key": "exp2.edges",
+   "value": 6581,
+   "source": "reports/expansion_v2_agentpatched_code.json",
+   "field": "totals.d2_edges (after the one-line fix)"
+  },
+  {
+   "key": "exp2.edges_resolved",
+   "value": 6581,
+   "source": "reports/expansion_v2_agentpatched_code.json",
+   "field": "totals.d2_resolved"
+  },
+  {
+   "key": "agent.v2_fix1_secs",
+   "value": 21,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_aliases_translations_regraded.secs",
+   "raw": 21.0
+  }
+ ],
+ "A test written at token 641,687 calls a function Argon wrote 552,000 tokens earlier. And it passes": [
+  {
+   "key": "exp2.longest_use.start_tok",
+   "value": 641687,
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "test_flow_09 use_tok"
+  },
+  {
+   "key": "exp2.longest_def.start_tok",
+   "value": 89603,
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "make_run_id def_tok"
+  },
+  {
+   "key": "exp2.longest_distance_k",
+   "value": "552,000",
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "distance rounded to thousands (552,084 -> 552,000)",
+   "derived": true,
+   "raw": 552084
+  },
+  {
+   "key": "exp2.longest_distance",
+   "value": 552084,
+   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+   "field": "distance"
+  },
+  {
+   "key": "live.v2_longest_tests_passed",
+   "value": 1,
+   "source": "videos/assets/term/exp_longest_test_v2.txt",
+   "field": "live pytest run of tests/integration/test_flow_09_analytics_governance.py (real terminal output)",
+   "live": true
+  }
+ ],
+ "Our verifier found 21,459 plan mistakes: people double-booked, tasks outside the shift": [
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2plan.overlaps",
+   "value": 7161,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.overlaps (double-bookings; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2plan.outside",
+   "value": 14117,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+  }
+ ],
+ "Scheduling mistakes went to zero, even in stores it never saw (bars card also shows 21,459 -> 175)": [
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  },
+  {
+   "key": "exp2fixed.labor",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_after.by_check.labor.hard"
+  },
+  {
+   "key": "exp2.heldout_after",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_after"
+  },
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2fixed.mistakes",
+   "value": 175,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "hard_errors (final v2 plan mistakes)"
+  }
+ ],
  "all 9 hand-offs between hops came out clean": [
   {
    "key": "exp2.seams_pass",

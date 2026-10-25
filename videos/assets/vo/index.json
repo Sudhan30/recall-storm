@@ -180,5 +180,55 @@
    "file": "m6_9c472de4bc26.wav",
    "text": "Argon writes the whole thing at once, the verifier proves it, the agent repairs it. Simulated drill; every number from the verifier."
   }
+ },
+ "submission_90s": {
+  "p1": {
+   "file": "p1_068843e0eb23.wav",
+   "text": "At midnight on January 1st, 2027, every product in California with Red No. 3 becomes illegal to sell. No grace period."
+  },
+  "p1b": {
+   "file": "p1b_95012aa0e1be.wav",
+   "text": "The dye hides under many names. Stores get one night."
+  },
+  "p2": {
+   "file": "p2_130a4b8cb38d.wav",
+   "text": "Reading a label decides what's pulled. What's pulled decides which shelves, which people, which shifts, which substitutes, which trucks. Change one rule and it ripples through all of them. A system like this has to agree with itself, everywhere at once."
+  },
+  "p3": {
+   "file": "p3_6c78f81bc8e6.wav",
+   "text": "So we asked Gemini 4 Argon to write the whole system in one continued generation: one author, holding every part in mind at once."
+  },
+  "p3a": {
+   "file": "p3a_cce55b12dfb1.wav",
+   "text": "646,825 tokens. 911 files. Ten hops, nine hand-offs, every one clean."
+  },
+  "p3b": {
+   "file": "p3b_a73002681d35.wav",
+   "text": "After a one-line fix, all 6,581 cross-file links line up."
+  },
+  "p3c": {
+   "file": "p3c_42eba3512885.wav",
+   "text": "A test written at token 641,687 calls a function Argon wrote 552,000 tokens earlier."
+  },
+  "p3d": {
+   "file": "p3d_a591a970fcd5.wav",
+   "text": "And it passes."
+  },
+  "p3e": {
+   "file": "p3e_cb90d99e1641.wav",
+   "text": "That's what a million-token model is for: the whole system in one head."
+  },
+  "p4": {
+   "file": "p4_8d981aaf5c0e.wav",
+   "text": "But consistent code isn't correct code. Our verifier found 21,459 plan mistakes: people double-booked, tasks outside the shift."
+  },
+  "p5": {
+   "file": "p5_94c36b0e7ac7.wav",
+   "text": "A managed agent traced it to one root cause and fixed it. Scheduling mistakes went to zero, even in stores it never saw."
+  },
+  "p6": {
+   "file": "p6_0a17d96f33c9.wav",
+   "text": "When a law changes overnight, you don't have months. Argon writes the whole system at once, the verifier proves it, the agent repairs it."
+  }
  }
 }

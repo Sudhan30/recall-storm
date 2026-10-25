@@ -906,6 +906,12 @@
   "source": "reports/expansion_v2_code.json",
   "field": "buckets.position.200-400K.d4_files_failed"
  },
+ "live.v2_longest_tests_passed": {
+  "value": 1,
+  "source": "videos/assets/term/exp_longest_test_v2.txt",
+  "field": "live pytest run of tests/integration/test_flow_09_analytics_governance.py (real terminal output)",
+  "live": true
+ },
  "live.longest_tests_passed": {
   "value": 9,
   "source": "videos/assets/term/exp_longest_test.txt",
@@ -1252,6 +1258,13 @@
   "value": 552084,
   "source": "reports/expansion_v2_agentpatched_deps.jsonl",
   "field": "distance"
+ },
+ "exp2.longest_distance_k": {
+  "value": "552,000",
+  "source": "reports/expansion_v2_agentpatched_deps.jsonl",
+  "field": "distance rounded to thousands (552,084 -> 552,000)",
+  "derived": true,
+  "raw": 552084
  },
  "agent.v2_fix1_secs": {
   "value": 21,

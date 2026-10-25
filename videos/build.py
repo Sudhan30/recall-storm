@@ -254,6 +254,8 @@ def beat_png(text, out):
 
 
 TITLES = {
+    "end_sub": lambda: title_img([("Recall Storm", 96, "Heavy", COL["text"]),
+                                  ("Simulated drill \u00b7 every number from the verifier \u00b7 open source", 44, "Medium", COL["amber"])]),
     "parts": parts_img,
     "end_full": lambda: title_img([("Recall Storm", 96, "Heavy", COL["text"]),
                                    ("Compliance drill \u00b7 simulated operations \u00b7 open source", 44, "Medium", COL["amber"])],
@@ -495,7 +497,7 @@ def render_shot(shot, out, n):
 
 
 # ---------------------------------------------------------------- assembly
-TEMPO = {"backup_core": 1.1, "demo_full_final": 1.06, "one_minute_final": 1.07}       # optional narration speed-up (pitch kept)
+TEMPO = {"submission_90s": 1.15, "backup_core": 1.1, "demo_full_final": 1.06, "one_minute_final": 1.07}       # optional narration speed-up (pitch kept)
 
 
 def prep_wav(wav, bdir, tempo=1.0):

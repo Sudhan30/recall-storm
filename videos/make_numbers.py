@@ -133,6 +133,12 @@ LONGEST = {"expansion": (("longest_def", "recallstorm/core/ids.py"),
 code_report("expansion", "exp1")
 code_report("expansion_v2", "exp2")
 
+tl2 = ROOT / "videos/assets/term/exp_longest_test_v2.txt"
+if tl2.exists():
+    m = re.search(r"(\d+) passed", tl2.read_text())
+    put("live.v2_longest_tests_passed", int(m.group(1)), "videos/assets/term/exp_longest_test_v2.txt",
+        "live pytest run of tests/integration/test_flow_09_analytics_governance.py (real terminal output)", live=True)
+
 # live test run shown in the code-wall beat (real capture, not one of the report files)
 tl = (ROOT / "videos/assets/term/exp_longest_test.txt")
 if tl.exists():
@@ -263,6 +269,8 @@ def _v2():
         put("exp2.longest_def.start_tok", dep[0]["def_tok"], "reports/expansion_v2_agentpatched_deps.jsonl", "make_run_id def_tok")
         put("exp2.longest_use.start_tok", dep[0]["use_tok"], "reports/expansion_v2_agentpatched_deps.jsonl", "test_flow_09 use_tok")
         put("exp2.longest_distance", dep[0]["distance"], "reports/expansion_v2_agentpatched_deps.jsonl", "distance")
+        put("exp2.longest_distance_k", f"{round(dep[0]['distance'] / 1000):,},000", "reports/expansion_v2_agentpatched_deps.jsonl",
+            "distance rounded to thousands (552,084 -> 552,000)", derived=True, raw=dep[0]["distance"])
     ag = {r["name"]: r for r in jl("patches/agent/LOG.jsonl")}
     fx = ag.get("v2_aliases_translations_regraded")
     if fx:
@@ -303,6 +311,16 @@ PHRASES = {
     "The rest, 12 missed products and 3 look-alikes, are still open": ["exp2fixed.missed", "exp2fixed.decoys_pulled", "exp2fixed.missed_spots"],
     "a test written at token 641,687 calls a function written 552,084 tokens earlier":
         ["exp2.longest_use.start_tok", "exp2.longest_distance", "exp2.longest_def.start_tok"],
+    "646,825 tokens. 911 files. Ten hops, nine hand-offs, every one clean (submission_90s)":
+        ["exp2.visible", "exp2.files_manifest", "exp2.hops", "exp2.seams_pass", "exp2.seams_total"],
+    "After a one-line fix, all 6,581 cross-file links line up": ["exp2.edges", "exp2.edges_resolved", "agent.v2_fix1_secs"],
+    "A test written at token 641,687 calls a function Argon wrote 552,000 tokens earlier. And it passes":
+        ["exp2.longest_use.start_tok", "exp2.longest_def.start_tok", "exp2.longest_distance_k", "exp2.longest_distance",
+         "live.v2_longest_tests_passed"],
+    "Our verifier found 21,459 plan mistakes: people double-booked, tasks outside the shift":
+        ["exp2plan.mistakes", "exp2plan.overlaps", "exp2plan.outside"],
+    "Scheduling mistakes went to zero, even in stores it never saw (bars card also shows 21,459 -> 175)":
+        ["exp2plan.labor", "exp2fixed.labor", "exp2.heldout_after", "exp2plan.mistakes", "exp2fixed.mistakes"],
     "all 9 hand-offs between hops came out clean": ["exp2.seams_pass", "exp2.seams_total"],
     "Our verifier ran the plan and found 21,459 mistakes, 21,284 of them in scheduling":
         ["exp2plan.mistakes", "exp2plan.mistakes_report", "exp2plan.labor"],

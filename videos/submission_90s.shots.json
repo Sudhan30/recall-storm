@@ -1,0 +1,280 @@
+{
+ "video": "videos/submission_90s.mp4",
+ "duration": 94.53,
+ "shots": [
+  {
+   "t": 0.0,
+   "dur": 4.47,
+   "seg": "p1",
+   "kind": "ai",
+   "src": "store_night",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 4.47,
+   "dur": 4.43,
+   "seg": "p1",
+   "kind": "ai",
+   "src": "scanner_shelf",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 8.9,
+   "dur": 2.17,
+   "seg": "p1b",
+   "kind": "ai",
+   "src": "aisle_pull",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 11.07,
+   "dur": 2.17,
+   "seg": "p1b",
+   "kind": "cards",
+   "src": "card",
+   "label": "REAL CAPTURE \u00b7 viewer evidence cards"
+  },
+  {
+   "t": 13.23,
+   "dur": 7.03,
+   "seg": "p2",
+   "kind": "title",
+   "src": "parts",
+   "label": null
+  },
+  {
+   "t": 20.27,
+   "dur": 3.53,
+   "seg": "p2",
+   "kind": "ai",
+   "src": "dc_interior",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 23.8,
+   "dur": 3.5,
+   "seg": "p2",
+   "kind": "cap",
+   "src": "store3d",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 27.3,
+   "dur": 7.57,
+   "seg": "p3",
+   "kind": "ai",
+   "src": "dc_trucks",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 34.87,
+   "dur": 8.4,
+   "seg": "p3a",
+   "kind": "still",
+   "src": "hops_expansion_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 43.27,
+   "dur": 5.73,
+   "seg": "p3b",
+   "kind": "cap",
+   "src": "codewall_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 49.0,
+   "dur": 8.2,
+   "seg": "p3c",
+   "kind": "still",
+   "src": "codewall_longest_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 57.2,
+   "dur": 1.2,
+   "seg": "p3pause",
+   "kind": "still",
+   "src": "codewall_longest_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 58.4,
+   "dur": 2.8,
+   "seg": "p3d",
+   "kind": "term",
+   "src": "exp_longest_test_v2",
+   "label": "REAL CAPTURE \u00b7 terminal output"
+  },
+  {
+   "t": 61.2,
+   "dur": 5.23,
+   "seg": "p3e",
+   "kind": "still",
+   "src": "codewall_expansion_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 66.43,
+   "dur": 3.3,
+   "seg": "p4",
+   "kind": "stats",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 69.73,
+   "dur": 6.1,
+   "seg": "p4",
+   "kind": "still",
+   "src": "compare_left_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 75.83,
+   "dur": 3.8,
+   "seg": "p5",
+   "kind": "still",
+   "src": "compare_both_v2",
+   "label": "REAL CAPTURE \u00b7 project viewer"
+  },
+  {
+   "t": 79.63,
+   "dur": 3.8,
+   "seg": "p5",
+   "kind": "bars",
+   "src": "",
+   "label": "OURS \u00b7 numbers from the verifier reports"
+  },
+  {
+   "t": 83.43,
+   "dur": 8.1,
+   "seg": "p6",
+   "kind": "ai",
+   "src": "highway_trucks",
+   "label": "AI-generated illustration"
+  },
+  {
+   "t": 91.53,
+   "dur": 3.0,
+   "seg": "p7",
+   "kind": "title",
+   "src": "end_sub",
+   "label": null
+  }
+ ],
+ "segments": [
+  {
+   "id": "p1",
+   "t": 0.0,
+   "dur": 8.91,
+   "say": "At midnight on January 1st, 2027, every product in California with Red No. 3 becomes illegal to sell. No grace period.",
+   "beat": "Midnight, January 1st",
+   "pending": null
+  },
+  {
+   "id": "p1b",
+   "t": 8.91,
+   "dur": 4.31,
+   "say": "The dye hides under many names. Stores get one night.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p2",
+   "t": 13.23,
+   "dur": 14.06,
+   "say": "Reading a label decides what's pulled. What's pulled decides which shelves, which people, which shifts, which substitutes, which trucks. Change one rule and it ripples through all of them. A system like this has to agree with itself, everywhere at once.",
+   "beat": "Every part depends on every other",
+   "pending": null
+  },
+  {
+   "id": "p3",
+   "t": 27.29,
+   "dur": 7.59,
+   "say": "So we asked Gemini 4 Argon to write the whole system in one continued generation: one author, holding every part in mind at once.",
+   "beat": "Why one generation",
+   "pending": null
+  },
+  {
+   "id": "p3a",
+   "t": 34.88,
+   "dur": 8.39,
+   "say": "646,825 tokens. 911 files. Ten hops, nine hand-offs, every one clean.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p3b",
+   "t": 43.27,
+   "dur": 5.72,
+   "say": "After a one-line fix, all 6,581 cross-file links line up.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p3c",
+   "t": 49.0,
+   "dur": 8.22,
+   "say": "A test written at token 641,687 calls a function Argon wrote 552,000 tokens earlier.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p3pause",
+   "t": 57.21,
+   "dur": 1.2,
+   "say": "",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p3d",
+   "t": 58.41,
+   "dur": 2.8,
+   "say": "And it passes.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p3e",
+   "t": 61.21,
+   "dur": 5.22,
+   "say": "That's what a million-token model is for: the whole system in one head.",
+   "beat": "",
+   "pending": null
+  },
+  {
+   "id": "p4",
+   "t": 66.44,
+   "dur": 9.41,
+   "say": "But consistent code isn't correct code. Our verifier found 21,459 plan mistakes: people double-booked, tasks outside the shift.",
+   "beat": "Consistent isn't correct",
+   "pending": null
+  },
+  {
+   "id": "p5",
+   "t": 75.84,
+   "dur": 7.6,
+   "say": "A managed agent traced it to one root cause and fixed it. Scheduling mistakes went to zero, even in stores it never saw.",
+   "beat": "Scheduling mistakes \u2192 0",
+   "pending": null
+  },
+  {
+   "id": "p6",
+   "t": 83.44,
+   "dur": 8.08,
+   "say": "When a law changes overnight, you don't have months. Argon writes the whole system at once, the verifier proves it, the agent repairs it.",
+   "beat": "Why it matters",
+   "pending": null
+  },
+  {
+   "id": "p7",
+   "t": 91.53,
+   "dur": 3.0,
+   "say": "",
+   "beat": "",
+   "pending": null
+  }
+ ]
+}
