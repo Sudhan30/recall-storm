@@ -1,0 +1,40 @@
+--- a/recallstorm/aliases/detector.py
++++ b/recallstorm/aliases/detector.py
+@@ -97,12 +97,23 @@
+     ),
+ )
+ 
++# A named certified or common colorant anywhere on the label attributes a generic color statement
++_SPECIFIC_DYE = re.compile(
++    r"\b(?:red|yellow|blue|green|orange|citrus\s+red)\s*(?:dye\s*)?(?:no\.?|#)?\s*\d"
++    r"|\b(?:tartrazine|allura|sunset\s+yellow|brilliant\s+blue|indigo(?:tine)?|erythros)",
++    re.IGNORECASE,
++)
++
++# Redaction or damage marks: "FD&C R#####", "ERYTH\u2592\u2592\u2592"
++_ILLEGIBLE_MARKS = re.compile(r"#{3,}|[\u2592\u2591\u2593\ufffd]{2,}")
++
+ _UNCLEAR_PATTERNS: tuple[re.Pattern[str], ...] = (
+     re.compile(r"\bartificial\s+colou?rs?\b", re.IGNORECASE),
+     re.compile(r"\bartificial\s+colou?ring\b", re.IGNORECASE),
+     re.compile(r"\bcolou?r\s+added\b", re.IGNORECASE),
+     re.compile(r"\badded\s+colou?r\b", re.IGNORECASE),
+     re.compile(r"\bfd\s*&\s*c\s+colou?rs?\b", re.IGNORECASE),
++    re.compile(r"\bcertified\s+colou?rs?\b", re.IGNORECASE),
+     re.compile(r"\bcitric\s+acid\s+and\s+colou?r\b", re.IGNORECASE),
+     re.compile(r"\bunreadable\b", re.IGNORECASE),
+     re.compile(r"\billegible\b", re.IGNORECASE),
+@@ -187,6 +198,13 @@
+     if len(stripped) < 3 or re.fullmatch(r"[\W_]+", stripped):
+         return True, stripped, 0, len(text)
+ 
++    m = _ILLEGIBLE_MARKS.search(text)
++    if m:
++        return True, text[m.start():m.end()], m.start(), m.end()
++
++    if _SPECIFIC_DYE.search(text):
++        return False, None, None, None
++
+     for pat in _UNCLEAR_PATTERNS:
+         m = pat.search(text)
+         if m:

@@ -25,15 +25,28 @@ score is reported twice: pre-repair (`gen/core`) and post-repair (`gen/core_patc
   5 with `FD&C Rojo No. 3` (Spanish), kept or held.
 - **Fix:** accept `N0`/`Nº` for "No", and `rojo`/`rouge`/`rosso` for "red", only before the number 3.
   `RED N0. 30`, `FD&C Rojo No. 40` and `D&C Red No. 33` still do not match.
-- **Not fixed (rules logic, not aliases):** 78 KEEP SKUs go to HOLD_VERIFY because any "ARTIFICIAL COLORS"
-  triggers a hold, even when the label then names the dyes ("ARTIFICIAL COLORS (RED 40, YELLOW 6)").
+- Left for 003: 78 KEEP SKUs held because any "ARTIFICIAL COLORS" triggered a hold.
+
+## core/003_generic_color_attributed_and_illegible.patch
+
+- **Author:** us, by hand. `is_unclear_or_generic_color` in `recallstorm/aliases/detector.py`, on top of 002.
+- **Failure:** 78 KEEP SKUs held. Any "ARTIFICIAL COLORS" / "COLOR ADDED" triggered HOLD_VERIFY, even when the
+  label names the dyes ("ARTIFICIAL COLORS (RED 40, YELLOW 6)"). Also 2 HOLD SKUs kept: "certified color" was
+  not treated as generic, and redaction marks ("FD&C R#####", "ERYTH▒▒▒") were not treated as unreadable.
+- **Fix:** a generic color statement is unclear only when no specific colorant (Red 40, Yellow 5, tartrazine,
+  allura, ...) is named anywhere on the label. Add "certified color" to the generic phrases. Treat 3+ `#` or
+  2+ block/replacement characters as unreadable. Red No. 3 alias matches still run first, so a named Red 3
+  always wins.
+- **Remaining** (4 SKUs): 1 HOLD pulled (the "for USA and Chile: Red 40" label, arguable), 1 KEEP held
+  ("TITANIUM DIOXIDE [AN ARTIFICIAL COLORING]"), 2 HOLD kept, plus 1 more HOLD kept.
 
 ## Scores on the real pack (data commit 5bf1814)
 
-| Build | PULL precision | PULL recall | KEEP pulled | KEEP held |
-|---|---|---|---|---|
-| `gen/core` (Argon, unedited) | 0.998 | 0.946 | 0 | 78 |
-| `gen/core_patched` (001 + 002) | 0.998 | 1.000 | 0 | 78 |
+| Build | PULL precision | PULL recall | HOLD precision | HOLD recall | KEEP pulled | KEEP held |
+|---|---|---|---|---|---|---|
+| `gen/core` (Argon, unedited) | 0.998 | 0.946 | 0.160 | 0.727 | 0 | 78 |
+| `gen/core_patched` (001 + 002) | 0.998 | 1.000 | — | — | 0 | 78 |
+| `gen/core_patched` (001 + 002 + 003) | 0.998 | 1.000 | 0.947 | 0.818 | 0 | 1 |
 
 The single non-PULL item pulled is labeled HOLD_VERIFY (a label stating the US version uses Red 40 in place of
 erythrosin). Argon's own unit tests: 42 passed, 1 skipped, before and after.
