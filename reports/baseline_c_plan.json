@@ -1,0 +1,69 @@
+{
+  "plan": "out/baseline_c/plan.jsonl",
+  "scenario": "ca_red3",
+  "state": "CA",
+  "deadline_local": "2027-01-01T00:00:00",
+  "records": {
+    "run": 1,
+    "evidence": 483,
+    "sku_verdict": 1212,
+    "allocation": 2064,
+    "route_manifest": 6,
+    "store_playbook": 20,
+    "shelf_task": 9015,
+    "exception": 60,
+    "handoff": 2087
+  },
+  "bad_json_lines": 0,
+  "hard_errors": 0,
+  "by_check": {},
+  "classification": {
+    "labeled": 1212,
+    "tp": 467,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.9979,
+    "recall": 1.0,
+    "confusion": {
+      "PULL": {
+        "PULL": 467
+      },
+      "KEEP": {
+        "KEEP": 723
+      },
+      "HOLD_VERIFY": {
+        "PULL": 1,
+        "KEEP": 6,
+        "HOLD_VERIFY": 15
+      }
+    },
+    "decoys": 483,
+    "decoys_pulled": 0,
+    "decoys_pulled_ids": [],
+    "missing_verdicts": 0,
+    "false_pulls": [
+      "FDC1879399"
+    ],
+    "missed_pulls": []
+  },
+  "coverage": {
+    "pull_facings": 6718,
+    "pull_facings_tasked": 6718,
+    "rate": 1.0,
+    "hold_facings": 319,
+    "hold_facings_tasked": 218
+  },
+  "events": {
+    "events": 26827,
+    "bad_json": 0,
+    "unknown_task_refs": 0,
+    "kinds": {
+      "MOVE": 9015,
+      "PULL": 6733,
+      "DONE": 9015,
+      "PLACE": 2064
+    }
+  },
+  "by_src": {},
+  "errors": []
+}
