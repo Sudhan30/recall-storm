@@ -11,3 +11,4 @@ runs_*.start
 viewer/data/status.json
 viewer/data/status.tmp
 gen/expansion_agentpatched/
+.DS_Store
