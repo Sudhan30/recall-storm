@@ -325,8 +325,10 @@ else:
         entry["drill_holdout"] = {"shown_before": cnt(drill_before["errors"], False), "shown_after": cnt(da["errors"], False),
                                   "held_before": cnt(drill_before["errors"], True), "held_after": cnt(da["errors"], True),
                                   "held_stores": sorted(held_stores)}
-        worse = {k: v for k, v in (da["by_check"] or {}).items()
-                 if isinstance(v, int) and v > (drill_before["by_check"] or {}).get(k, 0)}
+        hard = lambda v: v.get("hard", 0) if isinstance(v, dict) else (v or 0)     # verify_plan: {"hard": n, "soft": m}
+        bb = drill_before["by_check"] or {}
+        worse = {k: {"before": hard(bb.get(k, 0)), "after": hard(v)} for k, v in (da["by_check"] or {}).items()
+                 if hard(v) > hard(bb.get(k, 0))}
         entry["drill_regressions"] = worse
     still = set(after["failed_ids"])
     seen = [t for t in before["failed_ids"] if t not in held]

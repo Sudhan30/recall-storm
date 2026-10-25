@@ -1,0 +1,117 @@
+--- a/recallstorm/aliases/detect.py
++++ b/recallstorm/aliases/detect.py
+@@ -28,23 +28,23 @@
+ _ADDITIVE_PATTERNS: dict[str, list[re.Pattern]] = {
+     "RED3": [
+         re.compile(
+-            r"(?<![A-Za-z0-9])(?:FD\s*&\s*C\s+Red\s+(?:Dye\s+)?(?:No\.?\s*|#)?\s*0?3(?:\s+(?:Lake|Powder|Aluminum\s+Lake))?)(?![0-9])",
+-            re.IGNORECASE,
+-        ),
+-        re.compile(
+-            r"(?<![A-Za-z0-9&])(?:Red\s+Dye\s+(?:No\.?\s*|#)?\s*0?3(?:\s+(?:Lake|Powder))?)(?![0-9])",
+-            re.IGNORECASE,
+-        ),
+-        re.compile(
+-            r"(?<![A-Za-z0-9&])(?:Red\s+(?:No\.?\s*|#)\s*0?3(?:\s+(?:Lake|Powder))?)(?![0-9])",
+-            re.IGNORECASE,
+-        ),
+-        re.compile(
+-            r"(?<![A-Za-z0-9&])(?:Red\s+0?3(?:\s+(?:Lake|Powder))?)(?![0-9])",
+-            re.IGNORECASE,
+-        ),
+-        re.compile(
+-            r"(?<![A-Za-z0-9])(?:erythrosine?|eritrosina|E[\s\-]?127|C\.?I\.?\s*45430|INS\s*127|rojo\s+(?:no\.?\s*)?0?3|rouge\s+0?3)(?![A-Za-z0-9])",
++            r"(?<![A-Za-z0-9])(?:F[\s.]*D[\s.]*(?:&|and)?[\s.]*C\.?\s+R[e3]d(?:\s+(?:Dye|Color))?(?:\s+N[o0]\.?\s*|\s*#\s*|\s*)0?3(?:\s+(?:Aluminum\s+Lake|Aluminium\s+Lake|Lake|Powder))?)(?![0-9])",
++            re.IGNORECASE,
++        ),
++        re.compile(
++            r"(?<![A-Za-z0-9&])(?:R[e3]d\s+(?:Dye|Color)(?:\s+N[o0]\.?\s*|\s*#\s*|\s*)0?3(?:\s+(?:Aluminum\s+Lake|Aluminium\s+Lake|Lake|Powder))?)(?![0-9])",
++            re.IGNORECASE,
++        ),
++        re.compile(
++            r"(?<![A-Za-z0-9&])(?:R[e3]d(?:\s+N[o0]\.?\s*|\s*#\s*)0?3(?:\s+(?:Aluminum\s+Lake|Aluminium\s+Lake|Lake|Powder))?)(?![0-9])",
++            re.IGNORECASE,
++        ),
++        re.compile(
++            r"(?<![A-Za-z0-9&])(?:R[e3]d\s*0?3(?:\s+(?:Aluminum\s+Lake|Aluminium\s+Lake|Lake|Powder))?)(?![0-9])",
++            re.IGNORECASE,
++        ),
++        re.compile(
++            r"(?<![A-Za-z0-9])(?:[e3]rythr[o0][s5][i1l]n[e3]?(?:\s+b[s5]?)?|[e3]r[i1l]tr[o0][s5][i1l]na|E[\s\-]?127|C\.?\s*I\.?\s*45430|INS[\s\-]*127|(?:colorante\s+)?r[o0]j[o0]\s+(?:n[o0°]\.?\s*|#\s*)?0?3|r[o0]uge\s+(?:n[o0°]\.?\s*|#\s*)?0?3|vermelho\s+(?:n[o0°]\.?\s*|#\s*)?0?3|acid\s+r[e3]d\s+51|food\s+r[e3]d\s+14)(?![A-Za-z0-9])",
+             re.IGNORECASE,
+         ),
+     ],
+@@ -73,16 +73,30 @@
+         ),
+     ],
+ }
++
++_QUANTITY_FOOD_AFTER_RE = re.compile(
++    r"^(?:\s*-\s*|\s+)(?:bean|beans|pepper|peppers|chili|chilies|chile|chiles|berry|berries|apple|apples|cherry|cherries|tomato|tomatoes|potato|potatoes|onion|onions|cheese|cheeses|grain|grains|seed|seeds|layer|layers|piece|pieces|pack|packs|count|ct|oz|lb|lbs|medley|blend|mix)\b",
++    re.IGNORECASE,
++)
++
++
++def _canonical_additive(additive: str) -> str:
++    add = additive.strip().upper()
++    if add in {"RED3", "RED_3", "RED 3", "FD&C RED NO. 3", "FD&C RED 3"}:
++        return "RED3"
++    return add
+ 
+ 
+ def decoy_reason(text: str, start: int, end: int) -> str | None:
+     """Return a reason string if the span [start, end) in text is a decoy, else None."""
+     if not isinstance(text, str):
+         raise TypeError("text must be a string")
+-    before = text[max(0, start - 8):start]
+-    if re.search(r"D\s*&\s*C\s+$", before, re.IGNORECASE) and not re.search(r"FD\s*&\s*C\s+$", before, re.IGNORECASE):
++    before = text[max(0, start - 16):start]
++    if re.search(r"(?<![A-Za-z])D[\s.]*&[\s.]*C\.?\s+$", before, re.IGNORECASE) and not re.search(
++        r"F[\s.]*D[\s.]*&[\s.]*C\.?\s+$", before, re.IGNORECASE
++    ):
+         return "D&C cosmetic dye, not FD&C Red No. 3"
+-    if is_quantity_phrase(text, start, end):
++    if is_quantity_phrase(text, start, end) or _QUANTITY_FOOD_AFTER_RE.match(text[end : end + 30]):
+         return "Quantity/food phrase (e.g., peppers), not dye"
+     if is_product_name_phrase(text, start, end):
+         return "Botanical/food name phrase, not dye"
+@@ -94,12 +108,15 @@
+ 
+ def is_decoy(text: str, start: int, end: int, additive: str = "RED3") -> bool:
+     """Return True if the candidate span is a decoy for additive."""
+-    if additive.upper() == "RED3":
++    if _canonical_additive(additive) == "RED3":
+         if decoy_reason(text, start, end) is not None:
+             return True
+-        if is_red40(text, start) and "3" not in text[start:end]:
+-            return True
+-        if is_dc_red_33(text, start) and re.search(r"33|30|28", text[start:end]):
++        span_slice = text[start:end]
++        cleaned_slice = re.sub(r"r3d", "red", span_slice, flags=re.IGNORECASE)
++        if re.search(r"\bred\b", cleaned_slice, re.IGNORECASE) and "3" not in cleaned_slice:
++            if is_red40(text, start):
++                return True
++        if is_dc_red_33(text, start) and re.search(r"33|30|28", span_slice):
+             return True
+     return False
+ 
+@@ -113,8 +130,9 @@
+     if not isinstance(text, str) or not text:
+         return []
+     add = additive.strip().upper()
++    canon = _canonical_additive(add)
+     folded = fold_unicode(text)
+-    patterns = list(_ADDITIVE_PATTERNS.get(add, []))
++    patterns = list(_ADDITIVE_PATTERNS.get(canon, []))
+     for alias in extra_aliases or ():
+         a_clean = fold_unicode(alias.strip())
+         if a_clean:
+@@ -133,7 +151,7 @@
+     for pat in patterns:
+         for m in pat.finditer(folded):
+             s, e = m.start(), m.end()
+-            if is_decoy(text, s, e, add):
++            if is_decoy(text, s, e, canon):
+                 continue
+             raw_hits.append(MatchResult(additive=add, match_text=text[s:e], start=s, end=e, confidence=1.0))
+ 
