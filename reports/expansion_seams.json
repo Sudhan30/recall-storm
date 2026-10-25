@@ -2,18 +2,17 @@
   "run": "runs/expansion",
   "source": "hops.jsonl",
   "finished": false,
-  "summary": "SUMMARY: 1 seams (1 continuation, 0 resume), 0 PASS, 0 FAIL, 1 PENDING (source: hops.jsonl, run live)",
+  "summary": "SUMMARY: 1 seams (1 continuation, 0 resume), 1 PASS, 0 FAIL, 0 PENDING (source: hops.jsonl, run live)",
   "seams": [
     {
       "seam_byte": 202880,
-      "status": "PENDING",
+      "status": "PASS",
       "fails": [],
       "notes": [
-        "open_block tests/unit/test_ingest_open_food_facts.py still open (run live) -> PENDING",
-        "no text after seam yet (not resumed) -> PENDING"
+        "seam inside tests/unit/test_ingest_open_food_facts.py; closed at byte 203153"
       ],
       "before_tail": "ge(raw) == \"en\"\n    parsed = parse_off_product({\"product\": raw})\n    assert \"E12",
-      "after_head": "",
+      "after_head": "7\" in parsed[\"ingredients\"]\n    off_s = off_to_sku(raw)\n    fdc_s = fdc_to_sku({",
       "n": 1,
       "kind": "continuation",
       "label": "hop 0->1",

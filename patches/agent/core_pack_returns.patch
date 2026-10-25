@@ -1,0 +1,134 @@
+--- a/recallstorm/plan/planner.py
++++ b/recallstorm/plan/planner.py
+@@ -78,14 +78,15 @@
+     """Pack pulled return cases onto DC trucks within cube and weight limits.
+ 
+     Every pulled case is placed on a stop for its store's DC, and each store with
+-    pulled cases appears on at least one stop (or split across trucks only if a single
+-    store exceeds one truck's capacity, though normally each store is on 1 stop).
++    pulled cases appears on at least one stop (or split across trucks when a store's
++    load cannot fit whole on any single truck with remaining capacity).
+     """
+     sku_map = {s.sku_id: s for s in skus}
+     store_map = {s.store_id: s for s in stores}
+ 
+-    # Aggregate total cases, cube, weight per (dc_id, store_id)
++    # Aggregate total cases, cube, weight per (dc_id, store_id) and keep SKU breakdown
+     store_totals: dict[str, dict[str, Any]] = {}
++    store_sku_items: dict[str, list[tuple[Sku, int]]] = {}
+     for (store_id, sku_id), cases in sorted(pulled_cases.items()):
+         c = int(cases)
+         if c <= 0:
+@@ -101,6 +102,7 @@
+         entry["cases"] += c
+         entry["cube"] += c * float(sku.case_cube_ft3)
+         entry["weight"] += c * float(sku.case_weight_lb)
++        store_sku_items.setdefault(store_id, []).append((sku, c))
+ 
+     trucks_by_dc: dict[str, list[Truck]] = {}
+     for t in sorted(trucks, key=lambda x: (x.dc_id, x.truck_id)):
+@@ -120,59 +122,77 @@
+         if not dc_trucks:
+             continue
+ 
+-        # Bin-pack stores onto trucks using first-fit
++        # Bin-pack stores onto trucks using first-fit, splitting by case when needed
+         truck_bins: list[dict[str, Any]] = [
+-            {"truck": t, "stops": [], "cube": 0.0, "weight": 0.0}
++            {"truck": t, "stops": {}, "cube": 0.0, "weight": 0.0}
+             for t in dc_trucks
+         ]
++
++        def _add_to_bin(b: dict[str, Any], st_id: str, c_cnt: int, c_cube: float, c_weight: float) -> None:
++            if st_id not in b["stops"]:
++                b["stops"][st_id] = {"cases": 0, "cube": 0.0, "weight": 0.0}
++            b["stops"][st_id]["cases"] += c_cnt
++            b["stops"][st_id]["cube"] += c_cube
++            b["stops"][st_id]["weight"] += c_weight
++            b["cube"] += c_cube
++            b["weight"] += c_weight
+ 
+         for store_id in stores_by_dc[dc_id]:
+             info = store_totals[store_id]
+             cases = info["cases"]
+-            cube = round(info["cube"], 4)
+-            weight = round(info["weight"], 4)
++            cube = info["cube"]
++            weight = info["weight"]
+ 
+             placed = False
+             for b in truck_bins:
+                 t: Truck = b["truck"]
+                 if b["cube"] + cube <= t.cube_ft3 + 1e-6 and b["weight"] + weight <= t.weight_lb + 1e-6:
+-                    b["stops"].append(
+-                        Stop(
+-                            store_id=store_id,
+-                            cases=cases,
+-                            cube_ft3=round(cube, 2),
+-                            weight_lb=round(weight, 2),
+-                        )
+-                    )
+-                    b["cube"] += cube
+-                    b["weight"] += weight
++                    _add_to_bin(b, store_id, cases, cube, weight)
+                     placed = True
+                     break
+ 
+             if not placed:
+-                # Fallback: place on the truck with the most remaining cube
+-                best_bin = max(truck_bins, key=lambda b: b["truck"].cube_ft3 - b["cube"])
+-                best_bin["stops"].append(
+-                    Stop(
+-                        store_id=store_id,
+-                        cases=cases,
+-                        cube_ft3=round(cube, 2),
+-                        weight_lb=round(weight, 2),
+-                    )
+-                )
+-                best_bin["cube"] += cube
+-                best_bin["weight"] += weight
++                # Split the store's cases across trucks with remaining capacity
++                for sku, sku_cases in store_sku_items[store_id]:
++                    rem = sku_cases
++                    c_cube = float(sku.case_cube_ft3)
++                    c_weight = float(sku.case_weight_lb)
++                    for b in truck_bins:
++                        if rem <= 0:
++                            break
++                        t = b["truck"]
++                        avail_cube = t.cube_ft3 - b["cube"]
++                        avail_weight = t.weight_lb - b["weight"]
++                        max_by_cube = int((avail_cube + 1e-9) // c_cube) if c_cube > 0 else rem
++                        max_by_weight = int((avail_weight + 1e-9) // c_weight) if c_weight > 0 else rem
++                        take = min(rem, max(0, max_by_cube), max(0, max_by_weight))
++                        if take > 0:
++                            _add_to_bin(b, store_id, take, take * c_cube, take * c_weight)
++                            rem -= take
++
++                    if rem > 0:
++                        best_bin = max(truck_bins, key=lambda b: b["truck"].cube_ft3 - b["cube"])
++                        _add_to_bin(best_bin, store_id, rem, rem * c_cube, rem * c_weight)
+ 
+         for b in truck_bins:
+             if not b["stops"]:
+                 continue
+             t = b["truck"]
++            stop_objs = [
++                Stop(
++                    store_id=st_id,
++                    cases=st_data["cases"],
++                    cube_ft3=round(st_data["cube"], 4),
++                    weight_lb=round(st_data["weight"], 4),
++                )
++                for st_id, st_data in b["stops"].items()
++            ]
+             manifests.append(
+                 RouteManifest(
+                     manifest_id=f"MAN-{manifest_seq:04d}",
+                     truck_id=t.truck_id,
+                     dc_id=dc_id,
+-                    stops=tuple(b["stops"]),
++                    stops=tuple(stop_objs),
+                     depart=t.depart,
+                 )
+             )
