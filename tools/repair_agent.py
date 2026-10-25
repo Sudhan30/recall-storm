@@ -162,7 +162,11 @@ def run_tests(base: pathlib.Path, files: list[str]) -> dict:
 def imported_signatures(src: str, base: pathlib.Path) -> str:
     """Public def/class signature lines of every local module the failing file imports."""
     out = []
-    for node in ast.walk(ast.parse(src)):
+    try:
+        tree = ast.parse(src)
+    except SyntaxError:                                 # the file we are repairing may not parse: scan imports as text
+        tree = ast.parse("\n".join(l.strip() for l in src.splitlines() if re.match(r"\s*from \S+ import [^(]*$", l)))
+    for node in ast.walk(tree):
         if isinstance(node, ast.ImportFrom) and node.module:
             mod = node.module
             cands = [base / pathlib.Path(*mod.split(".")).with_suffix(".py"),
@@ -228,6 +232,10 @@ def guard_cases(n: int, failing: set[str]) -> str:
     return "\n".join(out)
 
 
+try:
+    ast.parse(src); parse_err = ""
+except SyntaxError as e:
+    parse_err = f"{type(e).__name__}: {e.msg} (line {e.lineno}): {(e.text or '').rstrip()}"
 failing_skus = {m for t in before["failed_ids"] for m in re.findall(r"\[(\w+)\]", t)}
 guards = guard_cases(a.guards, failing_skus) if a.guards else ""
 manifest = next((l for l in (gen / "manifest.jsonl").read_text().splitlines() if f'"{a.file}"' in l), "{}")
@@ -241,6 +249,7 @@ DIAGNOSIS: <one line: the root cause>
 <the complete corrected file>
 <<<END FILE>>>
 
+{"=== this file does not parse ===" + chr(10) + parse_err + chr(10) if parse_err else ""}
 === manifest entry ===
 {manifest}
 
