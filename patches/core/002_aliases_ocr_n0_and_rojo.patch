@@ -1,0 +1,19 @@
+--- a/recallstorm/aliases/detector.py
++++ b/recallstorm/aliases/detector.py
+@@ -49,14 +49,14 @@
+     (
+         "FD&C Red No. 3",
+         re.compile(
+-            r"\bf\.?\s*d\.?\s*(?:&|and)\s*c\.?\s+red(?:\s+(?:dye|no\.?|number|num\.?))?\s*#?\s*0*3(?:\s+lake)?\b(?!\d)",
++            r"\bf\.?\s*d\.?\s*(?:&|and)\s*c\.?\s+(?:red|rojo|rouge|rosso)(?:\s+(?:dye|n[o0º]\.?|number|num\.?))?\s*#?\s*0*3(?:\s+lake)?\b(?!\d)",
+             re.IGNORECASE,
+         ),
+     ),
+     (
+         "Red No. 3",
+         re.compile(
+-            r"(?<![a-z0-9&])\bred\s+(?:no\.?|number|num\.?)\s*#?\s*0*3(?:\s+lake)?\b(?!\d)",
++            r"(?<![a-z0-9&])\b(?:red|rojo|rouge|rosso)\s+(?:n[o0º]\.?|number|num\.?)\s*#?\s*0*3(?:\s+lake)?\b(?!\d)",
+             re.IGNORECASE,
+         ),
+     ),
