@@ -415,7 +415,7 @@ def lot_candidates(rec: dict, r: random.Random):
             h = date.fromisoformat(hi)
             l0 = date.fromisoformat(lo) if lo else h - timedelta(days=60)
             span = (h - l0).days
-            for d in {l0, h, l0 + timedelta(days=span // 2)}:
+            for d in sorted({l0, h, l0 + timedelta(days=span // 2)}):
                 pos.append((synth_lot(), d.isoformat()))
             neg.append((synth_lot(), (h + timedelta(days=r.choice([1, 2, 5, 14]))).isoformat()))
             if lo:

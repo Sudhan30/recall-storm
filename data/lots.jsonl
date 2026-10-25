@@ -1,8 +1,8 @@
 {"store_id": "SAMS4735", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 1}, "lot": "H25-201B", "best_by": "2027-10-25", "units": 6, "_real": false}
 {"store_id": "SAMS4735", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 2}, "lot": "d25011a", "best_by": "2027-05-28", "units": 13, "_real": false}
-{"store_id": "SAMS4735", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "A24-206B", "best_by": "2025-04-02", "units": 2, "_real": false}
+{"store_id": "SAMS4735", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "A24-206B", "best_by": "2025-03-03", "units": 2, "_real": false}
 {"store_id": "SAMS4735", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "U26-139C", "best_by": "2025-04-03", "units": 5, "_real": false}
-{"store_id": "SAMS4735", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "C25221A", "best_by": "2026-01-18", "units": 10, "_real": false}
+{"store_id": "SAMS4735", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "C25221A", "best_by": "2026-07-20", "units": 10, "_real": false}
 {"store_id": "SAMS4735", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "V24195B", "best_by": "2026-07-21", "units": 11, "_real": false}
 {"store_id": "SAMS4735", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "A26086C", "best_by": "2027-01-16", "units": 4, "_real": false}
 {"store_id": "SAMS4735", "sku_id": "FDAH05762025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "LOT V24205C", "best_by": "2027-08-08", "units": 16, "_real": false}
@@ -31,7 +31,7 @@
 {"store_id": "SAMS4767", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "P24329A", "best_by": "2027-10-07", "units": 17, "_real": false}
 {"store_id": "SAMS4767", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "4214", "best_by": "2027-06-25", "units": 14, "_real": false}
 {"store_id": "SAMS4767", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "4311", "best_by": "2027-08-06", "units": 3, "_real": false}
-{"store_id": "SAMS4767", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "r24041b", "best_by": "2026-01-22", "units": 8, "_real": false}
+{"store_id": "SAMS4767", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "r24041b", "best_by": "2026-01-02", "units": 8, "_real": false}
 {"store_id": "SAMS4767", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "E25-221A", "best_by": "2025-11-11", "units": 6, "_real": false}
 {"store_id": "SAMS4767", "sku_id": "FDAH06002026", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "LOT X25199A", "best_by": "2027-03-07", "units": 6, "_real": false}
 {"store_id": "SAMS4767", "sku_id": "FDAH06002026", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "LOT E26332B", "best_by": "2027-03-12", "units": 14, "_real": false}
@@ -53,8 +53,8 @@
 {"store_id": "SAMS6405", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "LOT V24041C", "best_by": "2027-08-21", "units": 6, "_real": false}
 {"store_id": "SAMS6405", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "K25084C", "best_by": "2027-05-16", "units": 3, "_real": false}
 {"store_id": "SAMS6405", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "P26316A", "best_by": "2027-02-21", "units": 18, "_real": false}
-{"store_id": "SAMS6405", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "K25330B", "best_by": "2027-03-02", "units": 3, "_real": false}
-{"store_id": "SAMS6405", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "LOT D24339B", "best_by": "2027-05-02", "units": 13, "_real": false}
+{"store_id": "SAMS6405", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "K25330B", "best_by": "2027-05-02", "units": 3, "_real": false}
+{"store_id": "SAMS6405", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "LOT D24339B", "best_by": "2027-03-02", "units": 13, "_real": false}
 {"store_id": "SAMS6405", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 3}, "lot": "P25031C", "best_by": "2026-12-30", "units": 15, "_real": false}
 {"store_id": "SAMS6405", "sku_id": "FDAH06002026", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "B25-302C", "best_by": "2027-03-07", "units": 7, "_real": false}
 {"store_id": "SAMS6405", "sku_id": "FDAH06002026", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "m26203b", "best_by": "2027-03-04", "units": 17, "_real": false}
@@ -86,8 +86,8 @@
 {"store_id": "SAMS6621", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "R25167C", "best_by": "2025-11-14", "units": 13, "_real": false}
 {"store_id": "SAMS6621", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "M26100A", "best_by": "2026-08-03", "units": 16, "_real": false}
 {"store_id": "SAMS6621", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "v25137b", "best_by": "2025-07-10", "units": 6, "_real": false}
-{"store_id": "SAMS6621", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "U26042A", "best_by": "2026-12-15", "units": 8, "_real": false}
-{"store_id": "SAMS6621", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "U25-079C", "best_by": "2026-11-15", "units": 12, "_real": false}
+{"store_id": "SAMS6621", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "U26042A", "best_by": "2027-01-14", "units": 8, "_real": false}
+{"store_id": "SAMS6621", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "U25-079C", "best_by": "2026-12-15", "units": 12, "_real": false}
 {"store_id": "SAMS6621", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 3}, "lot": "Z24339A", "best_by": "2027-01-19", "units": 12, "_real": false}
 {"store_id": "SAMS6621", "sku_id": "FDAH06002026", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "l24154a", "best_by": "2027-03-04", "units": 16, "_real": false}
 {"store_id": "SAMS6621", "sku_id": "FDAH06002026", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 2}, "lot": "T25123B", "best_by": "2027-03-08", "units": 15, "_real": false}
@@ -122,7 +122,7 @@
 {"store_id": "WM1563", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "0528D911", "best_by": "2027-06-02", "units": 6, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "v26321a", "best_by": "2027-06-14", "units": 16, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 3}, "lot": "0528D912", "best_by": "2027-09-16", "units": 2, "_real": false}
-{"store_id": "WM1563", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "LOT A26178B", "best_by": "2027-01-14", "units": 2, "_real": false}
+{"store_id": "WM1563", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "LOT A26178B", "best_by": "2026-11-15", "units": 2, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "J25-019B", "best_by": "2027-01-28", "units": 14, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "25086", "best_by": "2027-10-30", "units": 7, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "LOT M24264C", "best_by": "2027-10-22", "units": 10, "_real": false}
@@ -135,7 +135,7 @@
 {"store_id": "WM1563", "sku_id": "FDAH09102026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 1}, "lot": "049222", "best_by": "2027-03-22", "units": 2, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH09102026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 2}, "lot": "LOT 1177", "best_by": "2027-04-12", "units": 11, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 1}, "lot": "R24227B", "best_by": "2028-01-15", "units": 16, "_real": false}
-{"store_id": "WM1563", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 2}, "lot": "L24148B", "best_by": "2027-08-08", "units": 10, "_real": false}
+{"store_id": "WM1563", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 2}, "lot": "L24148B", "best_by": "2027-10-07", "units": 10, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 3}, "lot": "LOT A25091C", "best_by": "2028-03-17", "units": 7, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH11742026", "loc": {"aisle": "F02", "bay": 2, "shelf": 1, "pos": 1}, "lot": "60D0925", "best_by": "2027-05-08", "units": 13, "_real": false}
 {"store_id": "WM1563", "sku_id": "FDAH11742026", "loc": {"aisle": "F02", "bay": 2, "shelf": 1, "pos": 2}, "lot": "E24305C", "best_by": "2027-05-12", "units": 13, "_real": false}
@@ -186,16 +186,16 @@
 {"store_id": "WM1574", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "Z24037B", "best_by": "2025-11-10", "units": 14, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "S24-267A", "best_by": "2026-01-24", "units": 17, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 3}, "lot": "n26176a", "best_by": "2025-10-22", "units": 2, "_real": false}
-{"store_id": "WM1574", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "F25318B", "best_by": "2027-03-02", "units": 15, "_real": false}
+{"store_id": "WM1574", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "F25318B", "best_by": "2027-05-02", "units": 15, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "LOT G25045C", "best_by": "2026-12-30", "units": 11, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 3}, "lot": "J25-345A", "best_by": "2027-05-04", "units": 12, "_real": false}
-{"store_id": "WM1574", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "LOT D26230B", "best_by": "2026-07-20", "units": 3, "_real": false}
-{"store_id": "WM1574", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "W25267B", "best_by": "2025-07-20", "units": 13, "_real": false}
+{"store_id": "WM1574", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "LOT D26230B", "best_by": "2025-07-20", "units": 3, "_real": false}
+{"store_id": "WM1574", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "W25267B", "best_by": "2026-01-18", "units": 13, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 3}, "lot": "L25310B", "best_by": "2026-07-25", "units": 3, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 4}, "lot": "LOT A26169C", "best_by": "2025-07-19", "units": 2, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH05372026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "F25072B", "best_by": "2027-07-30", "units": 18, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH05372026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "0528D912", "best_by": "2027-04-09", "units": 10, "_real": false}
-{"store_id": "WM1574", "sku_id": "FDAH05482026", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 1}, "lot": "LOT R25182C", "best_by": "2026-11-15", "units": 16, "_real": false}
+{"store_id": "WM1574", "sku_id": "FDAH05482026", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 1}, "lot": "LOT R25182C", "best_by": "2026-12-15", "units": 16, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH05482026", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 2}, "lot": "U25302C", "best_by": "2027-01-15", "units": 13, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 1}, "lot": "25084", "best_by": "2027-02-10", "units": 13, "_real": false}
 {"store_id": "WM1574", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 2}, "lot": "25-086", "best_by": "2027-07-18", "units": 5, "_real": false}
@@ -242,7 +242,7 @@
 {"store_id": "WM1575", "sku_id": "FDAF02642025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 3}, "lot": "t25121b", "best_by": "2027-07-22", "units": 2, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "i24bi02a", "best_by": "2027-10-08", "units": 11, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "C24124A", "best_by": "2027-05-18", "units": 18, "_real": false}
-{"store_id": "WM1575", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "LOT S25258A", "best_by": "2025-03-03", "units": 2, "_real": false}
+{"store_id": "WM1575", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "LOT S25258A", "best_by": "2025-04-02", "units": 2, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "B26114C", "best_by": "2025-04-04", "units": 18, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "Z24298B", "best_by": "2024-10-23", "units": 17, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "LOT A25213A", "best_by": "2024-09-29", "units": 14, "_real": false}
@@ -257,8 +257,8 @@
 {"store_id": "WM1575", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "J25045B", "best_by": "2026-02-05", "units": 3, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "G26352B", "best_by": "2025-12-30", "units": 16, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 3}, "lot": "y26162a", "best_by": "2025-11-10", "units": 16, "_real": false}
-{"store_id": "WM1575", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "A26365A", "best_by": "2027-05-02", "units": 8, "_real": false}
-{"store_id": "WM1575", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "H26120A", "best_by": "2027-03-02", "units": 7, "_real": false}
+{"store_id": "WM1575", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "A26365A", "best_by": "2027-03-02", "units": 8, "_real": false}
+{"store_id": "WM1575", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "H26120A", "best_by": "2027-05-02", "units": 7, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 3}, "lot": "V26252A", "best_by": "2026-12-21", "units": 17, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 4}, "lot": "W24-140B", "best_by": "2027-05-03", "units": 3, "_real": false}
 {"store_id": "WM1575", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "G25057A", "best_by": "2025-07-17", "units": 5, "_real": false}
@@ -415,7 +415,7 @@
 {"store_id": "WM1608", "sku_id": "FDAH11902026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 1}, "lot": "ca1g24", "best_by": "2027-09-07", "units": 16, "_real": false}
 {"store_id": "WM1608", "sku_id": "FDAH11902026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 2}, "lot": "J25275B", "best_by": "2027-02-20", "units": 17, "_real": false}
 {"store_id": "WM1608", "sku_id": "FDAH11902026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 3}, "lot": "ca1g25", "best_by": "2027-08-31", "units": 12, "_real": false}
-{"store_id": "WM1608", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 1}, "lot": "N24333B", "best_by": "2027-07-10", "units": 9, "_real": false}
+{"store_id": "WM1608", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 1}, "lot": "N24333B", "best_by": "2027-05-11", "units": 9, "_real": false}
 {"store_id": "WM1608", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 2}, "lot": "LOT S25197A", "best_by": "2027-07-15", "units": 17, "_real": false}
 {"store_id": "WM1608", "sku_id": "FDAH12702026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 1}, "lot": "U24121C", "best_by": "2027-06-06", "units": 10, "_real": false}
 {"store_id": "WM1608", "sku_id": "FDAH12702026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 2}, "lot": "V25120C", "best_by": "2027-01-24", "units": 4, "_real": false}
@@ -442,13 +442,13 @@
 {"store_id": "WM1616", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "0545", "best_by": "2027-09-27", "units": 8, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "04-51", "best_by": "2027-08-23", "units": 11, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 3}, "lot": "0546", "best_by": "2027-07-21", "units": 18, "_real": false}
-{"store_id": "WM1616", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "P25-221A", "best_by": "2026-01-22", "units": 4, "_real": false}
+{"store_id": "WM1616", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "P25-221A", "best_by": "2026-01-02", "units": 4, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "Z24-098B", "best_by": "2025-12-30", "units": 8, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 3}, "lot": "V25269A", "best_by": "2026-01-24", "units": 11, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "H26110A", "best_by": "2027-05-03", "units": 9, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 2}, "lot": "G24-031B", "best_by": "2026-12-28", "units": 8, "_real": false}
-{"store_id": "WM1616", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "A25140C", "best_by": "2026-12-15", "units": 6, "_real": false}
-{"store_id": "WM1616", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "S25253B", "best_by": "2027-01-14", "units": 16, "_real": false}
+{"store_id": "WM1616", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "A25140C", "best_by": "2027-01-14", "units": 6, "_real": false}
+{"store_id": "WM1616", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "S25253B", "best_by": "2026-11-15", "units": 16, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 3}, "lot": "s26141a", "best_by": "2027-01-19", "units": 3, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH06862026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "LOT 215", "best_by": "2027-07-22", "units": 11, "_real": false}
 {"store_id": "WM1616", "sku_id": "FDAH06862026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "G24114C", "best_by": "2027-02-24", "units": 9, "_real": false}
@@ -479,22 +479,22 @@
 {"store_id": "WM1630", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "LOT Y24030A", "best_by": "2027-06-14", "units": 16, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "I24BI01A", "best_by": "2027-10-16", "units": 7, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "I24BI02A", "best_by": "2027-09-16", "units": 13, "_real": false}
-{"store_id": "WM1630", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "N24165A", "best_by": "2025-04-02", "units": 6, "_real": false}
-{"store_id": "WM1630", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "F26197A", "best_by": "2025-03-03", "units": 9, "_real": false}
+{"store_id": "WM1630", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "N24165A", "best_by": "2025-03-03", "units": 6, "_real": false}
+{"store_id": "WM1630", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "F26197A", "best_by": "2025-04-02", "units": 9, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 3}, "lot": "LOT S25096B", "best_by": "2025-04-07", "units": 2, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "LOT E24361C", "best_by": "2027-02-01", "units": 6, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "V26-110C", "best_by": "2027-05-14", "units": 17, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "4311", "best_by": "2027-08-11", "units": 14, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "4214", "best_by": "2027-05-14", "units": 3, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 3}, "lot": "C26-360B", "best_by": "2027-08-11", "units": 7, "_real": false}
-{"store_id": "WM1630", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "U25291A", "best_by": "2026-01-12", "units": 12, "_real": false}
+{"store_id": "WM1630", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "U25291A", "best_by": "2026-01-22", "units": 12, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 2}, "lot": "r25044a", "best_by": "2025-12-30", "units": 8, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 3}, "lot": "X25028B", "best_by": "2026-01-24", "units": 18, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "B24171B", "best_by": "2026-08-03", "units": 18, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "X24-204B", "best_by": "2025-07-17", "units": 15, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "0528D911", "best_by": "2027-05-19", "units": 3, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "LOT 0528D912", "best_by": "2027-08-04", "units": 3, "_real": false}
-{"store_id": "WM1630", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "Z26-146C", "best_by": "2027-01-14", "units": 18, "_real": false}
+{"store_id": "WM1630", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "Z26-146C", "best_by": "2026-11-15", "units": 18, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "W24100B", "best_by": "2027-01-15", "units": 4, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "25084", "best_by": "2027-01-26", "units": 16, "_real": false}
 {"store_id": "WM1630", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "b25134b", "best_by": "2027-10-08", "units": 5, "_real": false}
@@ -545,7 +545,7 @@
 {"store_id": "WM1899", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "L25320C", "best_by": "2027-03-20", "units": 18, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "i24bi01a", "best_by": "2027-04-18", "units": 12, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "N26108C", "best_by": "2027-01-16", "units": 14, "_real": false}
-{"store_id": "WM1899", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "m26261b", "best_by": "2025-03-03", "units": 6, "_real": false}
+{"store_id": "WM1899", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "m26261b", "best_by": "2025-04-02", "units": 6, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "C24157B", "best_by": "2025-02-01", "units": 15, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 3}, "lot": "LOT X24144B", "best_by": "2025-04-16", "units": 2, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "a26231c", "best_by": "2027-02-09", "units": 11, "_real": false}
@@ -555,11 +555,11 @@
 {"store_id": "WM1899", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "4311", "best_by": "2027-02-15", "units": 9, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "0641", "best_by": "2027-09-20", "units": 12, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 2}, "lot": "LOT A26032A", "best_by": "2027-06-27", "units": 12, "_real": false}
-{"store_id": "WM1899", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "LOT A24281B", "best_by": "2026-01-02", "units": 17, "_real": false}
+{"store_id": "WM1899", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "LOT A24281B", "best_by": "2026-01-12", "units": 17, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "X24262A", "best_by": "2025-11-11", "units": 6, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "J25143A", "best_by": "2027-05-07", "units": 8, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "LOT B25312C", "best_by": "2026-12-28", "units": 11, "_real": false}
-{"store_id": "WM1899", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "LOT B26163C", "best_by": "2025-07-20", "units": 15, "_real": false}
+{"store_id": "WM1899", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "LOT B26163C", "best_by": "2026-01-18", "units": 15, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "F24055B", "best_by": "2026-07-22", "units": 3, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH05372026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "0528D911", "best_by": "2027-09-28", "units": 14, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH05372026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "0528-D912", "best_by": "2027-05-23", "units": 12, "_real": false}
@@ -580,7 +580,7 @@
 {"store_id": "WM1899", "sku_id": "FDAH11852026", "loc": {"aisle": "F02", "bay": 2, "shelf": 4, "pos": 2}, "lot": "2800", "best_by": "2027-07-14", "units": 5, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH11852026", "loc": {"aisle": "F02", "bay": 2, "shelf": 4, "pos": 3}, "lot": "W25363B", "best_by": "2027-08-24", "units": 12, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH11852026", "loc": {"aisle": "F02", "bay": 2, "shelf": 4, "pos": 4}, "lot": "2783", "best_by": "2027-07-08", "units": 5, "_real": false}
-{"store_id": "WM1899", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 1}, "lot": "P24-011C", "best_by": "2027-05-11", "units": 18, "_real": false}
+{"store_id": "WM1899", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 1}, "lot": "P24-011C", "best_by": "2027-07-10", "units": 18, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 2}, "lot": "A24137B", "best_by": "2027-06-10", "units": 10, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 3}, "lot": "X26020B", "best_by": "2027-07-24", "units": 5, "_real": false}
 {"store_id": "WM1899", "sku_id": "FDAH12682026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 1}, "lot": "D25236C", "best_by": "2027-09-20", "units": 13, "_real": false}
@@ -607,8 +607,8 @@
 {"store_id": "WM1912", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "LOT L26021A", "best_by": "2027-03-30", "units": 7, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "i24bi01a", "best_by": "2027-02-21", "units": 4, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "I24BI02A", "best_by": "2027-02-11", "units": 6, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "E24055A", "best_by": "2025-03-03", "units": 3, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "P24249B", "best_by": "2025-04-02", "units": 8, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "E24055A", "best_by": "2025-04-02", "units": 3, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "P24249B", "best_by": "2025-03-03", "units": 8, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 3}, "lot": "LOT B25108C", "best_by": "2025-04-16", "units": 12, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "R25349C", "best_by": "2024-09-29", "units": 6, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "K25-179C", "best_by": "2024-10-10", "units": 3, "_real": false}
@@ -620,13 +620,13 @@
 {"store_id": "WM1912", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 4}, "lot": "D25349B", "best_by": "2027-01-29", "units": 4, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "04-51", "best_by": "2027-07-17", "units": 7, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 2}, "lot": "00-40", "best_by": "2027-08-28", "units": 11, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "G24167B", "best_by": "2026-01-22", "units": 6, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "LOT B24161C", "best_by": "2025-11-01", "units": 4, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "G24167B", "best_by": "2026-01-02", "units": 6, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "LOT B24161C", "best_by": "2025-11-09", "units": 4, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 3}, "lot": "M24-299A", "best_by": "2026-01-23", "units": 8, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "y25266a", "best_by": "2027-05-03", "units": 12, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "L26220C", "best_by": "2026-12-21", "units": 12, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAH04872025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "K26001A", "best_by": "2025-07-20", "units": 14, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAH04872025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "B26235A", "best_by": "2026-01-18", "units": 16, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAH04872025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "K26001A", "best_by": "2026-01-18", "units": 14, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAH04872025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "B26235A", "best_by": "2026-07-20", "units": 16, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH04872025", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 3}, "lot": "D25-080C", "best_by": "2026-07-25", "units": 5, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH05372026", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 1}, "lot": "LOT V25260C", "best_by": "2027-05-31", "units": 11, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH05372026", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 2}, "lot": "0528d912", "best_by": "2027-07-30", "units": 11, "_real": false}
@@ -651,7 +651,7 @@
 {"store_id": "WM1912", "sku_id": "FDAH11292026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 2}, "lot": "N26278C", "best_by": "2027-07-09", "units": 10, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11292026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 3}, "lot": "R25-314A", "best_by": "2027-07-09", "units": 10, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11522026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 1}, "lot": "V24313A", "best_by": "2028-01-15", "units": 4, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAH11522026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 2}, "lot": "LOT A25225B", "best_by": "2028-03-15", "units": 6, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAH11522026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 2}, "lot": "LOT A25225B", "best_by": "2028-02-14", "units": 6, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11522026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 3}, "lot": "W24215A", "best_by": "2028-03-16", "units": 15, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11852026", "loc": {"aisle": "F03", "bay": 1, "shelf": 3, "pos": 1}, "lot": "LOT 2800", "best_by": "2027-04-02", "units": 6, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11852026", "loc": {"aisle": "F03", "bay": 1, "shelf": 3, "pos": 2}, "lot": "2801", "best_by": "2027-04-24", "units": 3, "_real": false}
@@ -659,7 +659,7 @@
 {"store_id": "WM1912", "sku_id": "FDAH11902026", "loc": {"aisle": "F03", "bay": 1, "shelf": 4, "pos": 1}, "lot": "CA1G24", "best_by": "2027-07-28", "units": 15, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11902026", "loc": {"aisle": "F03", "bay": 1, "shelf": 4, "pos": 2}, "lot": "LOT U26312A", "best_by": "2027-08-19", "units": 13, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH11902026", "loc": {"aisle": "F03", "bay": 1, "shelf": 4, "pos": 3}, "lot": "LOT CA1G25", "best_by": "2027-01-19", "units": 15, "_real": false}
-{"store_id": "WM1912", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 5, "pos": 1}, "lot": "W25085B", "best_by": "2027-07-10", "units": 6, "_real": false}
+{"store_id": "WM1912", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 5, "pos": 1}, "lot": "W25085B", "best_by": "2027-05-11", "units": 6, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 5, "pos": 2}, "lot": "E25063C", "best_by": "2027-07-12", "units": 6, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH12682026", "loc": {"aisle": "F03", "bay": 2, "shelf": 1, "pos": 1}, "lot": "N25081A", "best_by": "2027-06-27", "units": 11, "_real": false}
 {"store_id": "WM1912", "sku_id": "FDAH12682026", "loc": {"aisle": "F03", "bay": 2, "shelf": 1, "pos": 2}, "lot": "G24116B", "best_by": "2027-06-04", "units": 10, "_real": false}
@@ -682,7 +682,7 @@
 {"store_id": "WM2028", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 2}, "lot": "V25241A", "best_by": "2027-07-31", "units": 5, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "M25064A", "best_by": "2027-08-21", "units": 16, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "I24BI02A", "best_by": "2027-09-17", "units": 9, "_real": false}
-{"store_id": "WM2028", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "S25187C", "best_by": "2025-04-02", "units": 13, "_real": false}
+{"store_id": "WM2028", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "S25187C", "best_by": "2025-03-03", "units": 13, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "N25289C", "best_by": "2025-04-16", "units": 6, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "A24-365A", "best_by": "2024-10-10", "units": 18, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "H26172C", "best_by": "2024-10-08", "units": 16, "_real": false}
@@ -699,8 +699,8 @@
 {"store_id": "WM2028", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 3}, "lot": "H26143A", "best_by": "2026-01-24", "units": 4, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "E26-357B", "best_by": "2027-05-03", "units": 8, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "H24294A", "best_by": "2026-12-28", "units": 7, "_real": false}
-{"store_id": "WM2028", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "C26270B", "best_by": "2026-07-20", "units": 11, "_real": false}
-{"store_id": "WM2028", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "M26223C", "best_by": "2026-01-18", "units": 12, "_real": false}
+{"store_id": "WM2028", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "C26270B", "best_by": "2025-07-20", "units": 11, "_real": false}
+{"store_id": "WM2028", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "M26223C", "best_by": "2026-07-20", "units": 12, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 3}, "lot": "S25-254A", "best_by": "2026-07-21", "units": 15, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH05482026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "x24077c", "best_by": "2027-01-16", "units": 7, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH05762025", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 1}, "lot": "25084", "best_by": "2027-06-29", "units": 4, "_real": false}
@@ -724,8 +724,8 @@
 {"store_id": "WM2028", "sku_id": "FDAH11852026", "loc": {"aisle": "F02", "bay": 2, "shelf": 5, "pos": 3}, "lot": "28-01", "best_by": "2027-10-09", "units": 11, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH11902026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 1}, "lot": "ca1g24", "best_by": "2027-03-13", "units": 13, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH11902026", "loc": {"aisle": "F03", "bay": 1, "shelf": 1, "pos": 2}, "lot": "CA1-G25", "best_by": "2027-10-16", "units": 13, "_real": false}
-{"store_id": "WM2028", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 1}, "lot": "v26026a", "best_by": "2027-07-10", "units": 13, "_real": false}
-{"store_id": "WM2028", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 2}, "lot": "H26246C", "best_by": "2027-05-11", "units": 9, "_real": false}
+{"store_id": "WM2028", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 1}, "lot": "v26026a", "best_by": "2027-05-11", "units": 13, "_real": false}
+{"store_id": "WM2028", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 2}, "lot": "H26246C", "best_by": "2027-07-10", "units": 9, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH12332026", "loc": {"aisle": "F03", "bay": 1, "shelf": 2, "pos": 3}, "lot": "n24189b", "best_by": "2027-07-12", "units": 12, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH12682026", "loc": {"aisle": "F03", "bay": 1, "shelf": 3, "pos": 1}, "lot": "C25-271B", "best_by": "2027-10-16", "units": 15, "_real": false}
 {"store_id": "WM2028", "sku_id": "FDAH12682026", "loc": {"aisle": "F03", "bay": 1, "shelf": 3, "pos": 2}, "lot": "X25008B", "best_by": "2027-02-08", "units": 5, "_real": false}
@@ -749,16 +749,16 @@
 {"store_id": "WM2028", "sku_id": "FDAH13942026", "loc": {"aisle": "F03", "bay": 2, "shelf": 5, "pos": 3}, "lot": "c25142b", "best_by": "2028-04-06", "units": 14, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAF02642025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 1}, "lot": "N25113B", "best_by": "2027-05-10", "units": 3, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAF02642025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 2}, "lot": "C26089A", "best_by": "2027-05-30", "units": 3, "_real": false}
-{"store_id": "WM2333", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "U25-206C", "best_by": "2025-03-03", "units": 6, "_real": false}
+{"store_id": "WM2333", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "U25-206C", "best_by": "2025-04-02", "units": 6, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "n25059a", "best_by": "2025-02-01", "units": 15, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "p24153a", "best_by": "2025-04-03", "units": 2, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "E26248A", "best_by": "2027-08-28", "units": 18, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "P25-346A", "best_by": "2027-06-21", "units": 9, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 3}, "lot": "D24273A", "best_by": "2027-11-04", "units": 7, "_real": false}
-{"store_id": "WM2333", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "T24054A", "best_by": "2026-01-12", "units": 10, "_real": false}
-{"store_id": "WM2333", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "M26117A", "best_by": "2026-01-22", "units": 14, "_real": false}
+{"store_id": "WM2333", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "T24054A", "best_by": "2026-01-22", "units": 10, "_real": false}
+{"store_id": "WM2333", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "M26117A", "best_by": "2026-01-02", "units": 14, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 3}, "lot": "H26253B", "best_by": "2026-01-23", "units": 14, "_real": false}
-{"store_id": "WM2333", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "LOT J24001C", "best_by": "2027-05-02", "units": 6, "_real": false}
+{"store_id": "WM2333", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "LOT J24001C", "best_by": "2027-03-02", "units": 6, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "C25114C", "best_by": "2026-12-31", "units": 14, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH04692025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 3}, "lot": "U24-164B", "best_by": "2026-12-21", "units": 9, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "0528D911", "best_by": "2027-10-05", "units": 17, "_real": false}
@@ -781,7 +781,7 @@
 {"store_id": "WM2333", "sku_id": "FDAH11742026", "loc": {"aisle": "F02", "bay": 1, "shelf": 2, "pos": 2}, "lot": "LOT 60D0925", "best_by": "2027-10-05", "units": 6, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH11902026", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 1}, "lot": "U26-031A", "best_by": "2027-10-08", "units": 16, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH11902026", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 2}, "lot": "CA1G25", "best_by": "2027-06-11", "units": 15, "_real": false}
-{"store_id": "WM2333", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 1}, "lot": "k26253c", "best_by": "2027-05-11", "units": 12, "_real": false}
+{"store_id": "WM2333", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 1}, "lot": "k26253c", "best_by": "2027-07-10", "units": 12, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH12332026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 2}, "lot": "LOT T26185B", "best_by": "2027-07-15", "units": 2, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH12682026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 1}, "lot": "F24-058A", "best_by": "2027-03-15", "units": 4, "_real": false}
 {"store_id": "WM2333", "sku_id": "FDAH12682026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 2}, "lot": "LOT R24211C", "best_by": "2027-09-30", "units": 2, "_real": false}
@@ -798,7 +798,7 @@
 {"store_id": "WM2523", "sku_id": "FDAF02642025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 1}, "lot": "w24255a", "best_by": "2027-07-30", "units": 7, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAF02642025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 2}, "lot": "H24002C", "best_by": "2027-07-09", "units": 8, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAF02642025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 3}, "lot": "U26-174B", "best_by": "2027-04-30", "units": 14, "_real": false}
-{"store_id": "WM2523", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "G24363B", "best_by": "2025-04-02", "units": 4, "_real": false}
+{"store_id": "WM2523", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "G24363B", "best_by": "2025-03-03", "units": 4, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "J26068C", "best_by": "2025-04-03", "units": 9, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "x25254c", "best_by": "2024-10-09", "units": 4, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "N25248B", "best_by": "2024-10-10", "units": 12, "_real": false}
@@ -818,7 +818,7 @@
 {"store_id": "WM2523", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "0528d911", "best_by": "2027-10-04", "units": 9, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "U24128B", "best_by": "2027-05-08", "units": 14, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH05372026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 3}, "lot": "LOT 0528D912", "best_by": "2027-05-26", "units": 18, "_real": false}
-{"store_id": "WM2523", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "A24-283C", "best_by": "2027-01-14", "units": 4, "_real": false}
+{"store_id": "WM2523", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "A24-283C", "best_by": "2026-11-15", "units": 4, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH05482026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "x26162c", "best_by": "2027-01-28", "units": 14, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH06862026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "215", "best_by": "2027-07-24", "units": 18, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH06862026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "216", "best_by": "2027-06-11", "units": 11, "_real": false}
@@ -827,7 +827,7 @@
 {"store_id": "WM2523", "sku_id": "FDAH11292026", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 1}, "lot": "d24214b", "best_by": "2027-07-08", "units": 15, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH11292026", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 2}, "lot": "M25-223B", "best_by": "2027-07-10", "units": 7, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH11292026", "loc": {"aisle": "F02", "bay": 1, "shelf": 3, "pos": 3}, "lot": "E24-152C", "best_by": "2027-07-12", "units": 12, "_real": false}
-{"store_id": "WM2523", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 1}, "lot": "U25192B", "best_by": "2028-02-14", "units": 3, "_real": false}
+{"store_id": "WM2523", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 1}, "lot": "U25192B", "best_by": "2028-03-15", "units": 3, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH11522026", "loc": {"aisle": "F02", "bay": 1, "shelf": 4, "pos": 2}, "lot": "l25262a", "best_by": "2028-03-29", "units": 6, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH11742026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 1}, "lot": "60d0924", "best_by": "2027-02-18", "units": 6, "_real": false}
 {"store_id": "WM2523", "sku_id": "FDAH11742026", "loc": {"aisle": "F02", "bay": 1, "shelf": 5, "pos": 2}, "lot": "60D0925", "best_by": "2027-03-31", "units": 14, "_real": false}
@@ -850,7 +850,7 @@
 {"store_id": "WM3139", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 2}, "lot": "b24245c", "best_by": "2027-01-28", "units": 2, "_real": false}
 {"store_id": "WM3139", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 3}, "lot": "K26051B", "best_by": "2027-06-28", "units": 10, "_real": false}
 {"store_id": "WM3139", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "a24107c", "best_by": "2025-02-01", "units": 3, "_real": false}
-{"store_id": "WM3139", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "LOT W24182C", "best_by": "2025-03-03", "units": 9, "_real": false}
+{"store_id": "WM3139", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "LOT W24182C", "best_by": "2025-04-02", "units": 9, "_real": false}
 {"store_id": "WM3139", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "E25303C", "best_by": "2025-04-03", "units": 16, "_real": false}
 {"store_id": "WM3139", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "z26073b", "best_by": "2024-10-09", "units": 18, "_real": false}
 {"store_id": "WM3139", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "J26149C", "best_by": "2024-10-11", "units": 4, "_real": false}
@@ -886,13 +886,13 @@
 {"store_id": "WM3141", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "I24BI01A", "best_by": "2027-02-04", "units": 3, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "D25065C", "best_by": "2027-07-31", "units": 17, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 3}, "lot": "I24BI02A", "best_by": "2027-03-12", "units": 3, "_real": false}
-{"store_id": "WM3141", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "W24098B", "best_by": "2025-03-03", "units": 18, "_real": false}
+{"store_id": "WM3141", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "W24098B", "best_by": "2025-04-02", "units": 18, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "a25230c", "best_by": "2025-04-03", "units": 7, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "LOT C24080B", "best_by": "2027-04-26", "units": 12, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "G25182B", "best_by": "2027-05-31", "units": 9, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "4214", "best_by": "2027-02-18", "units": 6, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH01342026", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "4311", "best_by": "2027-10-16", "units": 7, "_real": false}
-{"store_id": "WM3141", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "S25126B", "best_by": "2026-07-20", "units": 11, "_real": false}
+{"store_id": "WM3141", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "S25126B", "best_by": "2025-07-20", "units": 11, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 2}, "lot": "M25316C", "best_by": "2025-07-17", "units": 3, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 3}, "lot": "E24109A", "best_by": "2026-08-03", "units": 7, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH05762025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 1}, "lot": "25086", "best_by": "2027-07-19", "units": 13, "_real": false}
@@ -901,7 +901,7 @@
 {"store_id": "WM3141", "sku_id": "FDAH05762025", "loc": {"aisle": "F01", "bay": 2, "shelf": 3, "pos": 4}, "lot": "25087", "best_by": "2027-10-09", "units": 6, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH10752026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 1}, "lot": "P26163C", "best_by": "2027-01-23", "units": 17, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH10752026", "loc": {"aisle": "F01", "bay": 2, "shelf": 4, "pos": 2}, "lot": "R26163C", "best_by": "2027-08-06", "units": 3, "_real": false}
-{"store_id": "WM3141", "sku_id": "FDAH11522026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "X26317A", "best_by": "2027-08-08", "units": 5, "_real": false}
+{"store_id": "WM3141", "sku_id": "FDAH11522026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 1}, "lot": "X26317A", "best_by": "2027-10-07", "units": 5, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH11522026", "loc": {"aisle": "F01", "bay": 2, "shelf": 5, "pos": 2}, "lot": "LOT F24317A", "best_by": "2028-03-20", "units": 8, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH11852026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 1}, "lot": "X26-116B", "best_by": "2027-03-16", "units": 7, "_real": false}
 {"store_id": "WM3141", "sku_id": "FDAH11852026", "loc": {"aisle": "F02", "bay": 1, "shelf": 1, "pos": 2}, "lot": "LOT 2801", "best_by": "2027-07-13", "units": 3, "_real": false}
@@ -927,7 +927,7 @@
 {"store_id": "WM4127", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 1}, "lot": "J24149B", "best_by": "2027-01-26", "units": 6, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAF05462025", "loc": {"aisle": "F01", "bay": 1, "shelf": 1, "pos": 2}, "lot": "A25-081C", "best_by": "2027-01-28", "units": 15, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "Z24203B", "best_by": "2025-02-01", "units": 7, "_real": false}
-{"store_id": "WM4127", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "z25344a", "best_by": "2025-03-03", "units": 4, "_real": false}
+{"store_id": "WM4127", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "z25344a", "best_by": "2025-04-02", "units": 4, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "N24178B", "best_by": "2025-04-07", "units": 12, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "p24238c", "best_by": "2027-08-03", "units": 13, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH00142027", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "C25-360A", "best_by": "2027-02-15", "units": 8, "_real": false}
@@ -936,8 +936,8 @@
 {"store_id": "WM4127", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 1}, "lot": "0450", "best_by": "2027-06-12", "units": 16, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 2}, "lot": "0040", "best_by": "2027-11-04", "units": 11, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH02602025", "loc": {"aisle": "F01", "bay": 1, "shelf": 5, "pos": 3}, "lot": "LOT 0546", "best_by": "2027-10-09", "units": 4, "_real": false}
-{"store_id": "WM4127", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "t26328b", "best_by": "2025-11-01", "units": 10, "_real": false}
-{"store_id": "WM4127", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "X25-194B", "best_by": "2025-11-05", "units": 6, "_real": false}
+{"store_id": "WM4127", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 1}, "lot": "t26328b", "best_by": "2025-11-09", "units": 10, "_real": false}
+{"store_id": "WM4127", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 2}, "lot": "X25-194B", "best_by": "2025-11-01", "units": 6, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 3}, "lot": "r25150b", "best_by": "2025-10-31", "units": 14, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH03232025", "loc": {"aisle": "F01", "bay": 2, "shelf": 1, "pos": 4}, "lot": "LOT W24152A", "best_by": "2026-02-05", "units": 13, "_real": false}
 {"store_id": "WM4127", "sku_id": "FDAH04872025", "loc": {"aisle": "F01", "bay": 2, "shelf": 2, "pos": 1}, "lot": "LOT M24217B", "best_by": "2026-07-22", "units": 8, "_real": false}
@@ -972,7 +972,7 @@
 {"store_id": "WM5603", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 1}, "lot": "I24BI01A", "best_by": "2027-07-28", "units": 10, "_real": false}
 {"store_id": "WM5603", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 2}, "lot": "I24BI02A", "best_by": "2027-11-05", "units": 11, "_real": false}
 {"store_id": "WM5603", "sku_id": "FDAF06942025", "loc": {"aisle": "F01", "bay": 1, "shelf": 2, "pos": 3}, "lot": "LOT T26056C", "best_by": "2027-07-22", "units": 7, "_real": false}
-{"store_id": "WM5603", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "T24359B", "best_by": "2025-04-02", "units": 3, "_real": false}
+{"store_id": "WM5603", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 1}, "lot": "T24359B", "best_by": "2025-03-03", "units": 3, "_real": false}
 {"store_id": "WM5603", "sku_id": "FDAF12162024", "loc": {"aisle": "F01", "bay": 1, "shelf": 3, "pos": 2}, "lot": "W26113C", "best_by": "2025-04-16", "units": 16, "_real": false}
 {"store_id": "WM5603", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 1}, "lot": "G24195A", "best_by": "2024-10-11", "units": 2, "_real": false}
 {"store_id": "WM5603", "sku_id": "FDAF14832024", "loc": {"aisle": "F01", "bay": 1, "shelf": 4, "pos": 2}, "lot": "A25254C", "best_by": "2024-10-08", "units": 2, "_real": false}
