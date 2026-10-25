@@ -1,0 +1,383 @@
+{
+  "per_recall": [
+    {
+      "recall_number": "F-0264-2025",
+      "v1_lot_codes": [
+        "CODES"
+      ],
+      "v1_state": "IN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "F-0546-2025",
+      "v1_lot_codes": [
+        "BY02142025",
+        "X002SSLE1R"
+      ],
+      "v1_state": "CA",
+      "records": 2,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "F-0569-2025",
+      "v1_lot_codes": [
+        "687"
+      ],
+      "v1_state": "IA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "F-0694-2025",
+      "v1_lot_codes": [
+        "NUMBER"
+      ],
+      "v1_state": "CT",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "F-1216-2024",
+      "v1_lot_codes": [
+        "CODES"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "F-1483-2024",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0014-2027",
+      "v1_lot_codes": [
+        "L6081A"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0134-2026",
+      "v1_lot_codes": [
+        "4212"
+      ],
+      "v1_state": "AZ",
+      "records": 3,
+      "shelf_tasks": 2
+    },
+    {
+      "recall_number": "H-0139-2026",
+      "v1_lot_codes": [
+        "2519907B1"
+      ],
+      "v1_state": "IN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0260-2025",
+      "v1_lot_codes": [
+        "0039",
+        "0545",
+        "0640",
+        "0450",
+        "1198"
+      ],
+      "v1_state": "CA",
+      "records": 18,
+      "shelf_tasks": 13
+    },
+    {
+      "recall_number": "H-0323-2025",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "AK",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0469-2025",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0487-2025",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0537-2026",
+      "v1_lot_codes": [
+        "0528D911"
+      ],
+      "v1_state": "AR",
+      "records": 8,
+      "shelf_tasks": 7
+    },
+    {
+      "recall_number": "H-0548-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "AL",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0554-2025",
+      "v1_lot_codes": [
+        "NUMBER"
+      ],
+      "v1_state": "NJ",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0576-2025",
+      "v1_lot_codes": [
+        "CODE"
+      ],
+      "v1_state": "AL",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0600-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "IN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0623-2026",
+      "v1_lot_codes": [
+        "DATE07262026"
+      ],
+      "v1_state": "IN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0686-2026",
+      "v1_lot_codes": [
+        "CODE"
+      ],
+      "v1_state": "IN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-0809-2026",
+      "v1_lot_codes": [
+        "B2025"
+      ],
+      "v1_state": "MO",
+      "records": 6,
+      "shelf_tasks": 5
+    },
+    {
+      "recall_number": "H-0898-2026",
+      "v1_lot_codes": [
+        "UI775"
+      ],
+      "v1_state": "CA",
+      "records": 4,
+      "shelf_tasks": 3
+    },
+    {
+      "recall_number": "H-0910-2026",
+      "v1_lot_codes": [
+        "046390",
+        "0196",
+        "047107",
+        "0406",
+        "048236",
+        "0756",
+        "048762",
+        "0966",
+        "049018",
+        "1106",
+        "049218",
+        "1176"
+      ],
+      "v1_state": "AL",
+      "records": 16,
+      "shelf_tasks": 4
+    },
+    {
+      "recall_number": "H-1075-2026",
+      "v1_lot_codes": [
+        "CODE"
+      ],
+      "v1_state": "AK",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1129-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "AL",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1144-2026",
+      "v1_lot_codes": [
+        "TRF2025050801"
+      ],
+      "v1_state": "NY",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1152-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "AK",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1174-2026",
+      "v1_lot_codes": [
+        "60D0924"
+      ],
+      "v1_state": "AZ",
+      "records": 4,
+      "shelf_tasks": 3
+    },
+    {
+      "recall_number": "H-1185-2026",
+      "v1_lot_codes": [
+        "2800",
+        "2782"
+      ],
+      "v1_state": "CA",
+      "records": 13,
+      "shelf_tasks": 11
+    },
+    {
+      "recall_number": "H-1190-2026",
+      "v1_lot_codes": [
+        "CA1G24"
+      ],
+      "v1_state": "CA",
+      "records": 7,
+      "shelf_tasks": 6
+    },
+    {
+      "recall_number": "H-1233-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "AK",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1268-2026",
+      "v1_lot_codes": [
+        "CODE"
+      ],
+      "v1_state": "AL",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1270-2026",
+      "v1_lot_codes": [
+        "NG2024121501",
+        "NG2025121301"
+      ],
+      "v1_state": "ID",
+      "records": 13,
+      "shelf_tasks": 11
+    },
+    {
+      "recall_number": "H-1278-2026",
+      "v1_lot_codes": [
+        "CODE"
+      ],
+      "v1_state": "AK",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1330-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "IN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1333-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1339-2026",
+      "v1_lot_codes": [
+        "222"
+      ],
+      "v1_state": "MN",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1371-2026",
+      "v1_lot_codes": [
+        "CODES"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1387-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "AZ",
+      "records": 1,
+      "shelf_tasks": 0
+    },
+    {
+      "recall_number": "H-1394-2026",
+      "v1_lot_codes": [
+        "LOT2026A"
+      ],
+      "v1_state": "CA",
+      "records": 1,
+      "shelf_tasks": 0
+    }
+  ],
+  "crashes": []
+}

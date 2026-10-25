@@ -1,0 +1,5 @@
+$ /Users/shuruthipalaniappan/Desktop/recall-storm/.venv/bin/python -m recallstorm run --scenario fda_lots --data /Users/shuruthipalaniappan/Desktop/recall-storm/out/fda_lots_v1_data --out /Users/shuruthipalaniappan/Desktop/recall-storm/out/expansion_fda_lots_cli
+exit 0
+--- stdout
+
+--- stderr
