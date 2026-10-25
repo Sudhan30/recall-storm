@@ -5,8 +5,8 @@
 | `backup_core.mp4` | 1:31.3 (narration at 1.1× tempo) | Backup for demo steps 1-2: hook + working core |
 | `demo_full_draft.mp4` | 2:45.2 | Full BUILD.md section 14 structure with **expansion v1** numbers, plus `[v2 numbers pending]` cards where the v2 numbers go |
 | `one_minute.mp4` | 0:58.2 | Tight cut for the submission (v1 numbers) |
-| `demo_full_final.mp4` | 3:01.7 (narration 1.06×) | **Final cut** with expansion v2: 646,825 tokens, 911 files, 10 hops; 6,581 cross-file links after a one-line fix; longest link 552,084 tokens; v2 fix loop 21,459 → 175 |
-| `one_minute_final.mp4` | 0:58.4 (narration 1.05×) | **Final one-minute cut**, which leads with 646,825 tokens |
+| `demo_full_final.mp4` | 3:00.0 (narration 1.06×) | **Final cut, v2 only.** Every experiment number comes from the 646,825-token run; no v1 numbers or shots |
+| `one_minute_final.mp4` | 0:59.3 (narration 1.07×) | **Final one-minute cut, v2 only** |
 
 All videos are 1920x1080, 30 fps, H.264 (high) + AAC 48 kHz stereo, with captions burned in. Each `<video>.shots.json` lists
 every shot (start, duration, kind, source, on-screen label) and every narration line as spoken.
@@ -81,7 +81,9 @@ Sources: `runs/expansion_v2/hops.jsonl`, `reports/expansion_v2_score.txt`, `repo
 "Longest passing cross-file call" button opens `core/ids.py` → `tests/integration/test_flow_09_analytics_governance.py`),
 `compare_left_v2.png` / `compare_both_v2.png` (Run = v2), and `assets/term/exp_longest_test_v2.txt` (live pytest, 1 passed).
 The agent's third v2 attempt (`v2_aliases_detect_coverage`) is NOT_FIXED and is not claimed. The narration says the
-remaining 175 (12 missed products and 3 look-alikes) are still open.
+remaining 175 (12 missed products and 3 look-alikes) are still open. Both final cuts are v2-only (lead, ~2:00 PM): no
+254K/8,441/7,631 numbers and no v1 compare panel. "Two agent fixes, 7 lines changed" was not used: the patch files change
+1 line (`v2_aliases_translations.patch`) and +58/-21 lines (`v2_plan_tasks_labor.patch`).
 
 ## Story and language (team lead, 12:35-12:40)
 

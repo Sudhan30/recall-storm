@@ -142,13 +142,41 @@
    "field": "make_run_id def_tok"
   }
  ],
- "The same scheduling flaw showed up at both lengths": [
+ "all 9 hand-offs between hops came out clean": [
   {
-   "key": "exp1plan.double_bookings",
-   "value": 7631,
-   "source": "viewer/data/compare.json",
-   "field": "sum of left.stores[*].overlaps (viewer/build_compare.py: verify_plan's labor overlap rule on out/expansion/plan.jsonl); cross-check: reports/expansion_plan.json by_check.labor.hard = 7,632 includes 1 over-shift-minutes error"
+   "key": "exp2.seams_pass",
+   "value": 9,
+   "source": "reports/expansion_v2_seams.json",
+   "field": "count status PASS"
   },
+  {
+   "key": "exp2.seams_total",
+   "value": 9,
+   "source": "reports/expansion_v2_seams.json",
+   "field": "len(seams)"
+  }
+ ],
+ "Our verifier ran the plan and found 21,459 mistakes, 21,284 of them in scheduling": [
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2plan.mistakes_report",
+   "value": 21459,
+   "source": "runs/repair_v2_plan_tasks_labor/drill_before/plan_report.json",
+   "field": "hard_errors (cross-check of the LOG.jsonl drill_before)"
+  },
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  }
+ ],
+ "7,161 times the plan sent someone to two shelves at once, and 14,117 tasks fell outside the 10 PM to 6 AM shift": [
   {
    "key": "exp2plan.overlaps",
    "value": 7161,
@@ -160,6 +188,78 @@
    "value": 14117,
    "source": "viewer/data/compare.json",
    "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+  }
+ ],
+ "the root cause: one shared time cursor for all associates": [
+  {
+   "key": "agent.v2_plan_tasks_labor.result",
+   "value": "FIXED",
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.result"
+  }
+ ],
+ "scheduling mistakes went from 21,284 to 0, even in 10 stores it never saw": [
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  },
+  {
+   "key": "exp2fixed.labor",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_after.by_check.labor.hard"
+  },
+  {
+   "key": "exp2.heldout_before",
+   "value": 10143,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_before"
+  },
+  {
+   "key": "exp2.heldout_after",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_after"
+  },
+  {
+   "key": "exp2.heldout_stores",
+   "value": 10,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "len(drill_holdout.held_stores)"
+  }
+ ],
+ "Plan mistakes went from 21,459 to 175: 12 missed products and 3 look-alikes, still open": [
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2fixed.mistakes",
+   "value": 175,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "hard_errors (final v2 plan mistakes)"
+  },
+  {
+   "key": "exp2fixed.missed",
+   "value": 12,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.fn"
+  },
+  {
+   "key": "exp2fixed.missed_spots",
+   "value": 172,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "by_check.coverage.hard"
+  },
+  {
+   "key": "exp2fixed.decoys_pulled",
+   "value": 3,
+   "source": "reports/expansion_v2_agentpatched_plan.json",
+   "field": "classification.decoys_pulled"
   }
  ],
  "plan mistakes from 21,459 to 175": [
@@ -174,6 +274,64 @@
    "value": 175,
    "source": "reports/expansion_v2_agentpatched_plan.json",
    "field": "hard_errors (final v2 plan mistakes)"
+  }
+ ],
+ "In that run, our verifier found 21,459 plan mistakes, mostly one associate sent to two shelves at once, or outside their shift": [
+  {
+   "key": "exp2plan.mistakes",
+   "value": 21459,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.hard (drill with the one-line fix)"
+  },
+  {
+   "key": "exp2plan.labor",
+   "value": 21284,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_before.by_check.labor.hard"
+  },
+  {
+   "key": "exp2plan.overlaps",
+   "value": 7161,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.overlaps (double-bookings; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2plan.outside",
+   "value": 14117,
+   "source": "viewer/data/compare.json",
+   "field": "v2.left.outside (tasks outside the 10 PM-6 AM shift; expansion_v2_importfix)"
+  },
+  {
+   "key": "exp2plan.mistakes_report",
+   "value": 21459,
+   "source": "runs/repair_v2_plan_tasks_labor/drill_before/plan_report.json",
+   "field": "hard_errors (cross-check of the LOG.jsonl drill_before)"
+  }
+ ],
+ "A managed agent fixed the root cause: scheduling mistakes went to zero, even in 10 stores it never saw": [
+  {
+   "key": "exp2fixed.labor",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "drill_after.by_check.labor.hard"
+  },
+  {
+   "key": "exp2.heldout_before",
+   "value": 10143,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_before"
+  },
+  {
+   "key": "exp2.heldout_after",
+   "value": 0,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "v2_plan_tasks_labor.drill_holdout.held_after"
+  },
+  {
+   "key": "exp2.heldout_stores",
+   "value": 10,
+   "source": "patches/agent/LOG.jsonl",
+   "field": "len(drill_holdout.held_stores)"
   }
  ],
  "scheduling mistakes to 0, including in 10 stores it never saw": [

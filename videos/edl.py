@@ -43,16 +43,53 @@ FIXLOOP = {"kind": "bars", "title": "Managed agent: {agent.exp_root_causes} root
            "done": "0 mistakes, including {agent.exp_heldout_stores} stores the agent never saw", "rows": [
     {"label": "Plan mistakes", "before": "exp1plan.mistakes", "after": "exp1fixed.mistakes",
      "before_caption": "before (reports/expansion_plan.json)", "after_caption": "after (reports/expansion_agentpatched_plan.json)"}]}
-FIXLOOP_V2 = {"kind": "bars", "title": "Large run: the same fix loop", "at": 0.3, "rows": [
+FIXLOOP_V2 = {"kind": "bars", "title": "After the managed agent's fix", "at": 0.3, "rows": [
     {"label": "Plan mistakes", "before": "exp2plan.mistakes", "after": "exp2fixed.mistakes",
      "before_caption": "with the one-line fix (patches/agent/LOG.jsonl)",
      "after_caption": "after the scheduling fix: {exp2fixed.missed_spots} missed shelf spots + {exp2fixed.decoys_pulled} look-alikes left"},
     {"label": "Scheduling mistakes", "before": "exp2plan.labor", "after": "exp2fixed.labor",
      "before_caption": "{exp2plan.overlaps} double-bookings + {exp2plan.outside} tasks outside the shift + more",
      "after_caption": "including {exp2.heldout_stores} stores the agent never saw"}]}
+SCHED_V2 = {"kind": "bars", "title": "Large run: scheduling mistakes", "at": 0.25,
+            "done": "0 scheduling mistakes, even in {exp2.heldout_stores} stores the agent never saw", "rows": [
+    {"label": "Scheduling mistakes", "before": "exp2plan.labor", "after": "exp2fixed.labor",
+     "before_caption": "{exp2plan.overlaps} double-bookings + {exp2plan.outside} tasks outside the shift + more",
+     "after_caption": "after the agent's scheduling fix (patches/agent/LOG.jsonl)"}]}
 END = {"kind": "title", "src": "end_full"}
 
-# Final cut (expansion v2 done): segments that replace or follow the draft's, keyed by draft segment id.
+MISTAKES_V2 = {"kind": "stats", "items": [
+    {"n": "exp2plan.mistakes", "label": "plan mistakes found by the verifier", "color": "red"},
+    {"n": "exp2plan.overlaps", "label": "double-bookings: one associate in two places at once", "color": "red"},
+    {"n": "exp2plan.outside", "label": "tasks outside the 10 PM\u20136 AM shift", "color": "red"}]}
+FINAL_V2 = {
+    "s3": {"id": "f2_s3", "beat": "The whole system in one generation",
+           "say": "Gemini 4 Argon can hold the whole system in one continued generation. In our largest run it wrote "
+                  "{exp2.visible} tokens of code, {exp2.files_manifest} files, over {exp2.hops} hops, and all "
+                  "{exp2.seams_pass} hand-offs between hops came out clean. After a one-line fix the agent made in "
+                  "{agent.v2_fix1_secs} seconds, every one of its {exp2.edges} cross-file links lines up. That's the point "
+                  "of a million-token model: the whole system in one head.",
+           "shots": [{"kind": "still", "src": "hops_expansion_v2", "w": 0.55, "zoom": 0.03},
+                     {"kind": "cap", "src": "codewall_v2", "w": 0.45, "a": 0, "b": 4.6}]},
+    "s3b": {"id": "s3b_exp2v",
+            "say": "Its longest link: a test written at token {exp2.longest_use.start_tok} calls a function written "
+                   "{exp2.longest_distance} tokens earlier. The test passes, live.",
+            "shots": [{"kind": "still", "src": "codewall_longest_v2", "w": 0.55, "zoom": 0.05},
+                      {"kind": "term", "src": "exp_longest_test_v2", "w": 0.45}]},
+    "s4": {"id": "f2_s4", "beat": "Consistent isn't correct",
+           "say": "But consistent code isn't correct code. Our verifier ran the plan and found {exp2plan.mistakes} "
+                  "mistakes, {exp2plan.labor} of them in scheduling. Each row here is one simulated associate: "
+                  "{exp2plan.overlaps} times the plan sent someone to two shelves at once, and {exp2plan.outside} tasks "
+                  "fell outside the 10 PM to 6 AM shift.",
+           "shots": [{**MISTAKES_V2, "w": 0.35}, {"kind": "still", "src": "compare_left_v2", "w": 0.65, "zoom": 0.04}]},
+    "s5": {"id": "f2_s5", "beat": "Scheduling mistakes \u2192 {exp2fixed.labor}",
+           "say": "A managed agent read the findings and found the root cause: one shared time cursor for all associates. "
+                  "After its fix, scheduling mistakes went from {exp2plan.labor} to {exp2fixed.labor}, even in "
+                  "{exp2.heldout_stores} stores it never saw. Plan mistakes went from {exp2plan.mistakes} to "
+                  "{exp2fixed.mistakes}: {exp2fixed.missed} missed products and {exp2fixed.decoys_pulled} look-alikes, still open.",
+           "shots": [{"kind": "still", "src": "compare_both_v2", "w": 0.4, "zoom": 0.03}, {**FIXLOOP_V2, "w": 0.6}]},
+}
+
+# (superseded) Final cut (expansion v2 done): segments that replace or follow the draft's, keyed by draft segment id.
 FINAL_FULL = {
     "s3_exp2": {"id": "s3_exp2", "beat": "The whole system in one generation",
                 "say": "Gemini 4 Argon can hold the whole system in one continued generation. In our largest run it wrote "
@@ -174,20 +211,22 @@ def full(v):
         {"id": "s6b", "say": "Simulated drill, simulated operations, every number from the verifier. Open source.",
          "shots": [{**END, "w": 1}]},
     ]
-    if not draft:
-        out = []
-        for sg in segs:
-            out.append(FINAL_FULL.get(sg["id"], sg))
-            if sg["id"] in FINAL_AFTER:
-                out.append(FINAL_AFTER[sg["id"]])
-        segs = out
+    if not draft:                       # final cut: every experiment number from the 646,825-token run (v2)
+        by = {sg["id"]: sg for sg in segs}
+        segs = list(B1) + [by["s2"], FINAL_V2["s3"], FINAL_V2["s3b"], FINAL_V2["s4"], FINAL_V2["s5"],
+                           by["s5b"], by["s5c"], by["s6a"], by["s6b"]]
     return segs
 
 
 # ---------------------------------------------------------------- one minute: beats 1, 3, 5, 6
 def one_minute(v):
     draft = v == "exp1"
-    return [
+    m5a_v2 = {"id": "m5a_v2", "beat": "Scheduling mistakes \u2192 {exp2fixed.labor}",
+              "say": "In that run, our verifier found {exp2plan.mistakes} plan mistakes, mostly one associate sent to two "
+                     "shelves at once, or outside their shift. A managed agent fixed the root cause: scheduling mistakes "
+                     "went to zero, even in {exp2.heldout_stores} stores it never saw.",
+              "shots": [{"kind": "still", "src": "compare_both_v2", "w": 0.6, "zoom": 0.03}, {**SCHED_V2, "w": 0.4}]}
+    segs = [
         {"id": "m1", "beat": "One night to clear the shelves",
          "say": "On January 1st, 2027, California bans food with Red No. 3. Stores get one overnight shift to clear it, "
                 "even when it hides as erythrosine or E127.",
@@ -214,6 +253,9 @@ def one_minute(v):
                 "number from the verifier.",
          "shots": [{"kind": "ai", "src": "highway_trucks", "w": 0.45, "a": 0, "b": 4}, {**END, "w": 0.55}]},
     ]
+    if not draft:
+        segs = [m5a_v2 if sg["id"] == "m5a" else sg for sg in segs]
+    return segs
 
 
 VIDEOS = {"backup_core": BACKUP_CORE,

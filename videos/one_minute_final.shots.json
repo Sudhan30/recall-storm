@@ -1,82 +1,82 @@
 {
  "video": "videos/one_minute_final.mp4",
- "duration": 58.39,
+ "duration": 59.34,
  "shots": [
   {
    "t": 0.0,
-   "dur": 5.07,
+   "dur": 4.97,
    "seg": "m1",
    "kind": "ai",
    "src": "store_night",
    "label": "AI-generated illustration"
   },
   {
-   "t": 5.07,
-   "dur": 6.17,
+   "t": 4.97,
+   "dur": 6.07,
    "seg": "m1",
    "kind": "ai",
    "src": "scanner_shelf",
    "label": "AI-generated illustration"
   },
   {
-   "t": 11.23,
-   "dur": 7.67,
+   "t": 11.03,
+   "dur": 7.53,
    "seg": "m3_exp2",
    "kind": "still",
    "src": "hops_expansion_v2",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 18.9,
-   "dur": 7.67,
+   "t": 18.57,
+   "dur": 7.53,
    "seg": "m3_exp2",
    "kind": "still",
    "src": "codewall_longest_v2",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 26.57,
-   "dur": 7.97,
-   "seg": "m5a",
+   "t": 26.1,
+   "dur": 9.0,
+   "seg": "m5a_v2",
    "kind": "still",
-   "src": "compare_both",
+   "src": "compare_both_v2",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 34.53,
-   "dur": 5.3,
-   "seg": "m5a",
+   "t": 35.1,
+   "dur": 6.0,
+   "seg": "m5a_v2",
    "kind": "bars",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 39.83,
-   "dur": 4.13,
+   "t": 41.1,
+   "dur": 4.07,
    "seg": "m5b",
    "kind": "cap",
    "src": "store3d",
    "label": "REAL CAPTURE \u00b7 project viewer"
   },
   {
-   "t": 43.97,
-   "dur": 5.03,
+   "t": 45.17,
+   "dur": 4.97,
    "seg": "m5b",
    "kind": "stats",
    "src": "",
    "label": "OURS \u00b7 numbers from the verifier reports"
   },
   {
-   "t": 49.0,
-   "dur": 4.23,
+   "t": 50.13,
+   "dur": 4.13,
    "seg": "m6",
    "kind": "ai",
    "src": "highway_trucks",
    "label": "AI-generated illustration"
   },
   {
-   "t": 53.23,
-   "dur": 5.17,
+   "t": 54.27,
+   "dur": 5.07,
    "seg": "m6",
    "kind": "title",
    "src": "end_full",
@@ -87,39 +87,39 @@
   {
    "id": "m1",
    "t": 0.0,
-   "dur": 11.24,
+   "dur": 11.05,
    "say": "On January 1st, 2027, California bans food with Red No. 3. Stores get one overnight shift to clear it, even when it hides as erythrosine or E127.",
    "beat": "One night to clear the shelves",
    "pending": null
   },
   {
    "id": "m3_exp2",
-   "t": 11.24,
-   "dur": 15.31,
+   "t": 11.05,
+   "dur": 15.05,
    "say": "Gemini 4 Argon holds the whole system in one continued generation: 646,825 tokens of code, and after a one-line fix, every one of its 6,581 cross-file links lines up.",
    "beat": "The whole system in one generation",
    "pending": null
   },
   {
-   "id": "m5a",
-   "t": 26.56,
-   "dur": 13.26,
-   "say": "Our verifier still found 8,441 plan mistakes. Red means one associate sent to two shelves at once. A managed agent fixed the 2 root causes, and they went to 0, even in 10 stores it never saw.",
-   "beat": "8,441 \u2192 0",
+   "id": "m5a_v2",
+   "t": 26.1,
+   "dur": 15.01,
+   "say": "In that run, our verifier found 21,459 plan mistakes, mostly one associate sent to two shelves at once, or outside their shift. A managed agent fixed the root cause: scheduling mistakes went to zero, even in 10 stores it never saw.",
+   "beat": "Scheduling mistakes \u2192 0",
    "pending": null
   },
   {
    "id": "m5b",
-   "t": 39.82,
-   "dur": 9.19,
+   "t": 41.11,
+   "dur": 9.02,
    "say": "The working core, on 20 stores, found all 467 products with Red No. 3 and pulled none of the 483 look-alikes.",
    "beat": "",
    "pending": null
   },
   {
    "id": "m6",
-   "t": 49.01,
-   "dur": 9.39,
+   "t": 50.13,
+   "dur": 9.21,
    "say": "Argon writes the whole thing at once, the verifier proves it, the agent repairs it. Simulated drill; every number from the verifier.",
    "beat": "Why it matters",
    "pending": null

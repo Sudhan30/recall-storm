@@ -495,7 +495,7 @@ def render_shot(shot, out, n):
 
 
 # ---------------------------------------------------------------- assembly
-TEMPO = {"backup_core": 1.1, "demo_full_final": 1.06, "one_minute_final": 1.05}       # optional narration speed-up (pitch kept)
+TEMPO = {"backup_core": 1.1, "demo_full_final": 1.06, "one_minute_final": 1.07}       # optional narration speed-up (pitch kept)
 
 
 def prep_wav(wav, bdir, tempo=1.0):

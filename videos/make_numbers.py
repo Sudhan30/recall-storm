@@ -277,6 +277,10 @@ def _v2():
         put("exp2.heldout_before", dh["held_before"], L, "v2_plan_tasks_labor.drill_holdout.held_before")
         put("exp2.heldout_after", dh["held_after"], L, "v2_plan_tasks_labor.drill_holdout.held_after")
         put("exp2.heldout_stores", len(dh["held_stores"]), L, "len(drill_holdout.held_stores)")
+    db = ROOT / "runs/repair_v2_plan_tasks_labor/drill_before/plan_report.json"
+    if db.exists():
+        put("exp2plan.mistakes_report", json.loads(db.read_text())["hard_errors"], str(db.relative_to(ROOT)),
+            "hard_errors (cross-check of the LOG.jsonl drill_before)")
     r = jload("reports/expansion_v2_agentpatched_plan.json"); p = "reports/expansion_v2_agentpatched_plan.json"
     c = r["classification"]
     put("exp2fixed.mistakes", r["hard_errors"], p, "hard_errors (final v2 plan mistakes)")
@@ -299,8 +303,21 @@ PHRASES = {
     "The rest, 12 missed products and 3 look-alikes, are still open": ["exp2fixed.missed", "exp2fixed.decoys_pulled", "exp2fixed.missed_spots"],
     "a test written at token 641,687 calls a function written 552,084 tokens earlier":
         ["exp2.longest_use.start_tok", "exp2.longest_distance", "exp2.longest_def.start_tok"],
-    "The same scheduling flaw showed up at both lengths": ["exp1plan.double_bookings", "exp2plan.overlaps", "exp2plan.outside"],
+    "all 9 hand-offs between hops came out clean": ["exp2.seams_pass", "exp2.seams_total"],
+    "Our verifier ran the plan and found 21,459 mistakes, 21,284 of them in scheduling":
+        ["exp2plan.mistakes", "exp2plan.mistakes_report", "exp2plan.labor"],
+    "7,161 times the plan sent someone to two shelves at once, and 14,117 tasks fell outside the 10 PM to 6 AM shift":
+        ["exp2plan.overlaps", "exp2plan.outside"],
+    "the root cause: one shared time cursor for all associates": ["agent.v2_plan_tasks_labor.result"],
+    "scheduling mistakes went from 21,284 to 0, even in 10 stores it never saw":
+        ["exp2plan.labor", "exp2fixed.labor", "exp2.heldout_before", "exp2.heldout_after", "exp2.heldout_stores"],
+    "Plan mistakes went from 21,459 to 175: 12 missed products and 3 look-alikes, still open":
+        ["exp2plan.mistakes", "exp2fixed.mistakes", "exp2fixed.missed", "exp2fixed.missed_spots", "exp2fixed.decoys_pulled"],
     "plan mistakes from 21,459 to 175": ["exp2plan.mistakes", "exp2fixed.mistakes"],
+    "In that run, our verifier found 21,459 plan mistakes, mostly one associate sent to two shelves at once, or outside their shift":
+        ["exp2plan.mistakes", "exp2plan.labor", "exp2plan.overlaps", "exp2plan.outside", "exp2plan.mistakes_report"],
+    "A managed agent fixed the root cause: scheduling mistakes went to zero, even in 10 stores it never saw":
+        ["exp2fixed.labor", "exp2.heldout_before", "exp2.heldout_after", "exp2.heldout_stores"],
     "scheduling mistakes to 0, including in 10 stores it never saw":
         ["exp2plan.labor", "exp2fixed.labor", "exp2.heldout_before", "exp2.heldout_after", "exp2.heldout_stores"],
     "Large run: the same fix loop (bars card)": ["exp2plan.mistakes", "exp2fixed.mistakes", "exp2plan.labor", "exp2fixed.labor",

@@ -1289,6 +1289,11 @@
   "source": "patches/agent/LOG.jsonl",
   "field": "len(drill_holdout.held_stores)"
  },
+ "exp2plan.mistakes_report": {
+  "value": 21459,
+  "source": "runs/repair_v2_plan_tasks_labor/drill_before/plan_report.json",
+  "field": "hard_errors (cross-check of the LOG.jsonl drill_before)"
+ },
  "exp2fixed.mistakes": {
   "value": 175,
   "source": "reports/expansion_v2_agentpatched_plan.json",
