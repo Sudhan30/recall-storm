@@ -1,0 +1,260 @@
+--- a/recallstorm/rules/evaluator.py
++++ b/recallstorm/rules/evaluator.py
+@@ -19,24 +19,31 @@
+     "AZ": "America/Phoenix",
+ }
+ 
++_DC_DECOY_PREFIX = re.compile(
++    r"(?<![A-Za-z0-9])(?:EXT\.?\s*)?(?<!F)(?<!F\s)D\s*(?:&|AND|\+)?\s*C[\s.\-:]*$",
++    re.IGNORECASE,
++)
++
+ _RED3_BuiltIn_PATTERNS: list[re.Pattern[str]] = [
+     # FD&C Red No. 3 / Red No. 3 / Red #3 / Red Dye 3 / Red 3 (with Lake/Powder/Dye variants & OCR noise)
+-    # Negative lookbehind rejects D&C / Ext. D&C decoys (e.g. D&C Red No. 3)
+     re.compile(
+-        r"(?<![A-Za-z0-9])(?!(?:EXT\.?\s*)?D\s*(?:&|AND)\s*C\b)"
++        r"(?<![A-Za-z0-9])"
+         r"(?:F\s*D\s*(?:&|AND|\+)?\s*C\s+)?"
+         r"R\s*[E3]\s*D"
+         r"(?:\s+D\s*Y\s*[E3])?"
+         r"(?:\s*(?:N\s*[O0]\.?|N\s*U\s*M\s*B\s*[E3]\s*R|#))?"
+-        r"[\s.\-:]*3(?![0-9])"
++        r"[\s.\-:]*3(?![0-9]|\.[0-9])"
+         r"(?:\s+(?:L\s*A\s*K\s*[E3]|D\s*Y\s*[E3]|P\s*[O0]\s*W\s*D\s*[E3]\s*R))?"
+         r"(?![A-Za-z0-9])"
+-        r"(?!\s*(?:%|P\s*E\s*P\s*P\s*E\s*R|A\s*P\s*P\s*L\s*E|B\s*E\s*A\s*N|B\s*E\s*R\s*R|"
+-        r"C\s*H\s*I\s*L\s*I|P\s*O\s*T\s*A\s*T\s*O|O\s*N\s*I\s*O\s*N|T\s*O\s*M\s*A\s*T\s*O|"
++        r"(?![\s\-/]*(?:%|P\s*E\s*P\s*P\s*E\s*R|A\s*P\s*P\s*L\s*E|B\s*E\s*A\s*N|B\s*E\s*R\s*R|"
++        r"C\s*H\s*I\s*L\s*[IE]|P\s*O\s*T\s*A\s*T\s*O|O\s*N\s*I\s*O\s*N|T\s*O\s*M\s*A\s*T\s*O|"
+         r"C\s*A\s*B\s*B\s*A\s*G\s*E|G\s*R\s*A\s*P\s*E|C\s*H\s*E\s*R\s*R|P\s*I\s*M\s*I\s*E\s*N\s*T|"
+         r"B\s*E\s*L\s*L\b|J\s*A\s*L\s*A\s*P|H\s*A\s*B\s*A\s*N|R\s*A\s*D\s*I\s*S\s*H|B\s*E\s*E\s*T|"
+         r"L\s*E\s*N\s*T\s*I\s*L|Q\s*U\s*I\s*N\s*O\s*A|R\s*I\s*C\s*E|C\s*O\s*R\s*N|W\s*I\s*N\s*E|"
+-        r"V\s*I\s*N\s*E\s*G\s*A\s*R|S\s*A\s*U\s*C\s*E|M\s*E\s*A\s*T))",
++        r"V\s*I\s*N\s*E\s*G\s*A\s*R|S\s*A\s*U\s*C\s*E|M\s*E\s*A\s*T|C\s*H\s*E\s*E\s*S\s*E|"
++        r"G\s*R\s*A\s*I\s*N|S\s*E\s*E\s*D|F\s*R\s*U\s*I\s*T|M\s*E\s*L\s*O\s*N|"
++        r"V\s*E\s*G\s*G\s*I\s*E|V\s*E\s*G\s*E\s*T\s*A\s*B\s*L\s*E|M\s*E\s*D\s*L\s*E\s*Y|"
++        r"B\s*L\s*E\s*N\s*D|M\s*I\s*X\b|M\s*G\b|M\s*C\s*G\b|G\b|O\s*Z\b|M\s*L\b|L\s*B\b))",
+         re.IGNORECASE,
+     ),
+     # E127 / E-127 / E 127 / INS 127 with OCR noise (E->3, 1->I/l, 2->Z, 7->T)
+@@ -82,21 +89,29 @@
+     "???",
+     "***",
+     "###",
++    "___",
+     "N/A",
+     "NONE PROVIDED",
+     "UNKNOWN",
+ )
+ 
+-# Matches generic/unspecified artificial color statements when no specific color is named nearby
++_CORRUPTED_CHAR_PATTERN = re.compile(
++    r"[\ufffd\u2500-\u25ff]|\?{2,}|\*{2,}|#{2,}|_{2,}|~{2,}|"
++    r"\b(?:RED|YELLOW|BLUE|GREEN|NO\.?|#|ERYTH\w*|E1\d?)\s*[?*_~]+",
++    re.IGNORECASE,
++)
++
++# Matches generic/unspecified artificial color statements when no specific color is named in the qualifier
+ _VAGUE_COLOR_PATTERN = re.compile(
+     r"\b(?:"
+-    r"ARTIFICIAL\s+COLO(?:U)?RS?(?:\s+ADDED)?|"
++    r"ARTIFICIAL\s+COLO(?:U)?R(?:S|ING)?(?:\s+ADDED)?|"
+     r"ARTIFICIALLY\s+COLO(?:U)?RED|"
+-    r"COLO(?:U)?R\s+ADDED|"
+-    r"ADDED\s+COLO(?:U)?RS?|"
+-    r"CERTIFIED\s+COLO(?:U)?RS?|"
+-    r"FD&C\s+COLO(?:U)?RS?|"
+-    r"U\.?S\.?\s+CERTIFIED\s+COLO(?:U)?RS?|"
++    r"COLO(?:U)?RS?\s+ADDED|"
++    r"ADDED\s+COLO(?:U)?R(?:S|ING)?|"
++    r"CERTIFIED\s+COLO(?:U)?R(?:S|ING)?|"
++    r"FD&C\s+COLO(?:U)?R(?:S|ING)?|"
++    r"U\.?S\.?\s+CERTIFIED\s+COLO(?:U)?R(?:S|ING)?|"
++    r"SYNTHETIC\s+COLO(?:U)?R(?:S|ING)?|"
+     r"FOOD\s+COLO(?:U)?RING"
+     r")\b"
+     r"(?!\s*(?:\(|\s*\[|\s*:|\s*-|\s*INCLUDING|\s*FD&C|\s*RED|\s*YELLOW|\s*BLUE|\s*GREEN|"
+@@ -104,31 +119,35 @@
+     re.IGNORECASE,
+ )
+ 
+-# Specific named colors: if an ingredient list only says "ARTIFICIAL COLOR (RED 40, BLUE 1)" it is NOT vague.
+-# Wait: what if a product has "RED 40, COLOR ADDED" (like FDC2655277 in sample data)?
+-# Notice FDC2655277 has: "RED 40 LAKE, RED 40, COLOR ADDED."
+-# Let's check whether FDC2655277 is KEEP or HOLD_VERIFY!
+-# In FDC2655277 ("Gummy Clusters Candy", _real: true), FDA labels often say "RED 40, COLOR ADDED" or "ARTIFICIAL COLORS".
+-# Wait: the prompt specifically says:
+-# `HOLD_VERIFY when the label says only "artificial color" or the text is unreadable`
+-# Look at the phrasing: `when the label says only "artificial color" or the text is unreadable`!
+-_SPECIFIC_COLOR_MENTION = re.compile(
++# Matches when a vague phrase like "(COLOR ADDED)" is immediately inside parens qualifying a specific named color
++_PRECEDING_SPECIFIC_COLOR_PAREN = re.compile(
+     r"\b(?:"
+-    r"RED\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+|"
+-    r"YELLOW\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+|"
+-    r"BLUE\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+|"
+-    r"GREEN\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+|"
+-    r"E\s*1\d\d|"
+-    r"CARAMEL\s+COLO(?:U)?R|"
+-    r"ANNATTO|"
++    r"RED\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
++    r"YELLOW\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
++    r"BLUE\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
++    r"GREEN\s*(?:NO\.?\s*|#\s*|DYE\s*)?\d+(?:\s+LAKE)?|"
++    r"CARAMEL(?:\s+COLO(?:U)?R)?|"
++    r"ANNATTO(?:\s+EXTRACT)?|"
+     r"CARMINE|"
+     r"TITANIUM\s+DIOXIDE|"
+     r"TURMERIC|"
+     r"BETA[\s\-]*CAROTENE|"
+-    r"PAPRIKA|"
++    r"PAPRIKA(?:\s+OLEORESIN|\s+EXTRACT)?|"
+     r"BEET\s+(?:JUICE|POWDER|COLOR)|"
+     r"SPIRULINA"
+-    r")\b",
++    r")\s*[\(\[]\s*$",
++    re.IGNORECASE,
++)
++
++# Detects immediately-following parenthetical/bracketed qualifier that conflicts with or regionally restricts the match
++_FOLLOWING_PAREN_PATTERN = re.compile(r"^\s*(?:\(([^)]*)\)|\[([^\]]*)\])")
++_CONFLICTING_PAREN_CONTENT = re.compile(
++    r"\b(?:"
++    r"(?:FOR|IN)\s+(?:THE\s+)?(?:U\.?S\.?A?\.?|UNITED\s+STATES)\b|"
++    r"U\.?S\.?A?\s*:|"
++    r"(?:FD&C\s+)?RED\s*(?:NO\.?\s*|#\s*|DYE\s*)?(?:40|2|28|33)\b|"
++    r"ALLURA\s+RED\b"
++    r")",
+     re.IGNORECASE,
+ )
+ 
+@@ -212,8 +231,9 @@
+         by_additive.setdefault(r.additive, []).append(r)
+ 
+     for additive, add_rules in by_additive.items():
++        is_red3 = additive.upper() in ("RED3", "RED_3", "FD&C RED NO. 3")
+         patterns: list[re.Pattern[str]] = []
+-        if additive.upper() in ("RED3", "RED_3", "FD&C RED NO. 3"):
++        if is_red3:
+             patterns.extend(_RED3_BuiltIn_PATTERNS)
+         seen_aliases: set[str] = set()
+         for r in add_rules:
+@@ -222,19 +242,25 @@
+                 if norm_a not in seen_aliases:
+                     seen_aliases.add(norm_a)
+                     # Built-in patterns already handle standard Red 3 aliases with strict decoy protection
+-                    if additive.upper() == "RED3" and norm_a in {
+-                        "FD&C RED NO. 3",
+-                        "RED NO. 3",
+-                        "RED 3",
+-                        "RED DYE 3",
+-                        "ERYTHROSINE",
+-                        "E127",
+-                    }:
++                    if is_red3 and (
++                        norm_a
++                        in {
++                            "FD&C RED NO. 3",
++                            "RED NO. 3",
++                            "RED 3",
++                            "RED DYE 3",
++                            "ERYTHROSINE",
++                            "E127",
++                        }
++                        or any(p.fullmatch(alias.strip()) for p in _RED3_BuiltIn_PATTERNS)
++                    ):
+                         continue
+                     patterns.append(_compile_custom_alias_pattern(alias))
+ 
+         for pat in patterns:
+             for m in pat.finditer(text):
++                if is_red3 and _DC_DECOY_PREFIX.search(text[: m.start()]):
++                    continue
+                 if best_match is None:
+                     best_match = m
+                     best_additive = additive
+@@ -254,6 +280,25 @@
+     return None
+ 
+ 
++def _is_ambiguous_additive_match(
++    text: str, match: re.Match[str], rules: list[Rule]
++) -> tuple[bool, str]:
++    """Check if a matched additive is immediately qualified by a conflicting/regional parenthetical."""
++    after = text[match.end() :]
++    pm = _FOLLOWING_PAREN_PATTERN.match(after)
++    if not pm:
++        return False, ""
++    paren_body = pm.group(1) if pm.group(1) is not None else (pm.group(2) or "")
++    if _find_additive_match(paren_body, rules) is not None:
++        return False, ""
++    if _CONFLICTING_PAREN_CONTENT.search(paren_body):
++        return (
++            True,
++            f"Matched additive '{match.group(0)}' has conflicting/regional qualification '({paren_body})' requiring verification.",
++        )
++    return False, ""
++
++
+ def _is_unreadable(text: str) -> tuple[bool, str]:
+     """Check whether the ingredient text is missing, corrupted, or unreadable."""
+     if not text or not text.strip():
+@@ -268,6 +313,9 @@
+         if marker in upper:
+             return True, f"Ingredient text contains unreadable/unclear marker ({marker})."
+ 
++    if _CORRUPTED_CHAR_PATTERN.search(stripped):
++        return True, "Ingredient text contains corrupted or obscured characters."
++
+     # Check if there are too few alphabetic characters overall
+     alpha_count = sum(1 for c in stripped if c.isalpha())
+     if alpha_count < 3:
+@@ -284,16 +332,15 @@
+ 
+ 
+ def _has_only_vague_artificial_color(text: str) -> tuple[re.Match[str] | None, str]:
+-    """Detect when a label states only 'artificial color' (or equivalent) without specifying which color."""
+-    vague_match = _VAGUE_COLOR_PATTERN.search(text)
+-    if not vague_match:
+-        return None, ""
+-    if _SPECIFIC_COLOR_MENTION.search(text):
+-        return None, ""
+-    return (
+-        vague_match,
+-        f"Ingredient label specifies vague '{vague_match.group(0)}' without naming specific color additives.",
+-    )
++    """Detect when a label states a vague 'artificial color' (or equivalent) without specifying which color."""
++    for m in _VAGUE_COLOR_PATTERN.finditer(text):
++        if _PRECEDING_SPECIFIC_COLOR_PAREN.search(text[: m.start()]):
++            continue
++        return (
++            m,
++            f"Ingredient label specifies vague '{m.group(0)}' without naming specific color additives.",
++        )
++    return None, ""
+ 
+ 
+ def evaluate_sku(
+@@ -385,6 +432,21 @@
+         m, additive, matched_rules = match_info
+         rule_ids = tuple(r.rule_id for r in matched_rules)
+         span_text = ingredients[m.start() : m.end()]
++        ambiguous, ambig_reason = _is_ambiguous_additive_match(ingredients, m, active_rules)
++        if ambiguous:
++            if classifier is not None:
++                return classifier(sku, active_rules)
++            return SkuDecision(
++                sku_id=sku.sku_id,
++                verdict=Verdict.HOLD_VERIFY,
++                additive=additive,
++                match_text=span_text,
++                match_start=m.start(),
++                match_end=m.end(),
++                rule_ids=rule_ids,
++                decided_by=DecidedBy.RULE,
++                rationale=ambig_reason,
++            )
+         return SkuDecision(
+             sku_id=sku.sku_id,
+             verdict=Verdict.PULL,
