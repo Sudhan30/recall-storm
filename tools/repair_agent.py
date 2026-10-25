@@ -22,6 +22,10 @@ ap.add_argument("--gen", required=True)
 ap.add_argument("--file", required=True)
 ap.add_argument("--tests", nargs="*", default=[])
 ap.add_argument("--drill-check", help="evidence = verify_plan errors of this check (e.g. labor) from a drill run")
+ap.add_argument("--lots-mode", help="score on the fda_lots scenario instead: scenarios/fda_lots/adapter.py --mode M, "
+                                     "then tools/verify_lots.py; hold-out is by recall notice")
+ap.add_argument("--exclude-basis", nargs="*", default=[], help="lots mode: drop coverage errors of these label bases "
+                                                                "from the evidence and score (e.g. date_window)")
 ap.add_argument("--unit", nargs="*", default=[])
 ap.add_argument("--shim", action="append", default=[])
 ap.add_argument("--max-tokens", type=int, default=300_000)
@@ -55,8 +59,31 @@ def add_shims(base: pathlib.Path):
             p.write_text(f'"""OURS. Test shim exposing {target} as {mod}.{name}."""\nfrom {tmod} import {name}\n')
 
 
+def run_lots(base: pathlib.Path, tag: str) -> dict:
+    """Run v1-style generated code on the fda_lots scenario via our adapter, score with verify_lots."""
+    out = run / f"lots_{tag}"
+    env = {"PATH": "/usr/bin:/bin", "RECALLSTORM_GEN": str(base), "PYTHONPATH": str(ROOT)}
+    r = subprocess.run([sys.executable, str(ROOT / "scenarios" / "fda_lots" / "adapter.py"), "--mode", a.lots_mode,
+                        "--out", str(out)], capture_output=True, text=True, env=env, cwd=ROOT, timeout=900)
+    if r.returncode != 0 or not (out / "plan.jsonl").exists():
+        return {"crash": (r.stderr or r.stdout)[-3000:], "by_check": {}, "errors": []}
+    rep_path = out / "lots_report.json"
+    subprocess.run([sys.executable, str(ROOT / "tools" / "verify_lots.py"), str(out / "plan.jsonl"), "--report",
+                    str(rep_path), "--quiet"], capture_output=True, text=True, cwd=ROOT, timeout=900,
+                   env={**env, "VERIFY_PLAN_MAX_EXAMPLES": "1000000"})
+    rp = json.loads(rep_path.read_text())
+    errs = [e for e in rp.get("errors", []) if e.get("severity") == "hard"
+            and not any(f"basis {b}" in e.get("msg", "") for b in a.exclude_basis)]
+    by_check = {}
+    for e in errs:
+        by_check[e["check"]] = by_check.get(e["check"], 0) + 1
+    return {"by_check": by_check, "hard": len(errs), "errors": errs, "lots": rp.get("lots")}
+
+
 def run_drill(base: pathlib.Path, tag: str) -> dict:
     """Run the drill on the real pack with this work dir, verify it, return error counts and samples."""
+    if a.lots_mode:
+        return run_lots(base, tag)
     out = run / f"drill_{tag}"
     env = {"PYTHONPATH": f"{base}:{ROOT}", "PATH": "/usr/bin:/bin"}
     r = subprocess.run([sys.executable, "-m", "recallstorm", "run", "--scenario", "ca_red3", "--data", str(ROOT / "data"),
@@ -77,7 +104,13 @@ def run_drill(base: pathlib.Path, tag: str) -> dict:
 
 
 def store_of(e: dict) -> str:
-    txt = e.get("id", "") + " " + e.get("msg", "")
+    txt = (e.get("id") or "") + " " + (e.get("msg") or "")
+    if a.lots_mode:                                   # hold out whole recall notices, not stores
+        m = re.search(r"recall ([A-Z]-\d{4}-\d{4})", txt)
+        if m:
+            return m.group(1)
+        m = re.search(r"\bFDA([A-Z])(\d{4})(\d{4})\b", txt)       # simulated SKU id FDAF02642025 -> F-0264-2025
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if m else "?"
     m = re.search(r"TSK-([A-Z0-9]+)-", txt) or re.search(r"\bat ([A-Z]+\d+)\b", txt)
     return m.group(1) if m else "?"
 
@@ -88,6 +121,7 @@ CHECK_RULES = {
     "coverage": "every SKU whose label contains FD&C Red No. 3 under any alias in the rules (including spacing, "
                 "punctuation, '#', OCR digit-for-letter noise and non-English names) must get a PULL verdict, so every "
                 "shelf facing of it gets a PULL task.",
+    "lots": "",
     "decoy": "a SKU must not be pulled when its label only names a different dye (Red 40, D&C Red 33) or a phrase like "
              "'3 red apples'.",
 }
@@ -158,7 +192,16 @@ if drill_before:
     drill_shown_txt = (f"verify_plan hard errors of check '{a.drill_check}' on the drill output "
                        f"({len(shown)} shown, from {len(stores) - len(held_stores)} stores; other stores hidden):\n" +
                        "\n".join(f"- [{e['src']}] {e['type']} {e['id']}: {e['msg']}" for e in shown[:60]) +
-                       "\n\nThe verifier rule: " + CHECK_RULES.get(a.drill_check, "see the error messages."))
+                       "\n\nThe verifier rule: " + (
+                           "every shelf lot covered by a recall notice's lot codes, lot ranges or 'all lots' wording "
+                           "(case, punctuation and a 'LOT ' prefix do not matter) must get a PULL task; lots the "
+                           "notice does not cover must not be pulled. Example notices follow."
+                           if a.lots_mode else CHECK_RULES.get(a.drill_check, "see the error messages.")))
+    if a.lots_mode:
+        notices = [json.loads(l) for l in open(ROOT / "data" / "recalls_fda.jsonl")]
+        shown_ids = {store_of(e) for e in shown}
+        ex = [n for n in notices if n.get("recall_number") in shown_ids][:12]
+        drill_shown_txt += "\n" + "\n".join(f"- {n['recall_number']}: code_info = {n.get('code_info', '')[:500]!r}" for n in ex)
 held = tuple(before["failed_ids"][1::2]) if a.holdout else ()
 shown_output = hide_tests(before["output"], held)[-20000:]
 before_unit = run_tests(work, a.unit) if a.unit else None

@@ -35,7 +35,7 @@ import sys
 import traceback
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-GEN = ROOT / "gen" / "expansion"
+GEN = pathlib.Path(os.environ.get("RECALLSTORM_GEN", ROOT / "gen" / "expansion"))  # repair loop points this at a patched copy
 SRC = "scenarios/fda_lots/adapter.py"
 
 
